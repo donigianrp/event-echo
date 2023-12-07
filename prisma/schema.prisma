@@ -48,31 +48,31 @@ model SourceContent {
   @@map(name: "source_content")
 }
 model SourceContentEvent {
-  id               Int        @id @default(autoincrement())
   event_id         Int
   source_content_id Int
   events           Event @relation(fields: [event_id], references: [id])
   source_content   SourceContent @relation(fields: [source_content_id], references: [id])
 
+  @@id([source_content_id, event_id])
   @@map(name: "source_content_event")
 }
 model EventSeriesEvent {
-  id               Int        @id @default(autoincrement())
   event_id         Int
   event_series_id  Int
   event_position   Int
   events           Event @relation(fields: [event_id], references: [id])
   event_series     EventSeries @relation(fields: [event_series_id], references: [id])
 
+  @@id([event_series_id, event_id])
   @@map(name: "event_series_event")
 }
 model EventTypeEvent {
-  id               Int        @id @default(autoincrement())
   event_id         Int
   event_type_id    Int
   events           Event @relation(fields: [event_id], references: [id])
   event_type       EventType @relation(fields: [event_type_id], references: [id])
 
+  @@id([event_type_id, event_id])
   @@map(name: "event_type_event")
 }
 
@@ -105,13 +105,22 @@ model EventSubCategory {
 }
 
 model EventTypeEventSeries {
-  id               Int        @id @default(autoincrement())
   event_series_id  Int
   event_type_id    Int
   event_series     EventSeries @relation(fields: [event_series_id], references: [id])
   event_type       EventType @relation(fields: [event_type_id], references: [id])
 
+  @@id([event_series_id, event_type_id])
   @@map(name: "event_type_event_series")
+}
+model EventTagEventSeries {
+  event_series_id  Int @unique
+  event_tag_id    Int @unique
+  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
+  event_tag       EventTag @relation(fields: [event_tag_id], references: [id])
+
+  @@id([event_series_id, event_tag_id])
+  @@map(name: "event_tag_event_series")
 }
 
 model EventSeries {
@@ -122,14 +131,13 @@ model EventSeries {
   updated_at          DateTime
   is_private          Boolean
   view_count          Int
-  event_focus_type    String
   creator_id          Int
   events              EventSeriesEvent[]
   creator             User  @relation(fields: [creator_id], references: [id])
   event_type          EventTypeEventSeries[]
   user_favorites      UserSeriesFavorite[] 
   user_likes          UserSeriesLike[]
-  event_tags          EventTag[] @relation("EventEventTag")
+  event_tags          EventTagEventSeries[]
 
   @@map(name: "event_series")
 }
@@ -177,7 +185,7 @@ model EventTag {
   created_at       DateTime
   updated_at       DateTime
   title            String
-  event_series     EventSeries[] @relation("EventEventTag")
+  event_series     EventTagEventSeries[]
 
   @@map(name: "event_tag")
 }
@@ -214,24 +222,25 @@ model Subscriptions {
   subscribedToId  Int
 
   @@id([subscribedToId, subscribedById])
+  @@map(name: "subscriptions")
 }
 
 model UserSeriesLike {
-  id             Int       @id @default(autoincrement())
   user_id        Int
   event_series_id Int
   user           User      @relation(fields: [user_id], references: [id])
   event_series   EventSeries @relation(fields: [event_series_id], references: [id])
 
+  @@id([user_id, event_series_id])
   @@map(name: "user_series_like")
 }
 
 model UserSeriesFavorite {
-  id             Int       @id @default(autoincrement())
   user_id        Int
   event_series_id Int
   user           User  @relation(fields: [user_id], references: [id])
   event_series   EventSeries   @relation(fields: [event_series_id], references: [id])
-
+ 
+  @@id([user_id, event_series_id])
   @@map(name: "user_series_favorite")
 }

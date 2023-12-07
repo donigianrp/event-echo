@@ -32,30 +32,27 @@ CREATE TABLE "source_content" (
 
 -- CreateTable
 CREATE TABLE "source_content_event" (
-    "id" SERIAL NOT NULL,
     "event_id" INTEGER NOT NULL,
     "source_content_id" INTEGER NOT NULL,
 
-    CONSTRAINT "source_content_event_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "source_content_event_pkey" PRIMARY KEY ("source_content_id","event_id")
 );
 
 -- CreateTable
 CREATE TABLE "event_series_event" (
-    "id" SERIAL NOT NULL,
     "event_id" INTEGER NOT NULL,
     "event_series_id" INTEGER NOT NULL,
     "event_position" INTEGER NOT NULL,
 
-    CONSTRAINT "event_series_event_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "event_series_event_pkey" PRIMARY KEY ("event_series_id","event_id")
 );
 
 -- CreateTable
 CREATE TABLE "event_type_event" (
-    "id" SERIAL NOT NULL,
     "event_id" INTEGER NOT NULL,
     "event_type_id" INTEGER NOT NULL,
 
-    CONSTRAINT "event_type_event_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "event_type_event_pkey" PRIMARY KEY ("event_type_id","event_id")
 );
 
 -- CreateTable
@@ -85,11 +82,18 @@ CREATE TABLE "event_sub_category" (
 
 -- CreateTable
 CREATE TABLE "event_type_event_series" (
-    "id" SERIAL NOT NULL,
     "event_series_id" INTEGER NOT NULL,
     "event_type_id" INTEGER NOT NULL,
 
-    CONSTRAINT "event_type_event_series_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "event_type_event_series_pkey" PRIMARY KEY ("event_series_id","event_type_id")
+);
+
+-- CreateTable
+CREATE TABLE "event_tag_event_series" (
+    "event_series_id" INTEGER NOT NULL,
+    "event_tag_id" INTEGER NOT NULL,
+
+    CONSTRAINT "event_tag_event_series_pkey" PRIMARY KEY ("event_series_id","event_tag_id")
 );
 
 -- CreateTable
@@ -175,36 +179,34 @@ CREATE TABLE "user" (
 );
 
 -- CreateTable
-CREATE TABLE "Subscriptions" (
+CREATE TABLE "subscriptions" (
     "subscribedById" INTEGER NOT NULL,
     "subscribedToId" INTEGER NOT NULL,
 
-    CONSTRAINT "Subscriptions_pkey" PRIMARY KEY ("subscribedToId","subscribedById")
+    CONSTRAINT "subscriptions_pkey" PRIMARY KEY ("subscribedToId","subscribedById")
 );
 
 -- CreateTable
 CREATE TABLE "user_series_like" (
-    "id" SERIAL NOT NULL,
     "user_id" INTEGER NOT NULL,
     "event_series_id" INTEGER NOT NULL,
 
-    CONSTRAINT "user_series_like_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "user_series_like_pkey" PRIMARY KEY ("user_id","event_series_id")
 );
 
 -- CreateTable
 CREATE TABLE "user_series_favorite" (
-    "id" SERIAL NOT NULL,
     "user_id" INTEGER NOT NULL,
     "event_series_id" INTEGER NOT NULL,
 
-    CONSTRAINT "user_series_favorite_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "user_series_favorite_pkey" PRIMARY KEY ("user_id","event_series_id")
 );
 
--- CreateTable
-CREATE TABLE "_EventEventTag" (
-    "A" INTEGER NOT NULL,
-    "B" INTEGER NOT NULL
-);
+-- CreateIndex
+CREATE UNIQUE INDEX "event_tag_event_series_event_series_id_key" ON "event_tag_event_series"("event_series_id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "event_tag_event_series_event_tag_id_key" ON "event_tag_event_series"("event_tag_id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "source_content_creator_source_content_id_key" ON "source_content_creator"("source_content_id");
@@ -214,12 +216,6 @@ CREATE UNIQUE INDEX "social_media_platform_source_content_id_key" ON "social_med
 
 -- CreateIndex
 CREATE UNIQUE INDEX "comment_source_content_id_key" ON "comment"("source_content_id");
-
--- CreateIndex
-CREATE UNIQUE INDEX "_EventEventTag_AB_unique" ON "_EventEventTag"("A", "B");
-
--- CreateIndex
-CREATE INDEX "_EventEventTag_B_index" ON "_EventEventTag"("B");
 
 -- AddForeignKey
 ALTER TABLE "source_content_event" ADD CONSTRAINT "source_content_event_event_id_fkey" FOREIGN KEY ("event_id") REFERENCES "event"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -252,6 +248,12 @@ ALTER TABLE "event_type_event_series" ADD CONSTRAINT "event_type_event_series_ev
 ALTER TABLE "event_type_event_series" ADD CONSTRAINT "event_type_event_series_event_type_id_fkey" FOREIGN KEY ("event_type_id") REFERENCES "event_type"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
+ALTER TABLE "event_tag_event_series" ADD CONSTRAINT "event_tag_event_series_event_series_id_fkey" FOREIGN KEY ("event_series_id") REFERENCES "event_series"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "event_tag_event_series" ADD CONSTRAINT "event_tag_event_series_event_tag_id_fkey" FOREIGN KEY ("event_tag_id") REFERENCES "event_tag"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
 ALTER TABLE "event_series" ADD CONSTRAINT "event_series_creator_id_fkey" FOREIGN KEY ("creator_id") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
@@ -270,10 +272,10 @@ ALTER TABLE "comment" ADD CONSTRAINT "comment_source_content_id_fkey" FOREIGN KE
 ALTER TABLE "social_media_tag" ADD CONSTRAINT "social_media_tag_social_media_platform_id_fkey" FOREIGN KEY ("social_media_platform_id") REFERENCES "social_media_platform"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Subscriptions" ADD CONSTRAINT "Subscriptions_subscribedById_fkey" FOREIGN KEY ("subscribedById") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "subscriptions" ADD CONSTRAINT "subscriptions_subscribedById_fkey" FOREIGN KEY ("subscribedById") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Subscriptions" ADD CONSTRAINT "Subscriptions_subscribedToId_fkey" FOREIGN KEY ("subscribedToId") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "subscriptions" ADD CONSTRAINT "subscriptions_subscribedToId_fkey" FOREIGN KEY ("subscribedToId") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "user_series_like" ADD CONSTRAINT "user_series_like_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -286,9 +288,3 @@ ALTER TABLE "user_series_favorite" ADD CONSTRAINT "user_series_favorite_user_id_
 
 -- AddForeignKey
 ALTER TABLE "user_series_favorite" ADD CONSTRAINT "user_series_favorite_event_series_id_fkey" FOREIGN KEY ("event_series_id") REFERENCES "event_series"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "_EventEventTag" ADD CONSTRAINT "_EventEventTag_A_fkey" FOREIGN KEY ("A") REFERENCES "event_series"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "_EventEventTag" ADD CONSTRAINT "_EventEventTag_B_fkey" FOREIGN KEY ("B") REFERENCES "event_tag"("id") ON DELETE CASCADE ON UPDATE CASCADE;
