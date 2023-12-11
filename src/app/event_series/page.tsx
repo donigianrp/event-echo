@@ -1,5 +1,7 @@
 import React from "react";
 
-export const EventSeries = () => {
-  return <div>Event Series</div>;
+const EventSeries = () => {
+  return <div className="flex justify-center p-2">Event Series</div>;
 };
+
+export default EventSeries;
