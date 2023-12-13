@@ -1,15 +1,12 @@
 var profanity = require("@2toad/profanity").profanity;
-const data = require("./mockComment.ts");
-
-const { items } = data;
-
-const hash = new Map();
+var data = require("./mockComment.ts");
+var items = data.items;
+var hash = new Map();
 hash.set("@#$%&!", 0);
-
-items.forEach((item: YouTubeCommentResp) => {
+items.forEach(function (item) {
   item.snippet.topLevelComment.snippet.textOriginal
     .split(" ")
-    .forEach((word) => {
+    .forEach(function (word) {
       if (!profanity.exists(word)) {
         if (hash.has(word)) {
           hash.set(word, hash.get(word) + 1);
@@ -21,6 +18,5 @@ items.forEach((item: YouTubeCommentResp) => {
       }
     });
 });
-
 console.log("length", items.length);
 console.log(hash);
