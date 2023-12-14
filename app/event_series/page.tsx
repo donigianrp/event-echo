@@ -5,8 +5,6 @@ import React, { useState } from "react";
 const EventSeries = () => {
   const [seriesName, setSeriesName] = useState<string>("");
 
-  const handleCreateSeries = () => {};
-
   return (
     <div className="m-8 flex justify-center items-center ">
       <h1>Event Series</h1>
