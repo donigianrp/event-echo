@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
-  SheetContent,
   SheetTrigger,
+  SheetContent,
+  SheetClose,
 } from "@/components/ui/sheet";
 import NavLinks from "../NavLinks/NavLinks";
 

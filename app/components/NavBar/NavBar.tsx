@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { constants } from "crypto";
 import NavLinks from "./NavLinks/NavLinks";
-import { Skeleton } from "../ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import MobileNav from "./Mobilenav/MobileNav";
 
 const NavBar = () => {
