@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
-import { buttonVariants } from "../../ui/button";
-import { usePathname } from "next/navigation";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const links = [
   { name: "Home", pathName: "/" },
@@ -10,29 +15,34 @@ const links = [
   { name: "Subscriptions", pathName: "/subscriptions" },
 ];
 
-const NavLinks = () => {
-  const pathName = usePathname();
+interface Props {
+  navStyle: "default" | "mobile";
+}
 
+const NavLinks = ({ navStyle }: Props) => {
   return (
-    <div className="flex justify-center items-center p-2">
-      {links.map((link) => {
-        const isPathNameCurrent =
-          pathName === link.pathName
-            ? "text-white bg-primary"
-            : "text-primary bg-white";
-
-        return (
-          <Link
-            key={link.name}
-            className={`${buttonVariants({
-              variant: "outline",
-            })} ${isPathNameCurrent} border-primary hover:text-primary mr-2`}
-            href={link.pathName}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
+    <div
+      className={`${
+        navStyle === "mobile" ? "" : "absolute left-1/2 -translate-x-1/2"
+      }`}
+    >
+      <NavigationMenu className="m-auto">
+        <NavigationMenuList
+          className={`${navStyle === "mobile" ? "flex-col" : "flex-row"} gap-2`}
+        >
+          {links.map((link) => {
+            return (
+              <NavigationMenuItem key={link.name}>
+                <Link href={link.pathName} legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    {link.name}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            );
+          })}
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   );
 };
