@@ -13,15 +13,12 @@ datasource db {
 
 model Event {
   id                  Int        @id @default(autoincrement())
-  created_at          DateTime
-  updatedAt           DateTime
+  created_at          DateTime   @default(now())
+  updated_at          DateTime   @updatedAt
   title               String
-  description         String
-  event_date_start    DateTime
-  event_date_finish   DateTime
-  event_tag_id        Int
-  has_adult_content   Boolean
-  has_spam            Boolean
+  description         String?
+  event_date_start    DateTime?
+  event_date_finish   DateTime?
   event_type          EventTypeEvent[]
   event_series        EventSeriesEvent[]
   source_contents     SourceContentEvent[]
@@ -31,15 +28,15 @@ model Event {
 
 model SourceContent {
   id                         Int        @id @default(autoincrement())
-  created_at                 DateTime
-  updated_at                 DateTime
-  url                        String
-  comment_id                 Int
-  view_count                 Int
-  like_count                 Int
-  dislike_count              Int
-  comment_count              Int
-  comments_used              Int
+  created_at                 DateTime   @default(now())
+  updated_at                 DateTime   @updatedAt
+  url                        String?
+  comment_id                 Int?
+  view_count                 Int?
+  like_count                 Int?
+  dislike_count              Int?
+  comment_count              Int?
+  comments_used              Int?
   comment                    Comment?
   source_content_creator     SourceContentCreator? 
   social_media_platform      SocialMediaPlatform? 
@@ -114,8 +111,8 @@ model EventTypeEventSeries {
   @@map(name: "event_type_event_series")
 }
 model EventTagEventSeries {
-  event_series_id  Int @unique
-  event_tag_id    Int @unique
+  event_series_id  Int 
+  event_tag_id    Int 
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
   event_tag       EventTag @relation(fields: [event_tag_id], references: [id])
 
@@ -126,12 +123,14 @@ model EventTagEventSeries {
 model EventSeries {
   id                  Int         @id @default(autoincrement())
   title               String
-  description         String
-  created_at          DateTime
-  updated_at          DateTime
+  description         String?
+  created_at          DateTime    @default(now())
+  updated_at          DateTime    @updatedAt
   is_private          Boolean
-  view_count          Int
+  view_count          Int?
   creator_id          Int
+  has_adult_content   Boolean    @default(true)
+  has_spam            Boolean    @default(true)
   events              EventSeriesEvent[]
   creator             User  @relation(fields: [creator_id], references: [id])
   event_type          EventTypeEventSeries[]
@@ -144,8 +143,8 @@ model EventSeries {
 
 model SourceContentCreator {
   id                       Int        @id @default(autoincrement())
-  created_at               DateTime
-  updated_at               DateTime
+  created_at               DateTime   @default(now())
+  updated_at               DateTime   @updatedAt
   social_media_platform_id Int
   social_media_id          Int
   source_content_id        Int @unique
@@ -157,8 +156,8 @@ model SourceContentCreator {
 
 model SocialMediaPlatform {
   id                        Int        @id @default(autoincrement())
-  created_at                DateTime
-  updated_at                DateTime
+  created_at                DateTime   @default(now())
+  updated_at                DateTime   @updatedAt
   name                      String
   tags                      SocialMediaTag[]
   source_content_id         Int @unique
@@ -170,9 +169,9 @@ model SocialMediaPlatform {
 
 model Comment {
   id                 Int        @id @default(autoincrement())
-  created_at         DateTime
-  updated_at         DateTime
-  comments_used      Int
+  created_at         DateTime   @default(now())
+  updated_at         DateTime   @updatedAt
+  comments_used      Int?
   contents           String
   source_content_id  Int @unique
   source_content     SourceContent @relation(fields: [source_content_id], references: [id])
@@ -182,8 +181,8 @@ model Comment {
 
 model EventTag {
   id               Int        @id @default(autoincrement())
-  created_at       DateTime
-  updated_at       DateTime
+  created_at       DateTime   @default(now())
+  updated_at       DateTime   @updatedAt
   title            String
   event_series     EventTagEventSeries[]
 
@@ -201,27 +200,25 @@ model SocialMediaTag {
 
 model User {
   id                   Int                   @id @default(autoincrement())
-  title                String
-  body                 String
-  userId               Int
+  user_name            String
   status               String
-  createdAt            DateTime
-  updatedAt            DateTime
-  eventSeries          EventSeries[]
-  userSeriesLikes      UserSeriesLike[]
-  userSeriesFavorites  UserSeriesFavorite[]
-  subscribedBy Subscriptions[] @relation("subscribedBy")
-  subscribedTo  Subscriptions[] @relation("subscribedTo")        
+  created_at           DateTime      @default(now())
+  updated_at           DateTime      @updatedAt
+  event_series          EventSeries[]
+  user_series_likes      UserSeriesLike[]
+  user_series_favorites  UserSeriesFavorite[]
+  subscribed_by Subscriptions[] @relation("subscribed_by")
+  subscribed_to  Subscriptions[] @relation("subscribed_to")        
   @@map(name: "user")
 }
 
 model Subscriptions {
-  subscribedBy   User @relation("subscribedBy", fields: [subscribedById], references: [id])
-  subscribedById Int
-  subscribedTo    User @relation("subscribedTo", fields: [subscribedToId], references: [id])
-  subscribedToId  Int
+  subscribed_by   User @relation("subscribed_by", fields: [subscribed_by_id], references: [id])
+  subscribed_by_id Int
+  subscribed_to    User @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
+  subscribed_to_id  Int
 
-  @@id([subscribedToId, subscribedById])
+  @@id([subscribed_to_id, subscribed_by_id])
   @@map(name: "subscriptions")
 }
 
