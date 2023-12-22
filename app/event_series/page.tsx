@@ -3,12 +3,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const EventSeries = () => {
-  const [seriesName, setSeriesName] = useState<string>("");
-
   return (
     <div className="m-8 flex justify-center items-center ">
       <h1>Event Series</h1>
-      <input
+      {/* <input
         type="text"
         name="seriesName"
         id="seriesName"
@@ -18,7 +16,7 @@ const EventSeries = () => {
         }}
         className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         placeholder="Series Name"
-      />
+      /> */}
 
       <Link href="/event_series/add_event">
         <button
@@ -33,9 +31,3 @@ const EventSeries = () => {
 };
 
 export default EventSeries;
-
-export const getServerSideProps = async () => {
-  // const res = await fetch('/event_series/api')
-  // const repo = await res.json()
-  // return { props: { repo } }
-};
