@@ -1,5 +1,7 @@
 import React from "react";
 
-export const Favorites = () => {
-  return <div>Favorites</div>;
+const Favorites = () => {
+  return <div className="flex justify-center p-2">Favorites</div>;
 };
+
+export default Favorites;
