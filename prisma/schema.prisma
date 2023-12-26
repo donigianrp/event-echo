@@ -31,7 +31,8 @@ model SourceContent {
   created_at                 DateTime   @default(now())
   updated_at                 DateTime   @updatedAt
   url                        String?
-  comment_id                 Int?
+  content_id                 String?
+  channel_id                 String?
   view_count                 Int?
   like_count                 Int?
   dislike_count              Int?
@@ -199,16 +200,17 @@ model SocialMediaTag {
 }
 
 model User {
-  id                   Int                   @id @default(autoincrement())
-  user_name            String
+  id                   Int                  @id @default(autoincrement())
+  user_name            String               @unique
+  email                String               @unique
   status               String
-  created_at           DateTime      @default(now())
-  updated_at           DateTime      @updatedAt
+  created_at           DateTime             @default(now())
+  updated_at           DateTime             @updatedAt
   event_series          EventSeries[]
   user_series_likes      UserSeriesLike[]
   user_series_favorites  UserSeriesFavorite[]
-  subscribed_by Subscriptions[] @relation("subscribed_by")
-  subscribed_to  Subscriptions[] @relation("subscribed_to")        
+  subscribed_by Subscriptions[]             @relation("subscribed_by")
+  subscribed_to  Subscriptions[]            @relation("subscribed_to")        
   @@map(name: "user")
 }
 
