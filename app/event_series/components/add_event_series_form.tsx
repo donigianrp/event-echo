@@ -7,6 +7,7 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+import { Loader2 } from 'lucide-react';
 import Link from 'next/link';
 
 const initialState = {
@@ -17,8 +18,20 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button id="submit" variant="default" type="submit" aria-disabled={pending}>
-      Create
+    <Button
+      id="submit"
+      type="submit"
+      disabled={pending}
+      aria-disabled={pending}
+    >
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Please Wait
+        </>
+      ) : (
+        <>Create</>
+      )}
     </Button>
   );
 }

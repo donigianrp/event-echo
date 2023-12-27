@@ -23,7 +23,7 @@ export async function createEventSeries(prevState: any, formData: FormData) {
 
   const data = parse.data;
 
-  await prisma.eventSeries.create({
+  const event_series = await prisma.eventSeries.create({
     data: {
       title: data.title,
       description: data.description,
@@ -33,7 +33,7 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   });
 
   revalidatePath('/');
-  redirect(`/event_series/`, RedirectType.replace);
+  return redirect(`/event_series/${event_series.id}`);
 }
 
 export async function editEventSeries(prevState: any, formData: FormData) {
@@ -68,7 +68,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   });
 
   revalidatePath('/event_series/[id]', 'page');
-  redirect(`/event_series/${data.id}`, RedirectType.replace);
+  return redirect(`/event_series/${data.id}`, RedirectType.replace);
 }
 
 export async function deleteEventSeries(prevState: any, formData: FormData) {
