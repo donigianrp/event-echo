@@ -33,14 +33,17 @@ model SourceContent {
   url                        String?
   content_id                 String?
   channel_id                 String?
+  title                      String?
   view_count                 Int?
   like_count                 Int?
   dislike_count              Int?
   comment_count              Int?
   comments_used              Int?
   comment                    Comment?
-  source_content_creator     SourceContentCreator? 
-  social_media_platform      SocialMediaPlatform? 
+  social_media_platform_id   Int
+  social_content_creator_id  Int
+  source_content_creator     SourceContentCreator  @relation(fields: [social_content_creator_id], references: [id])
+  social_media_platform      SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
   events                     SourceContentEvent[] 
 
   @@map(name: "source_content")
@@ -147,10 +150,10 @@ model SourceContentCreator {
   created_at               DateTime   @default(now())
   updated_at               DateTime   @updatedAt
   social_media_platform_id Int
-  social_media_id          Int
-  source_content_id        Int @unique
+  social_media_id          String
+  name                     String?
   social_media_platform    SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
-  source_content           SourceContent @relation(fields: [source_content_id], references: [id])
+  source_content           SourceContent[]
 
   @@map(name: "source_content_creator")
 }
@@ -161,8 +164,7 @@ model SocialMediaPlatform {
   updated_at                DateTime   @updatedAt
   name                      String
   tags                      SocialMediaTag[]
-  source_content_id         Int @unique
-  source_content            SourceContent @relation(fields: [source_content_id], references: [id])
+  source_content            SourceContent[]
   source_content_creator    SourceContentCreator[] 
 
   @@map(name: "social_media_platform")

@@ -5,13 +5,13 @@ import {
   SheetContent,
   SheetClose,
 } from '@/components/ui/sheet';
-// import { Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import NavLinks from '../NavLinks/NavLinks';
 
 const MobileNav = () => {
   return (
     <Sheet>
-      {/* <SheetTrigger asChild>
+      <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu />
         </Button>
@@ -20,7 +20,7 @@ const MobileNav = () => {
         <SheetClose asChild>
           <NavLinks navStyle="mobile" />
         </SheetClose>
-      </SheetContent> */}
+      </SheetContent>
     </Sheet>
   );
 };
