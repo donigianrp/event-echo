@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetTrigger,
   SheetContent,
   SheetClose,
-} from "@/components/ui/sheet";
-import NavLinks from "../NavLinks/NavLinks";
-import { Menu } from "lucide-react";
+} from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
+import NavLinks from '../NavLinks/NavLinks';
 
 const MobileNav = () => {
   return (
