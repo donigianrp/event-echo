@@ -1,4 +1,4 @@
-import AddEventSeriesForm from '@/components/AddEventSeriesForm';
+import AddEventSeriesForm from '@/app/event_series/components/add_event_series_form';
 import React from 'react';
 
 const EventSeriesCreate = async () => {
