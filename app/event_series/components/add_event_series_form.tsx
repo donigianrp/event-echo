@@ -9,35 +9,37 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const initialState = {
   message: '',
 };
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <Button
-      id="submit"
-      type="submit"
-      disabled={pending}
-      aria-disabled={pending}
-    >
-      {pending ? (
-        <>
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Please Wait
-        </>
-      ) : (
-        <>Create</>
-      )}
-    </Button>
-  );
-}
-
 const AddEventSeriesForm = () => {
   const [state, formAction] = useFormState(createEventSeries, initialState);
+  const [title, setTitle] = useState('');
+
+  function SubmitButton() {
+    const { pending } = useFormStatus();
+
+    return (
+      <Button
+        id="submit"
+        type="submit"
+        disabled={pending || title.trim() === ''}
+        aria-disabled={pending}
+      >
+        {pending ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Please Wait
+          </>
+        ) : (
+          <>Create</>
+        )}
+      </Button>
+    );
+  }
 
   return (
     <div className="flex w-1/2 mx-auto my-10 align-middle">
@@ -51,6 +53,7 @@ const AddEventSeriesForm = () => {
             name="title"
             required
             className="border-b p-1"
+            onChange={(e) => setTitle(e.target.value)}
           ></Input>
           <Textarea placeholder="Description" name="description"></Textarea>
           <div className="flex gap-2 leading-none">

@@ -33,7 +33,7 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   });
 
   revalidatePath('/');
-  return redirect(`/event_series/${event_series.id}`);
+  redirect(`/event_series/${event_series.id}`);
 }
 
 export async function editEventSeries(prevState: any, formData: FormData) {
@@ -68,7 +68,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   });
 
   revalidatePath('/event_series/[id]', 'page');
-  return redirect(`/event_series/${data.id}`, RedirectType.replace);
+  redirect(`/event_series/${data.id}`, RedirectType.replace);
 }
 
 export async function deleteEventSeries(prevState: any, formData: FormData) {

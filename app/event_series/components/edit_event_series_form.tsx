@@ -15,33 +15,33 @@ const initialState = {
   message: '',
 };
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <Button
-      id="submit"
-      type="submit"
-      disabled={pending}
-      aria-disabled={pending}
-    >
-      {pending ? (
-        <>
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Please Wait
-        </>
-      ) : (
-        <>Submit</>
-      )}
-    </Button>
-  );
-}
-
 const EditEventSeriesForm = ({ eventSeries }: any) => {
   const [state, formAction] = useFormState(editEventSeries, initialState);
   const [title, setTitle] = useState(eventSeries.title);
   const [description, setDescription] = useState(eventSeries.description || '');
   const [checked, setChecked] = useState(eventSeries.is_private);
+
+  function SubmitButton() {
+    const { pending } = useFormStatus();
+
+    return (
+      <Button
+        id="submit"
+        type="submit"
+        disabled={pending || title.trim() === ''}
+        aria-disabled={pending}
+      >
+        {pending ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Please Wait
+          </>
+        ) : (
+          <>Submit</>
+        )}
+      </Button>
+    );
+  }
 
   return (
     <div className="flex p-10 lg:w-1/2 mx-auto my-10 align-middle">
