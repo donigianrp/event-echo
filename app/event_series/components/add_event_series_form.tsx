@@ -9,20 +9,11 @@ import { Textarea } from '../../components/ui/textarea';
 import { Input } from '../../components/ui/input';
 import { redirect } from 'next/navigation';
 import { useState } from 'react';
+import { Loader2 } from 'lucide-react';
 
 const initialState = {
   message: '',
 };
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <Button variant="default" type="submit" aria-disabled={pending}>
-      Create
-    </Button>
-  );
-}
 
 const AddEventSeriesForm = () => {
   const [state, formAction] = useFormState(createEventSeries, initialState);
@@ -30,6 +21,28 @@ const AddEventSeriesForm = () => {
 
   if (cancelled) {
     redirect('/event_series');
+  }
+
+  function SubmitButton() {
+    const { pending } = useFormStatus();
+
+    return (
+      <Button
+        id="submit"
+        type="submit"
+        disabled={pending}
+        aria-disabled={pending}
+      >
+        {pending ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Please Wait
+          </>
+        ) : (
+          <>Create</>
+        )}
+      </Button>
+    );
   }
 
   return (
