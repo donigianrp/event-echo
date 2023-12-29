@@ -31,15 +31,19 @@ model SourceContent {
   created_at                 DateTime   @default(now())
   updated_at                 DateTime   @updatedAt
   url                        String?
-  comment_id                 Int?
+  content_id                 String?
+  channel_id                 String?
+  title                      String?
   view_count                 Int?
   like_count                 Int?
   dislike_count              Int?
   comment_count              Int?
   comments_used              Int?
   comment                    Comment?
-  source_content_creator     SourceContentCreator? 
-  social_media_platform      SocialMediaPlatform? 
+  social_media_platform_id   Int
+  social_content_creator_id  Int
+  source_content_creator     SourceContentCreator  @relation(fields: [social_content_creator_id], references: [id])
+  social_media_platform      SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
   events                     SourceContentEvent[] 
 
   @@map(name: "source_content")
@@ -146,10 +150,10 @@ model SourceContentCreator {
   created_at               DateTime   @default(now())
   updated_at               DateTime   @updatedAt
   social_media_platform_id Int
-  social_media_id          Int
-  source_content_id        Int @unique
+  social_media_id          String
+  name                     String?
   social_media_platform    SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
-  source_content           SourceContent @relation(fields: [source_content_id], references: [id])
+  source_content           SourceContent[]
 
   @@map(name: "source_content_creator")
 }
@@ -160,8 +164,7 @@ model SocialMediaPlatform {
   updated_at                DateTime   @updatedAt
   name                      String
   tags                      SocialMediaTag[]
-  source_content_id         Int @unique
-  source_content            SourceContent @relation(fields: [source_content_id], references: [id])
+  source_content            SourceContent[]
   source_content_creator    SourceContentCreator[] 
 
   @@map(name: "social_media_platform")
@@ -199,16 +202,17 @@ model SocialMediaTag {
 }
 
 model User {
-  id                   Int                   @id @default(autoincrement())
-  user_name            String
+  id                   Int                  @id @default(autoincrement())
+  user_name            String               @unique
+  email                String               @unique
   status               String
-  created_at           DateTime      @default(now())
-  updated_at           DateTime      @updatedAt
+  created_at           DateTime             @default(now())
+  updated_at           DateTime             @updatedAt
   event_series          EventSeries[]
   user_series_likes      UserSeriesLike[]
   user_series_favorites  UserSeriesFavorite[]
-  subscribed_by Subscriptions[] @relation("subscribed_by")
-  subscribed_to  Subscriptions[] @relation("subscribed_to")        
+  subscribed_by Subscriptions[]             @relation("subscribed_by")
+  subscribed_to  Subscriptions[]            @relation("subscribed_to")        
   @@map(name: "user")
 }
 
