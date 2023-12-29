@@ -1,17 +1,20 @@
-import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { constants } from "crypto";
-import NavLinks from "./NavLinks/NavLinks";
-import { Skeleton } from "@/components/ui/skeleton";
-import MobileNav from "./Mobilenav/MobileNav";
-import ModeToggleButton from "./ModeToggleButton/ModeToggleButton";
+import Link from 'next/link';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import NavLinks from './NavLinks/NavLinks';
+import { Skeleton } from '@/components/ui/skeleton';
+import MobileNav from './Mobilenav/MobileNav';
+import ModeToggleButton from './ModeToggleButton/ModeToggleButton';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
-const NavBar = () => {
+const NavBar = async () => {
+  const session = await getServerSession(authOptions);
+
   return (
     <div className="sticky top-0 left-0 right-0 z-50 flex items-center justify-between p-2 border-b bg-opacity-30 dark:bg-slate-700 dark:bg-opacity-30 border-border bg-slate-200 backdrop-blur-md">
       <div className="flex">
         <MobileNav />
-        <Link className="hidden p-2 md:flex" href={"/"}>
+        <Link className="hidden p-2 md:flex" href={'/'}>
           Logo
         </Link>
       </div>
@@ -19,9 +22,11 @@ const NavBar = () => {
         <NavLinks navStyle="default" />
       </div>
       <div className="flex items-center">
-        <Link className="flex p-2" href={"/account"}>
+        <Link className="flex p-2" href={'/account'}>
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage
+              src={session?.user?.image || 'https://github.com/shadcn.png'}
+            />
             <AvatarFallback>
               <Skeleton className="w-12 h-12 rounded-full" />
             </AvatarFallback>
