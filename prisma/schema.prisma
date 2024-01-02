@@ -10,145 +10,148 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Event {
-  id                  Int        @id @default(autoincrement())
-  created_at          DateTime   @default(now())
-  updated_at          DateTime   @updatedAt
-  title               String
-  description         String?
-  event_date_start    DateTime?
-  event_date_finish   DateTime?
-  event_type          EventTypeEvent[]
-  event_series        EventSeriesEvent[]
-  source_contents     SourceContentEvent[]
+  id                Int                  @id @default(autoincrement())
+  created_at        DateTime             @default(now())
+  updated_at        DateTime             @updatedAt
+  title             String
+  description       String?
+  event_date_start  DateTime?
+  event_date_finish DateTime?
+  event_type        EventTypeEvent[]
+  event_series      EventSeriesEvent[]
+  source_contents   SourceContentEvent[]
 
   @@map(name: "event")
 }
 
 model SourceContent {
-  id                         Int        @id @default(autoincrement())
-  created_at                 DateTime   @default(now())
-  updated_at                 DateTime   @updatedAt
-  url                        String?
-  content_id                 String?
-  channel_id                 String?
-  title                      String?
-  view_count                 Int?
-  like_count                 Int?
-  dislike_count              Int?
-  comment_count              Int?
-  comments_used              Int?
-  comment                    Comment?
-  social_media_platform_id   Int
-  social_content_creator_id  Int
-  source_content_creator     SourceContentCreator  @relation(fields: [social_content_creator_id], references: [id])
-  social_media_platform      SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
-  events                     SourceContentEvent[] 
+  id                        Int                  @id @default(autoincrement())
+  created_at                DateTime             @default(now())
+  updated_at                DateTime             @updatedAt
+  url                       String?
+  content_id                String?
+  channel_id                String?
+  title                     String?
+  view_count                Int?
+  like_count                Int?
+  dislike_count             Int?
+  comment_count             Int?
+  comments_used             Int?
+  comment                   Comment?
+  social_media_platform_id  Int
+  social_content_creator_id Int
+  source_content_creator    SourceContentCreator @relation(fields: [social_content_creator_id], references: [id])
+  social_media_platform     SocialMediaPlatform  @relation(fields: [social_media_platform_id], references: [id])
+  events                    SourceContentEvent[]
 
   @@map(name: "source_content")
 }
+
 model SourceContentEvent {
-  event_id         Int
+  event_id          Int
   source_content_id Int
-  events           Event @relation(fields: [event_id], references: [id])
-  source_content   SourceContent @relation(fields: [source_content_id], references: [id])
+  events            Event         @relation(fields: [event_id], references: [id])
+  source_content    SourceContent @relation(fields: [source_content_id], references: [id])
 
   @@id([source_content_id, event_id])
   @@map(name: "source_content_event")
 }
+
 model EventSeriesEvent {
-  event_id         Int
-  event_series_id  Int
-  event_position   Int
-  events           Event @relation(fields: [event_id], references: [id])
-  event_series     EventSeries @relation(fields: [event_series_id], references: [id])
+  event_id        Int
+  event_series_id Int
+  event_position  Int
+  events          Event       @relation(fields: [event_id], references: [id])
+  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
 
   @@id([event_series_id, event_id])
   @@map(name: "event_series_event")
 }
+
 model EventTypeEvent {
-  event_id         Int
-  event_type_id    Int
-  events           Event @relation(fields: [event_id], references: [id])
-  event_type       EventType @relation(fields: [event_type_id], references: [id])
+  event_id      Int
+  event_type_id Int
+  events        Event     @relation(fields: [event_id], references: [id])
+  event_type    EventType @relation(fields: [event_type_id], references: [id])
 
   @@id([event_type_id, event_id])
   @@map(name: "event_type_event")
 }
 
 model EventType {
-  id                  Int        @id @default(autoincrement())
-  category_id         Int
-  sub_category_id     Int
-  event_category      EventCategory @relation(fields: [category_id], references: [id])
-  event_sub_category  EventSubCategory @relation(fields: [sub_category_id], references: [id])
-  events              EventTypeEvent[]
-  event_series        EventTypeEventSeries[]
+  id                 Int                    @id @default(autoincrement())
+  category_id        Int
+  sub_category_id    Int
+  event_category     EventCategory          @relation(fields: [category_id], references: [id])
+  event_sub_category EventSubCategory       @relation(fields: [sub_category_id], references: [id])
+  events             EventTypeEvent[]
+  event_series       EventTypeEventSeries[]
 
   @@map(name: "event_type")
 }
 
 model EventCategory {
-  id    Int    @id @default(autoincrement())
-  title String
+  id          Int         @id @default(autoincrement())
+  title       String
   event_types EventType[]
 
   @@map(name: "event_category")
 }
 
 model EventSubCategory {
-  id    Int    @id @default(autoincrement())
-  title String
+  id          Int         @id @default(autoincrement())
+  title       String
   event_types EventType[]
 
   @@map(name: "event_sub_category")
 }
 
 model EventTypeEventSeries {
-  event_series_id  Int
-  event_type_id    Int
-  event_series     EventSeries @relation(fields: [event_series_id], references: [id])
-  event_type       EventType @relation(fields: [event_type_id], references: [id])
+  event_series_id Int
+  event_type_id   Int
+  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
+  event_type      EventType   @relation(fields: [event_type_id], references: [id])
 
   @@id([event_series_id, event_type_id])
   @@map(name: "event_type_event_series")
 }
+
 model EventTagEventSeries {
-  event_series_id  Int 
-  event_tag_id    Int 
+  event_series_id Int
+  event_tag_id    Int
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
-  event_tag       EventTag @relation(fields: [event_tag_id], references: [id])
+  event_tag       EventTag    @relation(fields: [event_tag_id], references: [id])
 
   @@id([event_series_id, event_tag_id])
   @@map(name: "event_tag_event_series")
 }
 
 model EventSeries {
-  id                  Int         @id @default(autoincrement())
-  title               String
-  description         String?
-  created_at          DateTime    @default(now())
-  updated_at          DateTime    @updatedAt
-  is_private          Boolean
-  view_count          Int?
-  creator_id          Int
-  has_adult_content   Boolean    @default(true)
-  has_spam            Boolean    @default(true)
-  events              EventSeriesEvent[]
-  creator             User  @relation(fields: [creator_id], references: [id])
-  event_type          EventTypeEventSeries[]
-  user_favorites      UserSeriesFavorite[] 
-  user_likes          UserSeriesLike[]
-  event_tags          EventTagEventSeries[]
+  id                Int                    @id @default(autoincrement())
+  title             String
+  description       String?
+  created_at        DateTime               @default(now())
+  updated_at        DateTime               @updatedAt
+  is_private        Boolean
+  view_count        Int?
+  creator_id        String
+  has_adult_content Boolean                @default(true)
+  has_spam          Boolean                @default(true)
+  events            EventSeriesEvent[]
+  creator           User                   @relation(fields: [creator_id], references: [id])
+  event_type        EventTypeEventSeries[]
+  user_favorites    UserSeriesFavorite[]
+  user_likes        UserSeriesLike[]
+  event_tags        EventTagEventSeries[]
 
   @@map(name: "event_series")
 }
 
 model SourceContentCreator {
-  id                       Int        @id @default(autoincrement())
-  created_at               DateTime   @default(now())
-  updated_at               DateTime   @updatedAt
+  id                       Int                 @id @default(autoincrement())
+  created_at               DateTime            @default(now())
+  updated_at               DateTime            @updatedAt
   social_media_platform_id Int
   social_media_id          String
   name                     String?
@@ -159,89 +162,131 @@ model SourceContentCreator {
 }
 
 model SocialMediaPlatform {
-  id                        Int        @id @default(autoincrement())
-  created_at                DateTime   @default(now())
-  updated_at                DateTime   @updatedAt
-  name                      String
-  tags                      SocialMediaTag[]
-  source_content            SourceContent[]
-  source_content_creator    SourceContentCreator[] 
+  id                     Int                    @id @default(autoincrement())
+  created_at             DateTime               @default(now())
+  updated_at             DateTime               @updatedAt
+  name                   String
+  tags                   SocialMediaTag[]
+  source_content         SourceContent[]
+  source_content_creator SourceContentCreator[]
 
   @@map(name: "social_media_platform")
 }
 
 model Comment {
-  id                 Int        @id @default(autoincrement())
-  created_at         DateTime   @default(now())
-  updated_at         DateTime   @updatedAt
-  comments_used      Int?
-  contents           String
-  source_content_id  Int @unique
-  source_content     SourceContent @relation(fields: [source_content_id], references: [id])
+  id                Int           @id @default(autoincrement())
+  created_at        DateTime      @default(now())
+  updated_at        DateTime      @updatedAt
+  comments_used     Int?
+  contents          String
+  source_content_id Int           @unique
+  source_content    SourceContent @relation(fields: [source_content_id], references: [id])
 
   @@map(name: "comment")
 }
 
 model EventTag {
-  id               Int        @id @default(autoincrement())
-  created_at       DateTime   @default(now())
-  updated_at       DateTime   @updatedAt
-  title            String
-  event_series     EventTagEventSeries[]
+  id           Int                   @id @default(autoincrement())
+  created_at   DateTime              @default(now())
+  updated_at   DateTime              @updatedAt
+  title        String
+  event_series EventTagEventSeries[]
 
   @@map(name: "event_tag")
 }
 
 model SocialMediaTag {
-  id                      Int        @id @default(autoincrement())
-  title                   String
+  id                       Int                 @id @default(autoincrement())
+  title                    String
   social_media_platform_id Int
   social_media_platform    SocialMediaPlatform @relation(fields: [social_media_platform_id], references: [id])
 
   @@map(name: "social_media_tag")
 }
 
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+  oauth_token_secret String?
+  oauth_token        String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
 model User {
-  id                   Int                  @id @default(autoincrement())
-  user_name            String               @unique
-  email                String               @unique
-  status               String
-  created_at           DateTime             @default(now())
-  updated_at           DateTime             @updatedAt
+  id                    String               @id @default(cuid())
+  name                  String               @unique
+  email                 String               @unique
+  emailVerified         DateTime?
+  image                 String
+  created_at            DateTime             @default(now())
+  updated_at            DateTime             @updatedAt
   event_series          EventSeries[]
-  user_series_likes      UserSeriesLike[]
-  user_series_favorites  UserSeriesFavorite[]
-  subscribed_by Subscriptions[]             @relation("subscribed_by")
-  subscribed_to  Subscriptions[]            @relation("subscribed_to")        
+  user_series_likes     UserSeriesLike[]
+  user_series_favorites UserSeriesFavorite[]
+  subscribed_by         Subscriptions[]      @relation("subscribed_by")
+  subscribed_to         Subscriptions[]      @relation("subscribed_to")
+  accounts              Account[]
+  sessions              Session[]
+
   @@map(name: "user")
 }
 
 model Subscriptions {
-  subscribed_by   User @relation("subscribed_by", fields: [subscribed_by_id], references: [id])
-  subscribed_by_id Int
-  subscribed_to    User @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
-  subscribed_to_id  Int
+  subscribed_by    User   @relation("subscribed_by", fields: [subscribed_by_id], references: [id])
+  subscribed_by_id String
+  subscribed_to    User   @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
+  subscribed_to_id String
 
   @@id([subscribed_to_id, subscribed_by_id])
   @@map(name: "subscriptions")
 }
 
 model UserSeriesLike {
-  user_id        Int
+  user_id         String
   event_series_id Int
-  user           User      @relation(fields: [user_id], references: [id])
-  event_series   EventSeries @relation(fields: [event_series_id], references: [id])
+  user            User        @relation(fields: [user_id], references: [id])
+  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
 
   @@id([user_id, event_series_id])
   @@map(name: "user_series_like")
 }
 
 model UserSeriesFavorite {
-  user_id        Int
+  user_id         String
   event_series_id Int
-  user           User  @relation(fields: [user_id], references: [id])
-  event_series   EventSeries   @relation(fields: [event_series_id], references: [id])
- 
+  user            User        @relation(fields: [user_id], references: [id])
+  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
+
   @@id([user_id, event_series_id])
   @@map(name: "user_series_favorite")
+}
+
+model VerificationToken {
+  id         Int      @id @default(autoincrement())
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
 }

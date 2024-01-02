@@ -14,6 +14,7 @@ const links = [
   { name: 'Favorites', pathName: '/favorites' },
   { name: 'Subscriptions', pathName: '/subscriptions' },
   { name: 'Login', pathName: '/login' },
+  { name: 'Logout', pathName: '/api/auth/signout' },
 ];
 
 interface Props {

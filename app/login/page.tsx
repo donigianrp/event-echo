@@ -1,5 +1,3 @@
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]/route';
 import SignIn from './components/sign_in';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
@@ -7,8 +5,6 @@ import { Separator } from '../components/ui/separator';
 import Link from 'next/link';
 
 const Login = async () => {
-  const session = await getServerSession(authOptions);
-
   return (
     <div className="grid grid-cols-2 h-screen">
       <div className="flex flex-col bg-slate-700 bg-opacity-30 backdrop-blur-md">
