@@ -26,21 +26,11 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   const data = parse.data;
   const session = await getServerSession(authOptions);
 
-  const user = await prisma.user.findUnique({
-    where: {
-      email: session?.user.email,
-    },
-  });
-
-  if (!user) {
-    return { message: 'Invalid user' };
-  }
-
   const eventSeries = await prisma.eventSeries.create({
     data: {
       title: data.title,
       description: data.description,
-      creator_id: user.id,
+      creator_id: session?.user.id,
       is_private: data.is_private,
     },
   });
