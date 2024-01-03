@@ -10,9 +10,17 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../api/auth/[...nextauth]/route';
 
 export default async function EventSeries() {
-  let series = await prisma.eventSeries.findMany({});
+  const session = await getServerSession(authOptions);
+  let series = await prisma.eventSeries.findMany({
+    where: {
+      creator_id: session?.user.id,
+    },
+  });
+
   return (
     <div className="flex flex-col gap-6 mx-auto justify-center p-10 lg:w-1/2">
       <div className="flex justify-between">

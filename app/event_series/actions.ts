@@ -1,6 +1,8 @@
 'use server';
 
 import prisma from '@/db';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../api/auth/[...nextauth]/route';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
@@ -22,12 +24,13 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   }
 
   const data = parse.data;
+  const session = await getServerSession(authOptions);
 
   const eventSeries = await prisma.eventSeries.create({
     data: {
       title: data.title,
       description: data.description,
-      creator_id: 1,
+      creator_id: session?.user.id,
       is_private: data.is_private,
     },
   });
@@ -55,13 +58,14 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   }
 
   const data = parse.data;
+  const session = await getServerSession(authOptions);
 
   await prisma.eventSeries.update({
     where: { id: data.id },
     data: {
       title: data.title,
       description: data.description,
-      creator_id: 1,
+      creator_id: session?.user.id,
       is_private: data.is_private,
       updated_at: new Date(),
     },
