@@ -36,13 +36,13 @@ async function main() {
   //   },
   // });
 
-  let mattId = '';
+  let userId = '';
   await prisma.user
     .findFirst({
       where: { email: 'matthew.clunie@gmail.com' },
     })
     .then((data) => {
-      mattId = data!.id;
+      userId = data!.id;
     });
 
   console.log('CREATED USERS DATA');
@@ -119,7 +119,7 @@ async function main() {
     data: {
       title: '2023 New York Jets Postgame Conferences',
       is_private: false,
-      creator_id: mattId,
+      creator_id: userId,
     },
   });
 
