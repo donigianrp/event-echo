@@ -11,35 +11,42 @@ const prisma = new PrismaClient();
 async function main() {
   // USERS
   const matt = await prisma.user.upsert({
-    where: { email: 'matthewclunie@gmail.com' },
+    where: { email: 'matthew.clunie@gmail.com' },
     update: {},
     create: {
-      email: 'matthewclunie@gmail.com',
-      user_name: 'mclunie',
-      status: 'activated',
+      email: 'matthew.clunie@gmail.com',
+      name: 'matt clunie',
     },
   });
   const rich = await prisma.user.upsert({
-    where: { email: 'richdoherty@gmail.com' },
+    where: { email: 'richdoherty7@gmail.com' },
     update: {},
     create: {
-      email: 'richdoherty@gmail.com',
-      user_name: 'rdoherty',
-      status: 'activated',
+      email: 'richdoherty7@gmail.com',
+      name: 'rich doherty',
     },
   });
-  const rob = await prisma.user.upsert({
-    where: { email: 'rpdonigian@gmail.com' },
-    update: {},
-    create: {
-      email: 'rpdonigian@gmail.com',
-      user_name: 'rdonigian',
-      status: 'activated',
-      event_series: {},
-    },
-  });
+  // const rob = await prisma.user.upsert({
+  //   where: { email: 'rpdonigian@gmail.com' },
+  //   update: {},
+  //   create: {
+  //     email: 'rpdonigian@gmail.com',
+  //     name: 'rob donigian',
+  //     event_series: {},
+  //   },
+  // });
+
+  let userId = '';
+  await prisma.user
+    .findFirst({
+      where: { email: 'matthew.clunie@gmail.com' },
+    })
+    .then((data) => {
+      userId = data!.id;
+    });
+
   console.log('CREATED USERS DATA');
-  console.log(matt, rich, rob);
+  console.log(matt, rich);
 
   // Social Media Platform
 
@@ -112,7 +119,7 @@ async function main() {
     data: {
       title: '2023 New York Jets Postgame Conferences',
       is_private: false,
-      creator_id: 3,
+      creator_id: userId,
     },
   });
 
