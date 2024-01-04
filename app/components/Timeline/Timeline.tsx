@@ -1,11 +1,11 @@
 'use client';
 
-import GraphTabs from '@/app/components/Timeline/GraphTabs/GraphTabs';
-import { Button } from '@/app/components/ui/button';
 import { Minus, Pause, Play, Plus } from 'lucide-react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ReactSlider from 'react-slider';
+import { Button } from '../ui/button';
+import DataTabs from './data_tabs/data_tabs';
 
 const data = [
   { eventName: 'Video 1', wordCount: 47 },
@@ -147,7 +147,7 @@ const Timeline = () => {
           </>
         )}
       </div>
-      <GraphTabs
+      <DataTabs
         isAggregate={isAggregate}
         data={data}
         aggValue={aggValue}

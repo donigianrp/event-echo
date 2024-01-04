@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from '@/app/components/ui/card';
 import { FunctionComponent } from 'react';
-import { Event } from '../GraphTabs';
+import { Event } from '../data_tabs';
 
 interface Props {
   isAggregate: boolean;

@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
 import { BarChart4, Cloud, LineChart, PieChart } from 'lucide-react';
 import { FunctionComponent } from 'react';
-import TabCard from './TabCard/TabCard';
+import TabCard from './tab_card/tab_card';
 
 export interface Event {
   eventName: string;
@@ -23,7 +23,7 @@ const charts = [
   { type: 'cloud', icon: <Cloud className="h-5" /> },
 ];
 
-const GraphTabs: FunctionComponent<Props> = ({
+const DataTabs: FunctionComponent<Props> = ({
   isAggregate,
   data,
   aggValue,
@@ -58,4 +58,4 @@ const GraphTabs: FunctionComponent<Props> = ({
   );
 };
 
-export default GraphTabs;
+export default DataTabs;
