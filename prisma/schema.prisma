@@ -266,7 +266,7 @@ model Subscriptions {
   subscribed_to    User @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
   subscribed_to_id Int
 
-  @@id([subscribed_to_id, subscribed_by_id])
+  @@id(name: "subscription_id", [subscribed_to_id, subscribed_by_id])
   @@map(name: "subscriptions")
 }
 
