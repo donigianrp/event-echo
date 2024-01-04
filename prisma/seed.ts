@@ -13,6 +13,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   // USERS
+<<<<<<< HEAD
   const matt = await prisma.user.upsert({
     where: { email: 'matthew.clunie@gmail.com' },
     update: {},
@@ -22,6 +23,16 @@ async function main() {
       username: 'matt',
     },
   });
+=======
+  // const matt = await prisma.user.upsert({
+  //   where: { email: 'matthew.clunie@gmail.com' },
+  //   update: {},
+  //   create: {
+  //     email: 'matthew.clunie@gmail.com',
+  //     name: 'matt clunie',
+  //   },
+  // });
+>>>>>>> 202e7dc (fixed migration)
   const rich = await prisma.user.upsert({
     where: { email: 'richdoherty7@gmail.com' },
     update: {},
@@ -41,20 +52,36 @@ async function main() {
       event_series: {},
     },
   });
+<<<<<<< HEAD
+=======
+  const rob = await prisma.user.upsert({
+    where: { email: 'rpdonigian@gmail.com' },
+    update: {},
+    create: {
+      email: 'rpdonigian@gmail.com',
+      name: 'rob donigian',
+      event_series: {},
+    },
+  });
+>>>>>>> 202e7dc (fixed migration)
 
   let userId = 0;
   await prisma.user
     .findFirst({
-      where: { email: 'matthew.clunie@gmail.com' },
+      where: { email: 'rpdonigian@gmail.com' },
     })
     .then((data) => {
       userId = data!.id;
     });
 
   console.log('CREATED USERS DATA');
+<<<<<<< HEAD
   console.log(matt);
   console.log(rich);
   console.log(rob);
+=======
+  console.log(rob, rich);
+>>>>>>> 202e7dc (fixed migration)
 
   // Social Media Platform
 
