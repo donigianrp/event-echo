@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import NavLinks from './NavLinks/NavLinks';
+import NavLinks from './nav_links/nav_links';
 import { Skeleton } from '@/components/ui/skeleton';
-import MobileNav from './Mobilenav/MobileNav';
-import ModeToggleButton from './ModeToggleButton/ModeToggleButton';
+import MobileNav from './mobile_nav/mobile_nav';
+import ModeToggleButton from './mode_toggle_button/mode_toggle_button';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 

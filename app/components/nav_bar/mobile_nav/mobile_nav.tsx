@@ -6,7 +6,7 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
-import NavLinks from '../NavLinks/NavLinks';
+import NavLinks from '../nav_links/nav_links';
 
 const MobileNav = () => {
   return (
