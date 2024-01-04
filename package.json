@@ -32,14 +32,18 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.2",
+    "sentiment": "^5.0.2",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "wordcloud": "^1.2.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/sentiment": "^5.0.4",
+    "@types/wordcloud": "^1.2.2",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
