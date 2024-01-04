@@ -52,22 +52,11 @@ export async function getLikes({
   let favoriteIds = new Set();
   const results = await prisma.eventSeries.findMany({
     where: {
-      OR: [
-        {
-          user_likes: {
-            some: {
-              user_id: id,
-            },
-          },
+      user_likes: {
+        some: {
+          user_id: id,
         },
-        {
-          user_favorites: {
-            some: {
-              user_id: id,
-            },
-          },
-        },
-      ],
+      },
     },
     include: {
       user_likes: {
@@ -84,7 +73,7 @@ export async function getLikes({
   });
 
   for (let i = 0; i < results.length; i++) {
-    if (results[i].user_likes[0].event_series_id) {
+    if (results[i].user_likes[0]) {
       likeIds.add(results[i].user_likes[0].event_series_id);
     }
     if (results[i].user_favorites[0]) {
