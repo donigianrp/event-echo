@@ -102,10 +102,12 @@ export async function createEvent(prevState: any, formData: FormData) {
   const schema = z.object({
     title: z.string().min(1),
     description: z.string(),
+    eventSeriesId: z.number(),
   });
   const parse = schema.safeParse({
     title: formData.get('title'),
     description: formData.get('description'),
+    eventSeriesId: formData.get('eventSeriesId'),
   });
 
   if (!parse.success) {
@@ -115,14 +117,30 @@ export async function createEvent(prevState: any, formData: FormData) {
   const data = parse.data;
   const session = await getServerSession(authOptions);
 
-  const eventSeries = await prisma.event.create({
+  const event = await prisma.event.create({
     data: {
       title: data.title,
       description: data.description,
-      // creator_id: session?.user.id,
+      creator_id: session?.user.id,
+    },
+  });
+
+  const eventSeriesEvents = await prisma.eventSeriesEvent.findMany({
+    where: { event_series_id: data.eventSeriesId },
+  });
+
+  const lastPosition = eventSeriesEvents.reduce((acc, el) => {
+    return acc >= el.event_position ? acc : el.event_position;
+  }, 0);
+
+  const eventSeriesEvent = await prisma.eventSeriesEvent.create({
+    data: {
+      event_series_id: data.eventSeriesId,
+      event_id: event.id,
+      event_position: lastPosition + 1,
     },
   });
 
   revalidatePath('/');
-  redirect(`/event_series/${eventSeries.id}`);
+  redirect(`/event_series/${data.eventSeriesId}`);
 }

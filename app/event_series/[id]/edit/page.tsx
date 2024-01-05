@@ -9,8 +9,6 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     where: { id: Number(params.id) },
   });
 
-  const addEventToSeries = () => {};
-
   if (session?.user.id === eventSeries?.creator_id) {
     return <EditEventSeriesForm eventSeries={eventSeries} />;
   }
