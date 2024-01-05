@@ -26,15 +26,15 @@ async function main() {
       name: 'rich doherty',
     },
   });
-  // const rob = await prisma.user.upsert({
-  //   where: { email: 'rpdonigian@gmail.com' },
-  //   update: {},
-  //   create: {
-  //     email: 'rpdonigian@gmail.com',
-  //     name: 'rob donigian',
-  //     event_series: {},
-  //   },
-  // });
+  const rob = await prisma.user.upsert({
+    where: { email: 'rpdonigian@gmail.com' },
+    update: {},
+    create: {
+      email: 'rpdonigian@gmail.com',
+      name: 'rob donigian',
+      event_series: {},
+    },
+  });
 
   let userId = 0;
   await prisma.user

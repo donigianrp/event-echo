@@ -18,6 +18,8 @@ model Event {
   description       String?
   event_date_start  DateTime?
   event_date_finish DateTime?
+  creator_id        Int
+  creator           User                   @relation(fields: [creator_id], references: [id])
   event_type        EventTypeEvent[]
   event_series      EventSeriesEvent[]
   source_contents   SourceContentEvent[]
@@ -247,6 +249,7 @@ model User {
   created_at            DateTime             @default(now())
   updated_at            DateTime             @updatedAt
   event_series          EventSeries[]
+  events                Event[]
   user_series_likes     UserSeriesLike[]
   user_series_favorites UserSeriesFavorite[]
   subscribed_by         Subscriptions[]      @relation("subscribed_by")

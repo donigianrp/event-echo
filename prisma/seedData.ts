@@ -212,51 +212,67 @@ export const sourceContents = [
 export const events = [
   {
     title: 'Robert Saleh Postgame Press Conference (9/11)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (9/17)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (9/24)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (10/1)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (10/8)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (10/15)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (10/29)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (11/6)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (11/12)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (11/19)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (11/24)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (12/3)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (12/10)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (12/17)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (12/24)',
+    creator_id: 1,
   },
   {
     title: 'Robert Saleh Postgame Press Conference (12/28)',
+    creator_id: 1,
   },
 ];
 
