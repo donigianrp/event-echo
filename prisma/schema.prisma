@@ -135,7 +135,7 @@ model EventSeries {
   updated_at        DateTime               @updatedAt
   is_private        Boolean
   view_count        Int?
-  creator_id        String
+  creator_id        Int
   has_adult_content Boolean                @default(true)
   has_spam          Boolean                @default(true)
   events            EventSeriesEvent[]
@@ -205,8 +205,8 @@ model SocialMediaTag {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String  @map("user_id")
+  id                 Int     @id @default(autoincrement())
+  userId             Int     @map("user_id")
   type               String
   provider           String
   providerAccountId  String  @map("provider_account_id")
@@ -229,7 +229,7 @@ model Account {
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique @map("session_token")
-  userId       String   @map("user_id")
+  userId       Int      @map("user_id")
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -237,11 +237,13 @@ model Session {
 }
 
 model User {
-  id                    String               @id @default(cuid())
+  id                    Int                  @id @default(autoincrement())
   name                  String?
+  username              String?
   email                 String               @unique
   emailVerified         DateTime?
   image                 String?
+  status                String?              @default("active")
   created_at            DateTime             @default(now())
   updated_at            DateTime             @updatedAt
   event_series          EventSeries[]
@@ -256,17 +258,17 @@ model User {
 }
 
 model Subscriptions {
-  subscribed_by    User   @relation("subscribed_by", fields: [subscribed_by_id], references: [id])
-  subscribed_by_id String
-  subscribed_to    User   @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
-  subscribed_to_id String
+  subscribed_by    User @relation("subscribed_by", fields: [subscribed_by_id], references: [id])
+  subscribed_by_id Int
+  subscribed_to    User @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
+  subscribed_to_id Int
 
   @@id([subscribed_to_id, subscribed_by_id])
   @@map(name: "subscriptions")
 }
 
 model UserSeriesLike {
-  user_id         String
+  user_id         Int
   event_series_id Int
   user            User        @relation(fields: [user_id], references: [id])
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
@@ -276,7 +278,7 @@ model UserSeriesLike {
 }
 
 model UserSeriesFavorite {
-  user_id         String
+  user_id         Int
   event_series_id Int
   user            User        @relation(fields: [user_id], references: [id])
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])

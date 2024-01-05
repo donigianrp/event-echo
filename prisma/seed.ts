@@ -36,7 +36,7 @@ async function main() {
   //   },
   // });
 
-  let userId = '';
+  let userId = 0;
   await prisma.user
     .findFirst({
       where: { email: 'matthew.clunie@gmail.com' },
