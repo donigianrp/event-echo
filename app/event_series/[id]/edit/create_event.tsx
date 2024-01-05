@@ -3,11 +3,15 @@ import EditEventSeriesForm from '@/app/event_series/components/edit_event_series
 import prisma from '@/db';
 import { getServerSession } from 'next-auth';
 
-const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
+const CreateEvent = async ({ params }: { params: { id: string } }) => {
   const session = await getServerSession(authOptions);
   const eventSeries = await prisma.eventSeries.findUnique({
     where: { id: Number(params.id) },
   });
+
+  const createEvent = () => {};
+
+  const addContentToEvent = () => {};
 
   const addEventToSeries = () => {};
 
@@ -17,4 +21,4 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
   return <p>Cannot edit another user&apos;s event series.</p>;
 };
 
-export default EventSeriesEdit;
+export default CreateEvent;

@@ -18,6 +18,8 @@ model Event {
   description       String?
   event_date_start  DateTime?
   event_date_finish DateTime?
+creator_id        String
+
   event_type        EventTypeEvent[]
   event_series      EventSeriesEvent[]
   source_contents   SourceContentEvent[]

@@ -97,3 +97,32 @@ export async function deleteEventSeries(prevState: any, formData: FormData) {
     return { message: 'Failed to delete event series' };
   }
 }
+
+export async function createEvent(prevState: any, formData: FormData) {
+  const schema = z.object({
+    title: z.string().min(1),
+    description: z.string(),
+  });
+  const parse = schema.safeParse({
+    title: formData.get('title'),
+    description: formData.get('description'),
+  });
+
+  if (!parse.success) {
+    return { message: 'Failed to create event' };
+  }
+
+  const data = parse.data;
+  const session = await getServerSession(authOptions);
+
+  const eventSeries = await prisma.event.create({
+    data: {
+      title: data.title,
+      description: data.description,
+      // creator_id: session?.user.id,
+    },
+  });
+
+  revalidatePath('/');
+  redirect(`/event_series/${eventSeries.id}`);
+}
