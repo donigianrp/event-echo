@@ -22,7 +22,7 @@ const NavBar = async () => {
         <NavLinks navStyle="default" />
       </div>
       <div className="flex items-center">
-        <Link className="flex p-2" href={'/account'}>
+        <Link className="flex p-2" href={`/user/${session?.user.id}`}>
           <Avatar>
             <AvatarImage
               src={session?.user?.image || 'https://github.com/shadcn.png'}

@@ -241,9 +241,9 @@ model Session {
 model User {
   id                    Int                  @id @default(autoincrement())
   name                  String?
-  username              String?
+  username              String?              @unique
   email                 String               @unique
-  emailVerified         DateTime?
+  emailVerified         DateTime?            @map("email_verified")
   image                 String?
   status                String?              @default("active")
   created_at            DateTime             @default(now())
@@ -266,7 +266,7 @@ model Subscriptions {
   subscribed_to    User @relation("subscribed_to", fields: [subscribed_to_id], references: [id])
   subscribed_to_id Int
 
-  @@id([subscribed_to_id, subscribed_by_id])
+  @@id(name: "subscription_id", [subscribed_to_id, subscribed_by_id])
   @@map(name: "subscriptions")
 }
 
@@ -276,7 +276,7 @@ model UserSeriesLike {
   user            User        @relation(fields: [user_id], references: [id])
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
 
-  @@id([user_id, event_series_id])
+  @@id(name: "like_id", [user_id, event_series_id])
   @@map(name: "user_series_like")
 }
 
@@ -286,7 +286,7 @@ model UserSeriesFavorite {
   user            User        @relation(fields: [user_id], references: [id])
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
 
-  @@id([user_id, event_series_id])
+  @@id(name: "favorite_id", [user_id, event_series_id])
   @@map(name: "user_series_favorite")
 }
 
