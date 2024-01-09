@@ -34,9 +34,28 @@ export const authOptions: NextAuthOptions = {
     async signIn(message) {
       if (message.isNewUser) {
         const id = Number(message.user.id);
-        const username =
-          message.user.name?.split(' ')[0].toLowerCase() +
-          String(Math.trunc(Math.random() * 10000000000));
+
+        const randomUsername = () => {
+          return (
+            message.user.name?.split(' ')[0].toLowerCase() + String(Date.now())
+          );
+        };
+
+        let username = randomUsername();
+        let duplicateUsername = await prisma.user.findUnique({
+          where: {
+            username: username,
+          },
+        });
+        while (!!duplicateUsername) {
+          username = randomUsername();
+          duplicateUsername = await prisma.user.findUnique({
+            where: {
+              username: username,
+            },
+          });
+        }
+
         await prisma.user.update({
           where: {
             id: id,
