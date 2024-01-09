@@ -4,10 +4,9 @@ import { Button } from '../ui/button';
 import { Save } from 'lucide-react';
 import { favorite } from './actions';
 import { useFormState } from 'react-dom';
-import { useState } from 'react';
 
 export default function FavoriteButton(props: {
-  id: number;
+  eventId: number;
   favorited: boolean;
 }) {
   const initialState = {
@@ -19,7 +18,7 @@ export default function FavoriteButton(props: {
 
   return (
     <form action={formAction}>
-      <input type="hidden" name="event_series_id" value={props.id} />
+      <input type="hidden" name="event_series_id" value={props.eventId} />
       <Button variant="outline" size="icon" type="submit">
         <Save color={state.color} fill={state.fill} />
       </Button>

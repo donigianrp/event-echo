@@ -5,7 +5,7 @@ import { useFormState } from 'react-dom';
 import { subscribe } from './actions';
 
 export default function SubscribeButton(props: {
-  id: string;
+  id: number;
   isSubscribed: boolean;
 }) {
   const initialState = {

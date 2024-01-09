@@ -23,7 +23,7 @@ export async function like(prevState: any, formData: FormData) {
 
   const liked = await prisma.userSeriesLike.findUnique({
     where: {
-      user_id_event_series_id: {
+      like_id: {
         user_id: session?.user.id,
         event_series_id: data.event_series_id,
       },
@@ -33,7 +33,7 @@ export async function like(prevState: any, formData: FormData) {
   if (Boolean(liked)) {
     await prisma.userSeriesLike.delete({
       where: {
-        user_id_event_series_id: {
+        like_id: {
           user_id: session?.user.id,
           event_series_id: data.event_series_id,
         },
@@ -74,7 +74,7 @@ export async function favorite(prevState: any, formData: FormData) {
 
   const favorited = await prisma.userSeriesFavorite.findUnique({
     where: {
-      user_id_event_series_id: {
+      favorite_id: {
         user_id: session?.user.id,
         event_series_id: data.event_series_id,
       },
@@ -84,7 +84,7 @@ export async function favorite(prevState: any, formData: FormData) {
   if (Boolean(favorited)) {
     await prisma.userSeriesFavorite.delete({
       where: {
-        user_id_event_series_id: {
+        favorite_id: {
           user_id: session?.user.id,
           event_series_id: data.event_series_id,
         },
@@ -110,7 +110,7 @@ export async function favorite(prevState: any, formData: FormData) {
 
 export async function subscribe(prevState: any, formData: FormData) {
   const schema = z.object({
-    subscribed_to_id: z.string(),
+    subscribed_to_id: z.coerce.number(),
     subscribed: z.string(),
   });
   const parse = schema.safeParse({
@@ -124,7 +124,6 @@ export async function subscribe(prevState: any, formData: FormData) {
 
   const data = parse.data;
   const session = await getServerSession(authOptions);
-  console.log('data sub', data.subscribed);
 
   if (data.subscribed === 'true') {
     await prisma.subscriptions.delete({

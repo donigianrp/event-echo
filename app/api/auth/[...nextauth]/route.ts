@@ -30,6 +30,24 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
+  events: {
+    async signIn(message) {
+      if (message.isNewUser) {
+        const id = Number(message.user.id);
+        const username =
+          message.user.name?.split(' ')[0].toLowerCase() +
+          String(Math.trunc(Math.random() * 10000000000));
+        await prisma.user.update({
+          where: {
+            id: id,
+          },
+          data: {
+            username: username,
+          },
+        });
+      }
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);

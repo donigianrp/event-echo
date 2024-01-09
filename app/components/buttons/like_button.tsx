@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 import { like } from './actions';
 import { useFormState } from 'react-dom';
 
-export default function LikeButton(props: { id: number; liked: boolean }) {
+export default function LikeButton(props: { eventId: number; liked: boolean }) {
   const initialState = {
     message: '',
     color: props.liked ? 'pink' : 'white',
@@ -16,7 +16,7 @@ export default function LikeButton(props: { id: number; liked: boolean }) {
 
   return (
     <form action={formAction}>
-      <input type="hidden" name="event_series_id" value={props.id} />
+      <input type="hidden" name="event_series_id" value={props.eventId} />
       <Button variant="outline" size="icon" type="submit">
         <Heart color={state.color} fill={state.fill} />
       </Button>

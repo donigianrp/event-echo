@@ -6,7 +6,7 @@ export async function getLikesAndFavorites({
   id,
 }: {
   session: Session | null;
-  id?: string;
+  id?: number;
 }) {
   let likeIds = new Set();
   let favoriteIds = new Set();
@@ -46,7 +46,7 @@ export async function getLikes({
   id,
 }: {
   session: Session | null;
-  id: string;
+  id: number;
 }) {
   let likeIds = new Set();
   let favoriteIds = new Set();

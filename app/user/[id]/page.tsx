@@ -7,6 +7,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@/app/components/ui/avatar';
+import { buttonVariants } from '@/app/components/ui/button';
 import {
   Card,
   CardDescription,
@@ -38,9 +39,10 @@ export default async function UserProfile({
 }: {
   params: { id: string };
 }) {
+  const id = Number(params.id);
   const user = await prisma.user.findUnique({
     where: {
-      id: params.id,
+      id: id,
     },
   });
   if (!user) {
@@ -53,16 +55,16 @@ export default async function UserProfile({
     where: {
       subscription_id: {
         subscribed_by_id: session?.user.id || '',
-        subscribed_to_id: params.id,
+        subscribed_to_id: id,
       },
     },
   });
 
-  const series = await getLikesAndFavorites({ session, id: params.id });
-  const likes = await getLikes({ session, id: params.id });
+  const series = await getLikesAndFavorites({ session, id: id });
+  const likes = await getLikes({ session, id: id });
   const subscriptions = await prisma.subscriptions.findMany({
     where: {
-      subscribed_by_id: params.id,
+      subscribed_by_id: id,
     },
     include: {
       subscribed_to: true,
@@ -81,22 +83,24 @@ export default async function UserProfile({
         <div className="flex justify-between">
           <div>
             <h1 className="text-2xl tracking-tight">{user?.name}</h1>
-            <h2 className="text-sm text-muted-foreground">@username</h2>
+            <h2 className="text-sm text-muted-foreground">@{user?.username}</h2>
           </div>
           <div className="items-center">
-            {session?.user.id === params.id ? (
-              ''
+            {session?.user.id === id ? (
+              <Link
+                href={`/user/${id}/edit`}
+                className={buttonVariants({ variant: 'outline' })}
+              >
+                Edit Profile
+              </Link>
             ) : (
-              <SubscribeButton
-                id={params.id}
-                isSubscribed={Boolean(isSubscribed)}
-              />
+              <SubscribeButton id={id} isSubscribed={Boolean(isSubscribed)} />
             )}
           </div>
         </div>
       </div>
       <Separator />
-      <Tabs defaultValue="series" className="flex flex-col gap-6">
+      <Tabs defaultValue="series" className="flex flex-col gap-6 min-h-screen">
         <TabsList>
           <TabsTrigger value="series">Event Series</TabsTrigger>
           <TabsTrigger value="likes">Likes</TabsTrigger>
@@ -113,9 +117,9 @@ export default async function UserProfile({
                   <CardDescription>{s.description}</CardDescription>
                 </CardHeader>
                 <div className="flex px-6 pb-6 gap-2">
-                  <LikeButton id={s.id} liked={series.likeIds.has(s.id)} />
+                  <LikeButton eventId={s.id} liked={series.likeIds.has(s.id)} />
                   <FavoriteButton
-                    id={s.id}
+                    eventId={s.id}
                     favorited={series.favoriteIds.has(s.id)}
                   />
                 </div>
@@ -134,9 +138,9 @@ export default async function UserProfile({
                   <CardDescription>{s.description}</CardDescription>
                 </CardHeader>
                 <div className="flex px-6 pb-6 gap-2">
-                  <LikeButton id={s.id} liked={likes.likeIds.has(s.id)} />
+                  <LikeButton eventId={s.id} liked={likes.likeIds.has(s.id)} />
                   <FavoriteButton
-                    id={s.id}
+                    eventId={s.id}
                     favorited={likes.favoriteIds.has(s.id)}
                   />
                 </div>
@@ -164,7 +168,7 @@ export default async function UserProfile({
                 </Avatar>
                 <div className="flex flex-col">
                   <p>{user.subscribed_to.name}</p>
-                  <p className="text-xs">@username</p>
+                  <p className="text-xs">@{user.subscribed_to.username}</p>
                 </div>
               </div>
               <Separator className="my-4" />

@@ -16,6 +16,7 @@ async function main() {
     create: {
       email: 'matthew.clunie@gmail.com',
       name: 'matt clunie',
+      username: 'matt',
     },
   });
   const rich = await prisma.user.upsert({
@@ -24,6 +25,7 @@ async function main() {
     create: {
       email: 'richdoherty7@gmail.com',
       name: 'rich doherty',
+      username: 'rich',
     },
   });
   const rob = await prisma.user.upsert({
@@ -32,6 +34,7 @@ async function main() {
     create: {
       email: 'rpdonigian@gmail.com',
       name: 'rob donigian',
+      username: 'rob',
       event_series: {},
     },
   });
@@ -46,7 +49,9 @@ async function main() {
     });
 
   console.log('CREATED USERS DATA');
-  console.log(matt, rich);
+  console.log(matt);
+  console.log(rich);
+  console.log(rob);
 
   // Social Media Platform
 
