@@ -53,7 +53,11 @@ export async function like(prevState: any, formData: FormData) {
       },
     });
     revalidatePath('/');
-    return { message: 'Liked event series.', color: 'pink', fill: 'pink' };
+    return {
+      message: 'Liked event series.',
+      color: '#f9a8d4',
+      fill: '#f9a8d4',
+    };
   }
 }
 
@@ -93,7 +97,6 @@ export async function favorite(prevState: any, formData: FormData) {
     revalidatePath('/');
     return {
       message: 'Removed favorite from event series.',
-      color: 'white',
       fill: '',
     };
   } else {
@@ -104,7 +107,7 @@ export async function favorite(prevState: any, formData: FormData) {
       },
     });
     revalidatePath('/');
-    return { message: 'Favorited event series.', color: 'cyan' };
+    return { message: 'Favorited event series.', fill: 'white' };
   }
 }
 

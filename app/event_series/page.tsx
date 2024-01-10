@@ -1,17 +1,10 @@
 import prisma from '@/db';
 import Link from 'next/link';
 import React from 'react';
-import { DeleteEventSeriesForm } from '@/app/event_series/components/delete_event_series_form';
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { buttonVariants } from '@/components/ui/button';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
+import EventSeriesCard from '../components/event_series_card';
 
 export default async function EventSeries() {
   const session = await getServerSession(authOptions);
@@ -35,17 +28,12 @@ export default async function EventSeries() {
         </div>
       </div>
       {series.map((s) => (
-        <Card key={s.id}>
-          <CardHeader>
-            <CardTitle>
-              <Link href={`/event_series/${s.id}`}>{s.title}</Link>
-            </CardTitle>
-            <CardDescription>{s.description}</CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <DeleteEventSeriesForm id={s.id} title={s.title} />
-          </CardFooter>
-        </Card>
+        <EventSeriesCard
+          key={s.id}
+          id={s.id}
+          title={s.title}
+          description={s.description}
+        />
       ))}
     </div>
   );
