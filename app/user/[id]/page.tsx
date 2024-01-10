@@ -1,19 +1,12 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import FavoriteButton from '@/app/components/buttons/favorite_button';
-import LikeButton from '@/app/components/buttons/like_button';
 import SubscribeButton from '@/app/components/buttons/subscribe_button';
+import EventSeriesCard from '@/app/components/event_series_card';
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from '@/app/components/ui/avatar';
 import { buttonVariants } from '@/app/components/ui/button';
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/app/components/ui/card';
 import { Separator } from '@/app/components/ui/separator';
 import { Skeleton } from '@/app/components/ui/skeleton';
 import {
@@ -109,42 +102,28 @@ export default async function UserProfile({
         <TabsContent value="series">
           <div className="flex flex-col gap-6">
             {series.results.map((s) => (
-              <Card key={s.id}>
-                <CardHeader>
-                  <CardTitle>
-                    <Link href={`/event_series/${s.id}`}>{s.title}</Link>
-                  </CardTitle>
-                  <CardDescription>{s.description}</CardDescription>
-                </CardHeader>
-                <div className="flex px-6 pb-6 gap-2">
-                  <LikeButton eventId={s.id} liked={series.likeIds.has(s.id)} />
-                  <FavoriteButton
-                    eventId={s.id}
-                    favorited={series.favoriteIds.has(s.id)}
-                  />
-                </div>
-              </Card>
+              <EventSeriesCard
+                key={s.id}
+                id={s.id}
+                title={s.title}
+                description={s.description}
+                likeIds={series.likeIds}
+                favoriteIds={series.favoriteIds}
+              />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="likes">
           <div className="flex flex-col gap-6">
             {likes.results.map((s) => (
-              <Card key={s.id}>
-                <CardHeader>
-                  <CardTitle>
-                    <Link href={`/event_series/${s.id}`}>{s.title}</Link>
-                  </CardTitle>
-                  <CardDescription>{s.description}</CardDescription>
-                </CardHeader>
-                <div className="flex px-6 pb-6 gap-2">
-                  <LikeButton eventId={s.id} liked={likes.likeIds.has(s.id)} />
-                  <FavoriteButton
-                    eventId={s.id}
-                    favorited={likes.favoriteIds.has(s.id)}
-                  />
-                </div>
-              </Card>
+              <EventSeriesCard
+                key={s.id}
+                id={s.id}
+                title={s.title}
+                description={s.description}
+                likeIds={likes.likeIds}
+                favoriteIds={likes.favoriteIds}
+              />
             ))}
           </div>
         </TabsContent>

@@ -86,6 +86,12 @@ export async function deleteEventSeries(prevState: any, formData: FormData) {
   });
 
   try {
+    await prisma.userSeriesLike.deleteMany({
+      where: { event_series_id: data.id },
+    });
+    await prisma.userSeriesFavorite.deleteMany({
+      where: { event_series_id: data.id },
+    });
     await prisma.eventSeries.delete({
       where: { id: data.id },
     });
