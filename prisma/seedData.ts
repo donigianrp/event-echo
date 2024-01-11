@@ -209,6 +209,16 @@ export const sourceContents = [
   },
 ];
 
+export const sourceContentCreator = {
+  social_media_platform_id: 1,
+  social_media_id: 'UCROj9vBjc4ZW3AL4cd_BjHg',
+  name: 'New York Jets',
+};
+
+export const socialMediaPlatform = {
+  name: 'youtube',
+};
+
 export const events = [
   {
     title: 'Robert Saleh Postgame Press Conference (9/11)',

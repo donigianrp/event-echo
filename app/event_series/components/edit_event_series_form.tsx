@@ -22,6 +22,8 @@ const EditEventSeriesForm = ({ eventSeries }: any) => {
   const [checked, setChecked] = useState(eventSeries.is_private);
   const [cancelled, setCancelled] = useState(false);
 
+  // const { data, error, isLoading } = useSWR('/api/user', fetcher)
+
   if (cancelled) {
     redirect(`/event_series/${eventSeries.id}`);
   }

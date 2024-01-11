@@ -5,6 +5,9 @@ import {
   events,
   sourceContents,
   sourceContentsEvents,
+  comments,
+  socialMediaPlatform,
+  sourceContentCreator,
 } from './seedData';
 const prisma = new PrismaClient();
 
@@ -56,9 +59,7 @@ async function main() {
   // Social Media Platform
 
   const youTube = await prisma.socialMediaPlatform.create({
-    data: {
-      name: 'YouTube',
-    },
+    data: socialMediaPlatform,
   });
   console.log('CREATED SOCIAL MEDIA PLATFORM DATA');
   console.log(youTube);
@@ -66,11 +67,7 @@ async function main() {
   // Source Content Creator
 
   const newYorkJets = await prisma.sourceContentCreator.create({
-    data: {
-      social_media_platform_id: 1,
-      social_media_id: 'UCROj9vBjc4ZW3AL4cd_BjHg',
-      name: '@nyjets',
-    },
+    data: sourceContentCreator,
   });
 
   console.log('CREATED SOURCE CONTENT CREATOR DATA');
@@ -156,6 +153,14 @@ async function main() {
     });
   console.log('CREATED EVENT SERIES EVENTS DATA');
   console.log(newYorkJets2023PostGamesSourceContentsEvents);
+
+  // Comments
+
+  const newYorkJets2023PostGamesComments = await prisma.comment.createMany({
+    data: comments,
+  });
+  console.log('CREATED COMMENTS DATA');
+  console.log(newYorkJets2023PostGamesComments);
 }
 main()
   .then(async () => {
