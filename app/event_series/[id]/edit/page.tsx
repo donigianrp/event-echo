@@ -8,11 +8,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
   const eventSeries = await prisma.eventSeries.findUnique({
     where: { id: Number(params.id) },
   });
-
-  if (session?.user.id === eventSeries?.creator_id) {
-    return <EditEventSeriesForm eventSeries={eventSeries} />;
-  }
-  return <p>Cannot edit another user&apos;s event series.</p>;
+  return <EditEventSeriesForm eventSeries={eventSeries} />;
 };
 
 export default EventSeriesEdit;

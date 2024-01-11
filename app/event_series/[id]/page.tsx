@@ -23,9 +23,9 @@ export default async function EventSeriesPage({
   const id = Number(params.id);
   const eventSeries = await prisma.eventSeries.findUnique({
     where: { id },
-    include: {
-      creator: true,
-    },
+    // include: {
+    //   creator: true,
+    // },
   });
 
   if (!eventSeries) notFound();
@@ -59,8 +59,8 @@ export default async function EventSeriesPage({
         <div>
           <h1 className="text-3xl font-medium">{eventSeries.title}</h1>
           <Link href={`/user/${eventSeries.creator_id}`}>
-            <h2 className="text-lg">{eventSeries.creator.name}</h2>
-            <h3 className="text-sm">@{eventSeries.creator.username}</h3>
+            {/*<h2 className="text-lg">{eventSeries.creator.name}</h2>
+            <h3 className="text-sm">@{eventSeries.creator.username}</h3> */}
           </Link>
         </div>
 
