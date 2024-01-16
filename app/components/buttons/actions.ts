@@ -39,7 +39,7 @@ export async function like(prevState: any, formData: FormData) {
         },
       },
     });
-    revalidatePath('/');
+    revalidatePath(`/event_series/${data.event_series_id}`, 'page');
     return {
       message: 'Removed like from event series.',
       color: 'white',
@@ -52,7 +52,7 @@ export async function like(prevState: any, formData: FormData) {
         event_series_id: data.event_series_id,
       },
     });
-    revalidatePath('/');
+    revalidatePath(`/event_series/${data.event_series_id}`, 'page');
     return {
       message: 'Liked event series.',
       color: '#f9a8d4',
