@@ -21,13 +21,15 @@ export default function EventSeriesCard(props: {
 }) {
   return (
     <Card className="mx-auto w-full">
-      <CardHeader>
-        <CardTitle>
-          <Link href={`/event_series/${props.id}`}>{props.title}</Link>
-        </CardTitle>
-        <CardDescription>{props.description}</CardDescription>
-      </CardHeader>
-      {props.likeIds && props.favoriteIds ? (
+      <Link href={`/event_series/${props.id}`}>
+        <CardHeader>
+          <CardTitle>{props.title}</CardTitle>
+          <CardDescription className="h-10 overflow-hidden">
+            {props.description}
+          </CardDescription>
+        </CardHeader>
+      </Link>
+      {/* {props.likeIds && props.favoriteIds ? (
         <div className="flex px-6 pb-6 gap-2">
           <LikeButton eventId={props.id} liked={props.likeIds.has(props.id)} />
           <FavoriteButton
@@ -39,7 +41,7 @@ export default function EventSeriesCard(props: {
         <CardFooter>
           <DeleteEventSeriesForm id={props.id} title={props.title} />
         </CardFooter>
-      )}
+      )} */}
     </Card>
   );
 }
