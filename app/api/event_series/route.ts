@@ -7,28 +7,50 @@ export async function GET(request: Request) {
   const page = Number(searchParams.get('page'));
   const id = Number(searchParams.get('id'));
 
-  const result = await prisma.eventSeries.findMany({
-    take: limit,
-    skip: limit * page,
-    where: {
-      ...(id ? { creator_id: id } : undefined),
-      is_private: false,
-      OR: [
-        {
-          title: {
-            contains: query || '',
-            mode: 'insensitive',
+  const [result, count] = await prisma.$transaction([
+    prisma.eventSeries.findMany({
+      take: limit,
+      skip: limit * page,
+      where: {
+        ...(id ? { creator_id: id } : undefined),
+        is_private: false,
+        OR: [
+          {
+            title: {
+              contains: query || '',
+              mode: 'insensitive',
+            },
           },
-        },
-        {
-          description: {
-            contains: query || '',
-            mode: 'insensitive',
+          {
+            description: {
+              contains: query || '',
+              mode: 'insensitive',
+            },
           },
-        },
-      ],
-    },
-  });
+        ],
+      },
+    }),
+    prisma.eventSeries.count({
+      where: {
+        ...(id ? { creator_id: id } : undefined),
+        is_private: false,
+        OR: [
+          {
+            title: {
+              contains: query || '',
+              mode: 'insensitive',
+            },
+          },
+          {
+            description: {
+              contains: query || '',
+              mode: 'insensitive',
+            },
+          },
+        ],
+      },
+    }),
+  ]);
 
   if (!result) {
     return Response.json({
@@ -39,5 +61,6 @@ export async function GET(request: Request) {
 
   return Response.json({
     result,
+    count,
   });
 }
