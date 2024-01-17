@@ -1,6 +1,6 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import SubscribeButton from '@/app/components/buttons/subscribe_button';
-import EventSeriesCard from '@/app/components/event_series_card';
+import LoadSeries from '@/app/components/infinite_scroll/load_series';
 import {
   Avatar,
   AvatarFallback,
@@ -16,7 +16,6 @@ import {
   TabsTrigger,
 } from '@/app/components/ui/tabs';
 import prisma from '@/db';
-import { getLikes, getLikesAndFavorites } from '@/lib/button_functions';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 
@@ -53,8 +52,6 @@ export default async function UserProfile({
     },
   });
 
-  const series = await getLikesAndFavorites({ session, id: id });
-  const likes = await getLikes({ session, id: id });
   const subscriptions = await prisma.subscriptions.findMany({
     where: {
       subscribed_by_id: id,
@@ -100,31 +97,11 @@ export default async function UserProfile({
           <TabsTrigger value="subscriptions">Subscriptions</TabsTrigger>
         </TabsList>
         <TabsContent value="series">
-          <div className="flex flex-col gap-6">
-            {series.results.map((s) => (
-              <EventSeriesCard
-                key={s.id}
-                id={s.id}
-                title={s.title}
-                description={s.description}
-                likeIds={series.likeIds}
-                favoriteIds={series.favoriteIds}
-              />
-            ))}
-          </div>
+          <LoadSeries route={'event_series'} id={String(id)} />
         </TabsContent>
         <TabsContent value="likes">
           <div className="flex flex-col gap-6">
-            {likes.results.map((s) => (
-              <EventSeriesCard
-                key={s.id}
-                id={s.id}
-                title={s.title}
-                description={s.description}
-                likeIds={likes.likeIds}
-                favoriteIds={likes.favoriteIds}
-              />
-            ))}
+            <LoadSeries route={'user/likes'} id={String(id)} />
           </div>
         </TabsContent>
         <TabsContent value="subscriptions">

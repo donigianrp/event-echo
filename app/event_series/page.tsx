@@ -1,18 +1,12 @@
-import prisma from '@/db';
 import Link from 'next/link';
 import React from 'react';
 import { buttonVariants } from '@/components/ui/button';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
-import EventSeriesCard from '../components/event_series_card';
+import LoadSeries from '../components/infinite_scroll/load_series';
 
 export default async function EventSeries() {
   const session = await getServerSession(authOptions);
-  let series = await prisma.eventSeries.findMany({
-    where: {
-      creator_id: session?.user.id,
-    },
-  });
 
   return (
     <div className="flex flex-col gap-6 mx-auto justify-center p-10 lg:w-1/2">
@@ -27,14 +21,7 @@ export default async function EventSeries() {
           </Link>
         </div>
       </div>
-      {series.map((s) => (
-        <EventSeriesCard
-          key={s.id}
-          id={s.id}
-          title={s.title}
-          description={s.description}
-        />
-      ))}
+      <LoadSeries route={'event_series'} id={session?.user.id} />
     </div>
   );
 }
