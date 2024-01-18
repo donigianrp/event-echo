@@ -1,13 +1,12 @@
 'use client';
 
 import { Loader2 } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-import useInView from './use_in_view';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { EventSeries } from '@prisma/client';
 import useSWRInfinite from 'swr/infinite';
 import EventSeriesCard from '../event_series_card';
 import { useSearchParams } from 'next/navigation';
-import { Button } from '../ui/button';
 
 export default function LoadSeries({
   route,
@@ -19,8 +18,7 @@ export default function LoadSeries({
   query?: string;
 }) {
   const numOfEventSeries = 5;
-  const container = useRef<HTMLDivElement | null>(null);
-  const { isInView } = useInView(container);
+  const { ref, inView } = useInView();
 
   const searchParams = useSearchParams();
   const getKey = (pageIndex: number, previousPageData: any) => {
@@ -40,10 +38,10 @@ export default function LoadSeries({
   const { data, size, setSize } = useSWRInfinite(getKey, fetcher);
 
   useEffect(() => {
-    if (isInView) {
+    if (inView) {
       setSize(size + 1);
     }
-  }, [isInView]);
+  }, [inView]);
 
   if (!data) {
     return (
@@ -54,7 +52,7 @@ export default function LoadSeries({
   }
 
   return (
-    <div className="flex flex-col gap-6 justify-center sm:p-10">
+    <div className="flex flex-col gap-6 justify-center">
       {data.map((series) => {
         return series.result.map((s: EventSeries) => (
           <EventSeriesCard
@@ -67,13 +65,7 @@ export default function LoadSeries({
       })}
       {size * numOfEventSeries < data[0].count && (
         <div className="flex justify-center">
-          <Button
-            onClick={() => {
-              setSize(size + 1);
-            }}
-          >
-            Load More
-          </Button>
+          <Loader2 ref={ref} className="animate-spin h-10 w-10" />
         </div>
       )}
     </div>
