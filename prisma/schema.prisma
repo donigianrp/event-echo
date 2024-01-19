@@ -95,7 +95,8 @@ model EventType {
 
 model EventCategory {
   id          Int         @id @default(autoincrement())
-  title       String
+  label       String
+  value       String
   event_types EventType[]
 
   @@map(name: "event_category")
@@ -103,7 +104,9 @@ model EventCategory {
 
 model EventSubCategory {
   id          Int         @id @default(autoincrement())
-  title       String
+  label       String
+  value       String
+  category_value  String
   event_types EventType[]
 
   @@map(name: "event_sub_category")

@@ -85,3 +85,34 @@ interface CommentsReq {
   textOriginal: string;
   textDisplay: string;
 }
+
+// ------------------------- EVENT SERIES MODEL ---------------------
+
+export interface EventSeriesModel {
+  id: number;
+  title: string;
+  description: string | null;
+  created_at: Date;
+  updated_at: Date;
+  is_private: boolean;
+  view_count: number | null;
+  creator_id: number;
+  has_adult_content: boolean;
+  has_spam: boolean;
+}
+
+// ------------------------- CATEGORY MODEL ---------------------
+export interface CategoryModel {
+  id: number;
+  value: string;
+  label: string;
+}
+
+// ------------------------- SUB CATEGORY MODEL ---------------------
+
+export interface SubCategoryModel {
+  id: number;
+  value: string;
+  label: string;
+  category_value: string;
+}

@@ -9,7 +9,7 @@ interface Props {
 const EventList = ({ id }: Props) => {
   // const events = await fetch()
   return (
-    <div className="flex flex-col gap-6 mx-auto justify-center p-10 lg:w-1/2">
+    <div className="flex flex-col gap-6 mx-auto justify-center p-10 xl:w-1/2">
       <div className="flex justify-between">
         <h1 className="text-3xl font-semibold">Event Series</h1>
         <div className="">

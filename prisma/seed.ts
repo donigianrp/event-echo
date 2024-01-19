@@ -83,10 +83,17 @@ async function main() {
 
   // Category
 
-  const sports = await prisma.eventCategory.create({
-    data: {
-      title: 'Sports',
-    },
+  const sports = await prisma.eventCategory.createMany({
+    data: [
+      { label: 'Sports', value: 'sports' },
+      { label: 'Music', value: 'music' },
+      { label: 'Technology', value: 'technology' },
+      { label: 'Food and Drink', value: 'foodAndDrink' },
+      { label: 'Entertainment', value: 'entertainment' },
+      { label: 'Fitness and Wellness', value: 'fitnessAndWellness' },
+      { label: 'Arts and Culture', value: 'artsAndCulture' },
+      { label: 'Business and Networking', value: 'businessAndNetworking' },
+    ],
   });
 
   console.log('CREATED EVENT CATEGORY DATA');
@@ -94,10 +101,145 @@ async function main() {
 
   // Sub Category
 
-  const football = await prisma.eventSubCategory.create({
-    data: {
-      title: 'American Football',
-    },
+  const football = await prisma.eventSubCategory.createMany({
+    data: [
+      { label: 'NFL', value: 'nfl', category_value: 'sports' },
+      { label: 'MLB', value: 'mlb', category_value: 'sports' },
+      { label: 'NHL', value: 'nhl', category_value: 'sports' },
+      { label: 'NBA', value: 'nba', category_value: 'sports' },
+      { label: 'MLS', value: 'mls', category_value: 'sports' },
+      { label: 'Rock', value: 'rock', category_value: 'music' },
+      { label: 'Pop', value: 'pop', category_value: 'music' },
+      { label: 'Hip Hop', value: 'hipHop', category_value: 'music' },
+      { label: 'Jazz', value: 'jazz', category_value: 'music' },
+      { label: 'Electronic', value: 'electronic', category_value: 'music' },
+      {
+        label: 'Software Development',
+        value: 'softwareDevelopment',
+        category_value: 'technology',
+      },
+      { label: 'Hardware', value: 'hardware', category_value: 'technology' },
+      {
+        label: 'Artificial Intelligence',
+        value: 'artificialIntelligence',
+        category_value: 'technology',
+      },
+      {
+        label: 'Cybersecurity',
+        value: 'cybersecurity',
+        category_value: 'technology',
+      },
+      {
+        label: 'Mobile Development',
+        value: 'mobileDevelopment',
+        category_value: 'technology',
+      },
+      {
+        label: 'Restaurants',
+        value: 'restaurants',
+        category_value: 'foodAndDrink',
+      },
+      {
+        label: 'Cooking Classes',
+        value: 'cookingClasses',
+        category_value: 'foodAndDrink',
+      },
+      {
+        label: 'Wine Tasting',
+        value: 'wineTasting',
+        category_value: 'foodAndDrink',
+      },
+      {
+        label: 'Coffee Events',
+        value: 'coffeeEvents',
+        category_value: 'foodAndDrink',
+      },
+      {
+        label: 'Food Festivals',
+        value: 'foodFestivals',
+        category_value: 'foodAndDrink',
+      },
+      { label: 'Movies', value: 'movies', category_value: 'entertainment' },
+      { label: 'Theater', value: 'theater', category_value: 'entertainment' },
+      {
+        label: 'Comedy Shows',
+        value: 'comedyShows',
+        category_value: 'entertainment',
+      },
+      { label: 'Concerts', value: 'concerts', category_value: 'entertainment' },
+      {
+        label: 'Festivals',
+        value: 'festivals',
+        category_value: 'entertainment',
+      },
+      { label: 'Yoga', value: 'yoga', category_value: 'fitnessAndWellness' },
+      {
+        label: 'Running',
+        value: 'running',
+        category_value: 'fitnessAndWellness',
+      },
+      {
+        label: 'Gym Workouts',
+        value: 'gymWorkouts',
+        category_value: 'fitnessAndWellness',
+      },
+      {
+        label: 'Meditation',
+        value: 'meditation',
+        category_value: 'fitnessAndWellness',
+      },
+      {
+        label: 'Wellness Retreats',
+        value: 'wellnessRetreats',
+        category_value: 'fitnessAndWellness',
+      },
+      {
+        label: 'Art Exhibitions',
+        value: 'artExhibitions',
+        category_value: 'artsAndCulture',
+      },
+      { label: 'Museums', value: 'museums', category_value: 'artsAndCulture' },
+      {
+        label: 'Literature Events',
+        value: 'literatureEvents',
+        category_value: 'artsAndCulture',
+      },
+      {
+        label: 'Performing Arts',
+        value: 'performingArts',
+        category_value: 'artsAndCulture',
+      },
+      {
+        label: 'Cultural Festivals',
+        value: 'culturalFestivals',
+        category_value: 'artsAndCulture',
+      },
+      {
+        label: 'Conferences',
+        value: 'conferences',
+        category_value: 'businessAndNetworking',
+      },
+      {
+        label: 'Workshops',
+        value: 'workshops',
+        category_value: 'businessAndNetworking',
+      },
+      {
+        label: 'Networking Events',
+        value: 'networkingEvents',
+        category_value: 'businessAndNetworking',
+      },
+      {
+        label: 'Trade Shows',
+        value: 'tradeShows',
+        category_value: 'businessAndNetworking',
+      },
+      {
+        label: 'Business Seminars',
+        value: 'businessSeminars',
+        category_value: 'businessAndNetworking',
+      },
+    ],
   });
 
   console.log('CREATED EVENT SUB CATEGORY DATA');
@@ -105,11 +247,49 @@ async function main() {
 
   // Event Type
 
-  const sportsFootball = await prisma.eventType.create({
-    data: {
-      category_id: 1,
-      sub_category_id: 1,
-    },
+  const sportsFootball = await prisma.eventType.createMany({
+    data: [
+      { category_id: 1, sub_category_id: 1 },
+      { category_id: 1, sub_category_id: 2 },
+      { category_id: 1, sub_category_id: 3 },
+      { category_id: 1, sub_category_id: 4 },
+      { category_id: 1, sub_category_id: 5 },
+      { category_id: 2, sub_category_id: 6 },
+      { category_id: 2, sub_category_id: 7 },
+      { category_id: 2, sub_category_id: 8 },
+      { category_id: 2, sub_category_id: 9 },
+      { category_id: 2, sub_category_id: 10 },
+      { category_id: 3, sub_category_id: 11 },
+      { category_id: 3, sub_category_id: 12 },
+      { category_id: 3, sub_category_id: 13 },
+      { category_id: 3, sub_category_id: 14 },
+      { category_id: 3, sub_category_id: 15 },
+      { category_id: 4, sub_category_id: 16 },
+      { category_id: 4, sub_category_id: 17 },
+      { category_id: 4, sub_category_id: 18 },
+      { category_id: 4, sub_category_id: 19 },
+      { category_id: 4, sub_category_id: 20 },
+      { category_id: 5, sub_category_id: 21 },
+      { category_id: 5, sub_category_id: 22 },
+      { category_id: 5, sub_category_id: 23 },
+      { category_id: 5, sub_category_id: 24 },
+      { category_id: 5, sub_category_id: 25 },
+      { category_id: 6, sub_category_id: 26 },
+      { category_id: 6, sub_category_id: 27 },
+      { category_id: 6, sub_category_id: 28 },
+      { category_id: 6, sub_category_id: 29 },
+      { category_id: 6, sub_category_id: 30 },
+      { category_id: 7, sub_category_id: 31 },
+      { category_id: 7, sub_category_id: 32 },
+      { category_id: 7, sub_category_id: 33 },
+      { category_id: 7, sub_category_id: 34 },
+      { category_id: 7, sub_category_id: 35 },
+      { category_id: 8, sub_category_id: 36 },
+      { category_id: 8, sub_category_id: 37 },
+      { category_id: 8, sub_category_id: 38 },
+      { category_id: 8, sub_category_id: 39 },
+      { category_id: 8, sub_category_id: 40 },
+    ],
   });
 
   console.log('CREATED EVENT TYPE DATA');
