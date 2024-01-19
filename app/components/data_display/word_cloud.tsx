@@ -2,7 +2,10 @@
 import React, { useEffect } from 'react';
 import WordCloud, { Options } from 'wordcloud';
 import Sentiment from 'sentiment';
-
+import { useTheme } from 'next-themes';
+import useScreenSize from '@/hooks/useScreenSize';
+import { useDebounce } from 'use-debounce';
+import { useInView } from 'react-intersection-observer';
 interface WordCloudDisplayProps {
   words: [string, number][];
 }
@@ -10,6 +13,8 @@ interface WordCloudDisplayProps {
 const WordCloudDisplayComponent: React.FC<WordCloudDisplayProps> = ({
   words,
 }) => {
+  const { inView, ref } = useInView();
+  const { theme } = useTheme();
   const sentiment = new Sentiment();
   const sentimentColors = {
     '-5': '#a30101',
@@ -25,33 +30,47 @@ const WordCloudDisplayComponent: React.FC<WordCloudDisplayProps> = ({
     '5': '#02c502',
   };
 
-  useEffect(() => {
-    const options: Options = {
-      list: words,
-      gridSize: 20,
-      weightFactor: 5,
-      fontFamily: 'Impact',
-      color: (word, weight, fontSize, distance, theta) => {
-        const { score } = sentiment.analyze(word);
-        if (score < -10) {
-          return sentimentColors['-5'];
-        } else if (score > 10) {
-          return sentimentColors['5'];
-        } else {
-          const typedScore = String(score) as keyof typeof sentimentColors;
-          return sentimentColors[typedScore];
-        }
-      },
-      backgroundColor: '#fff',
-      minSize: 10,
-    };
+  const screenSize = useDebounce(useScreenSize(), 500);
 
-    WordCloud(document.getElementById('my-canvas')!, options);
-  }, [words]);
+  useEffect(() => {
+    if (words && words[0]) {
+      const mostFreqWord = words[0][1];
+      const options: Options = {
+        list: words,
+        gridSize: 5,
+        weightFactor: mostFreqWord > 15 ? 4 : 12,
+        fontFamily: 'Impact',
+        color: (word, weight, fontSize, distance, theta) => {
+          const { score } = sentiment.analyze(word);
+          if (score < -5) {
+            return sentimentColors['-5'];
+          } else if (score > 5) {
+            return sentimentColors['5'];
+          } else {
+            const typedScore = String(score) as keyof typeof sentimentColors;
+            return sentimentColors[typedScore];
+          }
+        },
+        backgroundColor: theme === 'dark' ? '#141b24' : '#e0e7eb',
+        minSize: 10,
+        shrinkToFit: true,
+      };
+
+      if (inView) {
+        WordCloud(document.getElementById('my-canvas')!, options);
+      }
+    }
+  }, [words, theme, screenSize[0].width, inView]);
 
   return (
-    <div>
-      <canvas id="my-canvas" width="800" height="800"></canvas>
+    <div id="surrounding_div" className="w-full h-[320px]" ref={ref}>
+      {inView && (
+        <canvas
+          width={document.getElementById('surrounding_div')?.offsetWidth}
+          height={document.getElementById('surrounding_div')?.offsetHeight}
+          id="my-canvas"
+        />
+      )}
     </div>
   );
 };
