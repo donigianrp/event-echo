@@ -32,9 +32,9 @@ export default async function EventSeriesPage({
   const id = Number(params.id);
   const eventSeries = await prisma.eventSeries.findUnique({
     where: { id },
-    // include: {
-    //   creator: true,
-    // },
+    include: {
+      creator: true,
+    },
   });
 
   const isLikedOrFavorited = await useSeriesLikes({
@@ -53,10 +53,9 @@ export default async function EventSeriesPage({
 
   return (
     <>
-      <div className="flex flex-col gap-4 p-10">
+      <div className="flex flex-col mb-2">
         <div className="flex justify-between">
           <div>
-            <h1 className="text-3xl font-medium">{eventSeries.title}</h1>
             <Link href={`/user/${eventSeries.creator_id}`}>
               {/*<h2 className="text-lg">{eventSeries.creator.name}</h2>
             <h3 className="text-sm">@{eventSeries.creator.username}</h3> */}
@@ -75,18 +74,9 @@ export default async function EventSeriesPage({
               />
               <p className="text-center">{isLikedOrFavorited.favCount}</p>
             </div>
-
-            {session?.user.id === eventSeries?.creator_id && (
-              <Link
-                className={buttonVariants({ variant: 'default' })}
-                href={`/event_series/${params.id}/edit`}
-              >
-                Edit
-              </Link>
-            )}
           </div>
         </div>
-        <br />
+
         {eventSeries.description}
       </div>
       <Card className="p-2 bg-background">
@@ -105,9 +95,9 @@ export default async function EventSeriesPage({
                 </Link>
               )}
             </div>
-            {/* <CardTitle className="text-md"> */}
-            {/* {eventSeries.creator.name} */}
-            {/* </CardTitle> */}
+            <CardTitle className="text-md">
+              {eventSeries.creator.name}
+            </CardTitle>
           </div>
           <CardDescription>{eventSeries.description}</CardDescription>
         </CardHeader>
