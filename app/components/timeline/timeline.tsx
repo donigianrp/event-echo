@@ -6,30 +6,142 @@ import { useEffect } from 'react';
 import ReactSlider from 'react-slider';
 import { Button } from '../ui/button';
 import DataTabs from './data_tabs/data_tabs';
+import { comments } from '@/prisma/seedData';
 
-const data = [
-  { eventName: 'Video 1', wordCount: 47 },
-  { eventName: 'Video 2', wordCount: 22 },
-  { eventName: 'Video 3', wordCount: 2 },
-  { eventName: 'Video 4', wordCount: 4 },
-  { eventName: 'Video 5', wordCount: 1 },
-];
+const nonRelevantWords: { [val: string]: boolean } = {
+  that: true,
+  when: true,
+  this: true,
+  have: true,
+  with: true,
+  from: true,
+  they: true,
+  what: true,
+  your: true,
+  like: true,
+  just: true,
+  some: true,
+  more: true,
+  will: true,
+  than: true,
+  into: true,
+  them: true,
+  then: true,
+  only: true,
+  come: true,
+  over: true,
+  well: true,
+  here: true,
+  much: true,
+  also: true,
+  make: true,
+  back: true,
+  even: true,
+  good: true,
+  very: true,
+  want: true,
+  work: true,
+  find: true,
+  give: true,
+  many: true,
+  such: true,
+  need: true,
+  take: true,
+  help: true,
+  live: true,
+  turn: true,
+  away: true,
+  face: true,
+  show: true,
+  long: true,
+  ever: true,
+  feel: true,
+  keep: true,
+  look: true,
+  seem: true,
+  name: true,
+  time: true,
+  done: true,
+  hear: true,
+  sure: true,
+  real: true,
+  last: true,
+  high: true,
+  must: true,
+  year: true,
+  know: true,
+  days: true,
+  never: true,
+  once: true,
+  life: true,
+};
+
+const cleanString = (word: string) => {
+  // Remove words with numbers and trim leading/trailing punctuation
+  return word
+    .replace(/\b\w*\d\w*\b/g, '') // Remove words with numbers
+    .replace(/^[^\w\s]+|[^\w\s]+$/g, '') // Trim leading/trailing punctuation
+    .toLowerCase();
+};
+
+export interface GraphData {
+  name: string;
+  wordCount: number;
+}
 
 const Timeline = () => {
+  const [graphData, setGraphData] = useState<GraphData[]>([]);
+  const [wordCloudData, setWordCloudData] = useState<[string, number][]>([]);
   const [value, setValue] = useState(0);
-  const [aggValue, setAggValue] = useState([0, data.length - 1]);
+  const [aggValue, setAggValue] = useState([0, comments.length - 1]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAggregate, setIsAggregate] = useState(false);
-  const [sum, setSum] = useState(0);
+
+  const countOccurrences = (arr: string[]) => {
+    const result: { [val: string]: number } = {};
+    const graphDataArr: { name: string; wordCount: number }[] = [];
+
+    arr.forEach((text) => {
+      const cleaned = cleanString(text);
+      if (cleaned.length > 3 && !nonRelevantWords[cleaned as string]) {
+        result[cleaned] = (result[cleaned] || 0) + 1;
+      }
+    });
+
+    const wordCloudArr: [string, number][] = Object.entries(result)
+      .sort((a, b) => {
+        return b[1] - a[1];
+      })
+      .slice(0, 30);
+
+    wordCloudArr.forEach((item) => {
+      const obj: {
+        name: string;
+        wordCount: number;
+      } = { name: '', wordCount: 0 };
+      obj['name'] = item[0];
+      obj['wordCount'] = item[1];
+      graphDataArr.push(obj);
+    });
+
+    setWordCloudData(wordCloudArr);
+    setGraphData(graphDataArr);
+  };
 
   const calculateSum = () => {
-    let total = 0;
+    const aggregateContents: string[] = [];
 
     for (let i = aggValue[0]; i <= aggValue[1]; i++) {
-      total = total + data[i].wordCount;
+      const splitContents = comments[i].contents.split(' ');
+      aggregateContents.push(...splitContents);
     }
-    setSum(total);
+    countOccurrences(aggregateContents);
   };
+
+  useEffect(() => {
+    const splitContents = comments[value].contents.split(' ');
+    countOccurrences(splitContents);
+  }, [value]);
 
   useEffect(() => {
     let handlePlay: NodeJS.Timeout | undefined;
@@ -40,7 +152,7 @@ const Timeline = () => {
       const increment = () => {
         num++;
         setValue(num);
-        if (num >= data.length - 1) {
+        if (num >= comments.length - 1) {
           setIsPlaying(false);
         }
       };
@@ -65,7 +177,7 @@ const Timeline = () => {
   };
 
   const play = () => {
-    if (value !== data.length - 1) {
+    if (value !== comments.length - 1) {
       setIsPlaying(true);
     } else {
       setValue(0);
@@ -74,17 +186,17 @@ const Timeline = () => {
   };
 
   return (
-    <div className="px-80">
-      <div className="flex items-center my-2">
+    <>
+      <div className="flex items-center my-2 ">
         <ReactSlider
-          className="w-full h-5"
+          className="w-full h-5 z-10"
           trackClassName={`h-2 top-2/4 -translate-y-1/2 bg-foreground rounded-full ${
             isAggregate ? 'aggregate' : 'track'
           }`}
           thumbClassName="bg-black w-5 h-5 rounded-full border-2 border-primary"
           markClassName="cursor-pointer top-2/4 -translate-y-1/2 w-1 rounded-full h-8 bg-primary ml-2 -z-10"
           min={0}
-          max={data.length - 1}
+          max={comments.length - 1}
           marks
           pearling
           minDistance={1}
@@ -149,12 +261,12 @@ const Timeline = () => {
       </div>
       <DataTabs
         isAggregate={isAggregate}
-        data={data}
+        graphData={graphData}
+        wordCloudData={wordCloudData}
         aggValue={aggValue}
         value={value}
-        sum={sum}
       />
-    </div>
+    </>
   );
 };
 
