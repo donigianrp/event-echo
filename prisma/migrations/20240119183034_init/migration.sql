@@ -7,10 +7,7 @@ CREATE TABLE "event" (
     "description" TEXT,
     "event_date_start" TIMESTAMP(3),
     "event_date_finish" TIMESTAMP(3),
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "creator_id" INTEGER NOT NULL,
-========
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
 
     CONSTRAINT "event_pkey" PRIMARY KEY ("id")
 );
@@ -113,11 +110,7 @@ CREATE TABLE "event_series" (
     "updated_at" TIMESTAMP(3) NOT NULL,
     "is_private" BOOLEAN NOT NULL,
     "view_count" INTEGER,
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "creator_id" INTEGER NOT NULL,
-========
-    "creator_id" TEXT NOT NULL,
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
     "has_adult_content" BOOLEAN NOT NULL DEFAULT true,
     "has_spam" BOOLEAN NOT NULL DEFAULT true,
 
@@ -179,13 +172,8 @@ CREATE TABLE "social_media_tag" (
 
 -- CreateTable
 CREATE TABLE "account" (
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "id" SERIAL NOT NULL,
     "user_id" INTEGER NOT NULL,
-========
-    "id" TEXT NOT NULL,
-    "user_id" TEXT NOT NULL,
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
     "type" TEXT NOT NULL,
     "provider" TEXT NOT NULL,
     "provider_account_id" TEXT NOT NULL,
@@ -206,11 +194,7 @@ CREATE TABLE "account" (
 CREATE TABLE "session" (
     "id" TEXT NOT NULL,
     "session_token" TEXT NOT NULL,
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "user_id" INTEGER NOT NULL,
-========
-    "user_id" TEXT NOT NULL,
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
     "expires" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "session_pkey" PRIMARY KEY ("id")
@@ -218,7 +202,6 @@ CREATE TABLE "session" (
 
 -- CreateTable
 CREATE TABLE "user" (
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "id" SERIAL NOT NULL,
     "name" TEXT,
     "username" TEXT,
@@ -226,13 +209,6 @@ CREATE TABLE "user" (
     "email_verified" TIMESTAMP(3),
     "image" TEXT,
     "status" TEXT DEFAULT 'active',
-========
-    "id" TEXT NOT NULL,
-    "name" TEXT,
-    "email" TEXT NOT NULL,
-    "emailVerified" TIMESTAMP(3),
-    "image" TEXT,
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 
@@ -241,20 +217,15 @@ CREATE TABLE "user" (
 
 -- CreateTable
 CREATE TABLE "subscriptions" (
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
     "subscribed_by_id" INTEGER NOT NULL,
     "subscribed_to_id" INTEGER NOT NULL,
-========
-    "subscribed_by_id" TEXT NOT NULL,
-    "subscribed_to_id" TEXT NOT NULL,
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
 
     CONSTRAINT "subscriptions_pkey" PRIMARY KEY ("subscribed_to_id","subscribed_by_id")
 );
 
 -- CreateTable
 CREATE TABLE "user_series_like" (
-    "user_id" TEXT NOT NULL,
+    "user_id" INTEGER NOT NULL,
     "event_series_id" INTEGER NOT NULL,
 
     CONSTRAINT "user_series_like_pkey" PRIMARY KEY ("user_id","event_series_id")
@@ -262,7 +233,7 @@ CREATE TABLE "user_series_like" (
 
 -- CreateTable
 CREATE TABLE "user_series_favorite" (
-    "user_id" TEXT NOT NULL,
+    "user_id" INTEGER NOT NULL,
     "event_series_id" INTEGER NOT NULL,
 
     CONSTRAINT "user_series_favorite_pkey" PRIMARY KEY ("user_id","event_series_id")
@@ -288,12 +259,9 @@ CREATE UNIQUE INDEX "account_provider_provider_account_id_key" ON "account"("pro
 CREATE UNIQUE INDEX "session_session_token_key" ON "session"("session_token");
 
 -- CreateIndex
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
 CREATE UNIQUE INDEX "user_username_key" ON "user"("username");
 
 -- CreateIndex
-========
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
 CREATE UNIQUE INDEX "user_email_key" ON "user"("email");
 
 -- CreateIndex
@@ -303,12 +271,9 @@ CREATE UNIQUE INDEX "verification_token_token_key" ON "verification_token"("toke
 CREATE UNIQUE INDEX "verification_token_identifier_token_key" ON "verification_token"("identifier", "token");
 
 -- AddForeignKey
-<<<<<<<< HEAD:prisma/migrations/20240117184038_init/migration.sql
 ALTER TABLE "event" ADD CONSTRAINT "event_creator_id_fkey" FOREIGN KEY ("creator_id") REFERENCES "user"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-========
->>>>>>>> 202e7dc (fixed migration):prisma/migrations/20240104184209_init/migration.sql
 ALTER TABLE "source_content" ADD CONSTRAINT "source_content_social_content_creator_id_fkey" FOREIGN KEY ("social_content_creator_id") REFERENCES "source_content_creator"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
