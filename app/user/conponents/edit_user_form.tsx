@@ -46,7 +46,7 @@ export default function EditUserForm(props: { user: any }) {
   }
 
   return (
-    <div className="flex p-10 lg:w-1/2 mx-auto my-10 align-middle">
+    <div className="flex p-10 w-full xl:w-1/2 mx-auto my-10 align-middle">
       <form action={formAction}>
         <h1 className="text-xl">Edit Profile</h1>
         <Input type="hidden" name="id" value={props.user.id} />

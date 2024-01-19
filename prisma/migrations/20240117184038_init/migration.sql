@@ -69,7 +69,8 @@ CREATE TABLE "event_type" (
 -- CreateTable
 CREATE TABLE "event_category" (
     "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
+    "label" TEXT NOT NULL,
+    "value" TEXT NOT NULL,
 
     CONSTRAINT "event_category_pkey" PRIMARY KEY ("id")
 );
@@ -77,7 +78,9 @@ CREATE TABLE "event_category" (
 -- CreateTable
 CREATE TABLE "event_sub_category" (
     "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
+    "label" TEXT NOT NULL,
+    "value" TEXT NOT NULL,
+    "category_value" TEXT NOT NULL,
 
     CONSTRAINT "event_sub_category_pkey" PRIMARY KEY ("id")
 );
@@ -203,7 +206,7 @@ CREATE TABLE "user" (
     "name" TEXT,
     "username" TEXT,
     "email" TEXT NOT NULL,
-    "emailVerified" TIMESTAMP(3),
+    "email_verified" TIMESTAMP(3),
     "image" TEXT,
     "status" TEXT DEFAULT 'active',
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -254,6 +257,9 @@ CREATE UNIQUE INDEX "account_provider_provider_account_id_key" ON "account"("pro
 
 -- CreateIndex
 CREATE UNIQUE INDEX "session_session_token_key" ON "session"("session_token");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "user_username_key" ON "user"("username");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "user_email_key" ON "user"("email");
