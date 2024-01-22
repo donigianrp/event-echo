@@ -12,10 +12,14 @@ export default function LoadSeries({
   route,
   id,
   query,
+  category,
+  subcategory,
 }: {
   route: string;
   id?: string;
   query?: string;
+  category?: string;
+  subcategory?: string;
 }) {
   const numOfEventSeries = 5;
   const { ref, inView } = useInView();
@@ -31,6 +35,12 @@ export default function LoadSeries({
     }
     if (query) {
       params.set('query', query);
+    }
+    if (category) {
+      params.set('category', category);
+    }
+    if (subcategory) {
+      params.set('subcategory', subcategory);
     }
     return `/api/${route}?${params.toString()}`;
   };

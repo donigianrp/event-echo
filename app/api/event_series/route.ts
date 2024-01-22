@@ -6,6 +6,8 @@ export async function GET(request: Request) {
   const limit = Number(searchParams.get('limit'));
   const page = Number(searchParams.get('page'));
   const id = Number(searchParams.get('id'));
+  const category = searchParams.get('category');
+  const subcategory = searchParams.get('subcategory');
 
   const [result, count] = await prisma.$transaction([
     prisma.eventSeries.findMany({
@@ -28,6 +30,24 @@ export async function GET(request: Request) {
             },
           },
         ],
+        event_type: {
+          some: {
+            event_type: {
+              AND: [
+                {
+                  event_category: {
+                    ...(category ? { value: category } : undefined),
+                  },
+                },
+                {
+                  event_sub_category: {
+                    ...(subcategory ? { value: subcategory } : undefined),
+                  },
+                },
+              ],
+            },
+          },
+        },
       },
     }),
     prisma.eventSeries.count({
@@ -48,6 +68,24 @@ export async function GET(request: Request) {
             },
           },
         ],
+        event_type: {
+          some: {
+            event_type: {
+              AND: [
+                {
+                  event_category: {
+                    ...(category ? { value: category } : undefined),
+                  },
+                },
+                {
+                  event_sub_category: {
+                    ...(subcategory ? { value: subcategory } : undefined),
+                  },
+                },
+              ],
+            },
+          },
+        },
       },
     }),
   ]);
