@@ -5,6 +5,7 @@ import Providers from './providers';
 import ContentWrapper from './components/content_wrapper/content_wrapper';
 import Header from './components/header/header';
 import NavBar from './components/nav_bar/nav_bar';
+import { Toaster } from './components/ui/toaster';
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -23,6 +24,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <NavBar />
             <ContentWrapper>{children}</ContentWrapper>
           </main>
+          <NavBar />
+          <div className="m-2">{children}</div>
+          <Toaster />
         </Providers>
       </body>
     </html>

@@ -101,6 +101,19 @@ export interface EventSeriesModel {
   has_spam: boolean;
 }
 
+// ------------------------- EVENT MODEL ---------------------
+
+export interface EventModel {
+  id: number;
+  created_at: Date;
+  updated_at: Date;
+  title: string;
+  description: string | null;
+  event_date_start: Date | null;
+  event_date_finish: Date | null;
+  creator_id: number;
+}
+
 // ------------------------- CATEGORY MODEL ---------------------
 export interface CategoryModel {
   id: number;
