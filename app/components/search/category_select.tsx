@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { EventCategory, EventSubCategory } from '@prisma/client';
 import { useEffect, useState } from 'react';
-import { Combobox } from './ui/combobox';
+import { Combobox } from '../ui/combobox';
 
 export default function CategorySelect({
   categories,
@@ -60,23 +60,19 @@ export default function CategorySelect({
   };
 
   return (
-    <div className="flex gap-2">
-      <div>
-        <Combobox
-          options={categories}
-          inputLabel="Category"
-          controller={[category, resetSubCategoryAndSetCategory]}
-          handleSelect={handleCategory}
-        />
-      </div>
-      <div>
-        <Combobox
-          options={filterSubCategories(subcategories)}
-          inputLabel="Subcategory"
-          controller={[subcategory, setSubcategory]}
-          handleSelect={handleSubcategory}
-        />
-      </div>
+    <div className="flex gap-4">
+      <Combobox
+        options={categories}
+        inputLabel="Category"
+        controller={[category, resetSubCategoryAndSetCategory]}
+        handleSelect={handleCategory}
+      />
+      <Combobox
+        options={filterSubCategories(subcategories)}
+        inputLabel="Subcategory"
+        controller={[subcategory, setSubcategory]}
+        handleSelect={handleSubcategory}
+      />
     </div>
   );
 }

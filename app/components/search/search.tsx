@@ -1,8 +1,8 @@
 'use client';
 
 import { SearchIcon } from 'lucide-react';
-import { Input } from '../components/ui/input';
-import { Label } from './ui/label';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
