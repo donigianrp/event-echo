@@ -11,6 +11,28 @@ export const sourceContents = [
     like_count: 1159,
     comment_count: 446,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/7Uha2Wik2xg/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/7Uha2Wik2xg/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/7Uha2Wik2xg/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/7Uha2Wik2xg/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=XZv-d9iVoiY',
@@ -24,6 +46,28 @@ export const sourceContents = [
     like_count: 390,
     comment_count: 310,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/XZv-d9iVoiY/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/XZv-d9iVoiY/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/XZv-d9iVoiY/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/XZv-d9iVoiY/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=l9PFVDkr2Jc',
@@ -37,6 +81,28 @@ export const sourceContents = [
     like_count: 226,
     comment_count: 516,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/l9PFVDkr2Jc/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/l9PFVDkr2Jc/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/l9PFVDkr2Jc/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/l9PFVDkr2Jc/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=kdKa0Xc3dI0',
@@ -50,6 +116,28 @@ export const sourceContents = [
     like_count: 904,
     comment_count: 558,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/kdKa0Xc3dI0/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/kdKa0Xc3dI0/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/kdKa0Xc3dI0/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/kdKa0Xc3dI0/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=H2oQuA_X25k',
@@ -63,6 +151,28 @@ export const sourceContents = [
     like_count: 572,
     comment_count: 187,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/H2oQuA_X25k/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/H2oQuA_X25k/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/H2oQuA_X25k/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/H2oQuA_X25k/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=9g6JIRihr3I',
@@ -76,6 +186,28 @@ export const sourceContents = [
     like_count: 1147,
     comment_count: 266,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/9g6JIRihr3I/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/9g6JIRihr3I/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/9g6JIRihr3I/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/9g6JIRihr3I/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=m4CnzgPFgN8',
@@ -89,6 +221,28 @@ export const sourceContents = [
     like_count: 674,
     comment_count: 284,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/m4CnzgPFgN8/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/m4CnzgPFgN8/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/m4CnzgPFgN8/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/m4CnzgPFgN8/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=cjFrUd4Tl-g',
@@ -102,6 +256,28 @@ export const sourceContents = [
     like_count: 281,
     comment_count: 470,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/cjFrUd4Tl-g/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/cjFrUd4Tl-g/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/cjFrUd4Tl-g/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/cjFrUd4Tl-g/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=Orr1Uz2b0Lg',
@@ -115,6 +291,28 @@ export const sourceContents = [
     like_count: 194,
     comment_count: 315,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/Orr1Uz2b0Lg/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/Orr1Uz2b0Lg/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/Orr1Uz2b0Lg/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/Orr1Uz2b0Lg/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=L0S241PLfjw',
@@ -128,6 +326,28 @@ export const sourceContents = [
     like_count: 280,
     comment_count: 390,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/L0S241PLfjw/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/L0S241PLfjw/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/L0S241PLfjw/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/L0S241PLfjw/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=3zZO_Tciqvc',
@@ -141,6 +361,28 @@ export const sourceContents = [
     like_count: 285,
     comment_count: 475,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/3zZO_Tciqvc/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/3zZO_Tciqvc/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/3zZO_Tciqvc/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/3zZO_Tciqvc/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=tKmRrjzYFvQ',
@@ -154,6 +396,28 @@ export const sourceContents = [
     like_count: 165,
     comment_count: 177,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/tKmRrjzYFvQ/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/tKmRrjzYFvQ/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/tKmRrjzYFvQ/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/tKmRrjzYFvQ/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=OsxqLlxgw5Y',
@@ -167,6 +431,28 @@ export const sourceContents = [
     like_count: 561,
     comment_count: 180,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/OsxqLlxgw5Y/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/OsxqLlxgw5Y/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/OsxqLlxgw5Y/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/OsxqLlxgw5Y/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=WTiNOlp6HEg',
@@ -180,6 +466,28 @@ export const sourceContents = [
     like_count: 150,
     comment_count: 241,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/WTiNOlp6HEg/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/WTiNOlp6HEg/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/WTiNOlp6HEg/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/WTiNOlp6HEg/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=CSUjZOdluj0',
@@ -193,6 +501,28 @@ export const sourceContents = [
     like_count: 139,
     comment_count: 68,
     comments_used: 68,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/CSUjZOdluj0/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/CSUjZOdluj0/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/CSUjZOdluj0/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/CSUjZOdluj0/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
   {
     url: 'https://www.youtube.com/watch?v=cjPhLQZiGBY',
@@ -206,6 +536,28 @@ export const sourceContents = [
     like_count: 0,
     comment_count: 1000,
     comments_used: 100,
+    thumbnails: {
+      default: {
+        url: 'https://i.ytimg.com/vi/cjPhLQZiGBY/default.jpg',
+        width: 120,
+        height: 90,
+      },
+      medium: {
+        url: 'https://i.ytimg.com/vi/cjPhLQZiGBY/mqdefault.jpg',
+        width: 320,
+        height: 180,
+      },
+      high: {
+        url: 'https://i.ytimg.com/vi/cjPhLQZiGBY/hqdefault.jpg',
+        width: 480,
+        height: 360,
+      },
+      standard: {
+        url: 'https://i.ytimg.com/vi/cjPhLQZiGBY/sddefault.jpg',
+        width: 640,
+        height: 480,
+      },
+    },
   },
 ];
 

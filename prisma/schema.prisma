@@ -43,6 +43,7 @@ model SourceContent {
   comment                   Comment?
   social_media_platform_id  Int
   social_content_creator_id Int
+  thumbnails                Json
   source_content_creator    SourceContentCreator @relation(fields: [social_content_creator_id], references: [id])
   social_media_platform     SocialMediaPlatform  @relation(fields: [social_media_platform_id], references: [id])
   events                    SourceContentEvent[]
