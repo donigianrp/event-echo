@@ -32,6 +32,7 @@ export default function CategorySelect({
     const params = new URLSearchParams(searchParams);
     if (c) {
       params.set('category', c);
+      params.set('page', '1');
       params.delete('subcategory');
     } else {
       params.delete('category');
@@ -44,6 +45,7 @@ export default function CategorySelect({
     const params = new URLSearchParams(searchParams);
     if (sc) {
       params.set('subcategory', sc);
+      params.set('page', '1');
     } else {
       params.delete('subcategory');
     }
@@ -60,7 +62,7 @@ export default function CategorySelect({
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-4">
       <Combobox
         options={categories}
         inputLabel="Category"

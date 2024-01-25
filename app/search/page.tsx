@@ -1,8 +1,10 @@
 import Search from '../components/search/search';
-import LoadSeries from '../components/infinite_scroll/load_series';
 import CategorySelect from '../components/search/category_select';
 import prisma from '@/db';
 import SortSelect from '../components/search/sort_select';
+import EventSeriesPagination from '../components/pagination/event_series_pagination';
+import { Suspense } from 'react';
+import { SearchSkeleton } from '../components/skeletons';
 
 export default async function Page({
   searchParams,
@@ -16,6 +18,7 @@ export default async function Page({
   };
 }) {
   const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
   const category = searchParams?.category || '';
   const subcategory = searchParams?.subcategory || '';
   const order = searchParams?.order || '';
@@ -32,10 +35,12 @@ export default async function Page({
   });
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="sm:w-4/5 flex flex-col gap-4 mx-auto sm:p-10 sm:pb-4">
-        <Search placeholder="Search&#8230;" />
-        <div className="flex gap-4">
+    <div className="flex flex-col">
+      <div className="w-full flex flex-col sm:flex-row gap-4 mx-auto p-10 pb-0">
+        <div className="grow">
+          <Search placeholder="Search&#8230;" />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4">
           <CategorySelect
             categories={categories}
             subcategories={subcategories}
@@ -43,14 +48,16 @@ export default async function Page({
           <SortSelect />
         </div>
       </div>
-      <div className="flex flex-col gap-6 mx-auto justify-center lg:w-1/2">
-        <LoadSeries
-          route={'event_series'}
-          query={query}
-          category={category}
-          subcategory={subcategory}
-          order={order}
-        />
+      <div className="flex flex-col gap-6 p-10 justify-center">
+        <Suspense key={query + currentPage} fallback={<SearchSkeleton />}>
+          <EventSeriesPagination
+            query={query}
+            currentPage={currentPage}
+            category={category}
+            subcategory={subcategory}
+            order={order}
+          />
+        </Suspense>
       </div>
     </div>
   );

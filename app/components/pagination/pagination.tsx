@@ -40,9 +40,11 @@ export default function PaginationComponent({
               <PaginationItem>
                 <PaginationLink href={createPageURL(1)}>1</PaginationLink>
               </PaginationItem>
-              <PaginationItem>
-                <PaginationEllipsis />
-              </PaginationItem>
+              {currentPage > 3 && (
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              )}
             </>
           )}
           {currentPage === 1 ? (
@@ -52,16 +54,20 @@ export default function PaginationComponent({
                   1
                 </PaginationLink>
               </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href={createPageURL(2)}>2</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href={createPageURL(3)}>3</PaginationLink>
-              </PaginationItem>
+              {totalPages > 1 && (
+                <PaginationItem>
+                  <PaginationLink href={createPageURL(2)}>2</PaginationLink>
+                </PaginationItem>
+              )}
+              {totalPages > 2 && (
+                <PaginationItem>
+                  <PaginationLink href={createPageURL(3)}>3</PaginationLink>
+                </PaginationItem>
+              )}
             </>
           ) : (
             <>
-              {currentPage === totalPages && (
+              {currentPage === totalPages && currentPage - 2 > 0 && (
                 <PaginationItem>
                   <PaginationLink href={createPageURL(currentPage - 2)}>
                     {currentPage - 2}
@@ -89,9 +95,11 @@ export default function PaginationComponent({
           )}
           {totalPages > currentPage + 1 && (
             <>
-              <PaginationItem>
-                <PaginationEllipsis />
-              </PaginationItem>
+              {totalPages > currentPage + 2 && (
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+              )}
               <PaginationItem>
                 <PaginationLink href={createPageURL(totalPages)}>
                   {totalPages}
