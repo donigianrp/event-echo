@@ -23,7 +23,7 @@ export default function EventSeriesCard(props: {
     <Card className="mx-auto w-full">
       <Link href={`/event_series/${props.id}`}>
         <CardHeader>
-          <CardTitle>{props.title}</CardTitle>
+          <CardTitle className="h-12 overflow-hidden">{props.title}</CardTitle>
           <CardDescription className="h-10 overflow-hidden">
             {props.description}
           </CardDescription>

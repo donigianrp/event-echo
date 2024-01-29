@@ -22,9 +22,15 @@ interface Props {
   options: { value: string; label: string }[];
   inputLabel: string;
   controller: [string, (val: string) => void];
+  handleSelect?: any;
 }
 
-export function Combobox({ options, inputLabel, controller }: Props) {
+export function Combobox({
+  options,
+  inputLabel,
+  controller,
+  handleSelect,
+}: Props) {
   const [open, setOpen] = React.useState(false);
   // const [value, setValue] = React.useState('');
   const [value, setValue] = controller;
@@ -56,6 +62,9 @@ export function Combobox({ options, inputLabel, controller }: Props) {
                   value={option.value}
                   onSelect={() => {
                     setValue(option.value === value ? '' : option.value);
+                    if (handleSelect) {
+                      handleSelect(option.value === value ? '' : option.value);
+                    }
                     setOpen(false);
                   }}
                 >

@@ -75,6 +75,11 @@ module.exports = {
           '40%': { transform: 'scale(1.2)' },
           '100%': { transform: 'scale(1)' },
         },
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
