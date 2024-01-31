@@ -4,9 +4,14 @@ import { buttonVariants } from '@/components/ui/button';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 import LoadSeries from '../components/infinite_scroll/load_series';
+import LoginPrompt from '../components/login_prompt';
 
 export default async function EventSeries() {
   const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return <LoginPrompt />;
+  }
 
   return (
     <div className="flex flex-col gap-6 mx-auto justify-center p-10 xl:w-1/2">

@@ -1,8 +1,13 @@
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import LoginPrompt from '@/app/components/login_prompt';
 import AddEventSeriesForm from '@/app/event_series/components/add_event_series_form';
+import { getServerSession } from 'next-auth';
 import React from 'react';
 
-const EventSeriesCreate = async () => {
+export default async function EventSeriesCreate() {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return <LoginPrompt />;
+  }
   return <AddEventSeriesForm />;
-};
-
-export default EventSeriesCreate;
+}

@@ -5,6 +5,9 @@ import { Heart } from 'lucide-react';
 import { like } from './actions';
 import { useFormState } from 'react-dom';
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
+import Login from '@/app/login/components/login';
+import { Dialog, DialogTrigger, DialogContent } from '../ui/dialog';
 
 export default function LikeButton(props: { eventId: number; liked: boolean }) {
   const initialState = {
@@ -13,8 +16,28 @@ export default function LikeButton(props: { eventId: number; liked: boolean }) {
     fill: props.liked ? '#f9a8d4' : '',
   };
 
+  const { status } = useSession();
   const [state, formAction] = useFormState(like, initialState);
   const [likeAnimation, setLikeAnimation] = useState(false);
+
+  if (status === 'unauthenticated') {
+    return (
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button
+            className={`hover:bg-transparent`}
+            variant="ghost"
+            size="icon"
+          >
+            <Heart color={'white'} fill={''} />
+          </Button>
+        </DialogTrigger>
+        <DialogContent>
+          <Login />
+        </DialogContent>
+      </Dialog>
+    );
+  }
 
   return (
     <form action={formAction}>

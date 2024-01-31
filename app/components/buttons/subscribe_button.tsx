@@ -3,6 +3,9 @@
 import { Button } from '../ui/button';
 import { useFormState } from 'react-dom';
 import { subscribe } from './actions';
+import { useSession } from 'next-auth/react';
+import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
+import Login from '@/app/login/components/login';
 
 export default function SubscribeButton(props: {
   id: number;
@@ -13,7 +16,21 @@ export default function SubscribeButton(props: {
     isSubscribed: props.isSubscribed,
   };
 
+  const { status } = useSession();
   const [state, formAction] = useFormState(subscribe, initialState);
+
+  if (status === 'unauthenticated') {
+    return (
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant={'default'}>Subscribe</Button>
+        </DialogTrigger>
+        <DialogContent>
+          <Login />
+        </DialogContent>
+      </Dialog>
+    );
+  }
 
   return (
     <form action={formAction}>
