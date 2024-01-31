@@ -47,16 +47,16 @@ const Header = async () => {
           <DropdownMenuContent align="end">
             {session ? (
               <>
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href={`/user/${session?.user.id}`}>Profile</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/login">Logout</Link>
+                <DropdownMenuItem asChild>
+                  <Link href="/api/auth/signout">Logout</Link>
                 </DropdownMenuItem>
               </>
             ) : (
-              <DropdownMenuItem>
-                <Link href="/api/auth/signout">Login</Link>
+              <DropdownMenuItem asChild>
+                <Link href="/login">Login</Link>
               </DropdownMenuItem>
             )}
           </DropdownMenuContent>

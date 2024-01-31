@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-import NavBar from '@/app/components/nav_bar/nav_bar';
 import Providers from './providers';
+import ContentWrapper from './components/content_wrapper/content_wrapper';
 import Header from './components/header/header';
+import NavBar from './components/nav_bar/nav_bar';
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
@@ -20,7 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <main>
             <Header />
             <NavBar />
-            <div className="my-2 mr-2 ml-2 md:ml-[205px]">{children}</div>
+            <ContentWrapper>{children}</ContentWrapper>
           </main>
         </Providers>
       </body>
