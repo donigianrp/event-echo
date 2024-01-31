@@ -43,14 +43,17 @@ export default async function UserProfile({
 
   const session = await getServerSession(authOptions);
 
-  const isSubscribed = await prisma.subscriptions.findUnique({
-    where: {
-      subscription_id: {
-        subscribed_by_id: session?.user.id || '',
-        subscribed_to_id: id,
+  let isSubscribed;
+  if (session) {
+    isSubscribed = await prisma.subscriptions.findUnique({
+      where: {
+        subscription_id: {
+          subscribed_by_id: session?.user.id || '',
+          subscribed_to_id: id,
+        },
       },
-    },
-  });
+    });
+  }
 
   const subscriptions = await prisma.subscriptions.findMany({
     where: {
