@@ -53,7 +53,7 @@ interface YouTubeCommentSnippet {
   topLevelComment: Comment;
 }
 
-interface Comment {
+interface YTComment {
   kind: string;
   etag: string;
   id: string;
@@ -75,6 +75,7 @@ interface Comment {
     publishedAt: datetime;
     updatedAt: datetime;
   };
+  replies?: { comments: YTComment[] };
 }
 
 interface CommentsReq {
@@ -99,6 +100,19 @@ export interface EventSeriesModel {
   creator_id: number;
   has_adult_content: boolean;
   has_spam: boolean;
+}
+
+// ------------------------- EVENT MODEL ---------------------
+
+export interface EventModel {
+  id: number;
+  created_at: Date;
+  updated_at: Date;
+  title: string;
+  description: string | null;
+  event_date_start: Date | null;
+  event_date_finish: Date | null;
+  creator_id: number;
 }
 
 // ------------------------- CATEGORY MODEL ---------------------

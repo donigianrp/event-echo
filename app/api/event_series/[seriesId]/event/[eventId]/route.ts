@@ -1,6 +1,6 @@
 import prisma from '@/db';
 
-// DELETE /event_series/[seriesId]/events/[eventId]
+// DELETE /event_series/[seriesId]/event/[eventId]
 
 export async function DELETE(
   request: Request,
@@ -52,7 +52,7 @@ export async function DELETE(
   }
 }
 
-// PUT /event_series/[seriesId]/events/[eventId]
+// PUT /event_series/[seriesId]/event/[eventId]
 
 export async function PUT(
   request: Request,
@@ -76,14 +76,13 @@ export async function PUT(
   }
 }
 
-// GET /event_series/[seriesId]/events/[eventId]
+// GET /event_series/[seriesId]/event/[eventId]
 
 export async function GET(
   request: Request,
   { params }: { params: { eventId: string; seriesId: string } },
 ) {
   const { eventId, seriesId } = params;
-  console.log(eventId, seriesId);
   try {
     const event = prisma.event.findFirst({
       where: { id: Number(eventId) },

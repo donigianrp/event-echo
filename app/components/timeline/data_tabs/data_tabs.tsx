@@ -19,6 +19,10 @@ interface Props {
   wordCloudData: [string, number][];
   aggValue: number[];
   value: number;
+  comments: {
+    source_content_id: number;
+    contents: string;
+  }[];
 }
 
 const charts: Chart[] = [
@@ -33,6 +37,7 @@ const DataTabs: FunctionComponent<Props> = ({
   wordCloudData,
   aggValue,
   value,
+  comments,
 }) => {
   return (
     <Tabs defaultValue="bar">
@@ -55,6 +60,7 @@ const DataTabs: FunctionComponent<Props> = ({
               aggValue={aggValue}
               value={value}
               type={chart.type}
+              comments={comments}
             />
           </TabsContent>
         );

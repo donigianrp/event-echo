@@ -1,4 +1,6 @@
-// GET /youtube/[contentId]
+// GET /youtube/comments/[contentId]
+
+import { YouTubeCommentResp } from '@/global';
 
 export async function GET(
   request: Request,
@@ -14,8 +16,13 @@ export async function GET(
     const data: { items: YouTubeCommentResp[] } = await response.json();
 
     return Response.json(
-      { items: data.items, channelId: data.items[0].snippet.channelId },
-      { status: 200 },
+      {
+        items: data.items,
+        channelId: data.items[0].snippet.channelId,
+      },
+      {
+        status: 200,
+      },
     );
   } catch {
     return Response.json({ status: 400 });
