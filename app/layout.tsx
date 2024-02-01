@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-import NavBar from '@/app/components/nav_bar/nav_bar';
 import Providers from './providers';
+import ContentWrapper from './components/content_wrapper/content_wrapper';
+import Header from './components/header/header';
+import NavBar from './components/nav_bar/nav_bar';
 
-const inter = Inter({ subsets: ['latin'] });
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,10 +16,13 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={plusJakartaSans.className}>
         <Providers>
-          <NavBar />
-          <div className="m-2">{children}</div>
+          <main>
+            <Header />
+            <NavBar />
+            <ContentWrapper>{children}</ContentWrapper>
+          </main>
         </Providers>
       </body>
     </html>
