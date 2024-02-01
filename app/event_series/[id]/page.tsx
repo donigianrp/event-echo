@@ -51,6 +51,34 @@ export default async function EventSeriesPage({
     return <p>Private</p>;
   }
 
+  const seriesEvents = await prisma.event.findMany({
+    where: {
+      event_series: {
+        some: {
+          event_series_id: eventSeries.id,
+        },
+      },
+    },
+    include: {
+      source_contents: {
+        include: {
+          source_content: {
+            include: {
+              comment: true,
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const seriesComments = seriesEvents.map((evt) => {
+    const { comment, id } = evt.source_contents[0].source_content;
+    return {
+      source_content_id: id,
+      contents: comment?.contents || '',
+    };
+  });
   return (
     <>
       <div className="flex flex-col mb-2">
@@ -104,7 +132,7 @@ export default async function EventSeriesPage({
         <CardContent>
           <div className="block lg:grid w-full lg:grid-cols-4 lg:gap-4">
             <div className="mb-2 col-span-3 lg:mb-0">
-              <Timeline />
+              <Timeline comments={seriesComments} />
             </div>
             <Card className="col-span-1">
               <CardHeader>

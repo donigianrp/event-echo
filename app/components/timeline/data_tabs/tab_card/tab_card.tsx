@@ -9,7 +9,7 @@ import { FunctionComponent } from 'react';
 import WordCloudDisplayComponent from '@/app/components/data_display/word_cloud';
 import BarGraph, { GraphData } from '@/app/components/data_display/bar_graph';
 import LineGraph from '@/app/components/data_display/line_graph';
-import { comments } from '@/prisma/seedData';
+// import { comments } from '@/prisma/seedData';
 
 interface Props {
   isAggregate: boolean;
@@ -18,6 +18,10 @@ interface Props {
   aggValue: number[];
   value: number;
   type: 'bar' | 'line' | 'cloud';
+  comments: {
+    source_content_id: number;
+    contents: string;
+  }[];
 }
 
 const TabCard: FunctionComponent<Props> = ({
@@ -27,6 +31,7 @@ const TabCard: FunctionComponent<Props> = ({
   aggValue,
   value,
   type,
+  comments,
 }) => {
   const dataDisplay = (type: string) => {
     switch (type) {

@@ -2,13 +2,18 @@
 import React, { useState, createContext } from 'react';
 import EditSeriesTabs from './edit_series_tabs';
 import EditSeriesContent from './edit_series_content';
-import { EditSeriesContextProps, EventSeriesEditTabs } from './page';
+import {
+  EditSeriesContextProps,
+  EventPosition,
+  EventSeriesEditTabs,
+} from './page';
 import {
   CategoryModel,
   EventModel,
   EventSeriesModel,
   SubCategoryModel,
 } from '@/global';
+import { Session } from 'next-auth';
 
 interface Props {
   editSeriesContextProps: EditSeriesContextProps;
@@ -18,15 +23,16 @@ export const EditSeriesContext = createContext<{
   categories: CategoryModel[];
   subCategories: SubCategoryModel[];
   eventSeries: EventSeriesModel;
-  events: EventModel[];
+  events: EventPosition[];
   tab: EventSeriesEditTabs;
   setTab: (val: EventSeriesEditTabs) => void;
   positionMap: { [val: number]: number };
+  session: Session | null;
 } | null>(null);
 
 const EditSeriesContainer = ({ editSeriesContextProps }: Props) => {
   const [tab, setTab] = useState<EventSeriesEditTabs>('details');
-  const { categories, subCategories, events, positionMap } =
+  const { categories, subCategories, events, positionMap, session } =
     editSeriesContextProps;
 
   const eventSeries = editSeriesContextProps.eventSeries;
@@ -44,6 +50,7 @@ const EditSeriesContainer = ({ editSeriesContextProps }: Props) => {
           tab,
           setTab,
           positionMap,
+          session,
         }}
       >
         <EditSeriesTabs />

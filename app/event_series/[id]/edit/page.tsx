@@ -1,6 +1,6 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import prisma from '@/db';
-import { getServerSession } from 'next-auth';
+import { Session, getServerSession } from 'next-auth';
 import EditSeriesContainer from './edit_series_container';
 import {
   CategoryModel,
@@ -9,10 +9,21 @@ import {
   SubCategoryModel,
 } from '@/global';
 
-export type EventSeriesEditTabs = 'details' | 'events';
+export type EventSeriesEditTabs = 'details' | 'events' | 'add';
 
-interface EventPosition extends EventModel {
+export interface ContentThumbnail {
+  url: string;
+  width: number;
+  height: number;
+}
+export interface EventPosition extends EventModel {
   event_position: number;
+  thumbnails: {
+    high: ContentThumbnail;
+    medium: ContentThumbnail;
+    default: ContentThumbnail;
+    standard: ContentThumbnail;
+  };
 }
 export interface EditSeriesContextProps {
   categories: CategoryModel[];
@@ -20,6 +31,7 @@ export interface EditSeriesContextProps {
   eventSeries: EventSeriesModel | null;
   events: EventPosition[];
   positionMap: { [val: number]: number };
+  session: Session | null;
 }
 
 const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
@@ -28,16 +40,18 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     where: { id: Number(params.id) },
   });
 
-  const events: EventPosition[] = await prisma.$queryRaw`
+  const events = await prisma.$queryRaw<EventPosition[]>`
     WITH EventPositions AS (
       SELECT event_id, event_position
       FROM "event_series_event" 
       WHERE "event_series_event"."event_series_id" = 1
     )
 
-    SELECT "event".*, "event_position" 
+    SELECT "event".*, "event_position", "thumbnails" 
     FROM "event"
     LEFT JOIN EventPositions ON EventPositions."event_id" = "event"."id"
+    LEFT JOIN "source_content_event" ON "source_content_event"."event_id" = "event"."id"
+    LEFT JOIN "source_content" ON "source_content"."id" = "source_content_event"."source_content_id"
     ORDER BY "event_position"
   `;
 
@@ -62,6 +76,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     subCategories,
     positionMap,
     eventSeries,
+    session,
   };
 
   return (

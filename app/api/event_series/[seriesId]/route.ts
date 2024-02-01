@@ -1,5 +1,7 @@
 import prisma from '@/db';
 
+// PUT /event_series/[seriesId]
+
 export async function PUT(
   request: Request,
   { params }: { params: { seriesId: string } },

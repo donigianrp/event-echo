@@ -176,7 +176,6 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                         tags={tags}
                         className="sm:min-w-[350px]"
                         setTags={(newTags) => {
-                          console.log(newTags);
                           setTags(newTags);
                           setValue('tags', newTags as [Tag, ...Tag[]]);
                         }}

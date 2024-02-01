@@ -53,7 +53,7 @@ interface YouTubeCommentSnippet {
   topLevelComment: Comment;
 }
 
-interface Comment {
+interface YTComment {
   kind: string;
   etag: string;
   id: string;
@@ -75,6 +75,7 @@ interface Comment {
     publishedAt: datetime;
     updatedAt: datetime;
   };
+  replies?: { comments: YTComment[] };
 }
 
 interface CommentsReq {

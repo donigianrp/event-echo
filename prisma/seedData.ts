@@ -642,82 +642,82 @@ export const eventSeriesEvents = [
   {
     event_id: 1,
     event_series_id: 1,
-    event_position: 0,
+    event_position: 1,
   },
   {
     event_id: 2,
     event_series_id: 1,
-    event_position: 1,
+    event_position: 2,
   },
   {
     event_id: 3,
     event_series_id: 1,
-    event_position: 2,
+    event_position: 3,
   },
   {
     event_id: 4,
     event_series_id: 1,
-    event_position: 3,
+    event_position: 4,
   },
   {
     event_id: 5,
     event_series_id: 1,
-    event_position: 4,
+    event_position: 5,
   },
   {
     event_id: 6,
     event_series_id: 1,
-    event_position: 5,
+    event_position: 6,
   },
   {
     event_id: 7,
     event_series_id: 1,
-    event_position: 6,
+    event_position: 7,
   },
   {
     event_id: 8,
     event_series_id: 1,
-    event_position: 7,
+    event_position: 8,
   },
   {
     event_id: 9,
     event_series_id: 1,
-    event_position: 8,
+    event_position: 9,
   },
   {
     event_id: 10,
     event_series_id: 1,
-    event_position: 9,
+    event_position: 10,
   },
   {
     event_id: 11,
     event_series_id: 1,
-    event_position: 10,
+    event_position: 11,
   },
   {
     event_id: 12,
     event_series_id: 1,
-    event_position: 11,
+    event_position: 12,
   },
   {
     event_id: 13,
     event_series_id: 1,
-    event_position: 12,
+    event_position: 13,
   },
   {
     event_id: 14,
     event_series_id: 1,
-    event_position: 13,
+    event_position: 14,
   },
   {
     event_id: 15,
     event_series_id: 1,
-    event_position: 14,
+    event_position: 15,
   },
   {
     event_id: 16,
     event_series_id: 1,
-    event_position: 15,
+    event_position: 16,
   },
 ];
 

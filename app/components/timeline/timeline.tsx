@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import ReactSlider from 'react-slider';
 import { Button } from '../ui/button';
 import DataTabs from './data_tabs/data_tabs';
-import { comments } from '@/prisma/seedData';
+import { comments as mockData } from '@/prisma/seedData';
 
 const nonRelevantWords: { [val: string]: boolean } = {
   that: true,
@@ -89,7 +89,14 @@ export interface GraphData {
   wordCount: number;
 }
 
-const Timeline = () => {
+interface Props {
+  comments: {
+    source_content_id: number;
+    contents: string;
+  }[];
+}
+
+const Timeline = ({ comments }: Props) => {
   const [graphData, setGraphData] = useState<GraphData[]>([]);
   const [wordCloudData, setWordCloudData] = useState<[string, number][]>([]);
   const [value, setValue] = useState(0);
@@ -265,6 +272,7 @@ const Timeline = () => {
         wordCloudData={wordCloudData}
         aggValue={aggValue}
         value={value}
+        comments={comments}
       />
     </>
   );

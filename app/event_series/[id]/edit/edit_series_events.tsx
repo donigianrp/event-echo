@@ -1,28 +1,21 @@
 'use client';
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableHeaderRow,
-  TableRow,
-} from '@/app/components/ui/table';
+import { Button } from '@/app/components/ui/button';
+import { useToast } from '@/app/components/ui/use-toast';
 import { EventModel } from '@/global';
 import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, arrayMove } from '@dnd-kit/sortable';
+import { ListRestart, Save } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useContext, useState } from 'react';
 import { EditSeriesContext } from './edit_series_container';
+import { EventPosition } from './page';
 import { SortableItem } from './sortable_item';
-import { Button } from '@/app/components/ui/button';
-import { useToast } from '@/app/components/ui/use-toast';
-import { revalidatePath } from 'next/cache';
-import { useRouter } from 'next/navigation';
 
 const EditSeriesEvents = () => {
   const localStore = useContext(EditSeriesContext);
   const events = localStore?.events || [];
   const eventSeries = localStore?.eventSeries;
-  const [items, setItems] = useState<EventModel[]>(events);
+  const [items, setItems] = useState<EventPosition[]>(events);
   const { toast } = useToast();
   const router = useRouter();
 
@@ -68,26 +61,28 @@ const EditSeriesEvents = () => {
 
   return (
     <div>
-      <Button onClick={() => resetOrder()}>Reset</Button>
-      <Button onClick={() => updateSeriesOrder(items)}>Save</Button>
+      <div className={`w-full flex justify-end`}>
+        <div className={`m-2`}>
+          <Button className={`bg-white`} onClick={() => resetOrder()}>
+            <ListRestart />
+          </Button>
+          <Button
+            className={`ml-2 bg-white`}
+            onClick={() => updateSeriesOrder(items)}
+          >
+            <Save />
+          </Button>
+        </div>
+      </div>
       <DndContext onDragEnd={reorderEvents}>
         <main className={'flex flex-col align-middle p-1 g-2'}>
-          <Table>
-            <TableHeader>
-              <TableHeaderRow>
-                <TableHead className="w-[50px]">Pos.</TableHead>
-                <TableHead className="w-[400px]">Title</TableHead>
-                <TableHead>Description</TableHead>
-              </TableHeaderRow>
-            </TableHeader>
-            <TableBody>
-              <SortableContext items={items}>
-                {items.map((item, idx) => (
-                  <SortableItem event={item} idx={idx} key={item.id} />
-                ))}
-              </SortableContext>
-            </TableBody>
-          </Table>
+          <div className={'w-full'}>
+            <SortableContext items={items}>
+              {items.map((item, idx) => (
+                <SortableItem event={item} idx={idx} key={item.id} />
+              ))}
+            </SortableContext>
+          </div>
         </main>
       </DndContext>
     </div>
