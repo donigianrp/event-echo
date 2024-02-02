@@ -108,7 +108,7 @@ const Timeline = ({ comments }: Props) => {
     const result: { [val: string]: number } = {};
     const graphDataArr: { name: string; wordCount: number }[] = [];
 
-    arr.forEach((text) => {
+    arr?.forEach((text) => {
       const cleaned = cleanString(text);
       if (cleaned.length > 3 && !nonRelevantWords[cleaned as string]) {
         result[cleaned] = (result[cleaned] || 0) + 1;
@@ -146,7 +146,7 @@ const Timeline = ({ comments }: Props) => {
   };
 
   useEffect(() => {
-    const splitContents = comments[value].contents.split(' ');
+    const splitContents = comments[value]?.contents.split(' ');
     countOccurrences(splitContents);
   }, [value]);
 

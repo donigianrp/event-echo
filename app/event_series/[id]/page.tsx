@@ -85,11 +85,10 @@ export default async function EventSeriesPage({
         <div className="flex justify-between">
           <div>
             <Link href={`/user/${eventSeries.creator_id}`}>
-              {/*<h2 className="text-lg">{eventSeries.creator.name}</h2>
-            <h3 className="text-sm">@{eventSeries.creator.username}</h3> */}
+              <h2 className="text-lg">{eventSeries.creator.name}</h2>
+              <h3 className="text-sm">@{eventSeries.creator.username}</h3>
             </Link>
           </div>
-
           <div className="flex gap-4">
             <div className="flex flex-col">
               <LikeButton eventId={id} liked={isLikedOrFavorited.liked} />
@@ -104,8 +103,6 @@ export default async function EventSeriesPage({
             </div>
           </div>
         </div>
-
-        {eventSeries.description}
       </div>
       <Card className="p-2 bg-background">
         <CardHeader>
