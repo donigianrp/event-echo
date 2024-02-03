@@ -12,27 +12,37 @@ import Login from '@/app/login/components/login';
 export default function FavoriteButton(props: {
   eventId: number;
   favorited: boolean;
+  count: number;
 }) {
   const initialState = {
     message: '',
-    fill: props.favorited ? 'white' : '',
   };
 
   const { status } = useSession();
   const [state, formAction] = useFormState(favorite, initialState);
-  const [favoriteAnimation, setFavoriteAnimation] = useState(false);
+  const [favorited, setFavorited] = useState(props.favorited);
+  const [count, setCount] = useState(props.count);
 
   if (status === 'unauthenticated') {
     return (
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            className={`hover:bg-transparent`}
-            variant="ghost"
-            size="icon"
-          >
-            <Bookmark color={'white'} fill={''} />
-          </Button>
+          <div>
+            <Button
+              className={`hover:bg-transparent`}
+              variant="ghost"
+              size="icon"
+            >
+              <Bookmark
+                className={
+                  favorited ? 'text-foreground' : 'fill-primary text-primary'
+                }
+              />
+            </Button>
+            <div className="overflow-hidden">
+              <p className={`text-center`}>{count}</p>
+            </div>
+          </div>
         </DialogTrigger>
         <DialogContent>
           <Login />
@@ -45,20 +55,33 @@ export default function FavoriteButton(props: {
     <form action={formAction}>
       <input type="hidden" name="event_series_id" value={props.eventId} />
       <Button
-        className={`hover:bg-transparent ${
-          favoriteAnimation && 'animate-favorite'
-        }`}
+        className={`hover:bg-transparent ${favorited && 'animate-favorite'}`}
         variant="ghost"
         size="icon"
         type="submit"
-        onClick={() => (props.favorited ? '' : setFavoriteAnimation(true))}
-        onAnimationEnd={() => setFavoriteAnimation(false)}
+        onClick={() => {
+          setFavorited(!favorited);
+          favorited ? setCount(count - 1) : setCount(count + 1);
+        }}
       >
-        <Bookmark color={'white'} fill={state.fill} />
+        <Bookmark
+          className={
+            favorited ? 'fill-foreground text-foreground' : 'text-foreground'
+          }
+        />
       </Button>
       <p aria-live="polite" className="sr-only" role="status">
         {state?.message}
       </p>
+      <div className="overflow-hidden">
+        <p
+          className={`text-center ${
+            favorited ? 'animate-count-up' : 'animate-count-down'
+          }`}
+        >
+          {count}
+        </p>
+      </div>
     </form>
   );
 }

@@ -9,28 +9,40 @@ import { useSession } from 'next-auth/react';
 import Login from '@/app/login/components/login';
 import { Dialog, DialogTrigger, DialogContent } from '../ui/dialog';
 
-export default function LikeButton(props: { eventId: number; liked: boolean }) {
+export default function LikeButton(props: {
+  eventId: number;
+  liked: boolean;
+  count: number;
+}) {
   const initialState = {
     message: '',
-    color: props.liked ? '#f9a8d4' : 'white',
-    fill: props.liked ? '#f9a8d4' : '',
   };
 
   const { status } = useSession();
   const [state, formAction] = useFormState(like, initialState);
-  const [likeAnimation, setLikeAnimation] = useState(false);
+  const [liked, setLiked] = useState(props.liked);
+  const [count, setCount] = useState(props.count);
 
   if (status === 'unauthenticated') {
     return (
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            className={`hover:bg-transparent`}
-            variant="ghost"
-            size="icon"
-          >
-            <Heart color={'white'} fill={''} />
-          </Button>
+          <div>
+            <Button
+              className={`hover:bg-transparent`}
+              variant="ghost"
+              size="icon"
+            >
+              <Heart
+                className={
+                  liked ? 'text-foreground' : 'fill-pink-300 text-pink-300'
+                }
+              />
+            </Button>
+            <div className="overflow-hidden">
+              <p className={`text-center`}>{count}</p>
+            </div>
+          </div>
         </DialogTrigger>
         <DialogContent>
           <Login />
@@ -40,21 +52,38 @@ export default function LikeButton(props: { eventId: number; liked: boolean }) {
   }
 
   return (
-    <form action={formAction}>
-      <input type="hidden" name="event_series_id" value={props.eventId} />
-      <Button
-        className={`hover:bg-transparent ${likeAnimation && 'animate-like'}`}
-        variant="ghost"
-        size="icon"
-        type="submit"
-        onClick={() => (props.liked ? '' : setLikeAnimation(true))}
-        onAnimationEnd={() => setLikeAnimation(false)}
-      >
-        <Heart color={state.color} fill={state.fill} />
-      </Button>
-      <p aria-live="polite" className="sr-only" role="status">
-        {state?.message}
-      </p>
-    </form>
+    <div className="flex flex-col">
+      <form action={formAction}>
+        <input type="hidden" name="event_series_id" value={props.eventId} />
+        <Button
+          className={`hover:bg-transparent ${liked && 'animate-like'}`}
+          variant="ghost"
+          size="icon"
+          type="submit"
+          onClick={() => {
+            setLiked(!liked);
+            liked ? setCount(count - 1) : setCount(count + 1);
+          }}
+        >
+          <Heart
+            className={
+              liked ? 'fill-pink-300 text-pink-300' : 'text-foreground'
+            }
+          />
+        </Button>
+        <p aria-live="polite" className="sr-only" role="status">
+          {state?.message}
+        </p>
+      </form>
+      <div className="overflow-hidden">
+        <p
+          className={`text-center ${
+            liked ? 'animate-count-up' : 'animate-count-down'
+          }`}
+        >
+          {count}
+        </p>
+      </div>
+    </div>
   );
 }
