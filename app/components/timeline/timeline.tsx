@@ -198,7 +198,7 @@ const Timeline = ({ comments }: Props) => {
         <ReactSlider
           className="w-full h-5 z-10"
           trackClassName={`h-2 top-2/4 -translate-y-1/2 bg-foreground rounded-full ${
-            isAggregate ? 'aggregate' : 'track'
+            isAggregate ? 'aggregate' : ''
           }`}
           thumbClassName="bg-black w-5 h-5 rounded-full border-2 border-primary"
           markClassName="cursor-pointer top-2/4 -translate-y-1/2 w-1 rounded-full h-8 bg-primary ml-2 -z-10"

@@ -71,7 +71,7 @@ const TabCard: FunctionComponent<Props> = ({
           <div className="grid w-full h-[320px]">
             <div className="self-center justify-self-center">
               <h4 className="scroll-m-20 text-xl font-semibold">
-                It looks like you haven't added any events!
+                It looks like you haven&#39;t added any events!
               </h4>
               <div className="text-center">Add an event to see some data.</div>
             </div>
