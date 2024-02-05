@@ -84,6 +84,14 @@ module.exports = {
           '40%': { transform: 'scale(1.2)' },
           '100%': { transform: 'scale(1)' },
         },
+        'count-up': {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'count-down': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
         shimmer: {
           '100%': {
             transform: 'translateX(100%)',
@@ -95,6 +103,8 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         like: 'like 0.5s',
         favorite: 'favorite 0.5s',
+        'count-up': 'count-up 0.2s',
+        'count-down': 'count-down 0.2s',
       },
     },
   },
