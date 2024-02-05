@@ -108,7 +108,7 @@ const Timeline = ({ comments }: Props) => {
     const result: { [val: string]: number } = {};
     const graphDataArr: { name: string; wordCount: number }[] = [];
 
-    arr.forEach((text) => {
+    arr?.forEach((text) => {
       const cleaned = cleanString(text);
       if (cleaned.length > 3 && !nonRelevantWords[cleaned as string]) {
         result[cleaned] = (result[cleaned] || 0) + 1;
@@ -146,7 +146,7 @@ const Timeline = ({ comments }: Props) => {
   };
 
   useEffect(() => {
-    const splitContents = comments[value].contents.split(' ');
+    const splitContents = comments[value]?.contents.split(' ');
     countOccurrences(splitContents);
   }, [value]);
 
@@ -198,7 +198,7 @@ const Timeline = ({ comments }: Props) => {
         <ReactSlider
           className="w-full h-5 z-10"
           trackClassName={`h-2 top-2/4 -translate-y-1/2 bg-foreground rounded-full ${
-            isAggregate ? 'aggregate' : 'track'
+            isAggregate ? 'aggregate' : ''
           }`}
           thumbClassName="bg-black w-5 h-5 rounded-full border-2 border-primary"
           markClassName="cursor-pointer top-2/4 -translate-y-1/2 w-1 rounded-full h-8 bg-primary ml-2 -z-10"

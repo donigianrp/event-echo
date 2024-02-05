@@ -8,7 +8,7 @@ const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       className={`my-2 mr-2 ml-2 ${
-        pathname === '/login' ? '' : 'md:ml-[205px]'
+        pathname === '/login' ? '' : 'md:ml-[196px]'
       }`}
     >
       {children}

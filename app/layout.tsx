@@ -24,8 +24,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <NavBar />
             <ContentWrapper>{children}</ContentWrapper>
           </main>
-          <NavBar />
-          <div className="m-2">{children}</div>
           <Toaster />
         </Providers>
       </body>

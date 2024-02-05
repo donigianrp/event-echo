@@ -80,40 +80,27 @@ export default async function EventSeriesPage({
     };
   });
   return (
-    <>
-      <div className="flex flex-col mb-2">
-        <div className="flex justify-between">
-          <div>
-            <Link href={`/user/${eventSeries.creator_id}`}>
-              {/*<h2 className="text-lg">{eventSeries.creator.name}</h2>
-            <h3 className="text-sm">@{eventSeries.creator.username}</h3> */}
-            </Link>
-          </div>
-
-          <div className="flex gap-4">
-            <div className="flex flex-col">
-              <LikeButton eventId={id} liked={isLikedOrFavorited.liked} />
-              <p className="text-center">{isLikedOrFavorited.likeCount}</p>
-            </div>
-            <div className="flex flex-col">
-              <FavoriteButton
-                eventId={id}
-                favorited={isLikedOrFavorited.favorited}
-              />
-              <p className="text-center">{isLikedOrFavorited.favCount}</p>
-            </div>
-          </div>
-        </div>
-
-        {eventSeries.description}
-      </div>
-      <Card className="p-2 bg-background">
-        <CardHeader>
-          <div className="mb-2">
-            <div className="flex justify-between">
-              <CardTitle className="text-3xl font-medium">
-                {eventSeries.title}
-              </CardTitle>
+    <Card className="p-2 bg-background">
+      <CardHeader className="py-2">
+        <div className="mb-2">
+          <div className="flex justify-between items-center">
+            <CardTitle className="text-3xl font-medium">
+              {eventSeries.title}
+            </CardTitle>
+            <div className="flex items-center">
+              <div className="flex gap-4">
+                <div className="flex flex-col">
+                  <LikeButton eventId={id} liked={isLikedOrFavorited.liked} />
+                  <p className="text-center">{isLikedOrFavorited.likeCount}</p>
+                </div>
+                <div className="flex flex-col mr-4">
+                  <FavoriteButton
+                    eventId={id}
+                    favorited={isLikedOrFavorited.favorited}
+                  />
+                  <p className="text-center">{isLikedOrFavorited.favCount}</p>
+                </div>
+              </div>
               {session?.user.id === eventSeries?.creator_id && (
                 <Link
                   className={buttonVariants({ variant: 'default' })}
@@ -123,30 +110,33 @@ export default async function EventSeriesPage({
                 </Link>
               )}
             </div>
-            <CardTitle className="text-md">
-              {eventSeries.creator.name}
-            </CardTitle>
           </div>
-          <CardDescription>{eventSeries.description}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="block lg:grid w-full lg:grid-cols-4 lg:gap-4">
-            <div className="mb-2 col-span-3 lg:mb-0">
-              <Timeline comments={seriesComments} />
-            </div>
-            <Card className="col-span-1">
-              <CardHeader>
-                <CardTitle>Details:</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Example Data 1.</p>
-                <p>Example Data 2.</p>
-                <p>Example Data 3.</p>
-              </CardContent>
-            </Card>
+          <CardTitle className="text-md">
+            <Link href={`/user/${eventSeries.creator_id}`}>
+              <p>{eventSeries.creator.name}</p>
+              <h3 className="text-sm">@{eventSeries.creator.username}</h3>
+            </Link>
+          </CardTitle>
+        </div>
+        <CardDescription>{eventSeries.description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="block lg:grid w-full lg:grid-cols-4 lg:gap-4">
+          <div className="mb-2 col-span-3 lg:mb-0">
+            <Timeline comments={seriesComments} />
           </div>
-        </CardContent>
-      </Card>
-    </>
+          <Card className="col-span-1">
+            <CardHeader>
+              <CardTitle>Details:</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Example Data 1.</p>
+              <p>Example Data 2.</p>
+              <p>Example Data 3.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

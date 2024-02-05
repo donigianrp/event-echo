@@ -52,15 +52,32 @@ const TabCard: FunctionComponent<Props> = ({
     <Card>
       <CardHeader>
         <CardTitle>Event Series Name</CardTitle>
-        <CardDescription>
-          {isAggregate
-            ? `Event ${comments[aggValue[0]].source_content_id} to Event ${
-                comments[aggValue[1]].source_content_id
-              }`
-            : `Event ${comments[value].source_content_id}`}
-        </CardDescription>
+        {comments && comments.length > 0 ? (
+          <CardDescription>
+            {isAggregate
+              ? `Event ${comments[aggValue[0]]
+                  ?.source_content_id} to Event ${comments[aggValue[1]]
+                  ?.source_content_id}`
+              : `Event ${comments[value]?.source_content_id}`}
+          </CardDescription>
+        ) : (
+          <CardDescription></CardDescription>
+        )}
       </CardHeader>
-      <CardContent>{renderDataDisplay}</CardContent>
+      <CardContent>
+        {comments && comments.length > 0 ? (
+          renderDataDisplay
+        ) : (
+          <div className="grid w-full h-[320px]">
+            <div className="self-center justify-self-center">
+              <h4 className="scroll-m-20 text-xl font-semibold">
+                It looks like you haven&#39;t added any events!
+              </h4>
+              <div className="text-center">Add an event to see some data.</div>
+            </div>
+          </div>
+        )}
+      </CardContent>
     </Card>
   );
 };
