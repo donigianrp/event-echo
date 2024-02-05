@@ -90,15 +90,18 @@ export default async function EventSeriesPage({
             <div className="flex items-center">
               <div className="flex gap-4">
                 <div className="flex flex-col">
-                  <LikeButton eventId={id} liked={isLikedOrFavorited.liked} />
-                  <p className="text-center">{isLikedOrFavorited.likeCount}</p>
+                  <LikeButton
+                    eventId={id}
+                    liked={isLikedOrFavorited.liked}
+                    count={isLikedOrFavorited.likeCount || 0}
+                  />
                 </div>
                 <div className="flex flex-col mr-4">
                   <FavoriteButton
                     eventId={id}
                     favorited={isLikedOrFavorited.favorited}
+                    count={isLikedOrFavorited.favCount || 0}
                   />
-                  <p className="text-center">{isLikedOrFavorited.favCount}</p>
                 </div>
               </div>
               {session?.user.id === eventSeries?.creator_id && (

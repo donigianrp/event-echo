@@ -4,7 +4,6 @@ import { Button } from '../ui/button';
 import { Heart } from 'lucide-react';
 import { like } from './actions';
 import { useFormState } from 'react-dom';
-import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import Login from '@/app/login/components/login';
 import { Dialog, DialogTrigger, DialogContent } from '../ui/dialog';
@@ -20,8 +19,6 @@ export default function LikeButton(props: {
 
   const { status } = useSession();
   const [state, formAction] = useFormState(like, initialState);
-  const [liked, setLiked] = useState(props.liked);
-  const [count, setCount] = useState(props.count);
 
   if (status === 'unauthenticated') {
     return (
@@ -35,12 +32,14 @@ export default function LikeButton(props: {
             >
               <Heart
                 className={
-                  liked ? 'text-foreground' : 'fill-pink-300 text-pink-300'
+                  props.liked
+                    ? 'text-foreground'
+                    : 'fill-pink-300 text-pink-300'
                 }
               />
             </Button>
             <div className="overflow-hidden">
-              <p className={`text-center`}>{count}</p>
+              <p className={`text-center`}>{props.count}</p>
             </div>
           </div>
         </DialogTrigger>
@@ -56,18 +55,18 @@ export default function LikeButton(props: {
       <form action={formAction}>
         <input type="hidden" name="event_series_id" value={props.eventId} />
         <Button
-          className={`hover:bg-transparent ${liked && 'animate-like'}`}
+          className={`hover:bg-transparent ${props.liked && 'animate-like'}`}
           variant="ghost"
           size="icon"
           type="submit"
           onClick={() => {
-            setLiked(!liked);
-            liked ? setCount(count - 1) : setCount(count + 1);
+            props.liked = !props.liked;
+            props.liked ? (props.count += 1) : (props.count -= 1);
           }}
         >
           <Heart
             className={
-              liked ? 'fill-pink-300 text-pink-300' : 'text-foreground'
+              props.liked ? 'fill-pink-300 text-pink-300' : 'text-foreground'
             }
           />
         </Button>
@@ -78,10 +77,10 @@ export default function LikeButton(props: {
       <div className="overflow-hidden">
         <p
           className={`text-center ${
-            liked ? 'animate-count-up' : 'animate-count-down'
+            props.liked ? 'animate-count-up' : 'animate-count-down'
           }`}
         >
-          {count}
+          {props.count}
         </p>
       </div>
     </div>

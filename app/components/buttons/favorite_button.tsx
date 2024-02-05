@@ -4,7 +4,6 @@ import { Button } from '../ui/button';
 import { Bookmark } from 'lucide-react';
 import { favorite } from './actions';
 import { useFormState } from 'react-dom';
-import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
 import Login from '@/app/login/components/login';
@@ -20,8 +19,6 @@ export default function FavoriteButton(props: {
 
   const { status } = useSession();
   const [state, formAction] = useFormState(favorite, initialState);
-  const [favorited, setFavorited] = useState(props.favorited);
-  const [count, setCount] = useState(props.count);
 
   if (status === 'unauthenticated') {
     return (
@@ -35,12 +32,14 @@ export default function FavoriteButton(props: {
             >
               <Bookmark
                 className={
-                  favorited ? 'text-foreground' : 'fill-primary text-primary'
+                  props.favorited
+                    ? 'text-foreground'
+                    : 'fill-primary text-primary'
                 }
               />
             </Button>
             <div className="overflow-hidden">
-              <p className={`text-center`}>{count}</p>
+              <p className={`text-center`}>{props.count}</p>
             </div>
           </div>
         </DialogTrigger>
@@ -55,18 +54,20 @@ export default function FavoriteButton(props: {
     <form action={formAction}>
       <input type="hidden" name="event_series_id" value={props.eventId} />
       <Button
-        className={`hover:bg-transparent ${favorited && 'animate-favorite'}`}
+        className={`hover:bg-transparent ${props.favorited && 'animate-favorite'}`}
         variant="ghost"
         size="icon"
         type="submit"
         onClick={() => {
-          setFavorited(!favorited);
-          favorited ? setCount(count - 1) : setCount(count + 1);
+          props.favorited = !props.favorited;
+          props.favorited ? (props.count += 1) : (props.count -= 1);
         }}
       >
         <Bookmark
           className={
-            favorited ? 'fill-foreground text-foreground' : 'text-foreground'
+            props.favorited
+              ? 'fill-foreground text-foreground'
+              : 'text-foreground'
           }
         />
       </Button>
@@ -76,10 +77,10 @@ export default function FavoriteButton(props: {
       <div className="overflow-hidden">
         <p
           className={`text-center ${
-            favorited ? 'animate-count-up' : 'animate-count-down'
+            props.favorited ? 'animate-count-up' : 'animate-count-down'
           }`}
         >
-          {count}
+          {props.count}
         </p>
       </div>
     </form>
