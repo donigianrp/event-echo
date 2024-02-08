@@ -57,6 +57,8 @@ interface Props {
 
 const EditEventSeriesDetails = ({ eventSeries }: Props) => {
   const [state, formAction] = useFormState(editEventSeries, initialState);
+  const [title, setTitle] = useState(eventSeries.title || '');
+  const [description, setDescription] = useState(eventSeries.description || '');
   const [checked, setChecked] = useState<CheckedState>(eventSeries.is_private);
   const [category, setCategory] = useState('');
   const [subCategory, setSubCategory] = useState('');
@@ -120,7 +122,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
     <Form {...form}>
       <form action={formAction} className="w-full">
         <div className="flex flex-col gap-6">
-          <Input type="hidden" name="id" value={eventSeries.id}></Input>
+          <Input type="hidden" name="id" value={eventSeries.id} />
           <FormField
             control={form.control}
             name="title"
@@ -135,6 +137,10 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                     required
                     className="border-b p-1"
                     aria-required="true"
+                    value={title}
+                    onChange={(e) => {
+                      setTitle(e.target.value);
+                    }}
                   />
                 </FormControl>
                 <FormMessage />
@@ -151,7 +157,11 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                   <Textarea
                     placeholder="Enter a brief description about your event series..."
                     name="description"
-                  ></Textarea>
+                    value={description}
+                    onChange={(e) => {
+                      setDescription(e.target.value);
+                    }}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
