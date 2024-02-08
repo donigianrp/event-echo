@@ -1,12 +1,6 @@
 'use client';
 import { Button } from '@/app/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/app/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/app/components/ui/card';
 import {
   Dialog,
   DialogContent,
@@ -26,6 +20,12 @@ import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { EditSeriesContext } from './edit_series_container';
 import { useRouter } from 'next/navigation';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/app/components/ui/tooltip';
 
 interface DialogProps {
   title: string;
@@ -53,10 +53,17 @@ const AddEventDialog = ({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <PlusCircle
-          onClick={() => {}}
-          className={`text-gray-600 hover:text-primary`}
-        />
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <PlusCircle
+                onClick={() => {}}
+                className={`text-gray-600 hover:text-primary`}
+              />
+            </TooltipTrigger>
+            <TooltipContent side="left">Add to Event Series</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -123,6 +130,7 @@ const AddEventCard = ({ sourceContent }: Props) => {
   const localStore = useContext(EditSeriesContext);
   if (!localStore) return <></>;
   const { eventSeries, session } = localStore;
+  console.log(thumbnails);
 
   const createEvent = async (event: EventReqParams) => {
     try {
@@ -209,51 +217,56 @@ const AddEventCard = ({ sourceContent }: Props) => {
     .textContent;
   return (
     <div>
-      <Card className="flex flex-col justify-between h-full">
-        <CardHeader>
-          <div className={`flex justify-between`}>
-            <CardTitle>{decodedTitle}</CardTitle>
-            <div className={`ml-2`}>
-              <AddEventDialog
-                title={title}
-                eventSeries={eventSeries}
-                handleEventCreation={handleEventCreation}
-                details={{
-                  event: {
-                    title,
-                    description,
-                    videoId,
-                    creator_id: 1,
-                    eventSeriesId: eventSeries.id,
-                    socialMediaId: channelId,
-                    socialMediaPlatformId: 1,
-                    thumbnails,
-                    channelId,
-                    channelTitle,
-                  },
-                  seriesId: eventSeries.id,
-                  contentId: videoId,
-                }}
+      <Card className="flex flex-col h-full">
+        <div>
+          {thumbnails.medium.width ? (
+            <Image
+              className={`w-full rounded-t-md`}
+              alt="source content thumbnail"
+              src={thumbnails.medium.url || ''}
+              width={thumbnails.medium.width}
+              height={thumbnails.medium.height}
+            />
+          ) : (
+            <div className="flex aspect-video">
+              <Image
+                className={`mx-auto rounded-full self-center w-1/2`}
+                alt="source content thumbnail"
+                src={thumbnails.medium.url || ''}
+                width={240}
+                height={240}
               />
             </div>
-          </div>
-        </CardHeader>
-        <div>
-          <CardContent className={`flex flex-col justify-end`}>
+          )}
+          <CardContent className={`flex flex-col justify-end p-2`}>
             <div className={`flex flex-col justify-end`}>
-              <div className="flex flex-1">
-                <div className="mr-1 text-sm">Channel:</div>
-                <div className={`text-sm`}>{channelTitle}</div>
+              <div className="line-clamp-2 min-h-12">{decodedTitle}</div>
+              <div className={`text-sm line-clamp-1 text-muted-foreground`}>
+                {channelTitle}
               </div>
             </div>
           </CardContent>
-          <CardFooter className={`p-0 bg-slate-300`}>
-            <Image
-              className={`m-auto`}
-              alt="source content thumbnail"
-              src={thumbnails.medium.url || ''}
-              width={thumbnails.medium.width || 160}
-              height={thumbnails.medium.height || 90}
+          <CardFooter className={`p-4 pt-2 justify-end`}>
+            <AddEventDialog
+              title={title}
+              eventSeries={eventSeries}
+              handleEventCreation={handleEventCreation}
+              details={{
+                event: {
+                  title,
+                  description,
+                  videoId,
+                  creator_id: 1,
+                  eventSeriesId: eventSeries.id,
+                  socialMediaId: channelId,
+                  socialMediaPlatformId: 1,
+                  thumbnails,
+                  channelId,
+                  channelTitle,
+                },
+                seriesId: eventSeries.id,
+                contentId: videoId,
+              }}
             />
           </CardFooter>
         </div>
