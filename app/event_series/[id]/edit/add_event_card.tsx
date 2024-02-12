@@ -130,7 +130,6 @@ const AddEventCard = ({ sourceContent }: Props) => {
   const localStore = useContext(EditSeriesContext);
   if (!localStore) return <></>;
   const { eventSeries, session } = localStore;
-  console.log(thumbnails);
 
   const createEvent = async (event: EventReqParams) => {
     try {
@@ -240,7 +239,9 @@ const AddEventCard = ({ sourceContent }: Props) => {
           )}
           <CardContent className={`flex flex-col justify-end p-2`}>
             <div className={`flex flex-col justify-end`}>
-              <div className="line-clamp-2 min-h-12">{decodedTitle}</div>
+              <div className="line-clamp-2 min-h-12" title={decodedTitle || ''}>
+                {decodedTitle}
+              </div>
               <div className={`text-sm line-clamp-1 text-muted-foreground`}>
                 {channelTitle}
               </div>
@@ -256,7 +257,7 @@ const AddEventCard = ({ sourceContent }: Props) => {
                   title,
                   description,
                   videoId,
-                  creator_id: 1,
+                  creator_id: session?.user.id,
                   eventSeriesId: eventSeries.id,
                   socialMediaId: channelId,
                   socialMediaPlatformId: 1,

@@ -44,7 +44,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
 
   const events = await prisma.$queryRaw<EventPosition[]>`
     WITH EventPositions AS (
-      SELECT event_id, event_position
+      SELECT event_id, event_series_id, event_position
       FROM "event_series_event" 
       WHERE "event_series_event"."event_series_id" = ${Number(params.id)}
     )
@@ -54,6 +54,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     INNER JOIN EventPositions ON EventPositions."event_id" = "event"."id"
     LEFT JOIN "source_content_event" ON "source_content_event"."event_id" = "event"."id"
     LEFT JOIN "source_content" ON "source_content"."id" = "source_content_event"."source_content_id"
+    WHERE EventPositions."event_series_id" = ${Number(params.id)}
     ORDER BY "event_position"
   `;
 
