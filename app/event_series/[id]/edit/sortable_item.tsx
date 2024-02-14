@@ -30,19 +30,21 @@ export function SortableItem({ event, idx }: Props) {
         transition: transition,
       }}
     >
-      <div className={`flex flex-col sm:flex-row items-center`}>
+      <div className={`flex flex-col gap-4 sm:flex-row items-center`}>
         <Image
           className="rounded-sm"
           alt="video thumbnail"
           src={thumbnail.url}
-          height={thumbnail.height / 2}
-          width={thumbnail.width / 2}
+          height={thumbnail.height / 3}
+          width={thumbnail.width / 3}
         />
-        <div className={`flex flex-1 align-middle`}>
-          <h3 className={`text-xl text-foreground ml-4`}>{event.title}</h3>
-        </div>
-        <div className={`flex w-full sm:w-20 justify-end sm:justify-center`}>
-          <h1 className={`sm:text-5xl text-foreground h-full`}>
+        <div
+          className={`flex w-full justify-end sm:justify-center items-center gap-4`}
+        >
+          <div className={`flex flex-1 align-middle`}>
+            <h3 className={`text-xl text-foreground ml-4`}>{event.title}</h3>
+          </div>
+          <h1 className={`sm:text-3xl sm:w-20 text-foreground text-center`}>
             {positionMap[event.id]}
           </h1>
         </div>
