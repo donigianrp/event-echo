@@ -16,14 +16,16 @@ export interface ContentThumbnail {
   width: number;
   height: number;
 }
+
+export interface Thumbnails {
+  high: ContentThumbnail;
+  medium: ContentThumbnail;
+  default: ContentThumbnail;
+  standard: ContentThumbnail;
+}
 export interface EventPosition extends EventModel {
   event_position: number;
-  thumbnails: {
-    high: ContentThumbnail;
-    medium: ContentThumbnail;
-    default: ContentThumbnail;
-    standard: ContentThumbnail;
-  };
+  thumbnails: Thumbnails;
 }
 export interface EditSeriesContextProps {
   categories: CategoryModel[];

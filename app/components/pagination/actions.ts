@@ -1,3 +1,4 @@
+import { Thumbnails } from '@/app/event_series/[id]/edit/page';
 import prisma from '@/db';
 
 type OrderMap = {
@@ -22,6 +23,20 @@ type OrderMap = {
     };
   };
 };
+
+export interface SeriesWithThumbnail {
+  id: number;
+  title: string;
+  description: string | null;
+  created_at: Date;
+  updated_at: Date;
+  is_private: boolean;
+  view_count: number | null;
+  creator_id: number;
+  has_adult_content: boolean;
+  has_spam: boolean;
+  thumbnails: Thumbnails | null;
+}
 
 const orderMap: OrderMap = {
   latest: {
@@ -60,7 +75,8 @@ export async function getFilteredEventSeries({
   subcategory: string;
   order: string;
 }) {
-  return await prisma.eventSeries.findMany({
+  const filteredSeriesArr: SeriesWithThumbnail[] = [];
+  const filteredSeries = await prisma.eventSeries.findMany({
     take: limit,
     skip: limit * (currentPage - 1),
     where: {
@@ -129,7 +145,46 @@ export async function getFilteredEventSeries({
           orderBy: orderMap[order],
         }
       : {}),
+    include: {
+      events: {
+        where: {
+          event_position: 1,
+        },
+        include: {
+          events: {
+            include: {
+              source_contents: {
+                include: {
+                  source_content: {
+                    select: {
+                      thumbnails: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   });
+  filteredSeries.forEach((series) =>
+    filteredSeriesArr.push({
+      id: series.id,
+      title: series.title,
+      description: series.description,
+      created_at: series.created_at,
+      updated_at: series.updated_at,
+      is_private: series.is_private,
+      view_count: series.view_count,
+      creator_id: series.creator_id,
+      has_adult_content: series.has_adult_content,
+      has_spam: series.has_spam,
+      thumbnails: series.events[0]?.events.source_contents[0].source_content
+        .thumbnails as unknown as Thumbnails,
+    }),
+  );
+  return filteredSeriesArr;
 }
 
 export async function getTotalPages({
