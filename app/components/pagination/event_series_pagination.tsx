@@ -1,5 +1,9 @@
 import EventSeriesCard from '../event_series_card';
-import { getFilteredEventSeries, getTotalPages } from './actions';
+import {
+  SeriesWithThumbnail,
+  getFilteredEventSeries,
+  getTotalPages,
+} from './actions';
 import PaginationComponent from './pagination';
 
 export default async function EventSeriesPagination({
@@ -16,6 +20,7 @@ export default async function EventSeriesPagination({
   order: string;
 }) {
   const limit = 9;
+
   const eventSeries = await getFilteredEventSeries({
     query,
     currentPage,
@@ -34,15 +39,18 @@ export default async function EventSeriesPagination({
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {eventSeries.map((s) => (
-          <EventSeriesCard
-            key={s.id}
-            id={s.id}
-            title={s.title}
-            description={s.description}
-          />
-        ))}
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        {eventSeries.map((s: SeriesWithThumbnail) => {
+          return (
+            <EventSeriesCard
+              key={s.id}
+              id={s.id}
+              title={s.title}
+              description={s.description}
+              thumbnails={s.thumbnails || undefined}
+            />
+          );
+        })}
       </div>
       <PaginationComponent totalPages={totalPages} />
     </div>

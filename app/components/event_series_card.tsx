@@ -1,47 +1,63 @@
-'use client';
-
 import Link from 'next/link';
-import FavoriteButton from './buttons/favorite_button';
-import LikeButton from './buttons/like_button';
 import {
   Card,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
+  CardContent,
 } from './ui/card';
-import { DeleteEventSeriesForm } from '../event_series/components/delete_event_series_form';
+import React from 'react';
+import { Thumbnails } from '../event_series/[id]/edit/page';
+import Image from 'next/image';
 
-export default function EventSeriesCard(props: {
+const EventSeriesCard = (props: {
   id: number;
   title: string;
   description: string | null;
-  likeIds?: Set<any>;
-  favoriteIds?: Set<any>;
-}) {
+  thumbnails?: Thumbnails;
+}) => {
   return (
     <Card className="mx-auto w-full">
       <Link href={`/event_series/${props.id}`}>
         <CardHeader>
-          <CardTitle className="h-12 overflow-hidden">{props.title}</CardTitle>
-          <CardDescription className="h-10 overflow-hidden">
-            {props.description}
-          </CardDescription>
+          <div className="flex justify-between items-center">
+            {props.thumbnails && (
+              <div className="mr-4 hidden sm:inline-block">
+                <Image
+                  className="rounded-sm"
+                  alt="video thumbnail"
+                  src={props.thumbnails.medium.url}
+                  height={props.thumbnails.medium.height}
+                  width={props.thumbnails.medium.width}
+                />
+              </div>
+            )}
+            <div className="w-full">
+              <CardTitle className="h-12 overflow-hidden line-clamp-2 w-full">
+                {props.title}
+              </CardTitle>
+              {props.description && (
+                <CardDescription className="h-10 overflow-hidden line-clamp-2 mt-2">
+                  {props.description}
+                </CardDescription>
+              )}
+            </div>
+          </div>
         </CardHeader>
+        {props.thumbnails && (
+          <CardContent className="flex justify-center items-center sm:hidden">
+            <Image
+              className="rounded-sm w-2/3 inline-block sm:hidden"
+              alt="video thumbnail"
+              src={props.thumbnails.medium.url}
+              height={props.thumbnails.medium.height}
+              width={props.thumbnails.medium.width}
+            />
+          </CardContent>
+        )}
       </Link>
-      {/* {props.likeIds && props.favoriteIds ? (
-        <div className="flex px-6 pb-6 gap-2">
-          <LikeButton eventId={props.id} liked={props.likeIds.has(props.id)} />
-          <FavoriteButton
-            eventId={props.id}
-            favorited={props.favoriteIds.has(props.id)}
-          />
-        </div>
-      ) : (
-        <CardFooter>
-          <DeleteEventSeriesForm id={props.id} title={props.title} />
-        </CardFooter>
-      )} */}
     </Card>
   );
-}
+};
+
+export default EventSeriesCard;

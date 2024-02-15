@@ -1,11 +1,11 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import FavoriteButton from '@/app/components/buttons/favorite_button';
 import LikeButton from '@/app/components/buttons/like_button';
+import EventDescription from '@/app/components/event_description/event_description';
 import Timeline from '@/app/components/timeline/timeline';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/app/components/ui/card';
@@ -121,7 +121,7 @@ export default async function EventSeriesPage({
             </Link>
           </CardTitle>
         </div>
-        <CardDescription>{eventSeries.description}</CardDescription>
+        <EventDescription description={eventSeries.description} />
       </CardHeader>
       <CardContent>
         <div className="block lg:grid w-full lg:grid-cols-4 lg:gap-4">

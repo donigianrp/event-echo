@@ -3,10 +3,10 @@
 import { Loader2 } from 'lucide-react';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { EventSeries } from '@prisma/client';
 import useSWRInfinite from 'swr/infinite';
 import EventSeriesCard from '../event_series_card';
 import { useSearchParams } from 'next/navigation';
+import { SeriesWithThumbnail } from '../pagination/actions';
 
 export default function LoadSeries({
   route,
@@ -69,12 +69,13 @@ export default function LoadSeries({
   return (
     <div className="flex flex-col gap-6 justify-center">
       {data.map((series) => {
-        return series.result.map((s: EventSeries) => (
+        return series.result.map((s: SeriesWithThumbnail) => (
           <EventSeriesCard
             key={s.id}
             id={s.id}
             title={s.title}
             description={s.description}
+            thumbnails={s.thumbnails || undefined}
           />
         ));
       })}

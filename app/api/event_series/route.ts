@@ -1,3 +1,5 @@
+import { SeriesWithThumbnail } from '@/app/components/pagination/actions';
+import { Thumbnails } from '@/app/event_series/[id]/edit/page';
 import prisma from '@/db';
 
 type OrderMap = {
@@ -55,6 +57,7 @@ export async function GET(request: Request) {
     },
   };
 
+  const resultArr: SeriesWithThumbnail[] = [];
   const [result, count] = await prisma.$transaction([
     prisma.eventSeries.findMany({
       take: limit,
@@ -126,6 +129,28 @@ export async function GET(request: Request) {
             orderBy: orderMap[order],
           }
         : {}),
+      include: {
+        events: {
+          where: {
+            event_position: 1,
+          },
+          include: {
+            events: {
+              include: {
+                source_contents: {
+                  include: {
+                    source_content: {
+                      select: {
+                        thumbnails: true,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     }),
     prisma.eventSeries.count({
       where: {
@@ -171,7 +196,24 @@ export async function GET(request: Request) {
     }),
   ]);
 
-  if (!result) {
+  result.forEach((series) =>
+    resultArr.push({
+      id: series.id,
+      title: series.title,
+      description: series.description,
+      created_at: series.created_at,
+      updated_at: series.updated_at,
+      is_private: series.is_private,
+      view_count: series.view_count,
+      creator_id: series.creator_id,
+      has_adult_content: series.has_adult_content,
+      has_spam: series.has_spam,
+      thumbnails: series.events[0]?.events.source_contents[0].source_content
+        .thumbnails as unknown as Thumbnails,
+    }),
+  );
+
+  if (!result || !resultArr) {
     return Response.json({
       message: 'error',
       status: 500,
@@ -179,7 +221,7 @@ export async function GET(request: Request) {
   }
 
   return Response.json({
-    result,
+    result: resultArr,
     count,
   });
 }
