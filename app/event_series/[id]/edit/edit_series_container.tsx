@@ -14,14 +14,15 @@ import {
   SubCategoryModel,
 } from '@/global';
 import { Session } from 'next-auth';
+import { EventCategory, EventSubCategory } from '@prisma/client';
 
 interface Props {
   editSeriesContextProps: EditSeriesContextProps;
 }
 
 export const EditSeriesContext = createContext<{
-  categories: CategoryModel[];
-  subCategories: SubCategoryModel[];
+  categories: EventCategory[];
+  subCategories: EventSubCategory[];
   eventSeries: EventSeriesModel;
   events: EventPosition[];
   tab: EventSeriesEditTabs;

@@ -44,12 +44,27 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     id: z.coerce.number(),
     title: z.string().min(1),
     description: z.string(),
-    is_private: z.coerce.boolean(),
+    category: z.coerce.number(),
+    subcategory: z.coerce.number(),
+    tags: z.preprocess(
+      (val) => (typeof val === 'string' ? JSON.parse(val) : {}),
+      z
+        .object({ id: z.string(), text: z.string() })
+        .pick({ text: true })
+        .array(),
+    ),
+    is_private: z.preprocess(
+      (val) => (typeof val === 'string' ? JSON.parse(val).is_private : {}),
+      z.boolean(),
+    ),
   });
   const parse = schema.safeParse({
     id: formData.get('id'),
     title: formData.get('title'),
     description: formData.get('description'),
+    category: formData.get('category'),
+    subcategory: formData.get('subcategory'),
+    tags: formData.get('tags'),
     is_private: formData.get('is_private'),
   });
 
@@ -60,7 +75,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   const data = parse.data;
   const session = await getServerSession(authOptions);
 
-  await prisma.eventSeries.update({
+  const eventSeries = await prisma.eventSeries.update({
     where: { id: data.id },
     data: {
       title: data.title,
@@ -69,7 +84,60 @@ export async function editEventSeries(prevState: any, formData: FormData) {
       is_private: data.is_private,
       updated_at: new Date(),
     },
+    include: {
+      event_type: true,
+      event_tags: true,
+    },
   });
+
+  if (data.category && data.subcategory) {
+    if (
+      eventSeries.event_type === undefined ||
+      eventSeries.event_type.length === 0
+    ) {
+      await prisma.eventTypeEventSeries.create({
+        data: {
+          event_series_id: data.id,
+          category_id: data.category,
+          sub_category_id: data.subcategory,
+        },
+      });
+    } else {
+      await prisma.eventTypeEventSeries.update({
+        where: { event_series_id: data.id },
+        data: {
+          category_id: data.category,
+          sub_category_id: data.subcategory,
+        },
+      });
+    }
+  } else if (eventSeries.event_type.length > 0) {
+    await prisma.eventTypeEventSeries.delete({
+      where: { event_series_id: data.id },
+    });
+  }
+
+  await prisma.eventTagEventSeries.deleteMany({
+    where: { event_series_id: data.id },
+  });
+  if (data.tags !== undefined && data.tags.length > 0) {
+    for (let i = 0; i < data.tags.length; i++) {
+      const tag = await prisma.eventTag.findUnique({
+        where: { text: data.tags[i].text },
+      });
+      if (!tag) {
+        await prisma.eventTag.create({
+          data: { text: data.tags[i].text },
+        });
+      }
+      await prisma.eventTagEventSeries.create({
+        data: {
+          event_series_id: data.id,
+          event_tag_text: data.tags[i].text,
+        },
+      });
+    }
+  }
 
   revalidatePath('/event_series/[id]', 'page');
   redirect(`/event_series/${data.id}`);

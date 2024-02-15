@@ -100,6 +100,12 @@ export interface EventSeriesModel {
   creator_id: number;
   has_adult_content: boolean;
   has_spam: boolean;
+  category_id: number;
+  sub_category_id: number;
+  tags: {
+    id: string;
+    text: string;
+  }[];
 }
 
 // ------------------------- EVENT MODEL ---------------------

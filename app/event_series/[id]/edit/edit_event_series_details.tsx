@@ -4,7 +4,6 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { editEventSeries } from '../../actions';
 import { useContext, useState } from 'react';
 import { Checkbox } from '../../../components/ui/checkbox';
-import { Label } from '../../../components/ui/label';
 import { Button } from '../../../components/ui/button';
 import { Textarea } from '../../../components/ui/textarea';
 import { Input } from '../../../components/ui/input';
@@ -30,9 +29,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/app/components/ui/card';
-import { CategoryModel, EventSeriesModel, SubCategoryModel } from '@/global';
-import { CheckedState } from '@radix-ui/react-checkbox';
+import { EventSeriesModel } from '@/global';
 import { EditSeriesContext } from './edit_series_container';
+import { EventSubCategory } from '@prisma/client';
 
 const initialState = {
   message: '',
@@ -49,6 +48,9 @@ const FormSchema = z.object({
       text: z.string(),
     }),
   ),
+  category: z.string(),
+  subcategory: z.string(),
+  is_private: z.boolean().default(false).optional(),
 });
 
 interface Props {
@@ -57,20 +59,24 @@ interface Props {
 
 const EditEventSeriesDetails = ({ eventSeries }: Props) => {
   const [state, formAction] = useFormState(editEventSeries, initialState);
-  const [title, setTitle] = useState(eventSeries.title || '');
-  const [description, setDescription] = useState(eventSeries.description || '');
-  const [checked, setChecked] = useState<CheckedState>(eventSeries.is_private);
-  const [category, setCategory] = useState('');
-  const [subCategory, setSubCategory] = useState('');
+  const [category, setCategory] = useState(
+    String(eventSeries.category_id) || '',
+  );
+  const [subCategory, setSubCategory] = useState(
+    String(eventSeries.sub_category_id) || '',
+  );
   const [cancelled, setCancelled] = useState(false);
-  const [tags, setTags] = useState<Tag[]>([]);
+  const [tags, setTags] = useState<Tag[]>(eventSeries.tags);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      title: '',
-      description: '',
-      tags: [],
+      title: eventSeries.title,
+      description: eventSeries.description || '',
+      tags: tags,
+      category: category,
+      subcategory: subCategory,
+      is_private: eventSeries.is_private,
     },
   });
 
@@ -94,7 +100,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
         disabled={pending}
         aria-disabled={pending}
         onClick={() => {
-          console.log(form);
+          // console.log(form);
         }}
       >
         {pending ? (
@@ -109,18 +115,40 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
     );
   }
 
-  const filterSubCategories = (subs: SubCategoryModel[]) => {
-    return subs.filter((sub) => sub.category_value === category);
+  const filterSubCategories = (subs: EventSubCategory[]) => {
+    return subs.filter((sub) => String(sub.category_id) === category);
   };
 
   const resetSubCategoryAndSetCategory = (val: string) => {
     setSubCategory('');
     setCategory(val);
+    setValue('subcategory', '');
+    setValue('category', val);
+  };
+
+  const setSubCategoryInForm = (val: string) => {
+    setSubCategory(val);
+    setValue('subcategory', val);
+  };
+
+  const submitForm = (values: z.infer<typeof FormSchema>) => {
+    let params = new FormData();
+    params.append('id', String(eventSeries.id));
+    params.append('title', values.title);
+    params.append('description', values.description);
+    params.append('category', values.category);
+    params.append('subcategory', values.subcategory);
+    params.append('tags', JSON.stringify(values.tags));
+    params.append(
+      'is_private',
+      JSON.stringify({ is_private: values.is_private }),
+    );
+    formAction(params);
   };
 
   return (
     <Form {...form}>
-      <form action={formAction} className="w-full">
+      <form onSubmit={form.handleSubmit(submitForm)} className="w-full">
         <div className="flex flex-col gap-6">
           <Input type="hidden" name="id" value={eventSeries.id} />
           <FormField
@@ -133,14 +161,10 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                   <Input
                     placeholder="Enter title here..."
                     type="text"
-                    name="title"
                     required
                     className="border-b p-1"
                     aria-required="true"
-                    value={title}
-                    onChange={(e) => {
-                      setTitle(e.target.value);
-                    }}
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />
@@ -156,11 +180,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                 <FormControl>
                   <Textarea
                     placeholder="Enter a brief description about your event series..."
-                    name="description"
-                    value={description}
-                    onChange={(e) => {
-                      setDescription(e.target.value);
-                    }}
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />
@@ -198,36 +218,62 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                   </FormItem>
                 )}
               />
-              <FormLabel className="text-left">Category</FormLabel>
-              <div className="md:flex justify-between md:w-8/12">
-                <div className="">
-                  <Combobox
-                    options={categories}
-                    inputLabel={'Category'}
-                    controller={[category, resetSubCategoryAndSetCategory]}
-                  />
-                </div>
+              <div className="flex flex-col md:flex-row gap-4">
+                <FormField
+                  control={form.control}
+                  name="category"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-left">Category</FormLabel>
+                      <div className="">
+                        <Combobox
+                          options={categories}
+                          inputLabel={'Category'}
+                          controller={[
+                            category,
+                            resetSubCategoryAndSetCategory,
+                          ]}
+                        />
+                      </div>
+                    </FormItem>
+                  )}
+                />
                 {category && (
-                  <div>
-                    <Combobox
-                      options={filterSubCategories(subCategories)}
-                      inputLabel={'Sub Category'}
-                      controller={[subCategory, setSubCategory]}
-                    />
-                  </div>
+                  <FormField
+                    control={form.control}
+                    name="category"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-left">Subcategory</FormLabel>
+                        <div>
+                          <Combobox
+                            options={filterSubCategories(subCategories)}
+                            inputLabel={'Sub Category'}
+                            controller={[subCategory, setSubCategoryInForm]}
+                          />
+                        </div>
+                      </FormItem>
+                    )}
+                  />
                 )}
               </div>
             </CardContent>
           </Card>
-          <div className="flex gap-2 leading-none">
-            <Checkbox
-              id="is_private"
-              name="is_private"
-              checked={checked}
-              onCheckedChange={setChecked}
-            />
-            <Label htmlFor="is_private">Private</Label>
-          </div>
+          <FormField
+            control={form.control}
+            name="is_private"
+            render={({ field }) => (
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel>Private</FormLabel>
+              </FormItem>
+            )}
+          />
           <div className="flex gap-4 justify-end">
             <Button variant="secondary" onClick={() => setCancelled(true)}>
               Cancel

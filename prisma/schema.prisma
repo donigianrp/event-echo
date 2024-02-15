@@ -19,7 +19,7 @@ model Event {
   event_date_start  DateTime?
   event_date_finish DateTime?
   creator_id        Int
-  creator           User                   @relation(fields: [creator_id], references: [id])
+  creator           User                 @relation(fields: [creator_id], references: [id])
   event_type        EventTypeEvent[]
   event_series      EventSeriesEvent[]
   source_contents   SourceContentEvent[]
@@ -73,17 +73,17 @@ model EventSeriesEvent {
 }
 
 model EventTypeEvent {
-  event_id      Int
-  event_type_id Int
-  events        Event     @relation(fields: [event_id], references: [id])
-  event_type    EventType @relation(fields: [event_type_id], references: [id])
+  event_id        Int
+  category_id     Int
+  sub_category_id Int
+  events          Event     @relation(fields: [event_id], references: [id])
+  event_type      EventType @relation(fields: [category_id, sub_category_id], references: [category_id, sub_category_id])
 
-  @@id([event_type_id, event_id])
+  @@id([category_id, sub_category_id, event_id])
   @@map(name: "event_type_event")
 }
 
 model EventType {
-  id                 Int                    @id @default(autoincrement())
   category_id        Int
   sub_category_id    Int
   event_category     EventCategory          @relation(fields: [category_id], references: [id])
@@ -91,45 +91,49 @@ model EventType {
   events             EventTypeEvent[]
   event_series       EventTypeEventSeries[]
 
+  @@id(name: "event_type_id", [category_id, sub_category_id])
   @@map(name: "event_type")
 }
 
 model EventCategory {
-  id          Int         @id @default(autoincrement())
-  label       String
-  value       String
-  event_types EventType[]
+  id               Int                @id @default(autoincrement())
+  label            String
+  value            String
+  event_types      EventType[]
+  EventSubCategory EventSubCategory[]
 
   @@map(name: "event_category")
 }
 
 model EventSubCategory {
-  id          Int         @id @default(autoincrement())
-  label       String
-  value       String
-  category_value  String
-  event_types EventType[]
+  id             Int           @id @default(autoincrement())
+  label          String
+  value          String
+  category_id    Int
+  event_category EventCategory @relation(fields: [category_id], references: [id])
+  event_types    EventType[]
 
   @@map(name: "event_sub_category")
 }
 
 model EventTypeEventSeries {
   event_series_id Int
-  event_type_id   Int
+  category_id     Int
+  sub_category_id Int
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
-  event_type      EventType   @relation(fields: [event_type_id], references: [id])
+  event_type      EventType   @relation(fields: [category_id, sub_category_id], references: [category_id, sub_category_id])
 
-  @@id([event_series_id, event_type_id])
+  @@id([event_series_id])
   @@map(name: "event_type_event_series")
 }
 
 model EventTagEventSeries {
   event_series_id Int
-  event_tag_id    Int
+  event_tag_text  String
   event_series    EventSeries @relation(fields: [event_series_id], references: [id])
-  event_tag       EventTag    @relation(fields: [event_tag_id], references: [id])
+  event_tag       EventTag    @relation(fields: [event_tag_text], references: [text])
 
-  @@id([event_series_id, event_tag_id])
+  @@id([event_series_id, event_tag_text])
   @@map(name: "event_tag_event_series")
 }
 
@@ -195,7 +199,7 @@ model EventTag {
   id           Int                   @id @default(autoincrement())
   created_at   DateTime              @default(now())
   updated_at   DateTime              @updatedAt
-  title        String
+  text         String                @unique
   event_series EventTagEventSeries[]
 
   @@map(name: "event_tag")
