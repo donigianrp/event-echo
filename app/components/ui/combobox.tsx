@@ -45,7 +45,10 @@ export function Combobox({
           className="min-w-[100px] xl:min-w-[250px] justify-between md:mt-0"
         >
           {value
-            ? options.find((option) => String(option.id) === value)?.label
+            ? options.find(
+                (option) =>
+                  String(option.id) === value || option.value === value,
+              )?.label
             : `Select ${inputLabel}...`}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -62,10 +65,16 @@ export function Combobox({
                   value={option.value}
                   onSelect={() => {
                     setValue(
-                      String(option.id) === value ? '' : String(option.id),
+                      String(option.id) === value || option.value === value
+                        ? ''
+                        : String(option.id),
                     );
                     if (handleSelect) {
-                      handleSelect(option.value === value ? '' : option.value);
+                      handleSelect(
+                        String(option.id) === value || option.value === value
+                          ? ''
+                          : option.value,
+                      );
                     }
                     setOpen(false);
                   }}
@@ -73,7 +82,9 @@ export function Combobox({
                   <Check
                     className={cn(
                       'mr-2 h-4 w-4',
-                      value === option.value ? 'opacity-100' : 'opacity-0',
+                      value === String(option.id) || value === option.value
+                        ? 'opacity-100'
+                        : 'opacity-0',
                     )}
                   />
                   {option.label}

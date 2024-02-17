@@ -49,7 +49,7 @@ const FormSchema = z.object({
     }),
   ),
   category: z.string(),
-  subcategory: z.string(),
+  subcategory: z.string().optional(),
   is_private: z.boolean().default(false).optional(),
 });
 
@@ -137,7 +137,9 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
     params.append('title', values.title);
     params.append('description', values.description);
     params.append('category', values.category);
-    params.append('subcategory', values.subcategory);
+    if (values.subcategory) {
+      params.append('subcategory', values.subcategory);
+    }
     params.append('tags', JSON.stringify(values.tags));
     params.append(
       'is_private',

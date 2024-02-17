@@ -45,7 +45,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     title: z.string().min(1),
     description: z.string(),
     category: z.coerce.number(),
-    subcategory: z.coerce.number(),
+    subcategory: z.coerce.number().optional(),
     tags: z.preprocess(
       (val) => (typeof val === 'string' ? JSON.parse(val) : {}),
       z

@@ -5,6 +5,11 @@ import SortSelect from '../components/search/sort_select';
 import EventSeriesPagination from '../components/pagination/event_series_pagination';
 import { Suspense } from 'react';
 import { SearchSkeleton } from '../components/skeletons';
+import { Prisma } from '@prisma/client';
+
+export type SubcategoryWithCategory = Prisma.EventSubCategoryGetPayload<{
+  include: { event_category: true };
+}>;
 
 export default async function Page({
   searchParams,
@@ -28,11 +33,15 @@ export default async function Page({
       id: 'asc',
     },
   });
-  const subcategories = await prisma.eventSubCategory.findMany({
-    orderBy: {
-      id: 'asc',
-    },
-  });
+  const subcategories: SubcategoryWithCategory[] =
+    await prisma.eventSubCategory.findMany({
+      include: {
+        event_category: true,
+      },
+      orderBy: {
+        id: 'asc',
+      },
+    });
 
   return (
     <div className="flex flex-col">
