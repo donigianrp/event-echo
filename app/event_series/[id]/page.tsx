@@ -12,6 +12,7 @@ import {
 import { buttonVariants } from '@/components/ui/button';
 import prisma from '@/db';
 import { useSeriesLikes } from '@/lib/use_series_likes';
+import { Eye } from 'lucide-react';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -34,6 +35,15 @@ export default async function EventSeriesPage({
     where: { id },
     include: {
       creator: true,
+    },
+  });
+
+  const updatedViews = await prisma.eventSeries.update({
+    where: { id },
+    data: {
+      view_count: {
+        increment: 1,
+      },
     },
   });
 
@@ -96,12 +106,16 @@ export default async function EventSeriesPage({
                     count={isLikedOrFavorited.likeCount || 0}
                   />
                 </div>
-                <div className="flex flex-col mr-4">
+                <div className="flex flex-col">
                   <FavoriteButton
                     eventId={id}
                     favorited={isLikedOrFavorited.favorited}
                     count={isLikedOrFavorited.favCount || 0}
                   />
+                </div>
+                <div className="flex flex-col mr-4">
+                  <Eye className="m-2" />
+                  <p className="text-center">{updatedViews.view_count}</p>
                 </div>
               </div>
               {session?.user.id === eventSeries?.creator_id && (
