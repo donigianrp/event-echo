@@ -60,10 +60,12 @@ interface Props {
 const EditEventSeriesDetails = ({ eventSeries }: Props) => {
   const [state, formAction] = useFormState(editEventSeries, initialState);
   const [category, setCategory] = useState(
-    String(eventSeries.category_id) || '',
+    eventSeries.category_id ? String(eventSeries.category_id) : undefined,
   );
   const [subCategory, setSubCategory] = useState(
-    String(eventSeries.sub_category_id) || '',
+    eventSeries.sub_category_id
+      ? String(eventSeries.sub_category_id)
+      : undefined,
   );
   const [cancelled, setCancelled] = useState(false);
   const [tags, setTags] = useState<Tag[]>(eventSeries.tags);

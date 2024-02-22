@@ -20,7 +20,6 @@ model Event {
   event_date_finish DateTime?
   creator_id        Int
   creator           User                 @relation(fields: [creator_id], references: [id])
-  event_type        EventTypeEvent[]
   event_series      EventSeriesEvent[]
   source_contents   SourceContentEvent[]
 
@@ -72,59 +71,25 @@ model EventSeriesEvent {
   @@map(name: "event_series_event")
 }
 
-model EventTypeEvent {
-  event_id        Int
-  category_id     Int
-  sub_category_id Int
-  events          Event     @relation(fields: [event_id], references: [id])
-  event_type      EventType @relation(fields: [category_id, sub_category_id], references: [category_id, sub_category_id])
-
-  @@id([category_id, sub_category_id, event_id])
-  @@map(name: "event_type_event")
-}
-
-model EventType {
-  category_id        Int
-  sub_category_id    Int
-  event_category     EventCategory          @relation(fields: [category_id], references: [id])
-  event_sub_category EventSubCategory       @relation(fields: [sub_category_id], references: [id])
-  events             EventTypeEvent[]
-  event_series       EventTypeEventSeries[]
-
-  @@id(name: "event_type_id", [category_id, sub_category_id])
-  @@map(name: "event_type")
-}
-
 model EventCategory {
-  id               Int                @id @default(autoincrement())
-  label            String
-  value            String
-  event_types      EventType[]
-  EventSubCategory EventSubCategory[]
+  id                 Int                @id @default(autoincrement())
+  label              String
+  value              String
+  event_sub_category EventSubCategory[]
+  event_series       EventSeries[]
 
   @@map(name: "event_category")
 }
 
 model EventSubCategory {
-  id             Int           @id @default(autoincrement())
+  id             Int            @id @default(autoincrement())
   label          String
   value          String
-  category_id    Int
-  event_category EventCategory @relation(fields: [category_id], references: [id])
-  event_types    EventType[]
+  category_id    Int?
+  event_category EventCategory? @relation(fields: [category_id], references: [id])
+  event_series   EventSeries[]
 
   @@map(name: "event_sub_category")
-}
-
-model EventTypeEventSeries {
-  event_series_id Int
-  category_id     Int
-  sub_category_id Int
-  event_series    EventSeries @relation(fields: [event_series_id], references: [id])
-  event_type      EventType   @relation(fields: [category_id, sub_category_id], references: [category_id, sub_category_id])
-
-  @@id([event_series_id])
-  @@map(name: "event_type_event_series")
 }
 
 model EventTagEventSeries {
@@ -138,19 +103,22 @@ model EventTagEventSeries {
 }
 
 model EventSeries {
-  id                Int                    @id @default(autoincrement())
+  id                Int                   @id @default(autoincrement())
   title             String
   description       String?
-  created_at        DateTime               @default(now())
-  updated_at        DateTime               @updatedAt
+  category_id       Int?
+  sub_category_id   Int?
+  created_at        DateTime              @default(now())
+  updated_at        DateTime              @updatedAt
   is_private        Boolean
   view_count        Int                    @default(0)                        
   creator_id        Int
-  has_adult_content Boolean                @default(true)
-  has_spam          Boolean                @default(true)
+  has_adult_content Boolean               @default(true)
+  has_spam          Boolean               @default(true)
+  category          EventCategory?        @relation(fields: [category_id], references: [id])
+  sub_category      EventSubCategory?     @relation(fields: [sub_category_id], references: [id])
   events            EventSeriesEvent[]
-  creator           User                   @relation(fields: [creator_id], references: [id])
-  event_type        EventTypeEventSeries[]
+  creator           User                  @relation(fields: [creator_id], references: [id])
   user_favorites    UserSeriesFavorite[]
   user_likes        UserSeriesLike[]
   event_tags        EventTagEventSeries[]

@@ -75,7 +75,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   const data = parse.data;
   const session = await getServerSession(authOptions);
 
-  const eventSeries = await prisma.eventSeries.update({
+  await prisma.eventSeries.update({
     where: { id: data.id },
     data: {
       title: data.title,
@@ -83,39 +83,10 @@ export async function editEventSeries(prevState: any, formData: FormData) {
       creator_id: session?.user.id,
       is_private: data.is_private,
       updated_at: new Date(),
-    },
-    include: {
-      event_type: true,
-      event_tags: true,
+      category_id: data.category || null,
+      sub_category_id: data.subcategory || null,
     },
   });
-
-  if (data.category && data.subcategory) {
-    if (
-      eventSeries.event_type === undefined ||
-      eventSeries.event_type.length === 0
-    ) {
-      await prisma.eventTypeEventSeries.create({
-        data: {
-          event_series_id: data.id,
-          category_id: data.category,
-          sub_category_id: data.subcategory,
-        },
-      });
-    } else {
-      await prisma.eventTypeEventSeries.update({
-        where: { event_series_id: data.id },
-        data: {
-          category_id: data.category,
-          sub_category_id: data.subcategory,
-        },
-      });
-    }
-  } else if (eventSeries.event_type.length > 0) {
-    await prisma.eventTypeEventSeries.delete({
-      where: { event_series_id: data.id },
-    });
-  }
 
   await prisma.eventTagEventSeries.deleteMany({
     where: { event_series_id: data.id },

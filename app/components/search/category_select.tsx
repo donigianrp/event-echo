@@ -49,8 +49,9 @@ export default function CategorySelect({
   const filterSubCategories = (subs: SubcategoryWithCategory[]) => {
     return subs.filter(
       (sub) =>
-        String(sub.event_category.id) === category ||
-        sub.event_category.value === category,
+        sub.event_category &&
+        (String(sub.event_category.id) === category ||
+          sub.event_category.value === category),
     );
   };
 

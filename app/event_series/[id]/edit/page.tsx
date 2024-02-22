@@ -56,11 +56,10 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
       creator_id,
       has_adult_content,
       has_spam,
-      COALESCE(category_id::varchar(255), '') as category_id,
-      COALESCE(sub_category_id::varchar(255), '') as sub_category_id,
+      category_id,
+      sub_category_id,
       COALESCE(EventSeriesTags.tags, '[]') as tags
     FROM event_series
-    LEFT JOIN event_type_event_series ON event_series.id = event_type_event_series.event_series_id
     LEFT JOIN EventSeriesTags ON EventSeriesTags.event_series_id = event_series.id
     WHERE id = ${Number(params.id)}
     `

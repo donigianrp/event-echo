@@ -21,7 +21,7 @@ import {
 interface Props {
   options: { value: string; label: string; id: number }[];
   inputLabel: string;
-  controller: [string, (val: string) => void];
+  controller: [string | undefined, (val: string) => void];
   handleSelect?: any;
 }
 
