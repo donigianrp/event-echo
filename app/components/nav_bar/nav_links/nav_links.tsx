@@ -13,6 +13,7 @@ import {
 import React, { Dispatch, FunctionComponent, SetStateAction } from 'react';
 
 const personalLinks = [
+  { name: 'Home', pathName: '/', icon: <Home /> },
   { name: 'Series', pathName: '/event_series', icon: <AreaChart /> },
   { name: 'Favorites', pathName: '/favorites', icon: <Bookmark /> },
   { name: 'Likes', pathName: '/likes', icon: <Heart /> },
@@ -37,19 +38,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
   };
   return (
     <>
-      <Button
-        variant="ghost"
-        className={`m-2 block ${navStyle === 'default' ? 'w-full' : 'w-2/4'}`}
-        asChild
-      >
-        <Link href="/" onClick={handleSheetClose}>
-          <div className="flex items-center">
-            <Home />
-            <div className="ml-2">Home</div>
-          </div>
-        </Link>
-      </Button>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight ">
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
         Personal
       </h4>
       {personalLinks.map((link) => {
@@ -57,9 +46,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
           <Button
             key={link.name}
             variant="ghost"
-            className={`m-2 block ${
-              navStyle === 'default' ? 'w-full' : 'w-2/4'
-            }`}
+            className={`block ${navStyle === 'default' ? 'w-full' : 'w-[150px]'}`}
             asChild
           >
             <Link href={link.pathName} onClick={handleSheetClose}>
@@ -71,7 +58,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
           </Button>
         );
       })}
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4 ">
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
         Popular
       </h4>
       {popularLinks.map((link) => {
@@ -79,9 +66,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
           <Button
             key={link.name}
             variant="ghost"
-            className={`m-2 block ${
-              navStyle === 'default' ? 'w-full' : 'w-2/4'
-            }`}
+            className={`block ${navStyle === 'default' ? 'w-full' : 'w-[150px]'}`}
             asChild
           >
             <Link href={link.pathName} onClick={handleSheetClose}>
