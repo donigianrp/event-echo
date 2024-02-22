@@ -44,12 +44,12 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     WITH EventPositions AS (
       SELECT event_id, event_position
       FROM "event_series_event" 
-      WHERE "event_series_event"."event_series_id" = 1
+      WHERE "event_series_event"."event_series_id" = ${Number(params.id)}
     )
 
     SELECT "event".*, "event_position", "thumbnails" 
     FROM "event"
-    LEFT JOIN EventPositions ON EventPositions."event_id" = "event"."id"
+    INNER JOIN EventPositions ON EventPositions."event_id" = "event"."id"
     LEFT JOIN "source_content_event" ON "source_content_event"."event_id" = "event"."id"
     LEFT JOIN "source_content" ON "source_content"."id" = "source_content_event"."source_content_id"
     ORDER BY "event_position"

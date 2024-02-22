@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "label": "Sports",
+    "value": "sports"
+  },
+  {
+    "id": 2,
+    "label": "Music",
+    "value": "music"
+  },
+  {
+    "id": 3,
+    "label": "Technology",
+    "value": "technology"
+  },
+  {
+    "id": 4,
+    "label": "Food and Drink",
+    "value": "foodAndDrink"
+  },
+  {
+    "id": 5,
+    "label": "Entertainment",
+    "value": "entertainment"
+  },
+  {
+    "id": 6,
+    "label": "Fitness and Wellness",
+    "value": "fitnessAndWellness"
+  },
+  {
+    "id": 7,
+    "label": "Arts and Culture",
+    "value": "artsAndCulture"
+  },
+  {
+    "id": 8,
+    "label": "Business and Networking",
+    "value": "businessAndNetworking"
+  }
+]

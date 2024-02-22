@@ -15,6 +15,7 @@ const EditSeriesEvents = () => {
   const localStore = useContext(EditSeriesContext);
   const events = localStore?.events || [];
   const eventSeries = localStore?.eventSeries;
+  console.log('EVENTS', events);
   const [items, setItems] = useState<EventPosition[]>(events);
   const { toast } = useToast();
   const router = useRouter();
@@ -74,17 +75,19 @@ const EditSeriesEvents = () => {
           </Button>
         </div>
       </div>
-      <DndContext onDragEnd={reorderEvents}>
-        <main className={'flex flex-col align-middle p-1 g-2'}>
-          <div className={'w-full'}>
-            <SortableContext items={items}>
-              {items.map((item, idx) => (
-                <SortableItem event={item} idx={idx} key={item.id} />
-              ))}
-            </SortableContext>
-          </div>
-        </main>
-      </DndContext>
+      {items.length > 0 && (
+        <DndContext onDragEnd={reorderEvents}>
+          <main className={'flex flex-col align-middle p-1 g-2'}>
+            <div className={'w-full'}>
+              <SortableContext items={items}>
+                {items.map((item, idx) => (
+                  <SortableItem event={item} idx={idx} key={item.id} />
+                ))}
+              </SortableContext>
+            </div>
+          </main>
+        </DndContext>
+      )}
     </div>
   );
 };

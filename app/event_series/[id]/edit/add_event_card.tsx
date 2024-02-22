@@ -179,6 +179,8 @@ const AddEventCard = ({ sourceContent }: Props) => {
       if (contents instanceof Error) {
         throw new Error('400');
       }
+
+      console.log('CONTENTS', contents);
       const results = await fetch(
         `/api/event_series/${seriesId}/event/${eventId}/comments`,
         {
