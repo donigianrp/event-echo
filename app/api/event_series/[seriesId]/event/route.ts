@@ -103,6 +103,8 @@ export async function POST(request: Request) {
       },
     });
 
+    console.log('EVENT EXISTS', eventExists);
+
     if (eventExists) {
       throw new Error('403');
     }
@@ -114,6 +116,7 @@ export async function POST(request: Request) {
         creator_id,
       },
     });
+    console.log(createdEvent);
 
     const currentMaxPosition = await prisma.eventSeriesEvent.findMany({
       where: { event_series_id: eventSeriesId },
@@ -124,6 +127,7 @@ export async function POST(request: Request) {
       ],
       take: 1,
     });
+    console.log(currentMaxPosition);
 
     const newSourceContentEvent = await prisma.sourceContentEvent.create({
       data: {
@@ -136,7 +140,10 @@ export async function POST(request: Request) {
       data: {
         event_id: createdEvent.id,
         event_series_id: eventSeriesId,
-        event_position: currentMaxPosition[0].event_position + 1,
+        event_position:
+          currentMaxPosition.length > 0
+            ? currentMaxPosition[0].event_position + 1
+            : 1,
       },
     });
 
