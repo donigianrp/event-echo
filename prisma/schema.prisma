@@ -140,7 +140,7 @@ model EventSeries {
   created_at        DateTime               @default(now())
   updated_at        DateTime               @updatedAt
   is_private        Boolean
-  view_count        Int?
+  view_count        Int                    @default(0)                        
   creator_id        Int
   has_adult_content Boolean                @default(true)
   has_spam          Boolean                @default(true)
