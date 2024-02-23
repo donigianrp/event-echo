@@ -136,7 +136,10 @@ export async function POST(request: Request) {
       data: {
         event_id: createdEvent.id,
         event_series_id: eventSeriesId,
-        event_position: currentMaxPosition[0].event_position + 1,
+        event_position:
+          currentMaxPosition.length > 0
+            ? currentMaxPosition[0].event_position + 1
+            : 1,
       },
     });
 

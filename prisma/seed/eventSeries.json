@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "2023 New York Jets Postgame Conferences",
+    "description": null,
+    "created_at": "2024-02-21T20:36:24.712Z",
+    "updated_at": "2024-02-21T20:36:24.712Z",
+    "is_private": false,
+    "view_count": null,
+    "creator_id": 1,
+    "has_adult_content": true,
+    "has_spam": true
+  },
+  {
+    "id": 2,
+    "title": "2023 Buffalo Bills Game Highlights",
+    "description": "",
+    "created_at": "2024-02-21T20:38:51.664Z",
+    "updated_at": "2024-02-21T20:38:51.664Z",
+    "is_private": false,
+    "view_count": null,
+    "creator_id": 3,
+    "has_adult_content": true,
+    "has_spam": true
+  },
+  {
+    "id": 3,
+    "title": "2023 Miami Dolphins Game Highlights",
+    "description": "",
+    "created_at": "2024-02-21T20:45:26.695Z",
+    "updated_at": "2024-02-21T20:45:26.695Z",
+    "is_private": false,
+    "view_count": null,
+    "creator_id": 3,
+    "has_adult_content": true,
+    "has_spam": true
+  },
+  {
+    "id": 4,
+    "title": "2023 New England Patriots Game Highlights",
+    "description": "",
+    "created_at": "2024-02-21T20:51:59.970Z",
+    "updated_at": "2024-02-21T20:51:59.970Z",
+    "is_private": false,
+    "view_count": null,
+    "creator_id": 3,
+    "has_adult_content": true,
+    "has_spam": true
+  }
+]
