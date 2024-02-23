@@ -47,6 +47,7 @@ export async function POST(request: Request) {
     socialMediaPlatformId,
     thumbnails,
     channelId,
+    channelTitle,
   }: EventReqParams = event;
 
   try {
@@ -64,6 +65,7 @@ export async function POST(request: Request) {
           data: {
             social_media_platform_id: socialMediaPlatformId,
             social_media_id: socialMediaId,
+            name: channelTitle,
           },
         });
       }

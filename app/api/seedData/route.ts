@@ -21,9 +21,6 @@ export async function GET(request: Request) {
     const sourceContentEvents = await prisma.sourceContentEvent.findMany();
     const eventSeries = await prisma.eventSeries.findMany();
     const eventSeriesEvents = await prisma.eventSeriesEvent.findMany();
-    const eventTypes = await prisma.eventType.findMany();
-    const eventTypeEvents = await prisma.eventTypeEvent.findMany();
-    const eventTypeEventSeries = await prisma.eventTypeEventSeries.findMany();
     const eventTagEventSeries = await prisma.eventTagEventSeries.findMany();
     const eventCategories = await prisma.eventCategory.findMany();
     const eventSubCategories = await prisma.eventSubCategory.findMany();
@@ -47,9 +44,6 @@ export async function GET(request: Request) {
     writeJSONFile('sourceContentEvents.json', sourceContentEvents);
     writeJSONFile('eventSeries.json', eventSeries);
     writeJSONFile('eventSeriesEvents.json', eventSeriesEvents);
-    writeJSONFile('eventTypes.json', eventTypes);
-    writeJSONFile('eventTypeEvents.json', eventTypeEvents);
-    writeJSONFile('eventTypeEventSeries.json', eventTypeEventSeries);
     writeJSONFile('eventCategories.json', eventCategories);
     writeJSONFile('eventSubCategories.json', eventSubCategories);
     writeJSONFile('sourceContentCreators.json', sourceContentCreators);

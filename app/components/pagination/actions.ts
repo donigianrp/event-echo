@@ -95,26 +95,14 @@ export async function getFilteredEventSeries({
           },
         },
       ],
-      ...(category || subcategory
+      ...(category
         ? {
-            event_type: {
-              some: {
-                event_type: {
-                  AND: [
-                    {
-                      event_category: {
-                        ...(category ? { value: category } : {}),
-                      },
-                    },
-                    {
-                      event_sub_category: {
-                        ...(subcategory ? { value: subcategory } : {}),
-                      },
-                    },
-                  ],
-                },
-              },
-            },
+            category: { value: category },
+          }
+        : {}),
+      ...(subcategory
+        ? {
+            sub_category: { value: subcategory },
           }
         : {}),
     },
@@ -217,26 +205,14 @@ export async function getTotalPages({
           },
         },
       ],
-      ...(category || subcategory
+      ...(category
         ? {
-            event_type: {
-              some: {
-                event_type: {
-                  AND: [
-                    {
-                      event_category: {
-                        ...(category ? { value: category } : {}),
-                      },
-                    },
-                    {
-                      event_sub_category: {
-                        ...(subcategory ? { value: subcategory } : {}),
-                      },
-                    },
-                  ],
-                },
-              },
-            },
+            category: { value: category },
+          }
+        : {}),
+      ...(subcategory
+        ? {
+            sub_category: { value: subcategory },
           }
         : {}),
     },

@@ -60,19 +60,14 @@ const EditSeriesEvents = () => {
   };
 
   return (
-    <div>
-      <div className={`w-full flex justify-end`}>
-        <div className={`m-2`}>
-          <Button className={`bg-white`} onClick={() => resetOrder()}>
-            <ListRestart />
-          </Button>
-          <Button
-            className={`ml-2 bg-white`}
-            onClick={() => updateSeriesOrder(items)}
-          >
-            <Save />
-          </Button>
-        </div>
+    <div className="flex flex-col gap-4">
+      <div className={`flex mt-4 gap-2 justify-end`}>
+        <Button variant="outline" onClick={() => resetOrder()}>
+          <ListRestart />
+        </Button>
+        <Button variant="outline" onClick={() => updateSeriesOrder(items)}>
+          <Save />
+        </Button>
       </div>
       {items.length > 0 && (
         <DndContext onDragEnd={reorderEvents}>

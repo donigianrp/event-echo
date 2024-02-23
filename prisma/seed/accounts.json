@@ -1,18 +1,1 @@
-[
-  {
-    "id": 1,
-    "userId": 3,
-    "type": "oauth",
-    "provider": "google",
-    "providerAccountId": "102765152179650329265",
-    "refresh_token": null,
-    "access_token": "ya29.a0AfB_byDcyVQOuvT_FQx96J169ED4sc1sp9J2c97h_uDjicLiavgh6FpYs27LSc9dgl8RbgUVGApckcJIYp-gEDDqcZ2R0Vd1bbrUQbgiqFMB_pPvoOHNxc3la9uuifLc5Vg4RUpdXGstcDco7cObBDbPI-mEreDy9fSHaCgYKAUkSARASFQHGX2MirfwJxEX0Xs0Hf80NwWXv6w0171",
-    "expires_at": 1708551462,
-    "token_type": "Bearer",
-    "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
-    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjU1YzE4OGE4MzU0NmZjMTg4ZTUxNTc2YmE3MjgzNmUwNjAwZThiNzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMjEzODc2MTg1MjMtZHNkbjlxb2p0ZmNjZTA5aXVyNnQwa2dyYmhsMmtsYmQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxMjEzODc2MTg1MjMtZHNkbjlxb2p0ZmNjZTA5aXVyNnQwa2dyYmhsMmtsYmQuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDI3NjUxNTIxNzk2NTAzMjkyNjUiLCJlbWFpbCI6InJwZG9uaWdpYW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJTeEVBQVBqdVE1Y2Q3VmI1NjdleFlRIiwibmFtZSI6IlJvYmVydCBEb25pZ2lhbiIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NJazNVa3o2Y1Zfak5qdkhGMDFkUHdRTDF5Mk9tNlZMdDFsMUt4alVoUEw9czk2LWMiLCJnaXZlbl9uYW1lIjoiUm9iZXJ0IiwiZmFtaWx5X25hbWUiOiJEb25pZ2lhbiIsImxvY2FsZSI6ImVuIiwiaWF0IjoxNzA4NTQ3ODY3LCJleHAiOjE3MDg1NTE0Njd9.g2-BHQ1v-3sw2kdtFD2Qrj9S-mJn0JflLhFBNORm970lpQeTcQ2F4Wkphr33Ws1OFj9R1kFX3k5MtIzRlVsZIdUNLygQDm_qKU68sykt2qO0v3yQ6oYWxoDzQv0OmwMuKWnKFChpNJf-C0MS2pHAVjDcW8KYU0W6rUdEja-ceIgI1Cs4lFX0knT397QHMZ2OF7xBnVKHR0fAJ3mJAr8yr2ZLDCCA-KSZiuZLXPVopcs0hlhKEJiUVKBGlK83YqBZ3Z3bg_dZhsl8bNRCIf-heERcT76asI0-LVf1yz72ggkrN1SqHPFuATT-hQ8y_dZdJD6_TbfEHqYUanxXGurMSg",
-    "session_state": null,
-    "oauth_token_secret": null,
-    "oauth_token": null
-  }
-]
+[]

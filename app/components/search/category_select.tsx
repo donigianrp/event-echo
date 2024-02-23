@@ -1,32 +1,26 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { EventCategory, EventSubCategory } from '@prisma/client';
-import { useEffect, useState } from 'react';
+import { EventCategory } from '@prisma/client';
+import { useState } from 'react';
 import { Combobox } from '../ui/combobox';
+import { SubcategoryWithCategory } from '@/app/search/page';
 
 export default function CategorySelect({
   categories,
   subcategories,
 }: {
   categories: EventCategory[];
-  subcategories: EventSubCategory[];
+  subcategories: SubcategoryWithCategory[];
 }) {
-  const [category, setCategory] = useState('');
-  const [subcategory, setSubcategory] = useState('');
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  useEffect(() => {
-    if (searchParams.get('category')) {
-      setCategory(searchParams.get('category') || '');
-    }
-
-    if (searchParams.get('subcategory')) {
-      setSubcategory(searchParams.get('subcategory') || '');
-    }
-  }, []);
+  const [category, setCategory] = useState(searchParams.get('category') || '');
+  const [subcategory, setSubcategory] = useState(
+    searchParams.get('subcategory') || '',
+  );
 
   const handleCategory = (c: string) => {
     const params = new URLSearchParams(searchParams);
@@ -52,8 +46,13 @@ export default function CategorySelect({
     replace(`${pathname}?${params.toString()}`);
   };
 
-  const filterSubCategories = (subs: EventSubCategory[]) => {
-    return subs.filter((sub) => sub.category_value === category);
+  const filterSubCategories = (subs: SubcategoryWithCategory[]) => {
+    return subs.filter(
+      (sub) =>
+        sub.event_category &&
+        (String(sub.event_category.id) === category ||
+          sub.event_category.value === category),
+    );
   };
 
   const resetSubCategoryAndSetCategory = (val: string) => {

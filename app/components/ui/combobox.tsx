@@ -19,9 +19,9 @@ import {
 } from '@/components/ui/popover';
 
 interface Props {
-  options: { value: string; label: string }[];
+  options: { value: string; label: string; id: number }[];
   inputLabel: string;
-  controller: [string, (val: string) => void];
+  controller: [string | undefined, (val: string) => void];
   handleSelect?: any;
 }
 
@@ -42,10 +42,13 @@ export function Combobox({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="min-w-[100px] xl:min-w-[250px] justify-between mb-2 md:mt-0"
+          className="min-w-[100px] xl:min-w-[250px] justify-between md:mt-0"
         >
           {value
-            ? options.find((option) => option.value === value)?.label
+            ? options.find(
+                (option) =>
+                  String(option.id) === value || option.value === value,
+              )?.label
             : `Select ${inputLabel}...`}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -61,9 +64,17 @@ export function Combobox({
                   key={option.value}
                   value={option.value}
                   onSelect={() => {
-                    setValue(option.value === value ? '' : option.value);
+                    setValue(
+                      String(option.id) === value || option.value === value
+                        ? ''
+                        : String(option.id),
+                    );
                     if (handleSelect) {
-                      handleSelect(option.value === value ? '' : option.value);
+                      handleSelect(
+                        String(option.id) === value || option.value === value
+                          ? ''
+                          : option.value,
+                      );
                     }
                     setOpen(false);
                   }}
@@ -71,7 +82,9 @@ export function Combobox({
                   <Check
                     className={cn(
                       'mr-2 h-4 w-4',
-                      value === option.value ? 'opacity-100' : 'opacity-0',
+                      value === String(option.id) || value === option.value
+                        ? 'opacity-100'
+                        : 'opacity-0',
                     )}
                   />
                   {option.label}

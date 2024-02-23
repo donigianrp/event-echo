@@ -44,12 +44,27 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     id: z.coerce.number(),
     title: z.string().min(1),
     description: z.string(),
-    is_private: z.coerce.boolean(),
+    category: z.coerce.number(),
+    subcategory: z.coerce.number().optional(),
+    tags: z.preprocess(
+      (val) => (typeof val === 'string' ? JSON.parse(val) : {}),
+      z
+        .object({ id: z.string(), text: z.string() })
+        .pick({ text: true })
+        .array(),
+    ),
+    is_private: z.preprocess(
+      (val) => (typeof val === 'string' ? JSON.parse(val).is_private : {}),
+      z.boolean(),
+    ),
   });
   const parse = schema.safeParse({
     id: formData.get('id'),
     title: formData.get('title'),
     description: formData.get('description'),
+    category: formData.get('category'),
+    subcategory: formData.get('subcategory'),
+    tags: formData.get('tags'),
     is_private: formData.get('is_private'),
   });
 
@@ -68,8 +83,32 @@ export async function editEventSeries(prevState: any, formData: FormData) {
       creator_id: session?.user.id,
       is_private: data.is_private,
       updated_at: new Date(),
+      category_id: data.category || null,
+      sub_category_id: data.subcategory || null,
     },
   });
+
+  await prisma.eventTagEventSeries.deleteMany({
+    where: { event_series_id: data.id },
+  });
+  if (data.tags !== undefined && data.tags.length > 0) {
+    for (let i = 0; i < data.tags.length; i++) {
+      const tag = await prisma.eventTag.findUnique({
+        where: { text: data.tags[i].text },
+      });
+      if (!tag) {
+        await prisma.eventTag.create({
+          data: { text: data.tags[i].text },
+        });
+      }
+      await prisma.eventTagEventSeries.create({
+        data: {
+          event_series_id: data.id,
+          event_tag_text: data.tags[i].text,
+        },
+      });
+    }
+  }
 
   revalidatePath('/event_series/[id]', 'page');
   redirect(`/event_series/${data.id}`);
