@@ -3,7 +3,6 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Providers from './providers';
 import ContentWrapper from './components/content_wrapper/content_wrapper';
-import Header from './components/header/header';
 import NavBar from './components/nav_bar/nav_bar';
 import { Toaster } from './components/ui/toaster';
 
@@ -20,7 +19,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className={plusJakartaSans.className}>
         <Providers>
           <main>
-            <Header />
             <NavBar />
             <ContentWrapper>{children}</ContentWrapper>
           </main>

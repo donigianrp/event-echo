@@ -20,7 +20,7 @@ const MobileNav = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-96">
+      <SheetContent side="left" className="min-w-[250px]">
         <SheetClose asChild>
           <NavLinks navStyle="mobile" setSheetOpen={setSheetOpen} />
         </SheetClose>
