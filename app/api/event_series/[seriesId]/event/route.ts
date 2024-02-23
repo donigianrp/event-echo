@@ -103,8 +103,6 @@ export async function POST(request: Request) {
       },
     });
 
-    console.log('EVENT EXISTS', eventExists);
-
     if (eventExists) {
       throw new Error('403');
     }
@@ -116,7 +114,6 @@ export async function POST(request: Request) {
         creator_id,
       },
     });
-    console.log(createdEvent);
 
     const currentMaxPosition = await prisma.eventSeriesEvent.findMany({
       where: { event_series_id: eventSeriesId },
@@ -127,7 +124,6 @@ export async function POST(request: Request) {
       ],
       take: 1,
     });
-    console.log(currentMaxPosition);
 
     const newSourceContentEvent = await prisma.sourceContentEvent.create({
       data: {

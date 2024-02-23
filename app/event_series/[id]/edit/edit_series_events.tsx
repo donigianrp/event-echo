@@ -15,7 +15,6 @@ const EditSeriesEvents = () => {
   const localStore = useContext(EditSeriesContext);
   const events = localStore?.events || [];
   const eventSeries = localStore?.eventSeries;
-  console.log('EVENTS', events);
   const [items, setItems] = useState<EventPosition[]>(events);
   const { toast } = useToast();
   const router = useRouter();
