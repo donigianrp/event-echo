@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/11)",
@@ -10,7 +9,6 @@
     "creator_id": 1
   },
   {
-    "id": 2,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/17)",
@@ -20,7 +18,6 @@
     "creator_id": 1
   },
   {
-    "id": 3,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/24)",
@@ -30,7 +27,6 @@
     "creator_id": 1
   },
   {
-    "id": 4,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/1)",
@@ -40,7 +36,6 @@
     "creator_id": 1
   },
   {
-    "id": 5,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/8)",
@@ -50,7 +45,6 @@
     "creator_id": 1
   },
   {
-    "id": 6,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/15)",
@@ -60,7 +54,6 @@
     "creator_id": 1
   },
   {
-    "id": 7,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/29)",
@@ -70,7 +63,6 @@
     "creator_id": 1
   },
   {
-    "id": 8,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/6)",
@@ -80,7 +72,6 @@
     "creator_id": 1
   },
   {
-    "id": 9,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/12)",
@@ -90,7 +81,6 @@
     "creator_id": 1
   },
   {
-    "id": 10,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/19)",
@@ -100,7 +90,6 @@
     "creator_id": 1
   },
   {
-    "id": 11,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/24)",
@@ -110,7 +99,6 @@
     "creator_id": 1
   },
   {
-    "id": 12,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/3)",
@@ -120,7 +108,6 @@
     "creator_id": 1
   },
   {
-    "id": 13,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/10)",
@@ -130,7 +117,6 @@
     "creator_id": 1
   },
   {
-    "id": 14,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/17)",
@@ -140,7 +126,6 @@
     "creator_id": 1
   },
   {
-    "id": 15,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/24)",
@@ -150,7 +135,6 @@
     "creator_id": 1
   },
   {
-    "id": 16,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/28)",
@@ -160,7 +144,6 @@
     "creator_id": 1
   },
   {
-    "id": 17,
     "created_at": "2024-02-21T20:39:24.826Z",
     "updated_at": "2024-02-21T20:39:24.826Z",
     "title": "Buffalo Bills vs. New York Jets | 2023 Week 1 Game Highlights",
@@ -170,7 +153,6 @@
     "creator_id": 1
   },
   {
-    "id": 18,
     "created_at": "2024-02-21T20:39:37.341Z",
     "updated_at": "2024-02-21T20:39:37.341Z",
     "title": "Las Vegas Raiders vs. Buffalo Bills Game Highlights | NFL 2023 Week 2",
@@ -180,7 +162,6 @@
     "creator_id": 1
   },
   {
-    "id": 19,
     "created_at": "2024-02-21T20:39:48.995Z",
     "updated_at": "2024-02-21T20:39:48.995Z",
     "title": "Buffalo Bills vs. Washington Commanders | 2023 Week 3 Game Highlights",
@@ -190,7 +171,6 @@
     "creator_id": 1
   },
   {
-    "id": 20,
     "created_at": "2024-02-21T20:40:02.328Z",
     "updated_at": "2024-02-21T20:40:02.328Z",
     "title": "Miami Dolphins vs. Buffalo Bills Game Highlights | NFL 2023 Week 4",
@@ -200,7 +180,6 @@
     "creator_id": 1
   },
   {
-    "id": 21,
     "created_at": "2024-02-21T20:40:16.627Z",
     "updated_at": "2024-02-21T20:40:16.627Z",
     "title": "Jacksonville Jaguars vs. Buffalo Bills Game Highlights | NFL 2023 Week 5",
@@ -210,7 +189,6 @@
     "creator_id": 1
   },
   {
-    "id": 22,
     "created_at": "2024-02-21T20:40:29.008Z",
     "updated_at": "2024-02-21T20:40:29.008Z",
     "title": "New York Giants vs. Buffalo Bills | 2023 Week 6 Game Highlights",
@@ -220,7 +198,6 @@
     "creator_id": 1
   },
   {
-    "id": 23,
     "created_at": "2024-02-21T20:40:43.204Z",
     "updated_at": "2024-02-21T20:40:43.204Z",
     "title": "Buffalo Bills vs. New England Patriots | 2023 Week 7 Game Highlights",
@@ -230,7 +207,6 @@
     "creator_id": 1
   },
   {
-    "id": 24,
     "created_at": "2024-02-21T20:40:52.378Z",
     "updated_at": "2024-02-21T20:40:52.378Z",
     "title": "Tampa Bay Buccaneers vs. Buffalo Bills | 2023 Week 8 Game Highlgihts",
@@ -240,7 +216,6 @@
     "creator_id": 1
   },
   {
-    "id": 25,
     "created_at": "2024-02-21T20:41:19.451Z",
     "updated_at": "2024-02-21T20:41:19.451Z",
     "title": "Buffalo Bills vs. Cincinnati Bengals | 2023 Week 9 Game Highlights",
@@ -250,7 +225,6 @@
     "creator_id": 1
   },
   {
-    "id": 26,
     "created_at": "2024-02-21T20:41:49.622Z",
     "updated_at": "2024-02-21T20:41:49.622Z",
     "title": "Denver Broncos vs. Buffalo Bills | 2023 Week 10 Game Highlights",
@@ -260,7 +234,6 @@
     "creator_id": 1
   },
   {
-    "id": 27,
     "created_at": "2024-02-21T20:42:13.802Z",
     "updated_at": "2024-02-21T20:42:13.802Z",
     "title": "New York Jets vs. Buffalo Bills | 2023 Week 11 Game Highlights",
@@ -270,7 +243,6 @@
     "creator_id": 1
   },
   {
-    "id": 28,
     "created_at": "2024-02-21T20:42:25.346Z",
     "updated_at": "2024-02-21T20:42:25.346Z",
     "title": "Buffalo Bills vs. Philadelphia Eagles | 2023 Week 12 Game Highlights",
@@ -280,7 +252,6 @@
     "creator_id": 1
   },
   {
-    "id": 29,
     "created_at": "2024-02-21T20:42:43.867Z",
     "updated_at": "2024-02-21T20:42:43.867Z",
     "title": "Buffalo Bills vs. Kansas City Chiefs | 2023 Week 14 Game Highlights",
@@ -290,7 +261,6 @@
     "creator_id": 1
   },
   {
-    "id": 30,
     "created_at": "2024-02-21T20:43:03.223Z",
     "updated_at": "2024-02-21T20:43:03.223Z",
     "title": "Buffalo Bills vs. Los Angeles Chargers | 2023 Week 16 Game Highlights",
@@ -300,7 +270,6 @@
     "creator_id": 1
   },
   {
-    "id": 31,
     "created_at": "2024-02-21T20:43:45.387Z",
     "updated_at": "2024-02-21T20:43:45.387Z",
     "title": "Buffalo Bills vs. Dallas Cowboys Game Highlights | NFL 2023 Week 15",
@@ -310,7 +279,6 @@
     "creator_id": 1
   },
   {
-    "id": 32,
     "created_at": "2024-02-21T20:43:54.910Z",
     "updated_at": "2024-02-21T20:43:54.910Z",
     "title": "New England Patriots vs. Buffalo Bills Game Highlights | NFL 2023 Week 17",
@@ -320,7 +288,6 @@
     "creator_id": 1
   },
   {
-    "id": 33,
     "created_at": "2024-02-21T20:44:06.430Z",
     "updated_at": "2024-02-21T20:44:06.430Z",
     "title": "Buffalo Bills vs. Miami Dolphins | 2023 Week 18 Game Highlights",
@@ -330,7 +297,6 @@
     "creator_id": 1
   },
   {
-    "id": 34,
     "created_at": "2024-02-21T20:45:58.258Z",
     "updated_at": "2024-02-21T20:45:58.258Z",
     "title": "Miami Dolphins vs. Los Angeles Chargers | 2023 Week 1 Game Highlights",
@@ -340,7 +306,6 @@
     "creator_id": 1
   },
   {
-    "id": 35,
     "created_at": "2024-02-21T20:46:11.300Z",
     "updated_at": "2024-02-21T20:46:11.300Z",
     "title": "Miami Dolphins vs. New England Patriots | 2023 Week 2 Game Highlights",
@@ -350,7 +315,6 @@
     "creator_id": 1
   },
   {
-    "id": 36,
     "created_at": "2024-02-21T20:46:19.352Z",
     "updated_at": "2024-02-21T20:46:19.352Z",
     "title": "Denver Broncos vs. Miami Dolphins Game Highlights | NFL 2023 Week 3",
@@ -360,7 +324,6 @@
     "creator_id": 1
   },
   {
-    "id": 37,
     "created_at": "2024-02-21T20:46:39.892Z",
     "updated_at": "2024-02-21T20:46:39.892Z",
     "title": "New York Giants vs. Miami Dolphins | 2023 Week 5 Game Highlights",
@@ -370,7 +333,6 @@
     "creator_id": 1
   },
   {
-    "id": 38,
     "created_at": "2024-02-21T20:46:51.301Z",
     "updated_at": "2024-02-21T20:46:51.301Z",
     "title": "Carolina Panthers vs. Miami Dolphins Game Highlights | NFL 2023 Week 6",
@@ -380,7 +342,6 @@
     "creator_id": 1
   },
   {
-    "id": 39,
     "created_at": "2024-02-21T20:47:11.076Z",
     "updated_at": "2024-02-21T20:47:11.076Z",
     "title": "Miami Dolphins vs. Buffalo Bills Game Highlights | NFL 2023 Week 4",
@@ -390,7 +351,6 @@
     "creator_id": 1
   },
   {
-    "id": 40,
     "created_at": "2024-02-21T20:47:23.963Z",
     "updated_at": "2024-02-21T20:47:23.963Z",
     "title": "Miami Dolphins vs. Philadelphia Eagles | 2023 Week 7 Game Highlights",
@@ -400,7 +360,6 @@
     "creator_id": 1
   },
   {
-    "id": 41,
     "created_at": "2024-02-21T20:47:40.270Z",
     "updated_at": "2024-02-21T20:47:40.270Z",
     "title": "New England Patriots vs. Miami Dolphins | 2023 Week 8 Game Highlights",
@@ -410,7 +369,6 @@
     "creator_id": 1
   },
   {
-    "id": 42,
     "created_at": "2024-02-21T20:47:50.570Z",
     "updated_at": "2024-02-21T20:47:50.570Z",
     "title": "Miami Dolphins vs. Kansas City Chiefs Game Highlights | NFL 2023 Week 9",
@@ -420,7 +378,6 @@
     "creator_id": 1
   },
   {
-    "id": 43,
     "created_at": "2024-02-21T20:48:03.315Z",
     "updated_at": "2024-02-21T20:48:03.315Z",
     "title": "Las Vegas Raiders vs. Miami Dolphins Game Highlights | NFL 2023 Week 11",
@@ -430,7 +387,6 @@
     "creator_id": 1
   },
   {
-    "id": 44,
     "created_at": "2024-02-21T20:48:18.687Z",
     "updated_at": "2024-02-21T20:48:18.687Z",
     "title": "Miami Dolphins vs. New York Jets | 2023 Week 12 Game Highlights",
@@ -440,7 +396,6 @@
     "creator_id": 1
   },
   {
-    "id": 45,
     "created_at": "2024-02-21T20:48:33.148Z",
     "updated_at": "2024-02-21T20:48:33.148Z",
     "title": "Miami Dolphins vs. Washington Commanders | 2023 Week 13 Game Highlights",
@@ -450,7 +405,6 @@
     "creator_id": 1
   },
   {
-    "id": 46,
     "created_at": "2024-02-21T20:48:42.768Z",
     "updated_at": "2024-02-21T20:48:42.768Z",
     "title": "Tennessee Titans vs. Miami Dolphins | 2023 Week 14 Game Highlights",
@@ -460,7 +414,6 @@
     "creator_id": 1
   },
   {
-    "id": 47,
     "created_at": "2024-02-21T20:48:54.027Z",
     "updated_at": "2024-02-21T20:48:54.027Z",
     "title": "New York Jets vs. Miami Dolphins Game Highlights | NFL 2023 Week 15",
@@ -470,7 +423,6 @@
     "creator_id": 1
   },
   {
-    "id": 48,
     "created_at": "2024-02-21T20:49:04.551Z",
     "updated_at": "2024-02-21T20:49:04.551Z",
     "title": "Dallas Cowboys vs. Miami Dolphins | 2023 Week 16 Game Highlights",
@@ -480,7 +432,6 @@
     "creator_id": 1
   },
   {
-    "id": 49,
     "created_at": "2024-02-21T20:49:16.846Z",
     "updated_at": "2024-02-21T20:49:16.846Z",
     "title": "Miami Dolphins vs. Baltimore Ravens | 2023 Week 17 Game Highlights",
@@ -490,7 +441,6 @@
     "creator_id": 1
   },
   {
-    "id": 50,
     "created_at": "2024-02-21T20:49:32.978Z",
     "updated_at": "2024-02-21T20:49:32.978Z",
     "title": "Buffalo Bills vs. Miami Dolphins | 2023 Week 18 Game Highlights",
@@ -500,7 +450,6 @@
     "creator_id": 1
   },
   {
-    "id": 51,
     "created_at": "2024-02-21T20:52:25.116Z",
     "updated_at": "2024-02-21T20:52:25.116Z",
     "title": "Philadelphia Eagles vs. New England Patriots | 2023 Week 1 Game Highlights",
@@ -510,7 +459,6 @@
     "creator_id": 1
   },
   {
-    "id": 52,
     "created_at": "2024-02-21T20:52:34.611Z",
     "updated_at": "2024-02-21T20:52:34.611Z",
     "title": "Miami Dolphins vs. New England Patriots | 2023 Week 2 Game Highlights",
@@ -520,7 +468,6 @@
     "creator_id": 1
   },
   {
-    "id": 53,
     "created_at": "2024-02-21T20:52:53.741Z",
     "updated_at": "2024-02-21T20:52:53.741Z",
     "title": "New England Patriots vs. New York Jets | 2023 Week 3 Game Highlights",
@@ -530,7 +477,6 @@
     "creator_id": 1
   },
   {
-    "id": 54,
     "created_at": "2024-02-21T20:53:03.651Z",
     "updated_at": "2024-02-21T20:53:03.651Z",
     "title": "New England Patriots vs. Dallas Cowboys Game Highlights | NFL 2023 Week 4",
@@ -540,7 +486,6 @@
     "creator_id": 1
   },
   {
-    "id": 55,
     "created_at": "2024-02-21T20:53:13.508Z",
     "updated_at": "2024-02-21T20:53:13.508Z",
     "title": "New Orleans Saints vs. New England Patriots | 2023 Week 5 Game Highlights",
@@ -550,7 +495,6 @@
     "creator_id": 1
   },
   {
-    "id": 56,
     "created_at": "2024-02-21T20:53:50.567Z",
     "updated_at": "2024-02-21T20:53:50.567Z",
     "title": "New England Patriots vs. Las Vegas Raiders | 2023 Week 6 Game Highlights",
@@ -560,7 +504,6 @@
     "creator_id": 1
   },
   {
-    "id": 57,
     "created_at": "2024-02-21T20:54:01.807Z",
     "updated_at": "2024-02-21T20:54:01.807Z",
     "title": "Buffalo Bills vs. New England Patriots | 2023 Week 7 Game Highlights",
@@ -570,7 +513,6 @@
     "creator_id": 1
   },
   {
-    "id": 58,
     "created_at": "2024-02-21T20:54:12.478Z",
     "updated_at": "2024-02-21T20:54:12.478Z",
     "title": "New England Patriots vs. Miami Dolphins | 2023 Week 8 Game Highlights",
@@ -580,7 +522,6 @@
     "creator_id": 1
   },
   {
-    "id": 59,
     "created_at": "2024-02-21T20:54:30.081Z",
     "updated_at": "2024-02-21T20:54:30.081Z",
     "title": "Indianapolis Colts vs. New England Patriots Game Highlights | NFL 2023 Week 10",
@@ -590,7 +531,6 @@
     "creator_id": 1
   },
   {
-    "id": 60,
     "created_at": "2024-02-21T20:54:41.217Z",
     "updated_at": "2024-02-21T20:54:41.217Z",
     "title": "New England Patriots vs. New York Giants | 2023 Week 12 Game Highlights",
@@ -600,7 +540,6 @@
     "creator_id": 1
   },
   {
-    "id": 61,
     "created_at": "2024-02-21T20:54:50.207Z",
     "updated_at": "2024-02-21T20:54:50.207Z",
     "title": "Los Angeles Chargers vs. New England Patriots Game Highlights | NFL 2023 Week 13",
@@ -610,7 +549,6 @@
     "creator_id": 1
   },
   {
-    "id": 62,
     "created_at": "2024-02-21T20:54:58.559Z",
     "updated_at": "2024-02-21T20:54:58.559Z",
     "title": "New England Patriots vs. Pittsburgh Steelers | 2023 Week 14 Game Highlights",
@@ -620,7 +558,6 @@
     "creator_id": 1
   },
   {
-    "id": 63,
     "created_at": "2024-02-21T20:55:11.695Z",
     "updated_at": "2024-02-21T20:55:11.695Z",
     "title": "Kansas City Chiefs vs. New England Patriots | 2023 Week 15 Game Highlights",
@@ -630,7 +567,6 @@
     "creator_id": 1
   },
   {
-    "id": 64,
     "created_at": "2024-02-21T20:55:23.677Z",
     "updated_at": "2024-02-21T20:55:23.677Z",
     "title": "New England Patriots vs. Denver Broncos | 2023 Week 16 Game Highlights",
@@ -640,7 +576,6 @@
     "creator_id": 1
   },
   {
-    "id": 65,
     "created_at": "2024-02-21T20:55:32.045Z",
     "updated_at": "2024-02-21T20:55:32.045Z",
     "title": "New England Patriots vs. Buffalo Bills Game Highlights | NFL 2023 Week 17",
@@ -650,7 +585,6 @@
     "creator_id": 1
   },
   {
-    "id": 66,
     "created_at": "2024-02-21T20:55:43.019Z",
     "updated_at": "2024-02-21T20:55:43.019Z",
     "title": "New York Jets vs. New England Patriots | 2023 Week 18 Game Highlights",
@@ -660,7 +594,6 @@
     "creator_id": 1
   },
   {
-    "id": 67,
     "created_at": "2024-02-21T20:56:16.330Z",
     "updated_at": "2024-02-21T20:56:16.330Z",
     "title": "Washington Commanders vs. New England Patriots | 2023 Week 9 Game Highlights",
