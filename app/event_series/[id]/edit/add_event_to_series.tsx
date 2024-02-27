@@ -38,8 +38,11 @@ const AddEventToSeries = () => {
 
       const resp: { items: YouTubeSearchResp[] } = await response.json();
 
+      const filteredResults = resp.items.filter((item) => {
+        return item.id.videoId;
+      });
       // Parse and return the response JSON
-      setResults(resp.items);
+      setResults(filteredResults);
     } catch (error) {
       console.error(error);
       // Handle errors as needed
