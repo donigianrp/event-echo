@@ -33,8 +33,8 @@ export default function FavoriteButton(props: {
               <Bookmark
                 className={
                   props.favorited
-                    ? 'text-foreground'
-                    : 'fill-primary text-primary'
+                    ? 'fill-primary text-primary'
+                    : 'text-foreground'
                 }
               />
             </Button>

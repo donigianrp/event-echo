@@ -1,4 +1,5 @@
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import AccessDenied from '@/app/components/access_denied';
 import FavoriteButton from '@/app/components/buttons/favorite_button';
 import LikeButton from '@/app/components/buttons/like_button';
 import EventDescription from '@/app/components/event_description/event_description';
@@ -54,11 +55,10 @@ export default async function EventSeriesPage({
 
   if (!eventSeries) notFound();
 
-  if (
-    !(session?.user.id === eventSeries.creator_id) &&
-    eventSeries.is_private
-  ) {
-    return <p>Private</p>;
+  if (session?.user.id !== eventSeries.creator_id && eventSeries.is_private) {
+    return (
+      <AccessDenied message="This event series is private." loggedIn={true} />
+    );
   }
 
   const seriesEvents = await prisma.event.findMany({

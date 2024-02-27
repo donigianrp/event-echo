@@ -63,8 +63,7 @@ export async function GET(request: Request) {
       take: limit,
       skip: limit * page,
       where: {
-        ...(id ? { creator_id: id } : {}),
-        is_private: false,
+        ...(id ? { creator_id: id } : { is_private: false }),
         OR: [
           {
             title: {
