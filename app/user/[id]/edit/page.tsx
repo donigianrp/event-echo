@@ -2,9 +2,10 @@ import prisma from '@/db';
 import EditUserForm from '../../conponents/edit_user_form';
 import { getServerSession } from 'next-auth';
 import AccessDenied from '@/app/components/access_denied';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 export default async function EditUser({ params }: { params: { id: string } }) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) {
     return (
       <AccessDenied
