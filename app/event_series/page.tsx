@@ -10,7 +10,11 @@ export default async function EventSeries() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    return <LoginPrompt />;
+    return (
+      <div className="flex h-screen items-center">
+        <LoginPrompt />
+      </div>
+    );
   }
 
   return (
