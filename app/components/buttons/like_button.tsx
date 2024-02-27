@@ -33,8 +33,8 @@ export default function LikeButton(props: {
               <Heart
                 className={
                   props.liked
-                    ? 'text-foreground'
-                    : 'fill-pink-300 text-pink-300'
+                    ? 'fill-pink-300 text-pink-300'
+                    : 'text-foreground'
                 }
               />
             </Button>

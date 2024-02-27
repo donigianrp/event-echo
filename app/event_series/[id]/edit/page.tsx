@@ -4,6 +4,7 @@ import { Session, getServerSession } from 'next-auth';
 import EditSeriesContainer from './edit_series_container';
 import { EventModel, EventSeriesModel } from '@/global';
 import { EventCategory, EventSubCategory } from '@prisma/client';
+import AccessDenied from '@/app/components/access_denied';
 
 export type EventSeriesEditTabs = 'details' | 'events' | 'add';
 
@@ -34,6 +35,16 @@ export interface EditSeriesContextProps {
 
 const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
   const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return (
+      <AccessDenied
+        message="Must be signed in to edit event series."
+        loggedIn={false}
+      />
+    );
+  }
+
   const eventSeries = (
     await prisma.$queryRaw<EventSeriesModel[]>`
     WITH EventSeriesTags AS (
@@ -64,6 +75,15 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     WHERE id = ${Number(params.id)}
     `
   )[0];
+
+  if (session?.user.id !== eventSeries.creator_id) {
+    return (
+      <AccessDenied
+        message="Cannot edit another user's event series."
+        loggedIn={true}
+      />
+    );
+  }
 
   const events = await prisma.$queryRaw<EventPosition[]>`
     WITH EventPositions AS (

@@ -7,6 +7,27 @@ export const useSeriesLikes = async ({
   eventId: number;
   userId: number;
 }) => {
+  if (!userId) {
+    const counts = await prisma.eventSeries.findUnique({
+      where: {
+        id: eventId,
+      },
+      select: {
+        _count: {
+          select: {
+            user_likes: true,
+            user_favorites: true,
+          },
+        },
+      },
+    });
+    return {
+      liked: false,
+      favorited: false,
+      likeCount: counts?._count.user_likes,
+      favCount: counts?._count.user_favorites,
+    };
+  }
   const isLikedOrFavorited = await prisma.eventSeries.findUnique({
     where: {
       id: eventId,
