@@ -10,43 +10,43 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 152, 69%, 52%;
+    --primary: 160.12 68.89% 47.37%;
     --primary-hover: 152, 69%, 70%;
     --primary-foreground: 240 10% 3.9%;
     --secondary: 240 10% 3.9%;
     --secondary-foreground: 0 0% 95%;
     --muted: 201 22% 90%;
     --muted-foreground: 240 10% 33.9%;
-    --accent: 152, 69%, 62%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 82% 59%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 160.12 68.89% 47.37%;
+    --destructive: 0 72.22% 50.59%;
     --destructive-foreground: 0 0% 98%;
     --border: 201 22% 85%;
     --input: 201 22% 85%;
-    --ring: 152, 69%, 52%;
+    --ring: 160.12 68.89% 47.37%;
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 213 28% 11%;
-    --card-foreground: 0 0% 95%;
-    --popover: 201 22% 8%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 152, 69%, 52%;
-    --primary-foreground: 0 0% 95%;
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 240 10% 3.9%;
-    --muted: 213 28% 11%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 152, 69%, 62%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 82% 59%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 213 28% 20%;
-    --input: 213 28% 20%;
-    --ring: 152, 69%, 52%;
+    --background: 228.57 84% 4.9%;
+    --foreground: 0 0% 89.8%;
+    --card: 222.22 47.37% 11.18%;
+    --card-foreground: 0 0% 89.8%;
+    --popover: 228.57 84% 4.9%;
+    --popover-foreground: 0 0% 89.8%;
+    --primary: 160.12 68.89% 47.37%;
+    --primary-foreground: 210 40% 98.04%;
+    --secondary: 212.73 26.83% 83.92%;
+    --secondary-foreground: 228.57 84% 4.9%;
+    --muted: 217.24 32.58% 17.45%;
+    --muted-foreground: 61 4% 73%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 217 91% 60%;
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 0 0% 89.8%;
+    --border: 215.29 25% 26.67%;
+    --input: 215.29 25% 26.67%;
+    --ring: 160.12 68.89% 47.37%;
   }
 }
 

@@ -13,7 +13,7 @@ const EditSeriesTabs = () => {
   if (!localStore) return <></>;
   const { tab, setTab } = localStore;
   const selected =
-    'inline-block p-4 text-primary bg-gray-100 hover:cursor-pointer rounded-t-lg active dark:bg-gray-800 dark:text-blue-500';
+    'inline-block p-4 text-accent-foreground bg-accent hover:cursor-pointer rounded-t-lg active';
   const unselected =
     'inline-block p-4 rounded-t-lg hover:cursor-pointer hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300';
 
