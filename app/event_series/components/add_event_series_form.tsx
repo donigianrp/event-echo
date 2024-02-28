@@ -46,7 +46,7 @@ const AddEventSeriesForm = () => {
   }
 
   return (
-    <div className="flex w-1/2 mx-auto my-10 align-middle">
+    <div className="flex w-1/2 mx-auto py-10 align-middle">
       <form action={formAction} className="w-full">
         <div className="flex flex-col gap-6">
           <h1 className="text-xl">Create an Event Series</h1>
