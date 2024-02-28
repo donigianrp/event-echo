@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+} from '@/components/ui/dropdown-menu';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 const ModeToggleButton = () => {
   const { setTheme } = useTheme();
@@ -23,14 +23,14 @@ const ModeToggleButton = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+        <DropdownMenuItem onClick={() => setTheme('light')}>
+          <div className="font-medium">Light</div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        <DropdownMenuItem onClick={() => setTheme('dark')}>
+          <div className="font-medium">Dark</div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+        <DropdownMenuItem onClick={() => setTheme('system')}>
+          <div className="font-medium">System</div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
