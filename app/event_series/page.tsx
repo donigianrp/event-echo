@@ -1,36 +1,73 @@
-import Link from 'next/link';
-import React from 'react';
-import { buttonVariants } from '@/components/ui/button';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]/route';
-import LoadSeries from '../components/infinite_scroll/load_series';
-import LoginPrompt from '../components/login_prompt';
+import Search from '../components/search/search';
+import CategorySelect from '../components/search/category_select';
+import prisma from '@/db';
+import SortSelect from '../components/search/sort_select';
+import EventSeriesPagination from '../components/pagination/event_series_pagination';
+import { Suspense } from 'react';
+import { SearchSkeleton } from '../components/skeletons';
+import { Prisma } from '@prisma/client';
 
-export default async function EventSeries() {
-  const session = await getServerSession(authOptions);
+export type SubcategoryWithCategory = Prisma.EventSubCategoryGetPayload<{
+  include: { event_category: true };
+}>;
 
-  if (!session) {
-    return (
-      <div className="flex h-screen items-center">
-        <LoginPrompt />
-      </div>
-    );
-  }
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+    category?: string;
+    subcategory?: string;
+    order?: string;
+  };
+}) {
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
+  const category = searchParams?.category || '';
+  const subcategory = searchParams?.subcategory || '';
+  const order = searchParams?.order || '';
+
+  const categories = await prisma.eventCategory.findMany({
+    orderBy: {
+      id: 'asc',
+    },
+  });
+  const subcategories: SubcategoryWithCategory[] =
+    await prisma.eventSubCategory.findMany({
+      include: {
+        event_category: true,
+      },
+      orderBy: {
+        id: 'asc',
+      },
+    });
 
   return (
-    <div className="flex flex-col gap-6 mx-auto justify-center p-10 xl:w-1/2">
-      <div className="flex justify-between">
-        <h1 className="text-3xl font-semibold">Event Series</h1>
-        <div className="">
-          <Link
-            className={buttonVariants({ variant: 'default' })}
-            href="/event_series/create"
-          >
-            Create New Event Series
-          </Link>
+    <div className="flex flex-col">
+      <div className="w-full flex flex-col sm:flex-row gap-4 mx-auto p-10 pb-0">
+        <div className="grow">
+          <Search placeholder="Search&#8230;" />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <CategorySelect
+            categories={categories}
+            subcategories={subcategories}
+          />
+          <SortSelect />
         </div>
       </div>
-      <LoadSeries route={'event_series'} id={session?.user.id} />
+      <div className="flex flex-col gap-6 p-10 justify-center">
+        <Suspense key={query + currentPage} fallback={<SearchSkeleton />}>
+          <EventSeriesPagination
+            query={query}
+            currentPage={currentPage}
+            category={category}
+            subcategory={subcategory}
+            order={order}
+          />
+        </Suspense>
+      </div>
     </div>
   );
 }

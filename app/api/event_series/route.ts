@@ -1,6 +1,8 @@
 import { SeriesWithThumbnail } from '@/app/components/pagination/actions';
-import { Thumbnails } from '@/app/event_series/[id]/edit/page';
+import { Thumbnails } from '@/app/workshop/[id]/page';
 import prisma from '@/db';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../auth/[...nextauth]/route';
 
 type OrderMap = {
   [key: string]: any;
@@ -57,25 +59,45 @@ export async function GET(request: Request) {
     },
   };
 
+  const session = await getServerSession(authOptions);
   const resultArr: SeriesWithThumbnail[] = [];
   const [result, count] = await prisma.$transaction([
     prisma.eventSeries.findMany({
       take: limit,
       skip: limit * page,
       where: {
-        ...(id ? { creator_id: id } : { is_private: false }),
-        OR: [
+        ...(id ? { creator_id: id } : {}),
+        AND: [
           {
-            title: {
-              contains: query || '',
-              mode: 'insensitive',
-            },
+            OR: [
+              {
+                is_private: false,
+              },
+              {
+                AND: {
+                  is_private: true,
+                  ...(session
+                    ? { creator_id: session.user.id }
+                    : { creator_id: -1 }),
+                },
+              },
+            ],
           },
           {
-            description: {
-              contains: query || '',
-              mode: 'insensitive',
-            },
+            OR: [
+              {
+                title: {
+                  contains: query || '',
+                  mode: 'insensitive',
+                },
+              },
+              {
+                description: {
+                  contains: query || '',
+                  mode: 'insensitive',
+                },
+              },
+            ],
           },
         ],
         ...(category
@@ -141,20 +163,38 @@ export async function GET(request: Request) {
     }),
     prisma.eventSeries.count({
       where: {
-        ...(id ? { creator_id: id } : undefined),
-        is_private: false,
-        OR: [
+        ...(id ? { creator_id: id } : {}),
+        AND: [
           {
-            title: {
-              contains: query || '',
-              mode: 'insensitive',
-            },
+            OR: [
+              {
+                is_private: false,
+              },
+              {
+                AND: {
+                  is_private: true,
+                  ...(session
+                    ? { creator_id: session.user.id }
+                    : { creator_id: -1 }),
+                },
+              },
+            ],
           },
           {
-            description: {
-              contains: query || '',
-              mode: 'insensitive',
-            },
+            OR: [
+              {
+                title: {
+                  contains: query || '',
+                  mode: 'insensitive',
+                },
+              },
+              {
+                description: {
+                  contains: query || '',
+                  mode: 'insensitive',
+                },
+              },
+            ],
           },
         ],
         ...(category

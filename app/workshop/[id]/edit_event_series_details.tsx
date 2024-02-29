@@ -1,12 +1,12 @@
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
-import { editEventSeries } from '../../actions';
+import { editEventSeries } from '../actions';
 import { useContext, useState } from 'react';
-import { Checkbox } from '../../../components/ui/checkbox';
-import { Button } from '../../../components/ui/button';
-import { Textarea } from '../../../components/ui/textarea';
-import { Input } from '../../../components/ui/input';
+import { Checkbox } from '../../components/ui/checkbox';
+import { Button } from '../../components/ui/button';
+import { Textarea } from '../../components/ui/textarea';
+import { Input } from '../../components/ui/input';
 import {
   Form,
   FormControl,
@@ -14,7 +14,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../../../components/ui/form';
+} from '../../components/ui/form';
 import { redirect } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useForm } from 'react-hook-form';
