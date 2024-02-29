@@ -121,7 +121,7 @@ export default async function EventSeriesPage({
               {session?.user.id === eventSeries?.creator_id && (
                 <Link
                   className={buttonVariants({ variant: 'default' })}
-                  href={`/event_series/${params.id}/edit`}
+                  href={`/workshop/${params.id}`}
                 >
                   Edit
                 </Link>

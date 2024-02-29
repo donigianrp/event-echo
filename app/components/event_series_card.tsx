@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import {
   Card,
@@ -7,8 +9,9 @@ import {
   CardContent,
 } from './ui/card';
 import React from 'react';
-import { Thumbnails } from '../event_series/[id]/edit/page';
+import { Thumbnails } from '../workshop/[id]/page';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const EventSeriesCard = (props: {
   id: number;
@@ -16,9 +19,17 @@ const EventSeriesCard = (props: {
   description: string | null;
   thumbnails?: Thumbnails;
 }) => {
+  const pathname = usePathname();
+  let link;
+  if (pathname.includes('workshop')) {
+    link = `/workshop/${props.id}`;
+  } else {
+    link = `/event_series/${props.id}`;
+  }
+
   return (
     <Card className="mx-auto w-full">
-      <Link href={`/event_series/${props.id}`}>
+      <Link href={link}>
         <CardHeader>
           <div className="flex justify-between items-center">
             {props.thumbnails && (

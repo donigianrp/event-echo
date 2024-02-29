@@ -20,7 +20,7 @@ const AddEventSeriesForm = () => {
   const [cancelled, setCancelled] = useState(false);
 
   if (cancelled) {
-    redirect('/event_series');
+    redirect('/workshop');
   }
 
   function SubmitButton() {

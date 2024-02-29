@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { EventCategory } from '@prisma/client';
 import { useState } from 'react';
 import { Combobox } from '../ui/combobox';
-import { SubcategoryWithCategory } from '@/app/search/page';
+import { SubcategoryWithCategory } from '@/app/event_series/page';
 
 export default function CategorySelect({
   categories,
@@ -61,7 +61,7 @@ export default function CategorySelect({
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-4">
+    <div className="flex flex-col lg:flex-row gap-4">
       <Combobox
         options={categories}
         inputLabel="Category"
