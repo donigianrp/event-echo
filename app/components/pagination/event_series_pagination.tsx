@@ -1,3 +1,4 @@
+import { getServerSession } from 'next-auth';
 import EventSeriesCard from '../event_series_card';
 import {
   SeriesWithThumbnail,
@@ -5,6 +6,7 @@ import {
   getTotalPages,
 } from './actions';
 import PaginationComponent from './pagination';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 export default async function EventSeriesPagination({
   query,
@@ -12,13 +14,16 @@ export default async function EventSeriesPagination({
   category,
   subcategory,
   order,
+  creatorId,
 }: {
   query: string;
   currentPage: number;
   category: string;
   subcategory: string;
   order: string;
+  creatorId?: number;
 }) {
+  const session = await getServerSession(authOptions);
   const limit = 9;
 
   const eventSeries = await getFilteredEventSeries({
@@ -28,6 +33,8 @@ export default async function EventSeriesPagination({
     category,
     subcategory,
     order,
+    creatorId,
+    sessionId: session?.user.id || -1,
   });
   const totalPages = await getTotalPages({
     query,
@@ -35,6 +42,7 @@ export default async function EventSeriesPagination({
     category,
     subcategory,
     order,
+    sessionId: session?.user.id || -1,
   });
 
   return (

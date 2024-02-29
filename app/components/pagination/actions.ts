@@ -1,4 +1,4 @@
-import { Thumbnails } from '@/app/event_series/[id]/edit/page';
+import { Thumbnails } from '@/app/workshop/[id]/page';
 import prisma from '@/db';
 
 type OrderMap = {
@@ -67,6 +67,8 @@ export async function getFilteredEventSeries({
   category,
   subcategory,
   order,
+  creatorId,
+  sessionId,
 }: {
   limit: number;
   query: string;
@@ -74,25 +76,44 @@ export async function getFilteredEventSeries({
   category: string;
   subcategory: string;
   order: string;
+  creatorId?: number;
+  sessionId: number;
 }) {
   const filteredSeriesArr: SeriesWithThumbnail[] = [];
   const filteredSeries = await prisma.eventSeries.findMany({
     take: limit,
     skip: limit * (currentPage - 1),
     where: {
-      is_private: false,
-      OR: [
+      ...(creatorId ? { creator_id: creatorId } : {}),
+      AND: [
         {
-          title: {
-            contains: query || '',
-            mode: 'insensitive',
-          },
+          OR: [
+            {
+              is_private: false,
+            },
+            {
+              AND: {
+                is_private: true,
+                creator_id: sessionId,
+              },
+            },
+          ],
         },
         {
-          description: {
-            contains: query || '',
-            mode: 'insensitive',
-          },
+          OR: [
+            {
+              title: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+            {
+              description: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+          ],
         },
       ],
       ...(category
@@ -181,28 +202,46 @@ export async function getTotalPages({
   category,
   subcategory,
   order,
+  sessionId,
 }: {
   limit: number;
   query: string;
   category: string;
   subcategory: string;
   order: string;
+  sessionId: number;
 }) {
   const totalPages = await prisma.eventSeries.findMany({
     where: {
-      is_private: false,
-      OR: [
+      AND: [
         {
-          title: {
-            contains: query || '',
-            mode: 'insensitive',
-          },
+          OR: [
+            {
+              is_private: false,
+            },
+            {
+              AND: {
+                is_private: true,
+                creator_id: sessionId,
+              },
+            },
+          ],
         },
         {
-          description: {
-            contains: query || '',
-            mode: 'insensitive',
-          },
+          OR: [
+            {
+              title: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+            {
+              description: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+          ],
         },
       ],
       ...(category
