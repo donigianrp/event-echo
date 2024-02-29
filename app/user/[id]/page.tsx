@@ -16,6 +16,7 @@ import {
   TabsTrigger,
 } from '@/app/components/ui/tabs';
 import prisma from '@/db';
+import { CircleUserRound } from 'lucide-react';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
 
@@ -67,10 +68,10 @@ export default async function UserProfile({
   return (
     <div className="lg:w-1/2 mx-auto flex flex-col gap-6 border-l border-r p-8">
       <div>
-        <Avatar className="w-[96px] h-[96px] border">
-          <AvatarImage src={user.image || 'https://github.com/shadcn.png'} />
+        <Avatar className="w-[96px] h-[96px]">
+          <AvatarImage src={user.image || undefined} />
           <AvatarFallback>
-            <Skeleton className="w-12 h-12 rounded-full" />
+            <CircleUserRound className="w-full h-full" />
           </AvatarFallback>
         </Avatar>
         <div className="flex justify-between">
@@ -115,14 +116,9 @@ export default async function UserProfile({
             >
               <div className="inline-flex gap-4 items-center">
                 <Avatar className="border">
-                  <AvatarImage
-                    src={
-                      user.subscribed_to.image ||
-                      'https://github.com/shadcn.png'
-                    }
-                  />
+                  <AvatarImage src={user.subscribed_to.image || undefined} />
                   <AvatarFallback>
-                    <Skeleton className="w-12 h-12 rounded-full" />
+                    <CircleUserRound className="w-12 h-12 rounded-full" />
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col">

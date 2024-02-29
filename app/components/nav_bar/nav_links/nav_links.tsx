@@ -11,9 +11,12 @@ import {
   Users,
 } from 'lucide-react';
 import React, { Dispatch, FunctionComponent, SetStateAction } from 'react';
+import { usePathname } from 'next/navigation';
+import NavButton from '../../buttons/nav_button';
+
+const homeLink = { name: 'Home', pathName: '/', icon: <Home /> };
 
 const personalLinks = [
-  { name: 'Home', pathName: '/', icon: <Home /> },
   { name: 'Series', pathName: '/event_series', icon: <AreaChart /> },
   { name: 'Favorites', pathName: '/favorites', icon: <Bookmark /> },
   { name: 'Likes', pathName: '/likes', icon: <Heart /> },
@@ -36,46 +39,42 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
       setSheetOpen(false);
     }
   };
+  const pathname = usePathname();
   return (
     <>
       <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
         Personal
       </h4>
-      {personalLinks.map((link) => {
+      <NavButton
+        navStyle={navStyle}
+        handleSheetClose={handleSheetClose}
+        pathname={pathname}
+        link={homeLink}
+        home
+      />
+      {personalLinks.map((link, idx) => {
         return (
-          <Button
-            key={link.name}
-            variant="ghost"
-            className={`block ${navStyle === 'default' ? 'w-full' : 'w-[150px]'}`}
-            asChild
-          >
-            <Link href={link.pathName} onClick={handleSheetClose}>
-              <div className="flex items-center">
-                {link.icon}
-                <div className="ml-2">{link.name}</div>
-              </div>
-            </Link>
-          </Button>
+          <NavButton
+            key={idx}
+            navStyle={navStyle}
+            handleSheetClose={handleSheetClose}
+            pathname={pathname}
+            link={link}
+          />
         );
       })}
       <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
         Popular
       </h4>
-      {popularLinks.map((link) => {
+      {popularLinks.map((link, idx) => {
         return (
-          <Button
-            key={link.name}
-            variant="ghost"
-            className={`block ${navStyle === 'default' ? 'w-full' : 'w-[150px]'}`}
-            asChild
-          >
-            <Link href={link.pathName} onClick={handleSheetClose}>
-              <div className="flex items-center">
-                {link.icon}
-                <div className="ml-2">{link.name}</div>
-              </div>
-            </Link>
-          </Button>
+          <NavButton
+            key={idx}
+            navStyle={navStyle}
+            handleSheetClose={handleSheetClose}
+            pathname={pathname}
+            link={link}
+          />
         );
       })}
     </>

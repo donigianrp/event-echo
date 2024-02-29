@@ -125,7 +125,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
   };
 
   return (
-    <div className="p-10 xl:w-8/12 mx-auto my-10 align-middle">
+    <div className="p-10 xl:w-8/12 mx-auto align-middle">
       {eventSeries && (
         <EditSeriesContainer editSeriesContextProps={editSeriesContextProps} />
       )}
