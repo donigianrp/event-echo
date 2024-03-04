@@ -90,7 +90,7 @@ export default async function EventSeriesPage({
     };
   });
   return (
-    <div className="p-2">
+    <div className="p-10">
       <div className="mb-2">
         <div className="flex justify-between items-center">
           <div className="text-3xl font-medium">{eventSeries.title}</div>

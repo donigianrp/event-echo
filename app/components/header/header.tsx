@@ -17,7 +17,7 @@ const Header = async () => {
   const session = await getServerSession(authOptions);
   return (
     <>
-      <div className="hidden md:block text-center pb-4">
+      <div className="hidden lg:block text-center pb-4">
         <Link href={'/'}>Logo</Link>
       </div>
       <div className="flex items-center justify-evenly">

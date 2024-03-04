@@ -4,7 +4,7 @@ import Header from '../header/header';
 const NavBar = () => {
   return (
     <>
-      <div className="h-screen hidden md:block fixed p-5 bg-opacity-30 border-r border-border w-[164px]">
+      <div className="h-screen hidden lg:block fixed p-5 bg-opacity-30 border-r border-border w-[164px]">
         <Header />
         <NavLinks navStyle="default" />
       </div>
