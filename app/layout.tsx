@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en" suppressHydrationWarning>
       <body className={plusJakartaSans.className}>
         <Providers>
-          <main>
+          <main className="flex flex-col lg:flex-row">
             <NavBar />
             <ContentWrapper>{children}</ContentWrapper>
           </main>

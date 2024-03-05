@@ -10,7 +10,7 @@ const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
         <MobileNav />
         <Header />
       </div>
-      <div className="lg:pl-[164px]">{children}</div>
+      <div className="grow">{children}</div>
       <div className="pb-14 lg:p-0">
         <Footer />
       </div>

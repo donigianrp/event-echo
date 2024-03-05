@@ -19,14 +19,14 @@ export default function Footer() {
     <div className="lg:hidden fixed bottom-0 inset-x-0">
       <NavigationMenu className="flex max-w-none h-14 bg-card border-t border-border list-none justify-around">
         <NavigationMenuItem>
-          <Link href="/">
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <Home className={`${pathname === '/' ? 'text-primary' : ''}`} />
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/event_series">
+          <Link href="/event_series" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <AreaChart
                 className={`${pathname.startsWith('/event_series') ? 'text-primary' : ''}`}
@@ -35,7 +35,7 @@ export default function Footer() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/workshop">
+          <Link href="/workshop" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <Hammer
                 className={`${pathname.startsWith('/workshop') ? 'text-primary' : ''}`}
@@ -44,7 +44,7 @@ export default function Footer() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/likes">
+          <Link href="/likes" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <Heart
                 className={`${pathname.startsWith('/likes') ? 'text-primary' : ''}`}
@@ -53,7 +53,7 @@ export default function Footer() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={`/user/${session?.user.id}`}>
+          <Link href={`/user/${session?.user.id}`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <CircleUserRound
                 className={`${pathname.startsWith(`/user/${session?.user.id}`) ? 'text-primary' : ''}`}
