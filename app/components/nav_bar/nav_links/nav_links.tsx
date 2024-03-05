@@ -13,20 +13,24 @@ import {
 import React, { Dispatch, FunctionComponent, SetStateAction } from 'react';
 import { usePathname } from 'next/navigation';
 import NavButton from '../../buttons/nav_button';
+import { Separator } from '../../ui/separator';
 
-const homeLink = { name: 'Home', pathName: '/', icon: <Home /> };
-
-const personalLinks = [
-  { name: 'Series', pathName: '/event_series', icon: <AreaChart /> },
-  { name: 'Favorites', pathName: '/favorites', icon: <Bookmark /> },
-  { name: 'Likes', pathName: '/likes', icon: <Heart /> },
-  { name: 'Workshop', pathName: '/workshop', icon: <Hammer /> },
-];
+const homeLink = { name: 'Home', pathName: '/', icon: <Home size={20} /> };
 
 const popularLinks = [
-  { name: 'Series', pathName: '/popular_series', icon: <AreaChart /> },
-  { name: 'Creators', pathName: '/creators', icon: <Users /> },
-  { name: 'Categories', pathName: '/categories', icon: <LibraryBig /> },
+  { name: 'Series', pathName: '/event_series', icon: <AreaChart size={20} /> },
+  { name: 'Creators', pathName: '/creators', icon: <Users size={20} /> },
+  {
+    name: 'Categories',
+    pathName: '/categories',
+    icon: <LibraryBig size={20} />,
+  },
+];
+
+const personalLinks = [
+  { name: 'Workshop', pathName: '/workshop', icon: <Hammer size={20} /> },
+  { name: 'Likes', pathName: '/likes', icon: <Heart size={20} /> },
+  { name: 'Favorites', pathName: '/favorites', icon: <Bookmark size={20} /> },
 ];
 
 interface Props {
@@ -41,10 +45,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
   };
   const pathname = usePathname();
   return (
-    <>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
-        Personal
-      </h4>
+    <div>
       <NavButton
         navStyle={navStyle}
         handleSheetClose={handleSheetClose}
@@ -52,20 +53,6 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
         link={homeLink}
         home
       />
-      {personalLinks.map((link, idx) => {
-        return (
-          <NavButton
-            key={idx}
-            navStyle={navStyle}
-            handleSheetClose={handleSheetClose}
-            pathname={pathname}
-            link={link}
-          />
-        );
-      })}
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight my-2">
-        Popular
-      </h4>
       {popularLinks.map((link, idx) => {
         return (
           <NavButton
@@ -77,7 +64,19 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
           />
         );
       })}
-    </>
+      <Separator className="my-2" />
+      {personalLinks.map((link, idx) => {
+        return (
+          <NavButton
+            key={idx}
+            navStyle={navStyle}
+            handleSheetClose={handleSheetClose}
+            pathname={pathname}
+            link={link}
+          />
+        );
+      })}
+    </div>
   );
 };
 

@@ -30,7 +30,7 @@ const NavButton: FunctionComponent<Props> = ({
   return (
     <Button
       variant="ghost"
-      className={`block ${navStyle === 'default' ? 'w-full' : 'w-[150px]'} ${isHomeButton ? 'text-primary' : ''}`}
+      className={`block h-fit ${navStyle === 'default' ? 'w-full' : 'w-[150px]'} ${isHomeButton ? 'text-primary' : ''}`}
       asChild
     >
       <Link href={link.pathName} onClick={handleSheetClose}>

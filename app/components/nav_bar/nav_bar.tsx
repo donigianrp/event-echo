@@ -4,9 +4,13 @@ import Header from '../header/header';
 const NavBar = () => {
   return (
     <>
-      <div className="h-screen hidden md:block fixed p-5 bg-opacity-30 border-r border-border w-[164px]">
-        <Header />
-        <NavLinks navStyle="default" />
+      <div className="min-h-screen hidden lg:flex p-5 sticky left-0 bg-opacity-30 border-r border-border">
+        <div className="sticky self-start top-5">
+          <div className="flex flex-col grow gap-4">
+            <Header />
+            <NavLinks navStyle="default" />
+          </div>
+        </div>
       </div>
     </>
   );
