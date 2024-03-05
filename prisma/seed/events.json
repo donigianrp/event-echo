@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/11)",
@@ -9,6 +10,7 @@
     "creator_id": 1
   },
   {
+    "id": 2,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/17)",
@@ -18,6 +20,7 @@
     "creator_id": 1
   },
   {
+    "id": 3,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (9/24)",
@@ -27,6 +30,7 @@
     "creator_id": 1
   },
   {
+    "id": 4,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/1)",
@@ -36,6 +40,7 @@
     "creator_id": 1
   },
   {
+    "id": 5,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/8)",
@@ -45,6 +50,7 @@
     "creator_id": 1
   },
   {
+    "id": 6,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/15)",
@@ -54,6 +60,7 @@
     "creator_id": 1
   },
   {
+    "id": 7,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (10/29)",
@@ -63,6 +70,7 @@
     "creator_id": 1
   },
   {
+    "id": 8,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/6)",
@@ -72,6 +80,7 @@
     "creator_id": 1
   },
   {
+    "id": 9,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/12)",
@@ -81,6 +90,7 @@
     "creator_id": 1
   },
   {
+    "id": 10,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/19)",
@@ -90,6 +100,7 @@
     "creator_id": 1
   },
   {
+    "id": 11,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (11/24)",
@@ -99,6 +110,7 @@
     "creator_id": 1
   },
   {
+    "id": 12,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/3)",
@@ -108,6 +120,7 @@
     "creator_id": 1
   },
   {
+    "id": 13,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/10)",
@@ -117,6 +130,7 @@
     "creator_id": 1
   },
   {
+    "id": 14,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/17)",
@@ -126,6 +140,7 @@
     "creator_id": 1
   },
   {
+    "id": 15,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/24)",
@@ -135,6 +150,7 @@
     "creator_id": 1
   },
   {
+    "id": 16,
     "created_at": "2024-02-21T20:36:24.721Z",
     "updated_at": "2024-02-21T20:36:24.721Z",
     "title": "Robert Saleh Postgame Press Conference (12/28)",
@@ -144,6 +160,7 @@
     "creator_id": 1
   },
   {
+    "id": 17,
     "created_at": "2024-02-21T20:39:24.826Z",
     "updated_at": "2024-02-21T20:39:24.826Z",
     "title": "Buffalo Bills vs. New York Jets | 2023 Week 1 Game Highlights",
@@ -153,6 +170,7 @@
     "creator_id": 1
   },
   {
+    "id": 18,
     "created_at": "2024-02-21T20:39:37.341Z",
     "updated_at": "2024-02-21T20:39:37.341Z",
     "title": "Las Vegas Raiders vs. Buffalo Bills Game Highlights | NFL 2023 Week 2",
@@ -162,6 +180,7 @@
     "creator_id": 1
   },
   {
+    "id": 19,
     "created_at": "2024-02-21T20:39:48.995Z",
     "updated_at": "2024-02-21T20:39:48.995Z",
     "title": "Buffalo Bills vs. Washington Commanders | 2023 Week 3 Game Highlights",
@@ -171,6 +190,7 @@
     "creator_id": 1
   },
   {
+    "id": 20,
     "created_at": "2024-02-21T20:40:02.328Z",
     "updated_at": "2024-02-21T20:40:02.328Z",
     "title": "Miami Dolphins vs. Buffalo Bills Game Highlights | NFL 2023 Week 4",
@@ -180,6 +200,7 @@
     "creator_id": 1
   },
   {
+    "id": 21,
     "created_at": "2024-02-21T20:40:16.627Z",
     "updated_at": "2024-02-21T20:40:16.627Z",
     "title": "Jacksonville Jaguars vs. Buffalo Bills Game Highlights | NFL 2023 Week 5",
@@ -189,6 +210,7 @@
     "creator_id": 1
   },
   {
+    "id": 22,
     "created_at": "2024-02-21T20:40:29.008Z",
     "updated_at": "2024-02-21T20:40:29.008Z",
     "title": "New York Giants vs. Buffalo Bills | 2023 Week 6 Game Highlights",
@@ -198,6 +220,7 @@
     "creator_id": 1
   },
   {
+    "id": 23,
     "created_at": "2024-02-21T20:40:43.204Z",
     "updated_at": "2024-02-21T20:40:43.204Z",
     "title": "Buffalo Bills vs. New England Patriots | 2023 Week 7 Game Highlights",
@@ -207,6 +230,7 @@
     "creator_id": 1
   },
   {
+    "id": 24,
     "created_at": "2024-02-21T20:40:52.378Z",
     "updated_at": "2024-02-21T20:40:52.378Z",
     "title": "Tampa Bay Buccaneers vs. Buffalo Bills | 2023 Week 8 Game Highlgihts",
@@ -216,6 +240,7 @@
     "creator_id": 1
   },
   {
+    "id": 25,
     "created_at": "2024-02-21T20:41:19.451Z",
     "updated_at": "2024-02-21T20:41:19.451Z",
     "title": "Buffalo Bills vs. Cincinnati Bengals | 2023 Week 9 Game Highlights",
@@ -225,6 +250,7 @@
     "creator_id": 1
   },
   {
+    "id": 26,
     "created_at": "2024-02-21T20:41:49.622Z",
     "updated_at": "2024-02-21T20:41:49.622Z",
     "title": "Denver Broncos vs. Buffalo Bills | 2023 Week 10 Game Highlights",
@@ -234,6 +260,7 @@
     "creator_id": 1
   },
   {
+    "id": 27,
     "created_at": "2024-02-21T20:42:13.802Z",
     "updated_at": "2024-02-21T20:42:13.802Z",
     "title": "New York Jets vs. Buffalo Bills | 2023 Week 11 Game Highlights",
@@ -243,6 +270,7 @@
     "creator_id": 1
   },
   {
+    "id": 28,
     "created_at": "2024-02-21T20:42:25.346Z",
     "updated_at": "2024-02-21T20:42:25.346Z",
     "title": "Buffalo Bills vs. Philadelphia Eagles | 2023 Week 12 Game Highlights",
@@ -252,6 +280,7 @@
     "creator_id": 1
   },
   {
+    "id": 29,
     "created_at": "2024-02-21T20:42:43.867Z",
     "updated_at": "2024-02-21T20:42:43.867Z",
     "title": "Buffalo Bills vs. Kansas City Chiefs | 2023 Week 14 Game Highlights",
@@ -261,6 +290,7 @@
     "creator_id": 1
   },
   {
+    "id": 30,
     "created_at": "2024-02-21T20:43:03.223Z",
     "updated_at": "2024-02-21T20:43:03.223Z",
     "title": "Buffalo Bills vs. Los Angeles Chargers | 2023 Week 16 Game Highlights",
@@ -270,6 +300,7 @@
     "creator_id": 1
   },
   {
+    "id": 31,
     "created_at": "2024-02-21T20:43:45.387Z",
     "updated_at": "2024-02-21T20:43:45.387Z",
     "title": "Buffalo Bills vs. Dallas Cowboys Game Highlights | NFL 2023 Week 15",
@@ -279,6 +310,7 @@
     "creator_id": 1
   },
   {
+    "id": 32,
     "created_at": "2024-02-21T20:43:54.910Z",
     "updated_at": "2024-02-21T20:43:54.910Z",
     "title": "New England Patriots vs. Buffalo Bills Game Highlights | NFL 2023 Week 17",
@@ -288,6 +320,7 @@
     "creator_id": 1
   },
   {
+    "id": 33,
     "created_at": "2024-02-21T20:44:06.430Z",
     "updated_at": "2024-02-21T20:44:06.430Z",
     "title": "Buffalo Bills vs. Miami Dolphins | 2023 Week 18 Game Highlights",
@@ -297,6 +330,7 @@
     "creator_id": 1
   },
   {
+    "id": 34,
     "created_at": "2024-02-21T20:45:58.258Z",
     "updated_at": "2024-02-21T20:45:58.258Z",
     "title": "Miami Dolphins vs. Los Angeles Chargers | 2023 Week 1 Game Highlights",
@@ -306,6 +340,7 @@
     "creator_id": 1
   },
   {
+    "id": 35,
     "created_at": "2024-02-21T20:46:11.300Z",
     "updated_at": "2024-02-21T20:46:11.300Z",
     "title": "Miami Dolphins vs. New England Patriots | 2023 Week 2 Game Highlights",
@@ -315,6 +350,7 @@
     "creator_id": 1
   },
   {
+    "id": 36,
     "created_at": "2024-02-21T20:46:19.352Z",
     "updated_at": "2024-02-21T20:46:19.352Z",
     "title": "Denver Broncos vs. Miami Dolphins Game Highlights | NFL 2023 Week 3",
@@ -324,6 +360,7 @@
     "creator_id": 1
   },
   {
+    "id": 37,
     "created_at": "2024-02-21T20:46:39.892Z",
     "updated_at": "2024-02-21T20:46:39.892Z",
     "title": "New York Giants vs. Miami Dolphins | 2023 Week 5 Game Highlights",
@@ -333,6 +370,7 @@
     "creator_id": 1
   },
   {
+    "id": 38,
     "created_at": "2024-02-21T20:46:51.301Z",
     "updated_at": "2024-02-21T20:46:51.301Z",
     "title": "Carolina Panthers vs. Miami Dolphins Game Highlights | NFL 2023 Week 6",
@@ -342,6 +380,7 @@
     "creator_id": 1
   },
   {
+    "id": 39,
     "created_at": "2024-02-21T20:47:11.076Z",
     "updated_at": "2024-02-21T20:47:11.076Z",
     "title": "Miami Dolphins vs. Buffalo Bills Game Highlights | NFL 2023 Week 4",
@@ -351,6 +390,7 @@
     "creator_id": 1
   },
   {
+    "id": 40,
     "created_at": "2024-02-21T20:47:23.963Z",
     "updated_at": "2024-02-21T20:47:23.963Z",
     "title": "Miami Dolphins vs. Philadelphia Eagles | 2023 Week 7 Game Highlights",
@@ -360,6 +400,7 @@
     "creator_id": 1
   },
   {
+    "id": 41,
     "created_at": "2024-02-21T20:47:40.270Z",
     "updated_at": "2024-02-21T20:47:40.270Z",
     "title": "New England Patriots vs. Miami Dolphins | 2023 Week 8 Game Highlights",
@@ -369,6 +410,7 @@
     "creator_id": 1
   },
   {
+    "id": 42,
     "created_at": "2024-02-21T20:47:50.570Z",
     "updated_at": "2024-02-21T20:47:50.570Z",
     "title": "Miami Dolphins vs. Kansas City Chiefs Game Highlights | NFL 2023 Week 9",
@@ -378,6 +420,7 @@
     "creator_id": 1
   },
   {
+    "id": 43,
     "created_at": "2024-02-21T20:48:03.315Z",
     "updated_at": "2024-02-21T20:48:03.315Z",
     "title": "Las Vegas Raiders vs. Miami Dolphins Game Highlights | NFL 2023 Week 11",
@@ -387,6 +430,7 @@
     "creator_id": 1
   },
   {
+    "id": 44,
     "created_at": "2024-02-21T20:48:18.687Z",
     "updated_at": "2024-02-21T20:48:18.687Z",
     "title": "Miami Dolphins vs. New York Jets | 2023 Week 12 Game Highlights",
@@ -396,6 +440,7 @@
     "creator_id": 1
   },
   {
+    "id": 45,
     "created_at": "2024-02-21T20:48:33.148Z",
     "updated_at": "2024-02-21T20:48:33.148Z",
     "title": "Miami Dolphins vs. Washington Commanders | 2023 Week 13 Game Highlights",
@@ -405,6 +450,7 @@
     "creator_id": 1
   },
   {
+    "id": 46,
     "created_at": "2024-02-21T20:48:42.768Z",
     "updated_at": "2024-02-21T20:48:42.768Z",
     "title": "Tennessee Titans vs. Miami Dolphins | 2023 Week 14 Game Highlights",
@@ -414,6 +460,7 @@
     "creator_id": 1
   },
   {
+    "id": 47,
     "created_at": "2024-02-21T20:48:54.027Z",
     "updated_at": "2024-02-21T20:48:54.027Z",
     "title": "New York Jets vs. Miami Dolphins Game Highlights | NFL 2023 Week 15",
@@ -423,6 +470,7 @@
     "creator_id": 1
   },
   {
+    "id": 48,
     "created_at": "2024-02-21T20:49:04.551Z",
     "updated_at": "2024-02-21T20:49:04.551Z",
     "title": "Dallas Cowboys vs. Miami Dolphins | 2023 Week 16 Game Highlights",
@@ -432,6 +480,7 @@
     "creator_id": 1
   },
   {
+    "id": 49,
     "created_at": "2024-02-21T20:49:16.846Z",
     "updated_at": "2024-02-21T20:49:16.846Z",
     "title": "Miami Dolphins vs. Baltimore Ravens | 2023 Week 17 Game Highlights",
@@ -441,6 +490,7 @@
     "creator_id": 1
   },
   {
+    "id": 50,
     "created_at": "2024-02-21T20:49:32.978Z",
     "updated_at": "2024-02-21T20:49:32.978Z",
     "title": "Buffalo Bills vs. Miami Dolphins | 2023 Week 18 Game Highlights",
@@ -450,6 +500,7 @@
     "creator_id": 1
   },
   {
+    "id": 51,
     "created_at": "2024-02-21T20:52:25.116Z",
     "updated_at": "2024-02-21T20:52:25.116Z",
     "title": "Philadelphia Eagles vs. New England Patriots | 2023 Week 1 Game Highlights",
@@ -459,6 +510,7 @@
     "creator_id": 1
   },
   {
+    "id": 52,
     "created_at": "2024-02-21T20:52:34.611Z",
     "updated_at": "2024-02-21T20:52:34.611Z",
     "title": "Miami Dolphins vs. New England Patriots | 2023 Week 2 Game Highlights",
@@ -468,6 +520,7 @@
     "creator_id": 1
   },
   {
+    "id": 53,
     "created_at": "2024-02-21T20:52:53.741Z",
     "updated_at": "2024-02-21T20:52:53.741Z",
     "title": "New England Patriots vs. New York Jets | 2023 Week 3 Game Highlights",
@@ -477,6 +530,7 @@
     "creator_id": 1
   },
   {
+    "id": 54,
     "created_at": "2024-02-21T20:53:03.651Z",
     "updated_at": "2024-02-21T20:53:03.651Z",
     "title": "New England Patriots vs. Dallas Cowboys Game Highlights | NFL 2023 Week 4",
@@ -486,6 +540,7 @@
     "creator_id": 1
   },
   {
+    "id": 55,
     "created_at": "2024-02-21T20:53:13.508Z",
     "updated_at": "2024-02-21T20:53:13.508Z",
     "title": "New Orleans Saints vs. New England Patriots | 2023 Week 5 Game Highlights",
@@ -495,6 +550,7 @@
     "creator_id": 1
   },
   {
+    "id": 56,
     "created_at": "2024-02-21T20:53:50.567Z",
     "updated_at": "2024-02-21T20:53:50.567Z",
     "title": "New England Patriots vs. Las Vegas Raiders | 2023 Week 6 Game Highlights",
@@ -504,6 +560,7 @@
     "creator_id": 1
   },
   {
+    "id": 57,
     "created_at": "2024-02-21T20:54:01.807Z",
     "updated_at": "2024-02-21T20:54:01.807Z",
     "title": "Buffalo Bills vs. New England Patriots | 2023 Week 7 Game Highlights",
@@ -513,6 +570,7 @@
     "creator_id": 1
   },
   {
+    "id": 58,
     "created_at": "2024-02-21T20:54:12.478Z",
     "updated_at": "2024-02-21T20:54:12.478Z",
     "title": "New England Patriots vs. Miami Dolphins | 2023 Week 8 Game Highlights",
@@ -522,6 +580,7 @@
     "creator_id": 1
   },
   {
+    "id": 59,
     "created_at": "2024-02-21T20:54:30.081Z",
     "updated_at": "2024-02-21T20:54:30.081Z",
     "title": "Indianapolis Colts vs. New England Patriots Game Highlights | NFL 2023 Week 10",
@@ -531,6 +590,7 @@
     "creator_id": 1
   },
   {
+    "id": 60,
     "created_at": "2024-02-21T20:54:41.217Z",
     "updated_at": "2024-02-21T20:54:41.217Z",
     "title": "New England Patriots vs. New York Giants | 2023 Week 12 Game Highlights",
@@ -540,6 +600,7 @@
     "creator_id": 1
   },
   {
+    "id": 61,
     "created_at": "2024-02-21T20:54:50.207Z",
     "updated_at": "2024-02-21T20:54:50.207Z",
     "title": "Los Angeles Chargers vs. New England Patriots Game Highlights | NFL 2023 Week 13",
@@ -549,6 +610,7 @@
     "creator_id": 1
   },
   {
+    "id": 62,
     "created_at": "2024-02-21T20:54:58.559Z",
     "updated_at": "2024-02-21T20:54:58.559Z",
     "title": "New England Patriots vs. Pittsburgh Steelers | 2023 Week 14 Game Highlights",
@@ -558,6 +620,7 @@
     "creator_id": 1
   },
   {
+    "id": 63,
     "created_at": "2024-02-21T20:55:11.695Z",
     "updated_at": "2024-02-21T20:55:11.695Z",
     "title": "Kansas City Chiefs vs. New England Patriots | 2023 Week 15 Game Highlights",
@@ -567,6 +630,7 @@
     "creator_id": 1
   },
   {
+    "id": 64,
     "created_at": "2024-02-21T20:55:23.677Z",
     "updated_at": "2024-02-21T20:55:23.677Z",
     "title": "New England Patriots vs. Denver Broncos | 2023 Week 16 Game Highlights",
@@ -576,6 +640,7 @@
     "creator_id": 1
   },
   {
+    "id": 65,
     "created_at": "2024-02-21T20:55:32.045Z",
     "updated_at": "2024-02-21T20:55:32.045Z",
     "title": "New England Patriots vs. Buffalo Bills Game Highlights | NFL 2023 Week 17",
@@ -585,6 +650,7 @@
     "creator_id": 1
   },
   {
+    "id": 66,
     "created_at": "2024-02-21T20:55:43.019Z",
     "updated_at": "2024-02-21T20:55:43.019Z",
     "title": "New York Jets vs. New England Patriots | 2023 Week 18 Game Highlights",
@@ -594,6 +660,7 @@
     "creator_id": 1
   },
   {
+    "id": 67,
     "created_at": "2024-02-21T20:56:16.330Z",
     "updated_at": "2024-02-21T20:56:16.330Z",
     "title": "Washington Commanders vs. New England Patriots | 2023 Week 9 Game Highlights",
@@ -601,5 +668,1215 @@
     "event_date_start": null,
     "event_date_finish": null,
     "creator_id": 1
+  },
+  {
+    "id": 68,
+    "created_at": "2024-03-04T18:02:35.580Z",
+    "updated_at": "2024-03-04T18:02:35.580Z",
+    "title": "Kansas City Chiefs vs. Baltimore Ravens Game Highlights | 2023 AFC Championship",
+    "description": "Watch live local and primetime games, NFL RedZone, and NFL Network on Plus.NFL.com Check out our other channels: NFL ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 69,
+    "created_at": "2024-03-04T18:04:51.954Z",
+    "updated_at": "2024-03-04T18:04:51.954Z",
+    "title": "Minnesota Vikings vs. Cincinnati Bengals Game Highlights | NFL 2023 Week 15",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 70,
+    "created_at": "2024-03-04T18:05:15.764Z",
+    "updated_at": "2024-03-04T18:05:15.764Z",
+    "title": "Cleveland Browns vs. Houston Texans Game Highlights | NFL 2023 Super Wild Card Weekend",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 71,
+    "created_at": "2024-03-04T18:05:35.579Z",
+    "updated_at": "2024-03-04T18:05:35.579Z",
+    "title": "Baltimore Ravens vs. Pittsburgh Steelers Game Highlights | NFL 2023 Week 5",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 72,
+    "created_at": "2024-03-04T18:05:51.733Z",
+    "updated_at": "2024-03-04T18:05:51.733Z",
+    "title": "Houston Texans vs. Indianapolis Colts | 2023 Week 18 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 73,
+    "created_at": "2024-03-04T18:06:09.542Z",
+    "updated_at": "2024-03-04T18:06:09.542Z",
+    "title": "Pittsburgh Steelers vs. Houston Texans Game Highlights | NFL 2023 Week 4",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 74,
+    "created_at": "2024-03-04T18:06:22.591Z",
+    "updated_at": "2024-03-04T18:06:22.591Z",
+    "title": "Indianapolis Colts vs. Jacksonville Jaguars Game Highlights | NFL 2023 Week 6",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 75,
+    "created_at": "2024-03-04T18:06:37.366Z",
+    "updated_at": "2024-03-04T18:06:37.366Z",
+    "title": "Carolina Panthers vs. Jacksonville Jaguars | 2023 Week 17 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 76,
+    "created_at": "2024-03-04T18:07:05.447Z",
+    "updated_at": "2024-03-04T18:07:05.447Z",
+    "title": "Indianapolis Colts vs. Tennessee Titans Game Highlights | NFL 2023 Week 13",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 77,
+    "created_at": "2024-03-04T18:07:20.301Z",
+    "updated_at": "2024-03-04T18:07:20.301Z",
+    "title": "Kansas City Chiefs vs. Denver Broncos Game Highlights | NFL 2023 Week 8",
+    "description": "Watch live local and primetime games, NFL RedZone, and NFL Network on Plus.NFL.com Check out our other channels: NFL ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 78,
+    "created_at": "2024-03-04T18:07:42.517Z",
+    "updated_at": "2024-03-04T18:07:42.517Z",
+    "title": "Las Vegas Raiders vs. Kansas City Chiefs Game Highlights | NFL 2023 Week 16",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 79,
+    "created_at": "2024-03-04T18:07:57.758Z",
+    "updated_at": "2024-03-04T18:07:57.758Z",
+    "title": "Los Angeles Chargers vs. Las Vegas Raiders | 2023 Week 15 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 80,
+    "created_at": "2024-03-04T18:08:16.240Z",
+    "updated_at": "2024-03-04T18:08:16.240Z",
+    "title": "Denver Broncos vs. Los Angeles Chargers Game Highlights | NFL 2023 Week 14",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 81,
+    "created_at": "2024-03-04T18:08:33.675Z",
+    "updated_at": "2024-03-04T18:08:33.675Z",
+    "title": "New York Giants vs. Dallas Cowboys | 2023 Week 10 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 82,
+    "created_at": "2024-03-04T18:08:51.653Z",
+    "updated_at": "2024-03-04T18:08:51.653Z",
+    "title": "New York Giants vs. New Orleans Saints | 2023 Week 15 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 83,
+    "created_at": "2024-03-04T18:09:09.952Z",
+    "updated_at": "2024-03-04T18:09:09.952Z",
+    "title": "Miami Dolphins vs. Philadelphia Eagles | 2023 Week 7 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 84,
+    "created_at": "2024-03-04T18:09:25.441Z",
+    "updated_at": "2024-03-04T18:09:25.441Z",
+    "title": "Washington Commanders vs. Dallas Cowboys Game Highlights | NFL 2023 Week 12",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 85,
+    "created_at": "2024-03-04T18:10:16.953Z",
+    "updated_at": "2024-03-04T18:10:16.953Z",
+    "title": "Carolina Panthers vs. Chicago Bears | 2023 Week 10 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 86,
+    "created_at": "2024-03-04T18:10:52.342Z",
+    "updated_at": "2024-03-04T18:10:52.342Z",
+    "title": "Los Angeles Rams vs. Detroit Lions Game Highlights | NFL 2023 Super Wild Card Weekend",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 87,
+    "created_at": "2024-03-04T18:11:14.752Z",
+    "updated_at": "2024-03-04T18:11:14.752Z",
+    "title": "Green Bay Packers vs. Minnesota Vikings | 2023 Week 17 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 89,
+    "created_at": "2024-03-04T18:12:26.706Z",
+    "updated_at": "2024-03-04T18:12:26.706Z",
+    "title": "Carolina Panthers vs. Atlanta Falcons Game Highlights | NFL 2023 Week 1",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 91,
+    "created_at": "2024-03-04T18:13:53.745Z",
+    "updated_at": "2024-03-04T18:13:53.745Z",
+    "title": "New Orleans Saints vs. Tampa Bay Buccaneers Game Highlights | NFL 2023 Week 17",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 88,
+    "created_at": "2024-03-04T18:11:47.343Z",
+    "updated_at": "2024-03-04T18:11:47.343Z",
+    "title": "Minnesota Vikings vs. Cincinnati Bengals Game Highlights | NFL 2023 Week 15",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 90,
+    "created_at": "2024-03-04T18:13:11.091Z",
+    "updated_at": "2024-03-04T18:13:11.091Z",
+    "title": "Minnesota Vikings vs. Carolina Panthers Game Highlights | NFL 2023 Week 4",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 92,
+    "created_at": "2024-03-04T18:21:42.069Z",
+    "updated_at": "2024-03-04T18:21:42.069Z",
+    "title": "Tampa Bay Buccaneers vs. Green Bay Packers Game Highlights | NFL 2023 Week 15",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 93,
+    "created_at": "2024-03-04T18:22:09.445Z",
+    "updated_at": "2024-03-04T18:22:09.445Z",
+    "title": "Atlanta Falcons vs. Arizona Cardinals | 2023 Week 10 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 94,
+    "created_at": "2024-03-04T18:22:45.413Z",
+    "updated_at": "2024-03-04T18:22:45.413Z",
+    "title": "Los Angeles Rams vs. San Francisco 49ers | 2023 Week 18 Game Highlights",
+    "description": "Los Angeles Rams vs. San Francisco 49ers - Highlights | 2023 Regular Season Week 18, 01/07/2024 Watch live local and ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 95,
+    "created_at": "2024-03-04T18:23:07.829Z",
+    "updated_at": "2024-03-04T18:23:07.829Z",
+    "title": "San Francisco 49ers vs. Los Angeles Rams | 2023 Week 2 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 96,
+    "created_at": "2024-03-04T18:23:52.246Z",
+    "updated_at": "2024-03-04T18:23:52.246Z",
+    "title": "Philadelphia Eagles vs. Seattle Seahawks | 2023 Week 15 Game Highlights",
+    "description": "Check out our other channels: NFL Mundo https://www.youtube.com/mundonfl NFL Brasil ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 97,
+    "created_at": "2024-03-04T18:26:04.731Z",
+    "updated_at": "2024-03-04T18:26:04.731Z",
+    "title": "Devils @ Ducks 3/1 | NHL Highlights 2024",
+    "description": "Extended highlights of the New Jersey Devils at the Anaheim Ducks 00:00 1st Period 03:25 2nd Period 06:24 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 98,
+    "created_at": "2024-03-04T18:26:33.442Z",
+    "updated_at": "2024-03-04T18:26:33.442Z",
+    "title": "Coyotes @ Senators 3/1 | NHL Highlights 2024",
+    "description": "Extended highlights of the Arizona Coyotes at the Ottawa Senators 00:00 1st Period 03:35 2nd Period 06:22 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 99,
+    "created_at": "2024-03-04T18:27:17.226Z",
+    "updated_at": "2024-03-04T18:27:17.226Z",
+    "title": "Bruins @ Islanders 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Boston Bruins at the New York Islanders 00:00 1st period 05:57 2nd period 08:42 3rd period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 100,
+    "created_at": "2024-03-04T18:28:16.456Z",
+    "updated_at": "2024-03-04T18:28:16.456Z",
+    "title": "Golden Knights @ Sabres 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Vegas Golden Knights at the Buffalo Sabres 00:00 1st Period 01:47 2nd Period 05:40 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 101,
+    "created_at": "2024-03-04T18:29:09.272Z",
+    "updated_at": "2024-03-04T18:29:09.272Z",
+    "title": "Penguins @ Flames 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Pittsburgh Penguins at the Calgary Flames 00:00 1st Period 03:09 2nd Period 05:03 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 102,
+    "created_at": "2024-03-04T18:30:21.230Z",
+    "updated_at": "2024-03-04T18:30:21.230Z",
+    "title": "Jets @ Hurricanes 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Winnipeg Jets at the Carolina Hurricanes 00:00 1st period 00:51 2nd period 04:17 3rd period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 103,
+    "created_at": "2024-03-04T18:30:59.442Z",
+    "updated_at": "2024-03-04T18:30:59.442Z",
+    "title": "Blue Jackets @ Blackhawks 3/2 | NHL Highlights 2024",
+    "description": "Extended highlight of the Columbus Blue Jackets at the Chicago Blackhawks 00:00 1st Period 04:18 2nd Period 06:18 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 104,
+    "created_at": "2024-03-04T18:31:56.308Z",
+    "updated_at": "2024-03-04T18:31:56.308Z",
+    "title": "Avalanche @ Predators 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Colorado Avalanche at the Nashville Predators 00:00 1st Period 03:58 2nd Period 05:38 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 105,
+    "created_at": "2024-03-04T18:33:03.173Z",
+    "updated_at": "2024-03-04T18:33:03.173Z",
+    "title": "Blue Jackets @ Blackhawks 3/2 | NHL Highlights 2024",
+    "description": "Extended highlight of the Columbus Blue Jackets at the Chicago Blackhawks 00:00 1st Period 04:18 2nd Period 06:18 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 106,
+    "created_at": "2024-03-04T18:33:52.657Z",
+    "updated_at": "2024-03-04T18:33:52.657Z",
+    "title": "Sharks @ Stars 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the San Jose Sharks at the Dallas Stars 00:00 1st Period 03:07 2nd Period 06:03 3rd Period 06:54 ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 107,
+    "created_at": "2024-03-04T18:34:38.229Z",
+    "updated_at": "2024-03-04T18:34:38.229Z",
+    "title": "Panthers @ Red Wings 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Edmonton Florida Panthers at the Detroit Red Wings 00:00 1st Period 02:28 2nd Period 05:42 3rd ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 108,
+    "created_at": "2024-03-04T18:35:37.178Z",
+    "updated_at": "2024-03-04T18:35:37.178Z",
+    "title": "Penguins @ Oilers 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the Pittsburgh Penguins at the Edmonton Oilers 00:00 1st Period 01:38 2nd Period 06:10 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 109,
+    "created_at": "2024-03-04T18:36:12.578Z",
+    "updated_at": "2024-03-04T18:36:12.578Z",
+    "title": "Panthers @ Red Wings 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Edmonton Florida Panthers at the Detroit Red Wings 00:00 1st Period 02:28 2nd Period 05:42 3rd ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 110,
+    "created_at": "2024-03-04T18:36:49.458Z",
+    "updated_at": "2024-03-04T18:36:49.458Z",
+    "title": "Devils @ Kings 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the New Jersey Devils at the Los Angeles Kings 00:00 1st Period 04:30 2nd Period 06:47 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 111,
+    "created_at": "2024-03-04T18:37:42.919Z",
+    "updated_at": "2024-03-04T18:37:42.919Z",
+    "title": "Sharks @ Wild 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the San Jose Sharks at the Minnesota Wild 00:00 1st Period 03:10 2nd Period 06:31 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 112,
+    "created_at": "2024-03-04T18:38:20.180Z",
+    "updated_at": "2024-03-04T18:38:20.180Z",
+    "title": "Canadiens @ Lightning 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Montreal Canadiens at the Tampa Bay Lightning 00:00 1st period 01:58 2nd period 04:45 3rd period ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 113,
+    "created_at": "2024-03-04T18:42:11.004Z",
+    "updated_at": "2024-03-04T18:42:11.004Z",
+    "title": "Avalanche @ Predators 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Colorado Avalanche at the Nashville Predators 00:00 1st Period 03:58 2nd Period 05:38 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 114,
+    "created_at": "2024-03-04T18:44:18.763Z",
+    "updated_at": "2024-03-04T18:44:18.763Z",
+    "title": "Devils @ Ducks 3/1 | NHL Highlights 2024",
+    "description": "Extended highlights of the New Jersey Devils at the Anaheim Ducks 00:00 1st Period 03:25 2nd Period 06:24 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 115,
+    "created_at": "2024-03-04T18:44:50.787Z",
+    "updated_at": "2024-03-04T18:44:50.787Z",
+    "title": "Bruins @ Islanders 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Boston Bruins at the New York Islanders 00:00 1st period 05:57 2nd period 08:42 3rd period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 116,
+    "created_at": "2024-03-04T18:45:32.370Z",
+    "updated_at": "2024-03-04T18:45:32.370Z",
+    "title": "Rangers @ Maple Leafs 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the New York Rangers at the Toronto Maple Leafs 00:00 1st Period 02:04 2nd Period 04:27 3rd Period ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 117,
+    "created_at": "2024-03-04T18:46:10.726Z",
+    "updated_at": "2024-03-04T18:46:10.726Z",
+    "title": "Senators @ Flyers 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Ottawa Senators at the Philadelphia Flyers 00:00 1st period 03:30 2nd period 06:54 3rd period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 118,
+    "created_at": "2024-03-04T18:46:57.516Z",
+    "updated_at": "2024-03-04T18:46:57.516Z",
+    "title": "Senators @ Flyers 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Ottawa Senators at the Philadelphia Flyers 00:00 1st period 03:30 2nd period 06:54 3rd period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 119,
+    "created_at": "2024-03-04T18:47:34.558Z",
+    "updated_at": "2024-03-04T18:47:34.558Z",
+    "title": "Penguins @ Oilers 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the Pittsburgh Penguins at the Edmonton Oilers 00:00 1st Period 01:38 2nd Period 06:10 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 120,
+    "created_at": "2024-03-04T18:48:11.145Z",
+    "updated_at": "2024-03-04T18:48:11.145Z",
+    "title": "Sharks @ Wild 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the San Jose Sharks at the Minnesota Wild 00:00 1st Period 03:10 2nd Period 06:31 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 121,
+    "created_at": "2024-03-04T18:48:42.463Z",
+    "updated_at": "2024-03-04T18:48:42.463Z",
+    "title": "Oilers @ Kraken 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Edmonton Oilers at the Seattle Kraken 00:00 1st Period 04:23 2nd Period 05:47 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 122,
+    "created_at": "2024-03-04T18:49:20.267Z",
+    "updated_at": "2024-03-04T18:49:20.267Z",
+    "title": "Wild @ Blues 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Minnesota Wild at the St. Louis Blues 00:00 1st Period 04:30 2nd Period 07:30 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 123,
+    "created_at": "2024-03-04T18:50:30.646Z",
+    "updated_at": "2024-03-04T18:50:30.646Z",
+    "title": "Canadiens @ Lightning 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Montreal Canadiens at the Tampa Bay Lightning 00:00 1st period 01:58 2nd period 04:45 3rd period ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 124,
+    "created_at": "2024-03-04T18:50:58.380Z",
+    "updated_at": "2024-03-04T18:50:58.380Z",
+    "title": "Rangers @ Maple Leafs 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the New York Rangers at the Toronto Maple Leafs 00:00 1st Period 02:04 2nd Period 04:27 3rd Period ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 125,
+    "created_at": "2024-03-04T18:51:44.764Z",
+    "updated_at": "2024-03-04T18:51:44.764Z",
+    "title": "Canucks @ Ducks 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the Vancouver Canucks at the Anaheim Ducks 00:00 1st Period 04:53 2nd Period 08:28 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 126,
+    "created_at": "2024-03-04T18:52:10.916Z",
+    "updated_at": "2024-03-04T18:52:10.916Z",
+    "title": "Golden Knights @ Sabres 3/2 | NHL Highlights 2024",
+    "description": "Extended highlights of the Vegas Golden Knights at the Buffalo Sabres 00:00 1st Period 01:47 2nd Period 05:40 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 127,
+    "created_at": "2024-03-04T18:52:54.557Z",
+    "updated_at": "2024-03-04T18:52:54.557Z",
+    "title": "Coyotes @ Capitals 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the Arizona Coyotes at the Washington Capitals 00:00 1st Period 02:51 2nd Period 06:37 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 128,
+    "created_at": "2024-03-04T18:53:33.864Z",
+    "updated_at": "2024-03-04T18:53:33.864Z",
+    "title": "Jets @ Sabres 3/3 | NHL Highlights 2024",
+    "description": "Extended highlights of the Winnipeg Jets at the Buffalo Sabres 00:00 1st Period 02:50 2nd Period 04:45 3rd Period.",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 129,
+    "created_at": "2024-03-04T18:55:08.113Z",
+    "updated_at": "2024-03-04T18:55:08.113Z",
+    "title": "Rangers vs. D-backs World Series Game 5 Highlights (11/1/23) | MLB Highlights",
+    "description": "Rangers vs. D-backs full World Series Game 5 highlights from 11/1/23, presented by @evanwilliamsbourbon (2:12) Evan ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 130,
+    "created_at": "2024-03-04T18:55:43.542Z",
+    "updated_at": "2024-03-04T18:55:43.542Z",
+    "title": "Nationals vs. Braves Game Highlights (9/30/23) | MLB Highlights",
+    "description": "Nationals vs. Braves full game highlights from 9/30/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 131,
+    "created_at": "2024-03-04T18:56:23.183Z",
+    "updated_at": "2024-03-04T18:56:23.183Z",
+    "title": "Red Sox vs. Orioles Game Highlights (9/28/23) | MLB Highlights",
+    "description": "Red Sox vs. Orioles full game highlights from 9/28/23, presented by @helloRecreate (1:23) Anthony Santander homers (28) on a ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 132,
+    "created_at": "2024-03-04T18:57:07.321Z",
+    "updated_at": "2024-03-04T18:57:07.321Z",
+    "title": "White Sox vs. Red Sox Game Highlights (9/23/23) | MLB Highlights",
+    "description": "White Sox vs. Red Sox full game highlights from 9/23/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 133,
+    "created_at": "2024-03-04T18:57:43.825Z",
+    "updated_at": "2024-03-04T18:57:43.825Z",
+    "title": "D-backs vs. White Sox Game Highlights (9/28/23) | MLB Highlights",
+    "description": "D-backs vs. White Sox full game highlights from 9/28/23, presented by @helloRecreate (0:49) Corbin Carroll records stolen base ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 134,
+    "created_at": "2024-03-04T18:58:16.571Z",
+    "updated_at": "2024-03-04T18:58:16.571Z",
+    "title": "Cubs vs. Braves Game Highlights (9/28/23) | MLB Highlights",
+    "description": "Cubs vs. Braves full game highlights from 9/28/23, presented by @helloRecreate (0:35) Cubs take 1-0 lead on fielder's choice ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 135,
+    "created_at": "2024-03-04T18:58:58.036Z",
+    "updated_at": "2024-03-04T18:58:58.036Z",
+    "title": "Pirates vs. Reds Game Highlights (9/23/23) | MLB Highlights",
+    "description": "Pirates vs. Reds full game highlights from 9/23/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 136,
+    "created_at": "2024-03-04T18:59:42.048Z",
+    "updated_at": "2024-03-04T18:59:42.048Z",
+    "title": "Reds vs. Guardians Game Highlights (9/26/23) | MLB Highlights",
+    "description": "Reds vs. Guardians full game highlights from 9/26/23, Presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 137,
+    "created_at": "2024-03-04T19:00:20.488Z",
+    "updated_at": "2024-03-04T19:00:20.488Z",
+    "title": "Dodgers vs. Rockies Game Highlights (9/27/23) | MLB Highlights",
+    "description": "Dodgers vs. Rockies full game highlights from 9/27/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 138,
+    "created_at": "2024-03-04T19:00:49.576Z",
+    "updated_at": "2024-03-04T19:00:49.576Z",
+    "title": "Guardians vs. Tigers Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Guardians vs. Tigers full game highlights from 10/1/23, presented by @helloRecreate (2:05) Kerry Carpenter singles on a line ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 139,
+    "created_at": "2024-03-04T19:01:35.640Z",
+    "updated_at": "2024-03-04T19:01:35.640Z",
+    "title": "Yankees vs. Astros Game Highlights (9/1/23) | MLB Highlights",
+    "description": "Yankees vs. Astros full game highlights from 9/1/23 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 140,
+    "created_at": "2024-03-04T19:02:05.385Z",
+    "updated_at": "2024-03-04T19:02:05.385Z",
+    "title": "Yankees vs. Royals Game Highlights (9/30/23) | MLB Highlights",
+    "description": "Yankees vs. Royals full game highlights from 9/30/23, presented by@helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 141,
+    "created_at": "2024-03-04T19:02:40.577Z",
+    "updated_at": "2024-03-04T19:02:40.577Z",
+    "title": "Rangers vs. Angels Game Highlights (9/26/23) | MLB Highlights",
+    "description": "Rangers vs. Angels full game highlights from 9/26/23, presented by @helloRecreate (0:19) Marcus Semien doubles into the left ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 142,
+    "created_at": "2024-03-04T19:03:00.610Z",
+    "updated_at": "2024-03-04T19:03:00.610Z",
+    "title": "Padres vs. Dodgers Game Highlights (9/11/23) | MLB Highlights",
+    "description": "Padres vs. Dodgers full game highlights from 9/11/23, presented by @geico Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 143,
+    "created_at": "2024-03-04T19:03:31.922Z",
+    "updated_at": "2024-03-04T19:03:31.922Z",
+    "title": "Marlins vs. Pirates Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Marlins vs. Pirates full game highlights from 10/1/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 144,
+    "created_at": "2024-03-04T19:04:15.717Z",
+    "updated_at": "2024-03-04T19:04:15.717Z",
+    "title": "Mets vs. Marlins Game Highlights (9/20/23) | MLB Highlights",
+    "description": "Mets vs. Marlins full game highlights from 9/20/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 145,
+    "created_at": "2024-03-04T19:04:42.542Z",
+    "updated_at": "2024-03-04T19:04:42.542Z",
+    "title": "Angels vs. Twins Game Highlights (9/24/23) | MLB Highlights",
+    "description": "Angels vs. Twins full game highlights from 9/24/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 146,
+    "created_at": "2024-03-04T19:05:11.681Z",
+    "updated_at": "2024-03-04T19:05:11.681Z",
+    "title": "Yankees vs. Royals Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Yankees vs. Royals full game highlights from 10/1/23, presented by@helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 147,
+    "created_at": "2024-03-04T19:05:55.025Z",
+    "updated_at": "2024-03-04T19:05:55.025Z",
+    "title": "Phillies vs. Mets Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Phillies vs. Mets full game highlights from 10/1/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 148,
+    "created_at": "2024-03-04T19:06:26.814Z",
+    "updated_at": "2024-03-04T19:06:26.814Z",
+    "title": "Tigers vs. A&#39;s Game Highlights (9/24/23) | MLB Highlights",
+    "description": "Tigers vs. A's full game highlights from 9/24/23, presented by@helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 149,
+    "created_at": "2024-03-04T19:07:00.473Z",
+    "updated_at": "2024-03-04T19:07:00.473Z",
+    "title": "Braves vs. Phillies NLDS Game 4 Highlights (10/12/23) | MLB Highlights",
+    "description": "Braves vs. Phillies full NLDS Game 4 highlights from 10/12/23, presented by @evanwilliamsbourbon (4:09) Johan Rojas lines into ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 150,
+    "created_at": "2024-03-04T19:07:27.070Z",
+    "updated_at": "2024-03-04T19:07:27.070Z",
+    "title": "Pirates vs. Cubs Game Highlights (9/20/23) | MLB Highlights",
+    "description": "Pirates vs. Cubs full game highlights from 9/20/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 151,
+    "created_at": "2024-03-04T19:08:42.729Z",
+    "updated_at": "2024-03-04T19:08:42.729Z",
+    "title": "Cardinals vs. Padres Game Highlights (9/24/23) | MLB Highlights",
+    "description": "Cardinals vs. Padres full game highlights from 9/24/23, Presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 152,
+    "created_at": "2024-03-04T19:12:26.306Z",
+    "updated_at": "2024-03-04T19:12:26.306Z",
+    "title": "Dodgers vs. Giants Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Dodgers vs. Giants full game highlights from 10/1/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 153,
+    "created_at": "2024-03-04T19:12:58.988Z",
+    "updated_at": "2024-03-04T19:12:58.988Z",
+    "title": "Rangers vs. Mariners Game Highlights (10/1/23) | MLB Highlights",
+    "description": "Rangers vs. Mariners full game highlights from 10/1/23, presented by @helloRecreate (2:18) Evan Carter doubles on a sharp line ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 154,
+    "created_at": "2024-03-04T19:13:32.871Z",
+    "updated_at": "2024-03-04T19:13:32.871Z",
+    "title": "Reds vs. Cardinals Game Highlights (9/30/23) | MLB Highlights",
+    "description": "Reds vs. Cardinals full game highlights from 9/30/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 155,
+    "created_at": "2024-03-04T19:14:03.219Z",
+    "updated_at": "2024-03-04T19:14:03.219Z",
+    "title": "Rangers vs. Rays Wild Card Game 1 Highlights (10/3/23) | MLB Highlights",
+    "description": "Rangers vs. Rays Wild Card Game 1 full game highlights from 10/3/23 (5:10) Wild pitch by pitcher Tyler Glasnow. Corey Seager ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 156,
+    "created_at": "2024-03-04T19:14:48.588Z",
+    "updated_at": "2024-03-04T19:14:48.588Z",
+    "title": "Rangers vs. Astros ALCS Game 7 Highlights (10/23/23) | MLB Highlights",
+    "description": "Rangers vs. Astros ALCS Game 7 full game highlights from 10/23/23 Check out http://MLB.com/video for more! About MLB.com: ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 157,
+    "created_at": "2024-03-04T19:15:13.758Z",
+    "updated_at": "2024-03-04T19:15:13.758Z",
+    "title": "Yankees vs. Blue Jays Highlights (9/28/23) | MLB Highlights",
+    "description": "Yankees vs. Blue Jays full game highlights from 9/28/23, presented by @helloRecreate (2:42) Daulton Varsho homers (19) on a ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 158,
+    "created_at": "2024-03-04T19:15:36.453Z",
+    "updated_at": "2024-03-04T19:15:36.453Z",
+    "title": "Braves vs. Nationals Game 1 Highlights (9/24/23) | MLB Highlights",
+    "description": "Braves vs. Nationals full game 1 highlights from 9/24/23, presented by @helloRecreate Don't forget to subscribe!",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 159,
+    "created_at": "2024-03-05T14:23:31.182Z",
+    "updated_at": "2024-03-05T14:23:31.182Z",
+    "title": "Houston Rockets vs Atlanta Hawks - Full Game Highlights | February 10, 2024 | 2023-24 Season",
+    "description": "NBA PLAYERS REACT TO THEIR HIGHLIGHTS: ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 160,
+    "created_at": "2024-03-05T14:24:17.911Z",
+    "updated_at": "2024-03-05T14:24:17.911Z",
+    "title": "Boston Celtics vs Chicago Bulls - Full Game Highlights | February 22, 2024 | 2023-24 Season",
+    "description": "Boston Celtics vs Chicago Bulls - Full Game Highlights | February 22, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 161,
+    "created_at": "2024-03-05T14:24:53.253Z",
+    "updated_at": "2024-03-05T14:24:53.253Z",
+    "title": "Brooklyn Nets vs Minnesota Timberwolves - Full Game Highlights | February 24, 2023-24 NBA Season",
+    "description": "Brooklyn Nets vs Minnesota Timberwolves - Full Game Highlights | February 24, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 162,
+    "created_at": "2024-03-05T14:25:28.139Z",
+    "updated_at": "2024-03-05T14:25:28.139Z",
+    "title": "Charlotte Hornets vs Milwaukee Bucks - Full Game Highlights | February 9, 2024 | 2023-24 NBA Season",
+    "description": "Charlotte Hornets vs Milwaukee Bucks - Full Game Highlights | February 9, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 163,
+    "created_at": "2024-03-05T14:26:01.859Z",
+    "updated_at": "2024-03-05T14:26:01.859Z",
+    "title": "Milwaukee Bucks vs Chicago Bulls - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season",
+    "description": "Milwaukee Bucks vs Chicago Bulls - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 164,
+    "created_at": "2024-03-05T14:26:42.758Z",
+    "updated_at": "2024-03-05T14:26:42.758Z",
+    "title": "New York Knicks vs Cleveland Cavaliers - Full Game Highlights | March 3, 2024 | 2023-24 NBA Season",
+    "description": "New York Knicks vs Cleveland Cavaliers - Full Game Highlights | March 3, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 165,
+    "created_at": "2024-03-05T14:27:16.703Z",
+    "updated_at": "2024-03-05T14:27:16.703Z",
+    "title": "Philadelphia 76ers vs Dallas Mavericks - Full Game Highlights | March 3, 2024 | 2023-24 NBA Season",
+    "description": "Philadelphia 76ers vs Dallas Mavericks - Full Game Highlights | March 3, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 166,
+    "created_at": "2024-03-05T14:28:03.946Z",
+    "updated_at": "2024-03-05T14:28:03.946Z",
+    "title": "Denver Nuggets vs Los Angeles Lakers - Full Game Highlights | March 2, 2024 | 2023-24 NBA Season",
+    "description": "Denver Nuggets vs Los Angeles Lakers - Full Game Highlights | March 2, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 167,
+    "created_at": "2024-03-05T14:28:41.527Z",
+    "updated_at": "2024-03-05T14:28:41.527Z",
+    "title": "Detroit Pistons vs New York Knicks - Full Game Highlights | February 26, 2023-24 NBA Season",
+    "description": "Detroit Pistons vs New York Knicks - Full Game Highlights | February 26, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 168,
+    "created_at": "2024-03-05T14:30:19.439Z",
+    "updated_at": "2024-03-05T14:30:19.439Z",
+    "title": "Golden State Warriors vs Boston Celtics - Full Game Highlights | March 3, 2024 | 2023-24 Season",
+    "description": "Golden State Warriors vs Boston Celtics - Full Game Highlights | March 3, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 169,
+    "created_at": "2024-03-05T14:30:59.894Z",
+    "updated_at": "2024-03-05T14:30:59.894Z",
+    "title": "Houston Rockets vs Phoenix Suns - Full Game Highlights | March 2, 2023-24 NBA Season",
+    "description": "Houston Rockets vs Phoenix Suns - Full Game Highlights | March 2, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 170,
+    "created_at": "2024-03-05T14:31:43.480Z",
+    "updated_at": "2024-03-05T14:31:43.480Z",
+    "title": "Indiana Pacers vs San Antonio Spurs - Full Game Highlights | March 3, 2023-24 NBA Season",
+    "description": "Indiana Pacers vs San Antonio Spurs - Full Game Highlights | March 3, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 171,
+    "created_at": "2024-03-05T14:32:20.546Z",
+    "updated_at": "2024-03-05T14:32:20.546Z",
+    "title": "Los Angeles Clippers vs Milwaukee Bucks - Full Game Highlights | March 4, 2023-24 NBA Season",
+    "description": "Los Angeles Clippers vs Milwaukee Bucks - Full Game Highlights | March 4, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 172,
+    "created_at": "2024-03-05T14:33:47.495Z",
+    "updated_at": "2024-03-05T14:33:47.495Z",
+    "title": "Oklahoma City Thunder vs Los Angeles Lakers - Full Game Highlights | March 4, 2024 NBA Season",
+    "description": "Oklahoma City Thunder vs Los Angeles Lakers - Full Game Highlights | March 4, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 173,
+    "created_at": "2024-03-05T14:34:08.424Z",
+    "updated_at": "2024-03-05T14:34:08.424Z",
+    "title": "Milwaukee Bucks vs Memphis Grizzlies - Full Game Highlights | February 15, 2023-24 NBA Season",
+    "description": "Milwaukee Bucks vs Memphis Grizzlies - Full Game Highlights | February 15, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 174,
+    "created_at": "2024-03-05T14:34:34.754Z",
+    "updated_at": "2024-03-05T14:34:34.754Z",
+    "title": "Miami Heat vs Sacramento Kings - Full Game Highlights | February 26, 2023-24 NBA Season",
+    "description": "Miami Heat vs Sacramento Kings - Full Game Highlights | February 26, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 175,
+    "created_at": "2024-03-05T14:35:43.889Z",
+    "updated_at": "2024-03-05T14:35:43.889Z",
+    "title": "Milwaukee Bucks vs Chicago Bulls - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season",
+    "description": "Milwaukee Bucks vs Chicago Bulls - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 176,
+    "created_at": "2024-03-05T14:36:00.816Z",
+    "updated_at": "2024-03-05T14:36:00.816Z",
+    "title": "Milwaukee Bucks vs Minnesota Timberwolves - Full Game Highlights | February 23, 2023-24 NBA Season",
+    "description": "Milwaukee Bucks vs Minnesota Timberwolves - Full Game Highlights | February 23, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 177,
+    "created_at": "2024-03-05T14:36:21.993Z",
+    "updated_at": "2024-03-05T14:36:21.993Z",
+    "title": "New Orleans Pelicans vs New York Knicks - Full Game Highlights | February 27, 2024 | 2023-24 Season",
+    "description": "New Orleans Pelicans vs New York Knicks - Full Game Highlights | February 27, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 178,
+    "created_at": "2024-03-05T14:36:41.582Z",
+    "updated_at": "2024-03-05T14:36:41.582Z",
+    "title": "Indiana Pacers vs New York Knicks - Full Game Highlights | February 10, 2024 | 2023-24 Season",
+    "description": "Indiana Pacers vs New York Knicks - Full Game Highlights | February 10, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 179,
+    "created_at": "2024-03-05T14:36:58.099Z",
+    "updated_at": "2024-03-05T14:36:58.099Z",
+    "title": "Oklahoma City Thunder vs Los Angeles Lakers - Full Game Highlights | March 4, 2024 NBA Season",
+    "description": "Oklahoma City Thunder vs Los Angeles Lakers - Full Game Highlights | March 4, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 180,
+    "created_at": "2024-03-05T14:37:16.877Z",
+    "updated_at": "2024-03-05T14:37:16.877Z",
+    "title": "Phoenix Suns vs Orlando Magic - Full Game Highlights | January 28, 2024 | 2023-24 Season",
+    "description": "Phoenix Suns vs Orlando Magic - Full Game Highlights | January 28, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 181,
+    "created_at": "2024-03-05T14:37:33.356Z",
+    "updated_at": "2024-03-05T14:37:33.356Z",
+    "title": "Philadelphia 76ers vs Utah Jazz - Full Game Highlights | February 1, 2023-24 NBA Season",
+    "description": "Philadelphia 76ers vs Utah Jazz - Full Game Highlights | February 1, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 182,
+    "created_at": "2024-03-05T14:37:54.871Z",
+    "updated_at": "2024-03-05T14:37:54.871Z",
+    "title": "Houston Rockets vs Phoenix Suns - Full Game Highlights | March 2, 2023-24 NBA Season",
+    "description": "Houston Rockets vs Phoenix Suns - Full Game Highlights | March 2, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 183,
+    "created_at": "2024-03-05T14:38:14.730Z",
+    "updated_at": "2024-03-05T14:38:14.730Z",
+    "title": "Milwaukee Bucks vs Portland Trail Blazers - Full Game Highlights | January 31, 2023-24 NBA Season",
+    "description": "Milwaukee Bucks vs Portland Trail Blazers - Full Game Highlights | January 31, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 184,
+    "created_at": "2024-03-05T14:38:35.782Z",
+    "updated_at": "2024-03-05T14:38:35.782Z",
+    "title": "Miami Heat vs Sacramento Kings - Full Game Highlights | February 26, 2023-24 NBA Season",
+    "description": "Miami Heat vs Sacramento Kings - Full Game Highlights | February 26, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 185,
+    "created_at": "2024-03-05T14:38:55.335Z",
+    "updated_at": "2024-03-05T14:38:55.335Z",
+    "title": "San Antonio Spurs vs Utah Jazz - Full Game Highlights | February 25, 2024 | 2023-24 NBA Season",
+    "description": "San Antonio Spurs vs Utah Jazz - Full Game Highlights | February 25, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 186,
+    "created_at": "2024-03-05T14:39:10.570Z",
+    "updated_at": "2024-03-05T14:39:10.570Z",
+    "title": "Dallas Mavericks vs Toronto Raptors - Full Game Highlights | February 28, 2023-24 NBA Season",
+    "description": "Dallas Mavericks vs Toronto Raptors - Full Game Highlights | February 28, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 187,
+    "created_at": "2024-03-05T14:39:27.729Z",
+    "updated_at": "2024-03-05T14:39:27.729Z",
+    "title": "Los Angeles Lakers vs Utah Jazz - Full Game Highlights | February 14, 2024 | 2023-24 Season",
+    "description": "Los Angeles Lakers vs Utah Jazz - Full Game Highlights | February 14, 2024 | 2023-24 NBA Regular Season NBA PLAYERS ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
+  },
+  {
+    "id": 188,
+    "created_at": "2024-03-05T14:39:40.271Z",
+    "updated_at": "2024-03-05T14:39:40.271Z",
+    "title": "Washington Wizards vs Los Angeles Clippers - Full Game Highlights | March 1, 2023-24 NBA Season",
+    "description": "Washington Wizards vs Los Angeles Clippers - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season NBA ...",
+    "event_date_start": null,
+    "event_date_finish": null,
+    "creator_id": 3
   }
 ]

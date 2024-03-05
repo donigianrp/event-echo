@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=7Uha2Wik2xg",
@@ -37,6 +38,7 @@
     }
   },
   {
+    "id": 2,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=XZv-d9iVoiY",
@@ -74,6 +76,7 @@
     }
   },
   {
+    "id": 3,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=l9PFVDkr2Jc",
@@ -111,6 +114,7 @@
     }
   },
   {
+    "id": 4,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=kdKa0Xc3dI0",
@@ -148,6 +152,7 @@
     }
   },
   {
+    "id": 5,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=H2oQuA_X25k",
@@ -185,6 +190,7 @@
     }
   },
   {
+    "id": 6,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=9g6JIRihr3I",
@@ -222,6 +228,7 @@
     }
   },
   {
+    "id": 7,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=m4CnzgPFgN8",
@@ -259,6 +266,7 @@
     }
   },
   {
+    "id": 8,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=cjFrUd4Tl-g",
@@ -296,6 +304,7 @@
     }
   },
   {
+    "id": 9,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=Orr1Uz2b0Lg",
@@ -333,6 +342,7 @@
     }
   },
   {
+    "id": 10,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=L0S241PLfjw",
@@ -370,6 +380,7 @@
     }
   },
   {
+    "id": 11,
     "created_at": "2024-02-21T20:40:43.195Z",
     "updated_at": "2024-02-21T20:40:43.195Z",
     "url": "https://www.youtube.com/watch?v=JjxdKGOwYr0",
@@ -402,6 +413,7 @@
     }
   },
   {
+    "id": 12,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=3zZO_Tciqvc",
@@ -439,6 +451,7 @@
     }
   },
   {
+    "id": 13,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=tKmRrjzYFvQ",
@@ -476,6 +489,7 @@
     }
   },
   {
+    "id": 14,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=OsxqLlxgw5Y",
@@ -513,6 +527,7 @@
     }
   },
   {
+    "id": 15,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=WTiNOlp6HEg",
@@ -550,6 +565,7 @@
     }
   },
   {
+    "id": 16,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=CSUjZOdluj0",
@@ -587,6 +603,7 @@
     }
   },
   {
+    "id": 17,
     "created_at": "2024-02-21T20:36:24.678Z",
     "updated_at": "2024-02-21T20:36:24.678Z",
     "url": "https://www.youtube.com/watch?v=cjPhLQZiGBY",
@@ -624,6 +641,7 @@
     }
   },
   {
+    "id": 18,
     "created_at": "2024-02-21T20:39:24.814Z",
     "updated_at": "2024-02-21T20:39:24.814Z",
     "url": "https://www.youtube.com/watch?v=Zk8DnHKqBRg",
@@ -656,6 +674,7 @@
     }
   },
   {
+    "id": 19,
     "created_at": "2024-02-21T20:39:37.332Z",
     "updated_at": "2024-02-21T20:39:37.332Z",
     "url": "https://www.youtube.com/watch?v=UdDHY5AUAKg",
@@ -688,6 +707,7 @@
     }
   },
   {
+    "id": 20,
     "created_at": "2024-02-21T20:39:48.987Z",
     "updated_at": "2024-02-21T20:39:48.987Z",
     "url": "https://www.youtube.com/watch?v=nXkyPkOEA0E",
@@ -720,6 +740,7 @@
     }
   },
   {
+    "id": 21,
     "created_at": "2024-02-21T20:40:02.306Z",
     "updated_at": "2024-02-21T20:40:02.306Z",
     "url": "https://www.youtube.com/watch?v=oX-Szmb3Ils",
@@ -752,6 +773,7 @@
     }
   },
   {
+    "id": 22,
     "created_at": "2024-02-21T20:40:16.618Z",
     "updated_at": "2024-02-21T20:40:16.618Z",
     "url": "https://www.youtube.com/watch?v=_Yp6Sq30eJA",
@@ -784,6 +806,7 @@
     }
   },
   {
+    "id": 23,
     "created_at": "2024-02-21T20:40:29.001Z",
     "updated_at": "2024-02-21T20:40:29.001Z",
     "url": "https://www.youtube.com/watch?v=XSXvxJOpapc",
@@ -816,6 +839,7 @@
     }
   },
   {
+    "id": 24,
     "created_at": "2024-02-21T20:40:52.371Z",
     "updated_at": "2024-02-21T20:40:52.371Z",
     "url": "https://www.youtube.com/watch?v=XuSrkkdZjkQ",
@@ -848,6 +872,7 @@
     }
   },
   {
+    "id": 25,
     "created_at": "2024-02-21T20:41:19.446Z",
     "updated_at": "2024-02-21T20:41:19.446Z",
     "url": "https://www.youtube.com/watch?v=vgbwUSb3q8k",
@@ -880,6 +905,7 @@
     }
   },
   {
+    "id": 26,
     "created_at": "2024-02-21T20:41:49.614Z",
     "updated_at": "2024-02-21T20:41:49.614Z",
     "url": "https://www.youtube.com/watch?v=88CVD5a9OpQ",
@@ -912,6 +938,7 @@
     }
   },
   {
+    "id": 27,
     "created_at": "2024-02-21T20:42:13.794Z",
     "updated_at": "2024-02-21T20:42:13.794Z",
     "url": "https://www.youtube.com/watch?v=1IdXSsK6IPo",
@@ -944,6 +971,7 @@
     }
   },
   {
+    "id": 28,
     "created_at": "2024-02-21T20:42:25.340Z",
     "updated_at": "2024-02-21T20:42:25.340Z",
     "url": "https://www.youtube.com/watch?v=RbplX6ELLaQ",
@@ -976,6 +1004,7 @@
     }
   },
   {
+    "id": 29,
     "created_at": "2024-02-21T20:42:43.859Z",
     "updated_at": "2024-02-21T20:42:43.859Z",
     "url": "https://www.youtube.com/watch?v=aYvAakypELE",
@@ -1008,6 +1037,7 @@
     }
   },
   {
+    "id": 30,
     "created_at": "2024-02-21T20:43:03.216Z",
     "updated_at": "2024-02-21T20:43:03.216Z",
     "url": "https://www.youtube.com/watch?v=vqiGrrmpL34",
@@ -1040,6 +1070,7 @@
     }
   },
   {
+    "id": 31,
     "created_at": "2024-02-21T20:43:45.244Z",
     "updated_at": "2024-02-21T20:43:45.244Z",
     "url": "https://www.youtube.com/watch?v=qc7PxMEPP5M",
@@ -1072,6 +1103,7 @@
     }
   },
   {
+    "id": 32,
     "created_at": "2024-02-21T20:43:54.904Z",
     "updated_at": "2024-02-21T20:43:54.904Z",
     "url": "https://www.youtube.com/watch?v=6SGIF0At2yg",
@@ -1104,6 +1136,7 @@
     }
   },
   {
+    "id": 33,
     "created_at": "2024-02-21T20:44:06.424Z",
     "updated_at": "2024-02-21T20:44:06.424Z",
     "url": "https://www.youtube.com/watch?v=5kHYGN4IOzg",
@@ -1136,6 +1169,7 @@
     }
   },
   {
+    "id": 34,
     "created_at": "2024-02-21T20:45:58.249Z",
     "updated_at": "2024-02-21T20:45:58.249Z",
     "url": "https://www.youtube.com/watch?v=YJvCBKhHTEo",
@@ -1168,6 +1202,7 @@
     }
   },
   {
+    "id": 35,
     "created_at": "2024-02-21T20:46:11.232Z",
     "updated_at": "2024-02-21T20:46:11.232Z",
     "url": "https://www.youtube.com/watch?v=Wvadap4QRSQ",
@@ -1200,6 +1235,7 @@
     }
   },
   {
+    "id": 36,
     "created_at": "2024-02-21T20:46:19.339Z",
     "updated_at": "2024-02-21T20:46:19.339Z",
     "url": "https://www.youtube.com/watch?v=wmW4z9yhmN8",
@@ -1232,6 +1268,7 @@
     }
   },
   {
+    "id": 37,
     "created_at": "2024-02-21T20:46:39.882Z",
     "updated_at": "2024-02-21T20:46:39.882Z",
     "url": "https://www.youtube.com/watch?v=9cOWVwCrOMk",
@@ -1264,6 +1301,7 @@
     }
   },
   {
+    "id": 38,
     "created_at": "2024-02-21T20:46:51.294Z",
     "updated_at": "2024-02-21T20:46:51.294Z",
     "url": "https://www.youtube.com/watch?v=tGhRlwswcq0",
@@ -1296,6 +1334,7 @@
     }
   },
   {
+    "id": 39,
     "created_at": "2024-02-21T20:47:23.953Z",
     "updated_at": "2024-02-21T20:47:23.953Z",
     "url": "https://www.youtube.com/watch?v=Grh0GJjcbg0",
@@ -1328,6 +1367,7 @@
     }
   },
   {
+    "id": 40,
     "created_at": "2024-02-21T20:47:40.262Z",
     "updated_at": "2024-02-21T20:47:40.262Z",
     "url": "https://www.youtube.com/watch?v=T_WP2DXae6w",
@@ -1360,6 +1400,7 @@
     }
   },
   {
+    "id": 41,
     "created_at": "2024-02-21T20:47:50.519Z",
     "updated_at": "2024-02-21T20:47:50.519Z",
     "url": "https://www.youtube.com/watch?v=E9t05pXwIZQ",
@@ -1392,6 +1433,7 @@
     }
   },
   {
+    "id": 42,
     "created_at": "2024-02-21T20:48:03.306Z",
     "updated_at": "2024-02-21T20:48:03.306Z",
     "url": "https://www.youtube.com/watch?v=D85oX6-p0r8",
@@ -1424,6 +1466,7 @@
     }
   },
   {
+    "id": 43,
     "created_at": "2024-02-21T20:48:18.682Z",
     "updated_at": "2024-02-21T20:48:18.682Z",
     "url": "https://www.youtube.com/watch?v=5YeakoallWA",
@@ -1456,6 +1499,7 @@
     }
   },
   {
+    "id": 44,
     "created_at": "2024-02-21T20:48:33.141Z",
     "updated_at": "2024-02-21T20:48:33.141Z",
     "url": "https://www.youtube.com/watch?v=4ApSVg20Iuw",
@@ -1488,6 +1532,7 @@
     }
   },
   {
+    "id": 45,
     "created_at": "2024-02-21T20:48:42.763Z",
     "updated_at": "2024-02-21T20:48:42.763Z",
     "url": "https://www.youtube.com/watch?v=ArQ8wriT0Zk",
@@ -1520,6 +1565,7 @@
     }
   },
   {
+    "id": 46,
     "created_at": "2024-02-21T20:48:54.021Z",
     "updated_at": "2024-02-21T20:48:54.021Z",
     "url": "https://www.youtube.com/watch?v=Rr17PZPZbXY",
@@ -1552,6 +1598,7 @@
     }
   },
   {
+    "id": 47,
     "created_at": "2024-02-21T20:49:04.545Z",
     "updated_at": "2024-02-21T20:49:04.545Z",
     "url": "https://www.youtube.com/watch?v=8xDSty_QtLA",
@@ -1584,6 +1631,7 @@
     }
   },
   {
+    "id": 48,
     "created_at": "2024-02-21T20:49:16.842Z",
     "updated_at": "2024-02-21T20:49:16.842Z",
     "url": "https://www.youtube.com/watch?v=jL04MQV6RhU",
@@ -1616,6 +1664,7 @@
     }
   },
   {
+    "id": 49,
     "created_at": "2024-02-21T20:52:25.111Z",
     "updated_at": "2024-02-21T20:52:25.111Z",
     "url": "https://www.youtube.com/watch?v=9ScvSGsDtfo",
@@ -1648,6 +1697,7 @@
     }
   },
   {
+    "id": 50,
     "created_at": "2024-02-21T20:52:53.735Z",
     "updated_at": "2024-02-21T20:52:53.735Z",
     "url": "https://www.youtube.com/watch?v=5SzGYQQ7oJg",
@@ -1680,6 +1730,7 @@
     }
   },
   {
+    "id": 51,
     "created_at": "2024-02-21T20:53:03.642Z",
     "updated_at": "2024-02-21T20:53:03.642Z",
     "url": "https://www.youtube.com/watch?v=3yFJb769c60",
@@ -1712,6 +1763,7 @@
     }
   },
   {
+    "id": 52,
     "created_at": "2024-02-21T20:53:13.503Z",
     "updated_at": "2024-02-21T20:53:13.503Z",
     "url": "https://www.youtube.com/watch?v=_9tgJYGvg7E",
@@ -1744,6 +1796,7 @@
     }
   },
   {
+    "id": 53,
     "created_at": "2024-02-21T20:53:50.557Z",
     "updated_at": "2024-02-21T20:53:50.557Z",
     "url": "https://www.youtube.com/watch?v=-BuRmIYHtJ8",
@@ -1776,6 +1829,7 @@
     }
   },
   {
+    "id": 54,
     "created_at": "2024-02-21T20:54:30.076Z",
     "updated_at": "2024-02-21T20:54:30.076Z",
     "url": "https://www.youtube.com/watch?v=w0LCp_4ylPQ",
@@ -1808,6 +1862,7 @@
     }
   },
   {
+    "id": 55,
     "created_at": "2024-02-21T20:54:41.210Z",
     "updated_at": "2024-02-21T20:54:41.210Z",
     "url": "https://www.youtube.com/watch?v=Peo0nK1Eh9I",
@@ -1840,6 +1895,7 @@
     }
   },
   {
+    "id": 56,
     "created_at": "2024-02-21T20:54:50.201Z",
     "updated_at": "2024-02-21T20:54:50.201Z",
     "url": "https://www.youtube.com/watch?v=I9rJkAy_4QA",
@@ -1872,6 +1928,7 @@
     }
   },
   {
+    "id": 57,
     "created_at": "2024-02-21T20:54:58.554Z",
     "updated_at": "2024-02-21T20:54:58.554Z",
     "url": "https://www.youtube.com/watch?v=3r_lXz3nQfY",
@@ -1904,6 +1961,7 @@
     }
   },
   {
+    "id": 58,
     "created_at": "2024-02-21T20:55:11.687Z",
     "updated_at": "2024-02-21T20:55:11.687Z",
     "url": "https://www.youtube.com/watch?v=YGK_k0Spe6U",
@@ -1936,6 +1994,7 @@
     }
   },
   {
+    "id": 59,
     "created_at": "2024-02-21T20:55:23.669Z",
     "updated_at": "2024-02-21T20:55:23.669Z",
     "url": "https://www.youtube.com/watch?v=Mcki_LetpUo",
@@ -1968,6 +2027,7 @@
     }
   },
   {
+    "id": 60,
     "created_at": "2024-02-21T20:55:43.014Z",
     "updated_at": "2024-02-21T20:55:43.014Z",
     "url": "https://www.youtube.com/watch?v=60FtjhcO-Ss",
@@ -2000,6 +2060,7 @@
     }
   },
   {
+    "id": 61,
     "created_at": "2024-02-21T20:56:16.325Z",
     "updated_at": "2024-02-21T20:56:16.325Z",
     "url": "https://www.youtube.com/watch?v=UvW8kw6gInY",
@@ -2026,6 +2087,3438 @@
       },
       "default": {
         "url": "https://i.ytimg.com/vi/UvW8kw6gInY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 62,
+    "created_at": "2024-03-04T18:02:35.567Z",
+    "updated_at": "2024-03-04T18:02:35.567Z",
+    "url": "https://www.youtube.com/watch?v=jb_lnAvZSa4",
+    "content_id": "jb_lnAvZSa4",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Kansas City Chiefs vs. Baltimore Ravens Game Highlights | 2023 AFC Championship",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/jb_lnAvZSa4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/jb_lnAvZSa4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/jb_lnAvZSa4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 63,
+    "created_at": "2024-03-04T18:04:51.947Z",
+    "updated_at": "2024-03-04T18:04:51.947Z",
+    "url": "https://www.youtube.com/watch?v=lu0hnU6pWlQ",
+    "content_id": "lu0hnU6pWlQ",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Minnesota Vikings vs. Cincinnati Bengals Game Highlights | NFL 2023 Week 15",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/lu0hnU6pWlQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/lu0hnU6pWlQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/lu0hnU6pWlQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 64,
+    "created_at": "2024-03-04T18:05:15.755Z",
+    "updated_at": "2024-03-04T18:05:15.755Z",
+    "url": "https://www.youtube.com/watch?v=0pB9o1aLm6M",
+    "content_id": "0pB9o1aLm6M",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Cleveland Browns vs. Houston Texans Game Highlights | NFL 2023 Super Wild Card Weekend",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/0pB9o1aLm6M/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/0pB9o1aLm6M/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/0pB9o1aLm6M/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 65,
+    "created_at": "2024-03-04T18:05:35.569Z",
+    "updated_at": "2024-03-04T18:05:35.569Z",
+    "url": "https://www.youtube.com/watch?v=rekGwJ7_sP4",
+    "content_id": "rekGwJ7_sP4",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Baltimore Ravens vs. Pittsburgh Steelers Game Highlights | NFL 2023 Week 5",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/rekGwJ7_sP4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/rekGwJ7_sP4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/rekGwJ7_sP4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 66,
+    "created_at": "2024-03-04T18:05:51.727Z",
+    "updated_at": "2024-03-04T18:05:51.727Z",
+    "url": "https://www.youtube.com/watch?v=J9XlAomP3_A",
+    "content_id": "J9XlAomP3_A",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Houston Texans vs. Indianapolis Colts | 2023 Week 18 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/J9XlAomP3_A/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/J9XlAomP3_A/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/J9XlAomP3_A/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 67,
+    "created_at": "2024-03-04T18:06:09.535Z",
+    "updated_at": "2024-03-04T18:06:09.535Z",
+    "url": "https://www.youtube.com/watch?v=dX3U9ue-JEY",
+    "content_id": "dX3U9ue-JEY",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Pittsburgh Steelers vs. Houston Texans Game Highlights | NFL 2023 Week 4",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/dX3U9ue-JEY/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/dX3U9ue-JEY/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/dX3U9ue-JEY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 68,
+    "created_at": "2024-03-04T18:06:22.585Z",
+    "updated_at": "2024-03-04T18:06:22.585Z",
+    "url": "https://www.youtube.com/watch?v=6kuTYzNStJM",
+    "content_id": "6kuTYzNStJM",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Indianapolis Colts vs. Jacksonville Jaguars Game Highlights | NFL 2023 Week 6",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/6kuTYzNStJM/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/6kuTYzNStJM/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/6kuTYzNStJM/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 69,
+    "created_at": "2024-03-04T18:06:37.357Z",
+    "updated_at": "2024-03-04T18:06:37.357Z",
+    "url": "https://www.youtube.com/watch?v=f7PSjegOyRU",
+    "content_id": "f7PSjegOyRU",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Carolina Panthers vs. Jacksonville Jaguars | 2023 Week 17 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/f7PSjegOyRU/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/f7PSjegOyRU/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/f7PSjegOyRU/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 70,
+    "created_at": "2024-03-04T18:07:05.439Z",
+    "updated_at": "2024-03-04T18:07:05.439Z",
+    "url": "https://www.youtube.com/watch?v=9sDRMQH7EnA",
+    "content_id": "9sDRMQH7EnA",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Indianapolis Colts vs. Tennessee Titans Game Highlights | NFL 2023 Week 13",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/9sDRMQH7EnA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/9sDRMQH7EnA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/9sDRMQH7EnA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 71,
+    "created_at": "2024-03-04T18:07:20.297Z",
+    "updated_at": "2024-03-04T18:07:20.297Z",
+    "url": "https://www.youtube.com/watch?v=sVNXZWbEEMk",
+    "content_id": "sVNXZWbEEMk",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Kansas City Chiefs vs. Denver Broncos Game Highlights | NFL 2023 Week 8",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/sVNXZWbEEMk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/sVNXZWbEEMk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/sVNXZWbEEMk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 72,
+    "created_at": "2024-03-04T18:07:42.512Z",
+    "updated_at": "2024-03-04T18:07:42.512Z",
+    "url": "https://www.youtube.com/watch?v=6dhCZ1xJT6U",
+    "content_id": "6dhCZ1xJT6U",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Las Vegas Raiders vs. Kansas City Chiefs Game Highlights | NFL 2023 Week 16",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/6dhCZ1xJT6U/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/6dhCZ1xJT6U/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/6dhCZ1xJT6U/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 73,
+    "created_at": "2024-03-04T18:07:57.753Z",
+    "updated_at": "2024-03-04T18:07:57.753Z",
+    "url": "https://www.youtube.com/watch?v=wwS12cMIhwg",
+    "content_id": "wwS12cMIhwg",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Los Angeles Chargers vs. Las Vegas Raiders | 2023 Week 15 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/wwS12cMIhwg/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/wwS12cMIhwg/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/wwS12cMIhwg/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 74,
+    "created_at": "2024-03-04T18:08:16.235Z",
+    "updated_at": "2024-03-04T18:08:16.235Z",
+    "url": "https://www.youtube.com/watch?v=W84zXc2F7bk",
+    "content_id": "W84zXc2F7bk",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Denver Broncos vs. Los Angeles Chargers Game Highlights | NFL 2023 Week 14",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/W84zXc2F7bk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/W84zXc2F7bk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/W84zXc2F7bk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 75,
+    "created_at": "2024-03-04T18:08:33.668Z",
+    "updated_at": "2024-03-04T18:08:33.668Z",
+    "url": "https://www.youtube.com/watch?v=ShIkktu3ueE",
+    "content_id": "ShIkktu3ueE",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "New York Giants vs. Dallas Cowboys | 2023 Week 10 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ShIkktu3ueE/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ShIkktu3ueE/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ShIkktu3ueE/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 76,
+    "created_at": "2024-03-04T18:08:51.649Z",
+    "updated_at": "2024-03-04T18:08:51.649Z",
+    "url": "https://www.youtube.com/watch?v=VvHSZCdIqqI",
+    "content_id": "VvHSZCdIqqI",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "New York Giants vs. New Orleans Saints | 2023 Week 15 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/VvHSZCdIqqI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/VvHSZCdIqqI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/VvHSZCdIqqI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 77,
+    "created_at": "2024-03-04T18:09:25.434Z",
+    "updated_at": "2024-03-04T18:09:25.434Z",
+    "url": "https://www.youtube.com/watch?v=cs32EDEzmpI",
+    "content_id": "cs32EDEzmpI",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Washington Commanders vs. Dallas Cowboys Game Highlights | NFL 2023 Week 12",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/cs32EDEzmpI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/cs32EDEzmpI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/cs32EDEzmpI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 78,
+    "created_at": "2024-03-04T18:10:16.944Z",
+    "updated_at": "2024-03-04T18:10:16.944Z",
+    "url": "https://www.youtube.com/watch?v=lfxxIv9sIj0",
+    "content_id": "lfxxIv9sIj0",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Carolina Panthers vs. Chicago Bears | 2023 Week 10 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/lfxxIv9sIj0/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/lfxxIv9sIj0/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/lfxxIv9sIj0/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 79,
+    "created_at": "2024-03-04T18:10:52.333Z",
+    "updated_at": "2024-03-04T18:10:52.333Z",
+    "url": "https://www.youtube.com/watch?v=rvoQpoy9Zv4",
+    "content_id": "rvoQpoy9Zv4",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Los Angeles Rams vs. Detroit Lions Game Highlights | NFL 2023 Super Wild Card Weekend",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/rvoQpoy9Zv4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/rvoQpoy9Zv4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/rvoQpoy9Zv4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 80,
+    "created_at": "2024-03-04T18:11:14.745Z",
+    "updated_at": "2024-03-04T18:11:14.745Z",
+    "url": "https://www.youtube.com/watch?v=VXOXrPhepTw",
+    "content_id": "VXOXrPhepTw",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Green Bay Packers vs. Minnesota Vikings | 2023 Week 17 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/VXOXrPhepTw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/VXOXrPhepTw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/VXOXrPhepTw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 81,
+    "created_at": "2024-03-04T18:12:26.699Z",
+    "updated_at": "2024-03-04T18:12:26.699Z",
+    "url": "https://www.youtube.com/watch?v=i2e3Sffr4G8",
+    "content_id": "i2e3Sffr4G8",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Carolina Panthers vs. Atlanta Falcons Game Highlights | NFL 2023 Week 1",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/i2e3Sffr4G8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/i2e3Sffr4G8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/i2e3Sffr4G8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 83,
+    "created_at": "2024-03-04T18:13:53.739Z",
+    "updated_at": "2024-03-04T18:13:53.739Z",
+    "url": "https://www.youtube.com/watch?v=8OvTS1pXiAU",
+    "content_id": "8OvTS1pXiAU",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "New Orleans Saints vs. Tampa Bay Buccaneers Game Highlights | NFL 2023 Week 17",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/8OvTS1pXiAU/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/8OvTS1pXiAU/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/8OvTS1pXiAU/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 82,
+    "created_at": "2024-03-04T18:13:11.085Z",
+    "updated_at": "2024-03-04T18:13:11.085Z",
+    "url": "https://www.youtube.com/watch?v=HBCsX7leZb4",
+    "content_id": "HBCsX7leZb4",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Minnesota Vikings vs. Carolina Panthers Game Highlights | NFL 2023 Week 4",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/HBCsX7leZb4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/HBCsX7leZb4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/HBCsX7leZb4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 84,
+    "created_at": "2024-03-04T18:21:42.057Z",
+    "updated_at": "2024-03-04T18:21:42.057Z",
+    "url": "https://www.youtube.com/watch?v=zu2JC9OQibQ",
+    "content_id": "zu2JC9OQibQ",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Tampa Bay Buccaneers vs. Green Bay Packers Game Highlights | NFL 2023 Week 15",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/zu2JC9OQibQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/zu2JC9OQibQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/zu2JC9OQibQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 85,
+    "created_at": "2024-03-04T18:22:09.424Z",
+    "updated_at": "2024-03-04T18:22:09.424Z",
+    "url": "https://www.youtube.com/watch?v=6zFNnRr7rB4",
+    "content_id": "6zFNnRr7rB4",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Atlanta Falcons vs. Arizona Cardinals | 2023 Week 10 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/6zFNnRr7rB4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/6zFNnRr7rB4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/6zFNnRr7rB4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 86,
+    "created_at": "2024-03-04T18:22:45.405Z",
+    "updated_at": "2024-03-04T18:22:45.405Z",
+    "url": "https://www.youtube.com/watch?v=OJxrc7lvlxw",
+    "content_id": "OJxrc7lvlxw",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Los Angeles Rams vs. San Francisco 49ers | 2023 Week 18 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/OJxrc7lvlxw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/OJxrc7lvlxw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/OJxrc7lvlxw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 87,
+    "created_at": "2024-03-04T18:23:07.821Z",
+    "updated_at": "2024-03-04T18:23:07.821Z",
+    "url": "https://www.youtube.com/watch?v=0h_uxJhuM_0",
+    "content_id": "0h_uxJhuM_0",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "San Francisco 49ers vs. Los Angeles Rams | 2023 Week 2 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/0h_uxJhuM_0/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/0h_uxJhuM_0/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/0h_uxJhuM_0/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 88,
+    "created_at": "2024-03-04T18:23:52.236Z",
+    "updated_at": "2024-03-04T18:23:52.236Z",
+    "url": "https://www.youtube.com/watch?v=qhlsFDIHe0w",
+    "content_id": "qhlsFDIHe0w",
+    "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+    "title": "Philadelphia Eagles vs. Seattle Seahawks | 2023 Week 15 Game Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 2,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/qhlsFDIHe0w/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/qhlsFDIHe0w/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/qhlsFDIHe0w/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 89,
+    "created_at": "2024-03-04T18:26:04.725Z",
+    "updated_at": "2024-03-04T18:26:04.725Z",
+    "url": "https://www.youtube.com/watch?v=VRC5T197Eho",
+    "content_id": "VRC5T197Eho",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Devils @ Ducks 3/1 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/VRC5T197Eho/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/VRC5T197Eho/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/VRC5T197Eho/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 90,
+    "created_at": "2024-03-04T18:26:33.435Z",
+    "updated_at": "2024-03-04T18:26:33.435Z",
+    "url": "https://www.youtube.com/watch?v=Q-qsa-kc5YE",
+    "content_id": "Q-qsa-kc5YE",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Coyotes @ Senators 3/1 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Q-qsa-kc5YE/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Q-qsa-kc5YE/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Q-qsa-kc5YE/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 91,
+    "created_at": "2024-03-04T18:27:17.177Z",
+    "updated_at": "2024-03-04T18:27:17.177Z",
+    "url": "https://www.youtube.com/watch?v=AbmFFlgcHv8",
+    "content_id": "AbmFFlgcHv8",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Bruins @ Islanders 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/AbmFFlgcHv8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/AbmFFlgcHv8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/AbmFFlgcHv8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 92,
+    "created_at": "2024-03-04T18:28:16.446Z",
+    "updated_at": "2024-03-04T18:28:16.446Z",
+    "url": "https://www.youtube.com/watch?v=hMEsY3cdo4Y",
+    "content_id": "hMEsY3cdo4Y",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Golden Knights @ Sabres 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/hMEsY3cdo4Y/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/hMEsY3cdo4Y/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/hMEsY3cdo4Y/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 93,
+    "created_at": "2024-03-04T18:29:09.265Z",
+    "updated_at": "2024-03-04T18:29:09.265Z",
+    "url": "https://www.youtube.com/watch?v=P_3i-TIylUk",
+    "content_id": "P_3i-TIylUk",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Penguins @ Flames 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/P_3i-TIylUk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/P_3i-TIylUk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/P_3i-TIylUk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 94,
+    "created_at": "2024-03-04T18:30:21.221Z",
+    "updated_at": "2024-03-04T18:30:21.221Z",
+    "url": "https://www.youtube.com/watch?v=Kfi1GhXeSao",
+    "content_id": "Kfi1GhXeSao",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Jets @ Hurricanes 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Kfi1GhXeSao/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Kfi1GhXeSao/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Kfi1GhXeSao/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 95,
+    "created_at": "2024-03-04T18:30:59.427Z",
+    "updated_at": "2024-03-04T18:30:59.427Z",
+    "url": "https://www.youtube.com/watch?v=XllaSxpO2zY",
+    "content_id": "XllaSxpO2zY",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Blue Jackets @ Blackhawks 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/XllaSxpO2zY/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/XllaSxpO2zY/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/XllaSxpO2zY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 96,
+    "created_at": "2024-03-04T18:31:56.302Z",
+    "updated_at": "2024-03-04T18:31:56.302Z",
+    "url": "https://www.youtube.com/watch?v=8K3uof6txLI",
+    "content_id": "8K3uof6txLI",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Avalanche @ Predators 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/8K3uof6txLI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/8K3uof6txLI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/8K3uof6txLI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 97,
+    "created_at": "2024-03-04T18:33:52.651Z",
+    "updated_at": "2024-03-04T18:33:52.651Z",
+    "url": "https://www.youtube.com/watch?v=zx6wXhD1gJk",
+    "content_id": "zx6wXhD1gJk",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Sharks @ Stars 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/zx6wXhD1gJk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/zx6wXhD1gJk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/zx6wXhD1gJk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 98,
+    "created_at": "2024-03-04T18:34:38.223Z",
+    "updated_at": "2024-03-04T18:34:38.223Z",
+    "url": "https://www.youtube.com/watch?v=6-bRATTtf-k",
+    "content_id": "6-bRATTtf-k",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Panthers @ Red Wings 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/6-bRATTtf-k/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/6-bRATTtf-k/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/6-bRATTtf-k/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 99,
+    "created_at": "2024-03-04T18:35:37.171Z",
+    "updated_at": "2024-03-04T18:35:37.171Z",
+    "url": "https://www.youtube.com/watch?v=6bwU7HdpIJA",
+    "content_id": "6bwU7HdpIJA",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Penguins @ Oilers 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/6bwU7HdpIJA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/6bwU7HdpIJA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/6bwU7HdpIJA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 100,
+    "created_at": "2024-03-04T18:36:49.445Z",
+    "updated_at": "2024-03-04T18:36:49.445Z",
+    "url": "https://www.youtube.com/watch?v=IaCxxhSJgz4",
+    "content_id": "IaCxxhSJgz4",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Devils @ Kings 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/IaCxxhSJgz4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/IaCxxhSJgz4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/IaCxxhSJgz4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 101,
+    "created_at": "2024-03-04T18:37:42.915Z",
+    "updated_at": "2024-03-04T18:37:42.915Z",
+    "url": "https://www.youtube.com/watch?v=87pv9g2V-Yk",
+    "content_id": "87pv9g2V-Yk",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Sharks @ Wild 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/87pv9g2V-Yk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/87pv9g2V-Yk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/87pv9g2V-Yk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 102,
+    "created_at": "2024-03-04T18:38:20.172Z",
+    "updated_at": "2024-03-04T18:38:20.172Z",
+    "url": "https://www.youtube.com/watch?v=h4isCveIRl4",
+    "content_id": "h4isCveIRl4",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Canadiens @ Lightning 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/h4isCveIRl4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/h4isCveIRl4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/h4isCveIRl4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 103,
+    "created_at": "2024-03-04T18:45:32.364Z",
+    "updated_at": "2024-03-04T18:45:32.364Z",
+    "url": "https://www.youtube.com/watch?v=PKiYPDhBa-o",
+    "content_id": "PKiYPDhBa-o",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Rangers @ Maple Leafs 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/PKiYPDhBa-o/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/PKiYPDhBa-o/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/PKiYPDhBa-o/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 104,
+    "created_at": "2024-03-04T18:46:10.722Z",
+    "updated_at": "2024-03-04T18:46:10.722Z",
+    "url": "https://www.youtube.com/watch?v=SAFOgzKYQKI",
+    "content_id": "SAFOgzKYQKI",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Senators @ Flyers 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/SAFOgzKYQKI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/SAFOgzKYQKI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/SAFOgzKYQKI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 107,
+    "created_at": "2024-03-04T18:51:44.757Z",
+    "updated_at": "2024-03-04T18:51:44.757Z",
+    "url": "https://www.youtube.com/watch?v=INo8v4_6xx4",
+    "content_id": "INo8v4_6xx4",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Canucks @ Ducks 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/INo8v4_6xx4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/INo8v4_6xx4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/INo8v4_6xx4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 109,
+    "created_at": "2024-03-04T18:53:33.857Z",
+    "updated_at": "2024-03-04T18:53:33.857Z",
+    "url": "https://www.youtube.com/watch?v=YK-6C_wm0n4",
+    "content_id": "YK-6C_wm0n4",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Jets @ Sabres 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/YK-6C_wm0n4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/YK-6C_wm0n4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/YK-6C_wm0n4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 111,
+    "created_at": "2024-03-04T18:55:43.536Z",
+    "updated_at": "2024-03-04T18:55:43.536Z",
+    "url": "https://www.youtube.com/watch?v=dc4on52mVIA",
+    "content_id": "dc4on52mVIA",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Nationals vs. Braves Game Highlights (9/30/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/dc4on52mVIA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/dc4on52mVIA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/dc4on52mVIA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 112,
+    "created_at": "2024-03-04T18:56:23.178Z",
+    "updated_at": "2024-03-04T18:56:23.178Z",
+    "url": "https://www.youtube.com/watch?v=TmIchzTWSys",
+    "content_id": "TmIchzTWSys",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Red Sox vs. Orioles Game Highlights (9/28/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/TmIchzTWSys/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/TmIchzTWSys/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/TmIchzTWSys/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 113,
+    "created_at": "2024-03-04T18:57:07.316Z",
+    "updated_at": "2024-03-04T18:57:07.316Z",
+    "url": "https://www.youtube.com/watch?v=H4yZ1BbtljI",
+    "content_id": "H4yZ1BbtljI",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "White Sox vs. Red Sox Game Highlights (9/23/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/H4yZ1BbtljI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/H4yZ1BbtljI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/H4yZ1BbtljI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 117,
+    "created_at": "2024-03-04T18:59:42.037Z",
+    "updated_at": "2024-03-04T18:59:42.037Z",
+    "url": "https://www.youtube.com/watch?v=Ny1DlnMG6Mo",
+    "content_id": "Ny1DlnMG6Mo",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Reds vs. Guardians Game Highlights (9/26/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Ny1DlnMG6Mo/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Ny1DlnMG6Mo/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Ny1DlnMG6Mo/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 105,
+    "created_at": "2024-03-04T18:48:42.457Z",
+    "updated_at": "2024-03-04T18:48:42.457Z",
+    "url": "https://www.youtube.com/watch?v=zZzsJhLcpUs",
+    "content_id": "zZzsJhLcpUs",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Oilers @ Kraken 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/zZzsJhLcpUs/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/zZzsJhLcpUs/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/zZzsJhLcpUs/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 106,
+    "created_at": "2024-03-04T18:49:20.258Z",
+    "updated_at": "2024-03-04T18:49:20.258Z",
+    "url": "https://www.youtube.com/watch?v=VaLx_PkYcCY",
+    "content_id": "VaLx_PkYcCY",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Wild @ Blues 3/2 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/VaLx_PkYcCY/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/VaLx_PkYcCY/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/VaLx_PkYcCY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 108,
+    "created_at": "2024-03-04T18:52:54.551Z",
+    "updated_at": "2024-03-04T18:52:54.551Z",
+    "url": "https://www.youtube.com/watch?v=LOlYqHXewmI",
+    "content_id": "LOlYqHXewmI",
+    "channel_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "title": "Coyotes @ Capitals 3/3 | NHL Highlights 2024",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 3,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/LOlYqHXewmI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/LOlYqHXewmI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/LOlYqHXewmI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 110,
+    "created_at": "2024-03-04T18:55:08.106Z",
+    "updated_at": "2024-03-04T18:55:08.106Z",
+    "url": "https://www.youtube.com/watch?v=qKfH3pNwuVs",
+    "content_id": "qKfH3pNwuVs",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Rangers vs. D-backs World Series Game 5 Highlights (11/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/qKfH3pNwuVs/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/qKfH3pNwuVs/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/qKfH3pNwuVs/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 114,
+    "created_at": "2024-03-04T18:57:43.817Z",
+    "updated_at": "2024-03-04T18:57:43.817Z",
+    "url": "https://www.youtube.com/watch?v=b4e3RkPX6so",
+    "content_id": "b4e3RkPX6so",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "D-backs vs. White Sox Game Highlights (9/28/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/b4e3RkPX6so/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/b4e3RkPX6so/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/b4e3RkPX6so/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 115,
+    "created_at": "2024-03-04T18:58:16.563Z",
+    "updated_at": "2024-03-04T18:58:16.563Z",
+    "url": "https://www.youtube.com/watch?v=TcYUhkAzMro",
+    "content_id": "TcYUhkAzMro",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Cubs vs. Braves Game Highlights (9/28/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/TcYUhkAzMro/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/TcYUhkAzMro/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/TcYUhkAzMro/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 116,
+    "created_at": "2024-03-04T18:58:58.031Z",
+    "updated_at": "2024-03-04T18:58:58.031Z",
+    "url": "https://www.youtube.com/watch?v=ieSKtmfACpk",
+    "content_id": "ieSKtmfACpk",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Pirates vs. Reds Game Highlights (9/23/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ieSKtmfACpk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ieSKtmfACpk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ieSKtmfACpk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 118,
+    "created_at": "2024-03-04T19:00:20.477Z",
+    "updated_at": "2024-03-04T19:00:20.477Z",
+    "url": "https://www.youtube.com/watch?v=xkK7NCPZl7k",
+    "content_id": "xkK7NCPZl7k",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Dodgers vs. Rockies Game Highlights (9/27/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/xkK7NCPZl7k/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/xkK7NCPZl7k/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/xkK7NCPZl7k/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 119,
+    "created_at": "2024-03-04T19:00:49.569Z",
+    "updated_at": "2024-03-04T19:00:49.569Z",
+    "url": "https://www.youtube.com/watch?v=tZXm76ftqqU",
+    "content_id": "tZXm76ftqqU",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Guardians vs. Tigers Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/tZXm76ftqqU/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/tZXm76ftqqU/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/tZXm76ftqqU/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 120,
+    "created_at": "2024-03-04T19:01:35.629Z",
+    "updated_at": "2024-03-04T19:01:35.629Z",
+    "url": "https://www.youtube.com/watch?v=Y2E5i0hM0Js",
+    "content_id": "Y2E5i0hM0Js",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Yankees vs. Astros Game Highlights (9/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Y2E5i0hM0Js/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Y2E5i0hM0Js/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Y2E5i0hM0Js/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 121,
+    "created_at": "2024-03-04T19:02:05.377Z",
+    "updated_at": "2024-03-04T19:02:05.377Z",
+    "url": "https://www.youtube.com/watch?v=J5vIV4_PFlA",
+    "content_id": "J5vIV4_PFlA",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Yankees vs. Royals Game Highlights (9/30/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/J5vIV4_PFlA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/J5vIV4_PFlA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/J5vIV4_PFlA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 122,
+    "created_at": "2024-03-04T19:02:40.567Z",
+    "updated_at": "2024-03-04T19:02:40.567Z",
+    "url": "https://www.youtube.com/watch?v=YIZ47qDTr8M",
+    "content_id": "YIZ47qDTr8M",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Rangers vs. Angels Game Highlights (9/26/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/YIZ47qDTr8M/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/YIZ47qDTr8M/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/YIZ47qDTr8M/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 123,
+    "created_at": "2024-03-04T19:03:00.602Z",
+    "updated_at": "2024-03-04T19:03:00.602Z",
+    "url": "https://www.youtube.com/watch?v=Wm3zfvKDIjA",
+    "content_id": "Wm3zfvKDIjA",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Padres vs. Dodgers Game Highlights (9/11/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Wm3zfvKDIjA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Wm3zfvKDIjA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Wm3zfvKDIjA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 124,
+    "created_at": "2024-03-04T19:03:31.913Z",
+    "updated_at": "2024-03-04T19:03:31.913Z",
+    "url": "https://www.youtube.com/watch?v=ir0vdEskG2E",
+    "content_id": "ir0vdEskG2E",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Marlins vs. Pirates Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ir0vdEskG2E/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ir0vdEskG2E/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ir0vdEskG2E/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 125,
+    "created_at": "2024-03-04T19:04:15.708Z",
+    "updated_at": "2024-03-04T19:04:15.708Z",
+    "url": "https://www.youtube.com/watch?v=b098m-fuKRU",
+    "content_id": "b098m-fuKRU",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Mets vs. Marlins Game Highlights (9/20/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/b098m-fuKRU/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/b098m-fuKRU/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/b098m-fuKRU/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 129,
+    "created_at": "2024-03-04T19:06:26.808Z",
+    "updated_at": "2024-03-04T19:06:26.808Z",
+    "url": "https://www.youtube.com/watch?v=ZKsRrw2BWWw",
+    "content_id": "ZKsRrw2BWWw",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Tigers vs. A&#39;s Game Highlights (9/24/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ZKsRrw2BWWw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ZKsRrw2BWWw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ZKsRrw2BWWw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 133,
+    "created_at": "2024-03-04T19:12:26.297Z",
+    "updated_at": "2024-03-04T19:12:26.297Z",
+    "url": "https://www.youtube.com/watch?v=-VcJ6BfgdCw",
+    "content_id": "-VcJ6BfgdCw",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Dodgers vs. Giants Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/-VcJ6BfgdCw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/-VcJ6BfgdCw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/-VcJ6BfgdCw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 135,
+    "created_at": "2024-03-04T19:13:32.867Z",
+    "updated_at": "2024-03-04T19:13:32.867Z",
+    "url": "https://www.youtube.com/watch?v=8IeQ8rUi_es",
+    "content_id": "8IeQ8rUi_es",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Reds vs. Cardinals Game Highlights (9/30/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/8IeQ8rUi_es/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/8IeQ8rUi_es/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/8IeQ8rUi_es/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 137,
+    "created_at": "2024-03-04T19:14:48.583Z",
+    "updated_at": "2024-03-04T19:14:48.583Z",
+    "url": "https://www.youtube.com/watch?v=S1lGILqwIaM",
+    "content_id": "S1lGILqwIaM",
+    "channel_id": "UCZjXWMvOrhc91chSDPDUspA",
+    "title": "Rangers vs. Astros ALCS Game 7 Highlights (10/23/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 5,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/S1lGILqwIaM/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/S1lGILqwIaM/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/S1lGILqwIaM/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 138,
+    "created_at": "2024-03-04T19:15:13.753Z",
+    "updated_at": "2024-03-04T19:15:13.753Z",
+    "url": "https://www.youtube.com/watch?v=PdPDBGQPFHs",
+    "content_id": "PdPDBGQPFHs",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Yankees vs. Blue Jays Highlights (9/28/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/PdPDBGQPFHs/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/PdPDBGQPFHs/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/PdPDBGQPFHs/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 126,
+    "created_at": "2024-03-04T19:04:42.535Z",
+    "updated_at": "2024-03-04T19:04:42.535Z",
+    "url": "https://www.youtube.com/watch?v=yLAzsdw50Y8",
+    "content_id": "yLAzsdw50Y8",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Angels vs. Twins Game Highlights (9/24/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/yLAzsdw50Y8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/yLAzsdw50Y8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/yLAzsdw50Y8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 127,
+    "created_at": "2024-03-04T19:05:11.677Z",
+    "updated_at": "2024-03-04T19:05:11.677Z",
+    "url": "https://www.youtube.com/watch?v=Nejs15ko8IQ",
+    "content_id": "Nejs15ko8IQ",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Yankees vs. Royals Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Nejs15ko8IQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Nejs15ko8IQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Nejs15ko8IQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 128,
+    "created_at": "2024-03-04T19:05:55.021Z",
+    "updated_at": "2024-03-04T19:05:55.021Z",
+    "url": "https://www.youtube.com/watch?v=sYYEW6LMtsI",
+    "content_id": "sYYEW6LMtsI",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Phillies vs. Mets Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/sYYEW6LMtsI/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/sYYEW6LMtsI/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/sYYEW6LMtsI/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 130,
+    "created_at": "2024-03-04T19:07:00.465Z",
+    "updated_at": "2024-03-04T19:07:00.465Z",
+    "url": "https://www.youtube.com/watch?v=aHge1M7ogOo",
+    "content_id": "aHge1M7ogOo",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Braves vs. Phillies NLDS Game 4 Highlights (10/12/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/aHge1M7ogOo/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/aHge1M7ogOo/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/aHge1M7ogOo/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 131,
+    "created_at": "2024-03-04T19:07:27.064Z",
+    "updated_at": "2024-03-04T19:07:27.064Z",
+    "url": "https://www.youtube.com/watch?v=ugQlB2GX-4U",
+    "content_id": "ugQlB2GX-4U",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Pirates vs. Cubs Game Highlights (9/20/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ugQlB2GX-4U/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ugQlB2GX-4U/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ugQlB2GX-4U/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 132,
+    "created_at": "2024-03-04T19:08:42.724Z",
+    "updated_at": "2024-03-04T19:08:42.724Z",
+    "url": "https://www.youtube.com/watch?v=ARmkuS7gIAM",
+    "content_id": "ARmkuS7gIAM",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Cardinals vs. Padres Game Highlights (9/24/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ARmkuS7gIAM/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ARmkuS7gIAM/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ARmkuS7gIAM/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 134,
+    "created_at": "2024-03-04T19:12:58.980Z",
+    "updated_at": "2024-03-04T19:12:58.980Z",
+    "url": "https://www.youtube.com/watch?v=-bxVDSWfhbQ",
+    "content_id": "-bxVDSWfhbQ",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Rangers vs. Mariners Game Highlights (10/1/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/-bxVDSWfhbQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/-bxVDSWfhbQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/-bxVDSWfhbQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 136,
+    "created_at": "2024-03-04T19:14:03.215Z",
+    "updated_at": "2024-03-04T19:14:03.215Z",
+    "url": "https://www.youtube.com/watch?v=mdIz4RTumb8",
+    "content_id": "mdIz4RTumb8",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Rangers vs. Rays Wild Card Game 1 Highlights (10/3/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/mdIz4RTumb8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/mdIz4RTumb8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/mdIz4RTumb8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 139,
+    "created_at": "2024-03-04T19:15:36.449Z",
+    "updated_at": "2024-03-04T19:15:36.449Z",
+    "url": "https://www.youtube.com/watch?v=TKLYjoETJTc",
+    "content_id": "TKLYjoETJTc",
+    "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "title": "Braves vs. Nationals Game 1 Highlights (9/24/23) | MLB Highlights",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 4,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/TKLYjoETJTc/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/TKLYjoETJTc/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/TKLYjoETJTc/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 140,
+    "created_at": "2024-03-05T14:23:31.171Z",
+    "updated_at": "2024-03-05T14:23:31.171Z",
+    "url": "https://www.youtube.com/watch?v=q9VUlFEDY3U",
+    "content_id": "q9VUlFEDY3U",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Houston Rockets vs Atlanta Hawks - Full Game Highlights | February 10, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/q9VUlFEDY3U/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/q9VUlFEDY3U/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/q9VUlFEDY3U/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 141,
+    "created_at": "2024-03-05T14:24:17.899Z",
+    "updated_at": "2024-03-05T14:24:17.899Z",
+    "url": "https://www.youtube.com/watch?v=CgLd1REiZuA",
+    "content_id": "CgLd1REiZuA",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Boston Celtics vs Chicago Bulls - Full Game Highlights | February 22, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/CgLd1REiZuA/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/CgLd1REiZuA/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/CgLd1REiZuA/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 142,
+    "created_at": "2024-03-05T14:24:53.244Z",
+    "updated_at": "2024-03-05T14:24:53.244Z",
+    "url": "https://www.youtube.com/watch?v=ET-Sc6a4i8A",
+    "content_id": "ET-Sc6a4i8A",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Brooklyn Nets vs Minnesota Timberwolves - Full Game Highlights | February 24, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ET-Sc6a4i8A/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ET-Sc6a4i8A/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ET-Sc6a4i8A/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 143,
+    "created_at": "2024-03-05T14:25:28.134Z",
+    "updated_at": "2024-03-05T14:25:28.134Z",
+    "url": "https://www.youtube.com/watch?v=DsO--CN8anE",
+    "content_id": "DsO--CN8anE",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Charlotte Hornets vs Milwaukee Bucks - Full Game Highlights | February 9, 2024 | 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/DsO--CN8anE/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/DsO--CN8anE/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/DsO--CN8anE/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 144,
+    "created_at": "2024-03-05T14:26:01.850Z",
+    "updated_at": "2024-03-05T14:26:01.850Z",
+    "url": "https://www.youtube.com/watch?v=itUqzSo7Bq8",
+    "content_id": "itUqzSo7Bq8",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Milwaukee Bucks vs Chicago Bulls - Full Game Highlights | March 1, 2024 | 2023-24 NBA Regular Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/itUqzSo7Bq8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/itUqzSo7Bq8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/itUqzSo7Bq8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 145,
+    "created_at": "2024-03-05T14:26:42.740Z",
+    "updated_at": "2024-03-05T14:26:42.740Z",
+    "url": "https://www.youtube.com/watch?v=O5Cm8MagG2g",
+    "content_id": "O5Cm8MagG2g",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "New York Knicks vs Cleveland Cavaliers - Full Game Highlights | March 3, 2024 | 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/O5Cm8MagG2g/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/O5Cm8MagG2g/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/O5Cm8MagG2g/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 146,
+    "created_at": "2024-03-05T14:27:16.696Z",
+    "updated_at": "2024-03-05T14:27:16.696Z",
+    "url": "https://www.youtube.com/watch?v=evSRm50sWtY",
+    "content_id": "evSRm50sWtY",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Philadelphia 76ers vs Dallas Mavericks - Full Game Highlights | March 3, 2024 | 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/evSRm50sWtY/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/evSRm50sWtY/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/evSRm50sWtY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 147,
+    "created_at": "2024-03-05T14:28:03.933Z",
+    "updated_at": "2024-03-05T14:28:03.933Z",
+    "url": "https://www.youtube.com/watch?v=kwrSdVSv29o",
+    "content_id": "kwrSdVSv29o",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Denver Nuggets vs Los Angeles Lakers - Full Game Highlights | March 2, 2024 | 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/kwrSdVSv29o/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/kwrSdVSv29o/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/kwrSdVSv29o/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 148,
+    "created_at": "2024-03-05T14:28:41.521Z",
+    "updated_at": "2024-03-05T14:28:41.521Z",
+    "url": "https://www.youtube.com/watch?v=ajCNGIgRMhk",
+    "content_id": "ajCNGIgRMhk",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Detroit Pistons vs New York Knicks - Full Game Highlights | February 26, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ajCNGIgRMhk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ajCNGIgRMhk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ajCNGIgRMhk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 149,
+    "created_at": "2024-03-05T14:30:19.435Z",
+    "updated_at": "2024-03-05T14:30:19.435Z",
+    "url": "https://www.youtube.com/watch?v=JDSsbVbYFiw",
+    "content_id": "JDSsbVbYFiw",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Golden State Warriors vs Boston Celtics - Full Game Highlights | March 3, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/JDSsbVbYFiw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/JDSsbVbYFiw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/JDSsbVbYFiw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 150,
+    "created_at": "2024-03-05T14:30:59.887Z",
+    "updated_at": "2024-03-05T14:30:59.887Z",
+    "url": "https://www.youtube.com/watch?v=Iy3IZqphHC8",
+    "content_id": "Iy3IZqphHC8",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Houston Rockets vs Phoenix Suns - Full Game Highlights | March 2, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Iy3IZqphHC8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Iy3IZqphHC8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Iy3IZqphHC8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 151,
+    "created_at": "2024-03-05T14:31:43.474Z",
+    "updated_at": "2024-03-05T14:31:43.474Z",
+    "url": "https://www.youtube.com/watch?v=tfKh0oAr6nQ",
+    "content_id": "tfKh0oAr6nQ",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Indiana Pacers vs San Antonio Spurs - Full Game Highlights | March 3, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/tfKh0oAr6nQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/tfKh0oAr6nQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/tfKh0oAr6nQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 152,
+    "created_at": "2024-03-05T14:32:20.538Z",
+    "updated_at": "2024-03-05T14:32:20.538Z",
+    "url": "https://www.youtube.com/watch?v=lag0aJnSUqk",
+    "content_id": "lag0aJnSUqk",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Los Angeles Clippers vs Milwaukee Bucks - Full Game Highlights | March 4, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/lag0aJnSUqk/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/lag0aJnSUqk/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/lag0aJnSUqk/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 153,
+    "created_at": "2024-03-05T14:33:47.488Z",
+    "updated_at": "2024-03-05T14:33:47.488Z",
+    "url": "https://www.youtube.com/watch?v=0fhX4pFMmns",
+    "content_id": "0fhX4pFMmns",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Oklahoma City Thunder vs Los Angeles Lakers - Full Game Highlights | March 4, 2024 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/0fhX4pFMmns/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/0fhX4pFMmns/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/0fhX4pFMmns/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 154,
+    "created_at": "2024-03-05T14:34:08.419Z",
+    "updated_at": "2024-03-05T14:34:08.419Z",
+    "url": "https://www.youtube.com/watch?v=RR_p5jDkZiw",
+    "content_id": "RR_p5jDkZiw",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Milwaukee Bucks vs Memphis Grizzlies - Full Game Highlights | February 15, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/RR_p5jDkZiw/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/RR_p5jDkZiw/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/RR_p5jDkZiw/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 155,
+    "created_at": "2024-03-05T14:34:34.750Z",
+    "updated_at": "2024-03-05T14:34:34.750Z",
+    "url": "https://www.youtube.com/watch?v=deWdweUAmok",
+    "content_id": "deWdweUAmok",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Miami Heat vs Sacramento Kings - Full Game Highlights | February 26, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/deWdweUAmok/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/deWdweUAmok/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/deWdweUAmok/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 156,
+    "created_at": "2024-03-05T14:36:00.786Z",
+    "updated_at": "2024-03-05T14:36:00.786Z",
+    "url": "https://www.youtube.com/watch?v=cDAfK0A2vf4",
+    "content_id": "cDAfK0A2vf4",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Milwaukee Bucks vs Minnesota Timberwolves - Full Game Highlights | February 23, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/cDAfK0A2vf4/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/cDAfK0A2vf4/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/cDAfK0A2vf4/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 157,
+    "created_at": "2024-03-05T14:36:21.985Z",
+    "updated_at": "2024-03-05T14:36:21.985Z",
+    "url": "https://www.youtube.com/watch?v=QvFA1agD3ME",
+    "content_id": "QvFA1agD3ME",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "New Orleans Pelicans vs New York Knicks - Full Game Highlights | February 27, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/QvFA1agD3ME/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/QvFA1agD3ME/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/QvFA1agD3ME/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 158,
+    "created_at": "2024-03-05T14:36:41.574Z",
+    "updated_at": "2024-03-05T14:36:41.574Z",
+    "url": "https://www.youtube.com/watch?v=sMoTdXTGmUs",
+    "content_id": "sMoTdXTGmUs",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Indiana Pacers vs New York Knicks - Full Game Highlights | February 10, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/sMoTdXTGmUs/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/sMoTdXTGmUs/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/sMoTdXTGmUs/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 160,
+    "created_at": "2024-03-05T14:37:33.349Z",
+    "updated_at": "2024-03-05T14:37:33.349Z",
+    "url": "https://www.youtube.com/watch?v=ecYtsT1eohY",
+    "content_id": "ecYtsT1eohY",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Philadelphia 76ers vs Utah Jazz - Full Game Highlights | February 1, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/ecYtsT1eohY/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/ecYtsT1eohY/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/ecYtsT1eohY/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 161,
+    "created_at": "2024-03-05T14:38:14.722Z",
+    "updated_at": "2024-03-05T14:38:14.722Z",
+    "url": "https://www.youtube.com/watch?v=qAguLBH9fog",
+    "content_id": "qAguLBH9fog",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Milwaukee Bucks vs Portland Trail Blazers - Full Game Highlights | January 31, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/qAguLBH9fog/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/qAguLBH9fog/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/qAguLBH9fog/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 164,
+    "created_at": "2024-03-05T14:39:27.724Z",
+    "updated_at": "2024-03-05T14:39:27.724Z",
+    "url": "https://www.youtube.com/watch?v=68PXqd6J5J8",
+    "content_id": "68PXqd6J5J8",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Los Angeles Lakers vs Utah Jazz - Full Game Highlights | February 14, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/68PXqd6J5J8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/68PXqd6J5J8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/68PXqd6J5J8/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 159,
+    "created_at": "2024-03-05T14:37:16.871Z",
+    "updated_at": "2024-03-05T14:37:16.871Z",
+    "url": "https://www.youtube.com/watch?v=S6berxJ1SF0",
+    "content_id": "S6berxJ1SF0",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Phoenix Suns vs Orlando Magic - Full Game Highlights | January 28, 2024 | 2023-24 Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/S6berxJ1SF0/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/S6berxJ1SF0/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/S6berxJ1SF0/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 162,
+    "created_at": "2024-03-05T14:38:55.329Z",
+    "updated_at": "2024-03-05T14:38:55.329Z",
+    "url": "https://www.youtube.com/watch?v=bkqUawM1YGs",
+    "content_id": "bkqUawM1YGs",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "San Antonio Spurs vs Utah Jazz - Full Game Highlights | February 25, 2024 | 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/bkqUawM1YGs/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/bkqUawM1YGs/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/bkqUawM1YGs/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 163,
+    "created_at": "2024-03-05T14:39:10.562Z",
+    "updated_at": "2024-03-05T14:39:10.562Z",
+    "url": "https://www.youtube.com/watch?v=xNx-7nZjSLQ",
+    "content_id": "xNx-7nZjSLQ",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Dallas Mavericks vs Toronto Raptors - Full Game Highlights | February 28, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/xNx-7nZjSLQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/xNx-7nZjSLQ/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/xNx-7nZjSLQ/default.jpg",
+        "width": 120,
+        "height": 90
+      }
+    }
+  },
+  {
+    "id": 165,
+    "created_at": "2024-03-05T14:39:40.267Z",
+    "updated_at": "2024-03-05T14:39:40.267Z",
+    "url": "https://www.youtube.com/watch?v=Gh6j9qZeLdU",
+    "content_id": "Gh6j9qZeLdU",
+    "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "title": "Washington Wizards vs Los Angeles Clippers - Full Game Highlights | March 1, 2023-24 NBA Season",
+    "view_count": null,
+    "like_count": null,
+    "dislike_count": null,
+    "comment_count": null,
+    "comments_used": null,
+    "social_media_platform_id": 1,
+    "social_content_creator_id": 6,
+    "thumbnails": {
+      "high": {
+        "url": "https://i.ytimg.com/vi/Gh6j9qZeLdU/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/Gh6j9qZeLdU/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "default": {
+        "url": "https://i.ytimg.com/vi/Gh6j9qZeLdU/default.jpg",
         "width": 120,
         "height": 90
       }

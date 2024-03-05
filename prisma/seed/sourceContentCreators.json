@@ -14,5 +14,37 @@
     "social_media_platform_id": 1,
     "social_media_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
     "name": null
+  },
+  {
+    "id": 3,
+    "created_at": "2024-03-04T18:26:04.723Z",
+    "updated_at": "2024-03-04T18:26:04.723Z",
+    "social_media_platform_id": 1,
+    "social_media_id": "UCqFMzb-4AUf6WAIbl132QKA",
+    "name": "NHL"
+  },
+  {
+    "id": 4,
+    "created_at": "2024-03-04T18:55:08.103Z",
+    "updated_at": "2024-03-04T18:55:08.103Z",
+    "social_media_platform_id": 1,
+    "social_media_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+    "name": "MLB"
+  },
+  {
+    "id": 5,
+    "created_at": "2024-03-04T19:14:48.579Z",
+    "updated_at": "2024-03-04T19:14:48.579Z",
+    "social_media_platform_id": 1,
+    "social_media_id": "UCZjXWMvOrhc91chSDPDUspA",
+    "name": "Texas Rangers"
+  },
+  {
+    "id": 6,
+    "created_at": "2024-03-05T14:23:31.164Z",
+    "updated_at": "2024-03-05T14:23:31.164Z",
+    "social_media_platform_id": 1,
+    "social_media_id": "UCqQo7ewe87aYAe7ub5UqXMw",
+    "name": "House of Highlights"
   }
 ]
