@@ -5,6 +5,10 @@ import {
   getTotalPages,
 } from '../components/pagination/actions';
 import PaginationPage from '../components/pagination/pagination_page';
+import { Prisma } from '@prisma/client';
+export type SubcategoryWithCategory = Prisma.EventSubCategoryGetPayload<{
+  include: { event_category: true };
+}>;
 
 export default async function Page({
   searchParams,

@@ -1,13 +1,16 @@
 import { buttonVariants } from '@/components/ui/button';
+import prisma from '@/db';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 import LoginPrompt from '../components/login_prompt';
-import {
-  getFilteredEventSeries,
-  getTotalPages,
-} from '../components/pagination/actions';
-import PaginationPage from '../components/pagination/pagination_page';
+import WorkshopPagination from '../components/pagination/workshop_pagination';
+import CategorySelect from '../components/search/category_select';
+import Search from '../components/search/search';
+import SortSelect from '../components/search/sort_select';
+import { SearchSkeleton } from '../components/skeletons';
+import { SubcategoryWithCategory } from '../event_series/page';
 
 export default async function Page({
   searchParams,
@@ -35,26 +38,21 @@ export default async function Page({
   const category = searchParams?.category || '';
   const subcategory = searchParams?.subcategory || '';
   const order = searchParams?.order || '';
-  const creatorId = session?.user.id;
-  const limit = 9;
-  const eventSeries = await getFilteredEventSeries({
-    query,
-    currentPage,
-    limit,
-    category,
-    subcategory,
-    order,
-    creatorId,
-    sessionId: session?.user.id || -1,
+
+  const categories = await prisma.eventCategory.findMany({
+    orderBy: {
+      id: 'asc',
+    },
   });
-  const totalPages = await getTotalPages({
-    query,
-    limit,
-    category,
-    subcategory,
-    order,
-    sessionId: session?.user.id || -1,
-  });
+  const subcategories: SubcategoryWithCategory[] =
+    await prisma.eventSubCategory.findMany({
+      include: {
+        event_category: true,
+      },
+      orderBy: {
+        id: 'asc',
+      },
+    });
 
   return (
     <div className="flex flex-col gap-6 mx-auto justify-center sm:p-10">
@@ -71,12 +69,32 @@ export default async function Page({
           </Link>
         </div>
       </div>
-      <PaginationPage
-        eventSeries={eventSeries}
-        query={query}
-        currentPage={currentPage}
-        totalPages={totalPages}
-      />
+      <div className="flex flex-col">
+        <div className="w-full flex flex-col lg:flex-row gap-4 mx-auto px-10">
+          <div className="grow">
+            <Search placeholder="Search&#8230;" />
+          </div>
+          <div className="flex flex-col lg:flex-row gap-4">
+            <CategorySelect
+              categories={categories}
+              subcategories={subcategories}
+            />
+            <SortSelect />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 p-10 justify-center">
+          <Suspense key={query + currentPage} fallback={<SearchSkeleton />}>
+            <WorkshopPagination
+              query={query}
+              currentPage={currentPage}
+              category={category}
+              subcategory={subcategory}
+              order={order}
+              creatorId={session?.user.id}
+            />
+          </Suspense>
+        </div>
+      </div>
     </div>
   );
 }

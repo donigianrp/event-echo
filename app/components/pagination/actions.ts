@@ -195,61 +195,6 @@ export async function getFilteredEventSeries({
   );
   return filteredSeriesArr;
 }
-export async function getCreators({
-  limit,
-  query,
-  currentPage,
-  order,
-  creatorId,
-  sessionId,
-}: {
-  limit: number;
-  query: string;
-  currentPage: number;
-  order: string;
-  creatorId?: number;
-  sessionId: number;
-}) {
-  const users = await prisma.user.findMany({
-    take: limit,
-    skip: limit * (currentPage - 1),
-    select: {
-      id: true,
-      name: true,
-      user_series_likes: {
-        select: { user_id: true },
-      },
-    },
-    // Ordering users by the count of records in descending order
-    orderBy: {
-      user_series_likes: {
-        _count: 'desc',
-      },
-    },
-  });
-
-  // users && users.forEach((user) =>
-  //   usersArr.push({
-  //     id: user.id,
-  //     name: user.name,
-
-  //     // id: series.id,
-  //     // title: series.title,
-  //     // description: series.description,
-  //     // created_at: series.created_at,
-  //     // updated_at: series.updated_at,
-  //     // is_private: series.is_private,
-  //     // view_count: series.view_count,
-  //     // creator_id: series.creator_id,
-  //     // has_adult_content: series.has_adult_content,
-  //     // has_spam: series.has_spam,
-  //     // thumbnails: series.events[0]?.events.source_contents[0].source_content
-  //     //   .thumbnails as unknown as Thumbnails,
-  //   }),
-  // );
-
-  return users;
-}
 
 export async function getLikedSeries({
   sessionId,
@@ -394,18 +339,17 @@ export async function getTotalPages({
     where: {
       AND: [
         {
-          creator_id: sessionId,
-          // OR: [
-          //   {
-          //     is_private: false,
-          //   },
-          //   {
-          //     AND: {
-          //       is_private: true,
-          //       creator_id: sessionId,
-          //     },
-          //   },
-          // ],
+          OR: [
+            {
+              is_private: false,
+            },
+            {
+              AND: {
+                is_private: true,
+                creator_id: sessionId,
+              },
+            },
+          ],
         },
         {
           OR: [
@@ -464,19 +408,20 @@ export async function getTotalPages({
       : {}),
   });
 
-  console.log('TOTAL PAGES', totalPages.length);
-  console.log('LIMIT', limit);
   return Math.ceil(totalPages.length / limit);
 }
-
-export async function getCreatorsTotalPages({
+export async function getWorkshopTotalPages({
   limit,
   query,
+  category,
+  subcategory,
   order,
   sessionId,
 }: {
   limit: number;
   query: string;
+  category: string;
+  subcategory: string;
   order: string;
   sessionId: number;
 }) {
@@ -484,17 +429,7 @@ export async function getCreatorsTotalPages({
     where: {
       AND: [
         {
-          OR: [
-            {
-              is_private: false,
-            },
-            {
-              AND: {
-                is_private: true,
-                creator_id: sessionId,
-              },
-            },
-          ],
+          creator_id: sessionId,
         },
         {
           OR: [
@@ -513,6 +448,16 @@ export async function getCreatorsTotalPages({
           ],
         },
       ],
+      ...(category
+        ? {
+            category: { value: category },
+          }
+        : {}),
+      ...(subcategory
+        ? {
+            sub_category: { value: subcategory },
+          }
+        : {}),
     },
     ...(order === 'likes'
       ? {
@@ -542,6 +487,7 @@ export async function getCreatorsTotalPages({
         }
       : {}),
   });
+
   return Math.ceil(totalPages.length / limit);
 }
 

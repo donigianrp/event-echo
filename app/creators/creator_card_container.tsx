@@ -1,13 +1,19 @@
 import React from 'react';
+import { CreatorLikes } from './page';
+import CreatorCard from './creator_card';
 
-const CreatorCardContainer = () => {
+interface Props {
+  creators: CreatorLikes[];
+}
+
+const CreatorCardContainer = (props: Props) => {
+  const { creators } = props;
+  console.log(creators);
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {/* {sourceContents.map((content) => {
-            return (
-              <AddEventCard key={content.id.videoId} sourceContent={content} />
-            );
-          })} */}
+      {creators.map((creator) => {
+        return <CreatorCard key={creator.id} creator={creator} />;
+      })}
     </div>
   );
 };
