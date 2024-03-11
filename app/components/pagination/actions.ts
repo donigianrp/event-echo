@@ -196,6 +196,130 @@ export async function getFilteredEventSeries({
   return filteredSeriesArr;
 }
 
+export async function getLikedSeries({
+  sessionId,
+  limit,
+  currentPage,
+}: {
+  sessionId: number;
+  limit: number;
+  currentPage: number;
+}) {
+  const likedSeriesArr: SeriesWithThumbnail[] = [];
+  const likedSeries = await prisma.userSeriesLike.findMany({
+    take: limit,
+    skip: limit * (currentPage - 1),
+    where: {
+      user_id: sessionId,
+    },
+    include: {
+      event_series: {
+        include: {
+          events: {
+            where: {
+              event_position: 1,
+            },
+            include: {
+              events: {
+                include: {
+                  source_contents: {
+                    include: {
+                      source_content: {
+                        select: {
+                          thumbnails: true,
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+  likedSeries.forEach((series) =>
+    likedSeriesArr.push({
+      id: series.event_series.id,
+      title: series.event_series.title,
+      description: series.event_series.description,
+      created_at: series.event_series.created_at,
+      updated_at: series.event_series.updated_at,
+      is_private: series.event_series.is_private,
+      view_count: series.event_series.view_count,
+      creator_id: series.event_series.creator_id,
+      has_adult_content: series.event_series.has_adult_content,
+      has_spam: series.event_series.has_spam,
+      thumbnails: series.event_series.events[0]?.events.source_contents[0]
+        .source_content.thumbnails as unknown as Thumbnails,
+    }),
+  );
+  return likedSeriesArr;
+}
+
+export async function getFavoritedSeries({
+  sessionId,
+  limit,
+  currentPage,
+}: {
+  sessionId: number;
+  limit: number;
+  currentPage: number;
+}) {
+  const favoritedSeriesArr: SeriesWithThumbnail[] = [];
+  const favoritedSeries = await prisma.userSeriesFavorite.findMany({
+    take: limit,
+    skip: limit * (currentPage - 1),
+    where: {
+      user_id: sessionId,
+    },
+    include: {
+      event_series: {
+        include: {
+          events: {
+            where: {
+              event_position: 1,
+            },
+            include: {
+              events: {
+                include: {
+                  source_contents: {
+                    include: {
+                      source_content: {
+                        select: {
+                          thumbnails: true,
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+  favoritedSeries.forEach((series) =>
+    favoritedSeriesArr.push({
+      id: series.event_series.id,
+      title: series.event_series.title,
+      description: series.event_series.description,
+      created_at: series.event_series.created_at,
+      updated_at: series.event_series.updated_at,
+      is_private: series.event_series.is_private,
+      view_count: series.event_series.view_count,
+      creator_id: series.event_series.creator_id,
+      has_adult_content: series.event_series.has_adult_content,
+      has_spam: series.event_series.has_spam,
+      thumbnails: series.event_series.events[0]?.events.source_contents[0]
+        .source_content.thumbnails as unknown as Thumbnails,
+    }),
+  );
+  return favoritedSeriesArr;
+}
+
 export async function getTotalPages({
   limit,
   query,
@@ -282,6 +406,37 @@ export async function getTotalPages({
           orderBy: orderMap[order],
         }
       : {}),
+  });
+  return Math.ceil(totalPages.length / limit);
+}
+
+export async function getTotalLikedPages({
+  sessionId,
+  limit,
+}: {
+  sessionId: number;
+  limit: number;
+}) {
+  const totalPages = await prisma.userSeriesLike.findMany({
+    where: {
+      user_id: sessionId,
+    },
+  });
+
+  return Math.ceil(totalPages.length / limit);
+}
+
+export async function getTotalFavoritedPages({
+  sessionId,
+  limit,
+}: {
+  sessionId: number;
+  limit: number;
+}) {
+  const totalPages = await prisma.userSeriesFavorite.findMany({
+    where: {
+      user_id: sessionId,
+    },
   });
   return Math.ceil(totalPages.length / limit);
 }

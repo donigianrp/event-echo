@@ -1,15 +1,10 @@
-import Search from '../components/search/search';
-import CategorySelect from '../components/search/category_select';
-import prisma from '@/db';
-import SortSelect from '../components/search/sort_select';
-import EventSeriesPagination from '../components/pagination/event_series_pagination';
-import { Suspense } from 'react';
-import { SearchSkeleton } from '../components/skeletons';
-import { Prisma } from '@prisma/client';
-
-export type SubcategoryWithCategory = Prisma.EventSubCategoryGetPayload<{
-  include: { event_category: true };
-}>;
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../api/auth/[...nextauth]/route';
+import {
+  getFilteredEventSeries,
+  getTotalPages,
+} from '../components/pagination/actions';
+import PaginationPage from '../components/pagination/pagination_page';
 
 export default async function Page({
   searchParams,
@@ -22,52 +17,38 @@ export default async function Page({
     order?: string;
   };
 }) {
+  const session = await getServerSession(authOptions);
+  const sessionId = session?.user.id;
+  const limit = 9;
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
   const category = searchParams?.category || '';
   const subcategory = searchParams?.subcategory || '';
   const order = searchParams?.order || '';
-
-  const categories = await prisma.eventCategory.findMany({
-    orderBy: {
-      id: 'asc',
-    },
+  const totalPages = await getTotalPages({
+    query,
+    limit,
+    category,
+    subcategory,
+    order,
+    sessionId,
   });
-  const subcategories: SubcategoryWithCategory[] =
-    await prisma.eventSubCategory.findMany({
-      include: {
-        event_category: true,
-      },
-      orderBy: {
-        id: 'asc',
-      },
-    });
+  const eventSeries = await getFilteredEventSeries({
+    query,
+    currentPage,
+    limit,
+    category,
+    subcategory,
+    order,
+    sessionId,
+  });
 
   return (
-    <div className="flex flex-col">
-      <div className="w-full flex flex-col sm:flex-row gap-4 mx-auto p-10 pb-0">
-        <div className="grow">
-          <Search placeholder="Search&#8230;" />
-        </div>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <CategorySelect
-            categories={categories}
-            subcategories={subcategories}
-          />
-          <SortSelect />
-        </div>
-      </div>
-      <div className="flex flex-col gap-6 p-10 justify-center">
-        <Suspense key={query + currentPage} fallback={<SearchSkeleton />}>
-          <EventSeriesPagination
-            query={query}
-            currentPage={currentPage}
-            category={category}
-            subcategory={subcategory}
-            order={order}
-          />
-        </Suspense>
-      </div>
-    </div>
+    <PaginationPage
+      eventSeries={eventSeries}
+      query={query}
+      currentPage={currentPage}
+      totalPages={totalPages}
+    />
   );
 }
