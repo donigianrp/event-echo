@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { EventCategory } from '@prisma/client';
 import { useState } from 'react';
 import { Combobox } from '../ui/combobox';
-import { SubcategoryWithCategory } from '@/app/event_series/page';
+import { SubcategoryWithCategory } from '../pagination/pagination_page';
 
 export default function CategorySelect({
   categories,
