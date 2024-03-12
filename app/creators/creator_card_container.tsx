@@ -8,7 +8,6 @@ interface Props {
 
 const CreatorCardContainer = (props: Props) => {
   const { creators } = props;
-  console.log(creators);
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {creators.map((creator) => {

@@ -37,8 +37,6 @@ export async function GET(request: Request) {
     const userSeriesFavorites = await prisma.userSeriesFavorite.findMany();
     const verificationTokens = await prisma.verificationToken.findMany();
 
-    console.log('SCE', sourceContentEvents);
-
     writeJSONFile('events.json', events);
     writeJSONFile('sourceContents.json', sourceContents);
     writeJSONFile('sourceContentEvents.json', sourceContentEvents);
