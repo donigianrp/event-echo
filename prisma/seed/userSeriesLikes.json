@@ -1,1 +1,154 @@
-[]
+[
+  {
+    "user_id": 4,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 5,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 6,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 7,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 8,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 9,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 10,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 11,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 12,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 13,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 14,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 15,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 16,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 17,
+    "event_series_id": 1
+  },
+  {
+    "user_id": 4,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 5,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 6,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 7,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 8,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 9,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 10,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 11,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 12,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 13,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 14,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 15,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 16,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 17,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 18,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 19,
+    "event_series_id": 51
+  },
+  {
+    "user_id": 4,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 5,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 6,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 7,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 8,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 9,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 10,
+    "event_series_id": 100
+  },
+  {
+    "user_id": 9,
+    "event_series_id": 101
+  }
+]

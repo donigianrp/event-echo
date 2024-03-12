@@ -407,6 +407,87 @@ export async function getTotalPages({
         }
       : {}),
   });
+
+  return Math.ceil(totalPages.length / limit);
+}
+export async function getWorkshopTotalPages({
+  limit,
+  query,
+  category,
+  subcategory,
+  order,
+  sessionId,
+}: {
+  limit: number;
+  query: string;
+  category: string;
+  subcategory: string;
+  order: string;
+  sessionId: number;
+}) {
+  const totalPages = await prisma.eventSeries.findMany({
+    where: {
+      AND: [
+        {
+          creator_id: sessionId,
+        },
+        {
+          OR: [
+            {
+              title: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+            {
+              description: {
+                contains: query || '',
+                mode: 'insensitive',
+              },
+            },
+          ],
+        },
+      ],
+      ...(category
+        ? {
+            category: { value: category },
+          }
+        : {}),
+      ...(subcategory
+        ? {
+            sub_category: { value: subcategory },
+          }
+        : {}),
+    },
+    ...(order === 'likes'
+      ? {
+          include: {
+            _count: {
+              select: {
+                user_likes: true,
+              },
+            },
+          },
+        }
+      : {}),
+    ...(order === 'favorites'
+      ? {
+          include: {
+            _count: {
+              select: {
+                user_favorites: true,
+              },
+            },
+          },
+        }
+      : {}),
+    ...(order
+      ? {
+          orderBy: orderMap[order],
+        }
+      : {}),
+  });
+
   return Math.ceil(totalPages.length / limit);
 }
 

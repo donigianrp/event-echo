@@ -12,9 +12,18 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { getServerSession } from 'next-auth';
 import { Button } from '../ui/button';
 import { CircleUserRound } from 'lucide-react';
+import prisma from '@/db';
 
 const Header = async () => {
   const session = await getServerSession(authOptions);
+
+  const user = !!session?.user
+    ? await prisma.user.findUnique({
+        where: {
+          email: session?.user.email,
+        },
+      })
+    : { image: '' };
   return (
     <>
       <div className="hidden lg:block text-center">
@@ -29,7 +38,9 @@ const Header = async () => {
               className="w-12 h-12 rounded-full"
             >
               <Avatar>
-                <AvatarImage src={session?.user?.image} />
+                <AvatarImage
+                  src={`https://gravatar.com/avatar/${user?.image}`}
+                />
                 <AvatarFallback>
                   <CircleUserRound className="w-12 h-12" />
                 </AvatarFallback>

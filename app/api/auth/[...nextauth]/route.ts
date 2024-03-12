@@ -2,6 +2,7 @@ import NextAuth, { NextAuthOptions } from 'next-auth';
 import Google from 'next-auth/providers/google';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import prisma from '@/db';
+import { sha256 } from 'js-sha256';
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -62,6 +63,9 @@ export const authOptions: NextAuthOptions = {
           },
           data: {
             username: username,
+            image: message.user.email
+              ? sha256(message.user.email.toLowerCase())
+              : '',
           },
         });
       }

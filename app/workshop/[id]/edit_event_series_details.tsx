@@ -101,9 +101,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
         type="submit"
         disabled={pending}
         aria-disabled={pending}
-        onClick={() => {
-          // console.log(form);
-        }}
+        onClick={() => {}}
       >
         {pending ? (
           <>
