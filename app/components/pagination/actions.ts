@@ -216,15 +216,11 @@ export async function getLikedSeries({
               event_position: 1,
             },
             include: {
-              events: {
+              source_contents: {
                 include: {
-                  source_contents: {
-                    include: {
-                      source_content: {
-                        select: {
-                          thumbnails: true,
-                        },
-                      },
+                  source_content: {
+                    select: {
+                      thumbnails: true,
                     },
                   },
                 },
@@ -247,7 +243,7 @@ export async function getLikedSeries({
       creator_id: series.event_series.creator_id,
       has_adult_content: series.event_series.has_adult_content,
       has_spam: series.event_series.has_spam,
-      thumbnails: series.event_series.events[0]?.events.source_contents[0]
+      thumbnails: series.event_series.events[0]?.source_contents[0]
         .source_content.thumbnails as unknown as Thumbnails,
     }),
   );
@@ -278,15 +274,11 @@ export async function getFavoritedSeries({
               event_position: 1,
             },
             include: {
-              events: {
+              source_contents: {
                 include: {
-                  source_contents: {
-                    include: {
-                      source_content: {
-                        select: {
-                          thumbnails: true,
-                        },
-                      },
+                  source_content: {
+                    select: {
+                      thumbnails: true,
                     },
                   },
                 },
@@ -309,7 +301,7 @@ export async function getFavoritedSeries({
       creator_id: series.event_series.creator_id,
       has_adult_content: series.event_series.has_adult_content,
       has_spam: series.event_series.has_spam,
-      thumbnails: series.event_series.events[0]?.events.source_contents[0]
+      thumbnails: series.event_series.events[0]?.source_contents[0]
         .source_content.thumbnails as unknown as Thumbnails,
     }),
   );
