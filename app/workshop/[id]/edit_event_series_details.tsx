@@ -89,7 +89,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
   // const { data, error, isLoading } = useSWR('/api/user', fetcher)
 
   if (cancelled) {
-    redirect(`/event_series/${eventSeries.id}`);
+    redirect(`/workshop`);
   }
 
   function SubmitButton() {
@@ -151,14 +151,14 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(submitForm)} className="w-full">
-        <div className="flex flex-col gap-6">
+        <div className="mt-4 flex flex-col gap-6">
           <Input type="hidden" name="id" value={eventSeries.id} />
           <FormField
             control={form.control}
             name="title"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Title</FormLabel>
+                <FormLabel className="text-xl">Title</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Enter title here..."
@@ -178,7 +178,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
             name="description"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Description</FormLabel>
+                <FormLabel className="text-xl">Description</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Enter a brief description about your event series..."

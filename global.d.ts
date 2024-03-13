@@ -119,6 +119,7 @@ export interface EventModel {
   event_date_start: Date | null;
   event_date_finish: Date | null;
   creator_id: number;
+  event_position: number;
 }
 
 // ------------------------- CATEGORY MODEL ---------------------

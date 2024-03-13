@@ -6,6 +6,7 @@ import { authOptions } from '../api/auth/[...nextauth]/route';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { Event } from '@prisma/client';
 
 export async function createEventSeries(prevState: any, formData: FormData) {
   const schema = z.object({
@@ -36,7 +37,7 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   });
 
   revalidatePath('/');
-  redirect(`/event_series/${eventSeries.id}`);
+  redirect(`/workshop/${eventSeries.id}`);
 }
 
 export async function editEventSeries(prevState: any, formData: FormData) {
@@ -114,32 +115,34 @@ export async function editEventSeries(prevState: any, formData: FormData) {
   redirect(`/event_series/${data.id}`);
 }
 
-export async function deleteEventSeries(prevState: any, formData: FormData) {
-  const schema = z.object({
-    id: z.coerce.number(),
-    title: z.string().min(1),
+export async function deleteEventSeries({ id }: { id: number }) {
+  await prisma.userSeriesLike.deleteMany({
+    where: { event_series_id: id },
   });
-  const data = schema.parse({
-    id: formData.get('id'),
-    title: formData.get('title'),
+  await prisma.userSeriesFavorite.deleteMany({
+    where: { event_series_id: id },
+  });
+  await deleteTags({ eventSeriesId: id });
+  const events = await prisma.event.findMany({
+    where: { event_series_id: id },
+  });
+  await deleteAllEvents({ events });
+  await prisma.eventSeries.delete({
+    where: { id },
   });
 
-  try {
-    await prisma.userSeriesLike.deleteMany({
-      where: { event_series_id: data.id },
-    });
-    await prisma.userSeriesFavorite.deleteMany({
-      where: { event_series_id: data.id },
-    });
-    await prisma.eventSeries.delete({
-      where: { id: data.id },
-    });
+  revalidatePath('/workshop', 'page');
+  redirect(`/workshop`);
+}
 
-    revalidatePath('/');
-    return { message: `Deleted event series ${data.title}` };
-  } catch (e) {
-    console.log(e);
-    return { message: 'Failed to delete event series' };
+async function deleteAllEvents({ events }: { events: Event[] }) {
+  for (const event of events) {
+    await deleteSourceContent({ eventId: event.id });
+    await prisma.event.delete({
+      where: {
+        id: event.id,
+      },
+    });
   }
 }
 
@@ -162,15 +165,7 @@ export async function createEvent(prevState: any, formData: FormData) {
   const data = parse.data;
   const session = await getServerSession(authOptions);
 
-  const event = await prisma.event.create({
-    data: {
-      title: data.title,
-      description: data.description,
-      creator_id: session?.user.id,
-    },
-  });
-
-  const eventSeriesEvents = await prisma.eventSeriesEvent.findMany({
+  const eventSeriesEvents = await prisma.event.findMany({
     where: { event_series_id: data.eventSeriesId },
   });
 
@@ -178,14 +173,80 @@ export async function createEvent(prevState: any, formData: FormData) {
     return acc >= el.event_position ? acc : el.event_position;
   }, 0);
 
-  const eventSeriesEvent = await prisma.eventSeriesEvent.create({
+  await prisma.event.create({
     data: {
+      title: data.title,
+      description: data.description,
+      creator_id: session?.user.id,
       event_series_id: data.eventSeriesId,
-      event_id: event.id,
       event_position: lastPosition + 1,
     },
   });
 
   revalidatePath('/');
   redirect(`/event_series/${data.eventSeriesId}`);
+}
+
+export async function deleteEvent({ eventId }: { eventId: number }) {
+  await deleteSourceContent({ eventId });
+  await prisma.event.delete({
+    where: {
+      id: eventId,
+    },
+  });
+  revalidatePath('/');
+}
+
+async function deleteSourceContent({ eventId }: { eventId: number }) {
+  const sourceContent = await prisma.sourceContentEvent.findFirst({
+    where: { event_id: eventId },
+  });
+
+  if (sourceContent) {
+    await prisma.sourceContentEvent.delete({
+      where: {
+        source_content_id_event_id: {
+          source_content_id: sourceContent.source_content_id,
+          event_id: eventId,
+        },
+      },
+    });
+
+    const count = await prisma.sourceContentEvent.count({
+      where: { source_content_id: sourceContent.source_content_id },
+    });
+
+    if (count < 1) {
+      const commentsExist = await prisma.comment.findFirst({
+        where: { source_content_id: sourceContent.source_content_id },
+      });
+      if (commentsExist) {
+        await prisma.comment.delete({
+          where: { source_content_id: sourceContent.source_content_id },
+        });
+      }
+      await prisma.sourceContent.delete({
+        where: { id: sourceContent.source_content_id },
+      });
+    }
+  }
+}
+
+async function deleteTags({ eventSeriesId }: { eventSeriesId: number }) {
+  const tags = await prisma.eventTagEventSeries.findMany({
+    where: { event_series_id: eventSeriesId },
+  });
+  await prisma.eventTagEventSeries.deleteMany({
+    where: { event_series_id: eventSeriesId },
+  });
+  for await (const tag of tags) {
+    const count = await prisma.eventTagEventSeries.count({
+      where: { event_tag_text: tag.event_tag_text },
+    });
+    if (count < 1) {
+      await prisma.eventTag.delete({
+        where: { text: tag.event_tag_text },
+      });
+    }
+  }
 }

@@ -17,10 +17,10 @@ export async function PUT(
 
     await prisma.$transaction(async (tx) => {
       for (const { eventId, newPosition } of updatedPositions) {
-        await tx.eventSeriesEvent.updateMany({
+        await tx.event.updateMany({
           where: {
             event_series_id: Number(seriesId),
-            event_id: eventId,
+            id: eventId,
           },
           data: {
             event_position: newPosition,

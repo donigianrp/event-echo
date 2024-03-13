@@ -33,15 +33,6 @@ export async function DELETE(
       });
     }
 
-    await prisma.eventSeriesEvent.delete({
-      where: {
-        event_series_id_event_id: {
-          event_series_id: Number(seriesId),
-          event_id: Number(eventId),
-        },
-      },
-    });
-
     const event = await prisma.event.delete({
       where: { id: Number(eventId) },
     });

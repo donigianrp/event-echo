@@ -63,11 +63,7 @@ export default async function EventSeriesPage({
 
   const seriesEvents = await prisma.event.findMany({
     where: {
-      event_series: {
-        some: {
-          event_series_id: eventSeries.id,
-        },
-      },
+      event_series_id: eventSeries.id,
     },
     include: {
       source_contents: {

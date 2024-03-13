@@ -6,12 +6,14 @@ import Image from 'next/image';
 
 import { useContext } from 'react';
 import { EditSeriesContext } from './edit_series_container';
-import { EventPosition } from './page';
+import { GripVertical } from 'lucide-react';
+import { EventWithThumbnails } from './page';
 interface Props {
-  event: EventPosition;
+  event: EventWithThumbnails;
   idx: number;
+  deleteMode: boolean;
 }
-export function SortableItem({ event, idx }: Props) {
+export function SortableItem({ event, idx, deleteMode }: Props) {
   const localStore = useContext(EditSeriesContext);
   const positionMap = localStore?.positionMap || {};
   const { attributes, listeners, setNodeRef, transform, transition } =
@@ -22,17 +24,16 @@ export function SortableItem({ event, idx }: Props) {
       ref={setNodeRef}
       {...attributes}
       {...listeners}
-      className={
-        'w-full p-2 rounded-md hover:cursor-grab active:cursor-grabbing active:bg-primary hover:bg-primary-hover border-2 border-border'
-      }
+      className={`w-full bg-card p-2 px-4 rounded-md ${deleteMode ? 'pr-0 hover:cursor-auto' : 'border-2 border-border hover:cursor-grab active:cursor-grabbing active:bg-primary hover:bg-primary/90'}`}
       style={{
         transform: CSS.Transform.toString(transform),
         transition: transition,
       }}
     >
       <div className={`flex flex-col gap-4 sm:flex-row items-center`}>
+        <GripVertical className={`${deleteMode ? 'text-transparent' : ''}`} />
         <Image
-          className="rounded-sm"
+          className="rounded-sm h-auto w-auto"
           alt="video thumbnail"
           src={thumbnail.url}
           height={thumbnail.height / 3}
@@ -44,9 +45,11 @@ export function SortableItem({ event, idx }: Props) {
           <div className={`flex flex-1 align-middle`}>
             <h3 className={`text-xl text-foreground ml-4`}>{event.title}</h3>
           </div>
-          <h1 className={`sm:text-3xl sm:w-20 text-foreground text-center`}>
-            {positionMap[event.id]}
-          </h1>
+          {!deleteMode && (
+            <h1 className={`sm:text-3xl sm:w-14 text-foreground text-center`}>
+              {positionMap[event.id]}
+            </h1>
+          )}
         </div>
       </div>
     </div>
