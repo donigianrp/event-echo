@@ -6,7 +6,7 @@ import { EventModel, EventSeriesModel } from '@/global';
 import { EventCategory, EventSubCategory } from '@prisma/client';
 import AccessDenied from '@/app/components/access_denied';
 
-export type EventSeriesEditTabs = 'details' | 'events' | 'add';
+export type EventSeriesEditTabs = 'details' | 'events' | 'add' | 'delete';
 
 export interface ContentThumbnail {
   url: string;
@@ -20,15 +20,14 @@ export interface Thumbnails {
   default: ContentThumbnail;
   standard: ContentThumbnail;
 }
-export interface EventPosition extends EventModel {
-  event_position: number;
+export interface EventWithThumbnails extends EventModel {
   thumbnails: Thumbnails;
 }
 export interface EditSeriesContextProps {
   categories: EventCategory[];
   subCategories: EventSubCategory[];
   eventSeries: EventSeriesModel | null;
-  events: EventPosition[];
+  events: EventWithThumbnails[];
   positionMap: { [val: number]: number };
   session: Session | null;
 }
@@ -85,28 +84,50 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
     );
   }
 
-  const events = await prisma.$queryRaw<EventPosition[]>`
-    WITH EventPositions AS (
-      SELECT event_id, event_position
-      FROM "event_series_event" 
-      WHERE "event_series_event"."event_series_id" = ${Number(params.id)}
-    )
+  const events = await prisma.event.findMany({
+    where: {
+      event_series_id: Number(params.id),
+    },
+    include: {
+      source_contents: {
+        include: {
+          source_content: {
+            select: {
+              thumbnails: true,
+            },
+          },
+        },
+      },
+    },
+    orderBy: {
+      event_position: 'asc',
+    },
+  });
 
-    SELECT "event".*, "event_position", "thumbnails" 
-    FROM "event"
-    INNER JOIN EventPositions ON EventPositions."event_id" = "event"."id"
-    LEFT JOIN "source_content_event" ON "source_content_event"."event_id" = "event"."id"
-    LEFT JOIN "source_content" ON "source_content"."id" = "source_content_event"."source_content_id"
-    ORDER BY "event_position"
-  `;
+  const eventsWithThumbnails: EventWithThumbnails[] = [];
+  events.forEach((event) =>
+    eventsWithThumbnails.push({
+      id: event.id,
+      created_at: event.created_at,
+      updated_at: event.updated_at,
+      title: event.title,
+      description: event.description,
+      event_position: event.event_position,
+      event_date_start: event.event_date_start,
+      event_date_finish: event.event_date_finish,
+      creator_id: event.creator_id,
+      thumbnails: event.source_contents[0]?.source_content
+        .thumbnails as unknown as Thumbnails,
+    }),
+  );
 
-  const eventSeriesEvents = await prisma.eventSeriesEvent.findMany({
+  const eventSeriesEvents = await prisma.event.findMany({
     where: { event_series_id: Number(params.id) },
   });
 
   const positionMap = eventSeriesEvents.reduce(
     (acc, el) => {
-      acc[el.event_id] = el.event_position;
+      acc[el.id] = el.event_position;
       return acc;
     },
     {} as { [val: number]: number },
@@ -116,7 +137,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
   const subCategories = await prisma.eventSubCategory.findMany({});
 
   const editSeriesContextProps: EditSeriesContextProps = {
-    events,
+    events: eventsWithThumbnails,
     categories,
     subCategories,
     positionMap,

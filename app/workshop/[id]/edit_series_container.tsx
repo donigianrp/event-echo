@@ -4,15 +4,10 @@ import EditSeriesTabs from './edit_series_tabs';
 import EditSeriesContent from './edit_series_content';
 import {
   EditSeriesContextProps,
-  EventPosition,
   EventSeriesEditTabs,
+  EventWithThumbnails,
 } from './page';
-import {
-  CategoryModel,
-  EventModel,
-  EventSeriesModel,
-  SubCategoryModel,
-} from '@/global';
+import { EventSeriesModel } from '@/global';
 import { Session } from 'next-auth';
 import { EventCategory, EventSubCategory } from '@prisma/client';
 
@@ -24,7 +19,7 @@ export const EditSeriesContext = createContext<{
   categories: EventCategory[];
   subCategories: EventSubCategory[];
   eventSeries: EventSeriesModel;
-  events: EventPosition[];
+  events: EventWithThumbnails[];
   tab: EventSeriesEditTabs;
   setTab: (val: EventSeriesEditTabs) => void;
   positionMap: { [val: number]: number };

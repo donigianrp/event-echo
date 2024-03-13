@@ -144,15 +144,11 @@ export async function GET(request: Request) {
             event_position: 1,
           },
           include: {
-            events: {
+            source_contents: {
               include: {
-                source_contents: {
-                  include: {
-                    source_content: {
-                      select: {
-                        thumbnails: true,
-                      },
-                    },
+                source_content: {
+                  select: {
+                    thumbnails: true,
                   },
                 },
               },
@@ -223,7 +219,7 @@ export async function GET(request: Request) {
       creator_id: series.creator_id,
       has_adult_content: series.has_adult_content,
       has_spam: series.has_spam,
-      thumbnails: series.events[0]?.events.source_contents[0].source_content
+      thumbnails: series.events[0]?.source_contents[0]?.source_content
         .thumbnails as unknown as Thumbnails,
     }),
   );

@@ -55,11 +55,8 @@ const AddEventDialog = ({
       <DialogTrigger>
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger>
-              <PlusCircle
-                onClick={() => {}}
-                className={`text-gray-600 hover:text-primary`}
-              />
+            <TooltipTrigger asChild>
+              <PlusCircle className={`text-gray-600 hover:text-primary`} />
             </TooltipTrigger>
             <TooltipContent side="left">Add to Event Series</TooltipContent>
           </Tooltip>
