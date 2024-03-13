@@ -26,6 +26,7 @@ async function main() {
     }
   }
   await createRecordsFromJSON('users.json', prisma.user);
+  await createRecordsFromJSON('eventSeries.json', prisma.eventSeries);
   await createRecordsFromJSON('events.json', prisma.event);
   await createRecordsFromJSON(
     'socialMediaPlatforms.json',
@@ -41,11 +42,6 @@ async function main() {
     prisma.sourceContentEvent,
   );
   await createRecordsFromJSON('comments.json', prisma.comment);
-  await createRecordsFromJSON('eventSeries.json', prisma.eventSeries);
-  await createRecordsFromJSON(
-    'eventSeriesEvents.json',
-    prisma.eventSeriesEvent,
-  );
   await createRecordsFromJSON('eventCategories.json', prisma.eventCategory);
   await createRecordsFromJSON(
     'eventSubCategories.json',

@@ -1,4 +1,4 @@
-import { EventReqParams } from '@/app/event_series/[id]/edit/add_event_card';
+import { EventReqParams } from '@/app/workshop/[id]/add_event_card';
 import prisma from '@/db';
 
 // GET /event_series/[seriesId]/event
@@ -11,11 +11,7 @@ export async function GET(
   try {
     const results = await prisma.event.findMany({
       where: {
-        event_series: {
-          some: {
-            event_series_id: Number(seriesId),
-          },
-        },
+        event_series_id: Number(seriesId),
       },
       include: {
         source_contents: {
@@ -86,11 +82,7 @@ export async function POST(request: Request) {
       where: {
         AND: [
           {
-            event_series: {
-              some: {
-                event_series_id: eventSeriesId,
-              },
-            },
+            event_series_id: eventSeriesId,
           },
           {
             source_contents: {
@@ -109,15 +101,7 @@ export async function POST(request: Request) {
       throw new Error('403');
     }
 
-    const createdEvent = await prisma.event.create({
-      data: {
-        title,
-        description,
-        creator_id,
-      },
-    });
-
-    const currentMaxPosition = await prisma.eventSeriesEvent.findMany({
+    const currentMaxPosition = await prisma.event.findMany({
       where: { event_series_id: eventSeriesId },
       orderBy: [
         {
@@ -127,16 +111,11 @@ export async function POST(request: Request) {
       take: 1,
     });
 
-    const newSourceContentEvent = await prisma.sourceContentEvent.create({
+    const createdEvent = await prisma.event.create({
       data: {
-        event_id: createdEvent.id,
-        source_content_id: sourceContent.id,
-      },
-    });
-
-    const newEventSeriesEvent = await prisma.eventSeriesEvent.create({
-      data: {
-        event_id: createdEvent.id,
+        title,
+        description,
+        creator_id,
         event_series_id: eventSeriesId,
         event_position:
           currentMaxPosition.length > 0
@@ -145,10 +124,17 @@ export async function POST(request: Request) {
       },
     });
 
+    await prisma.sourceContentEvent.create({
+      data: {
+        event_id: createdEvent.id,
+        source_content_id: sourceContent.id,
+      },
+    });
+
     return Response.json(
       {
         success: true,
-        event: newEventSeriesEvent,
+        event: createdEvent,
         sourceContentId: sourceContent.id,
       },
       { status: 200 },
