@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "created_at": "2024-02-21T20:36:24.670Z",
     "updated_at": "2024-02-21T20:36:24.670Z",
     "social_media_platform_id": 1,
@@ -8,7 +7,6 @@
     "name": "New York Jets"
   },
   {
-    "id": 2,
     "created_at": "2024-02-21T20:39:24.809Z",
     "updated_at": "2024-02-21T20:39:24.809Z",
     "social_media_platform_id": 1,
@@ -16,7 +14,6 @@
     "name": null
   },
   {
-    "id": 3,
     "created_at": "2024-03-04T18:26:04.723Z",
     "updated_at": "2024-03-04T18:26:04.723Z",
     "social_media_platform_id": 1,
@@ -24,7 +21,6 @@
     "name": "NHL"
   },
   {
-    "id": 4,
     "created_at": "2024-03-04T18:55:08.103Z",
     "updated_at": "2024-03-04T18:55:08.103Z",
     "social_media_platform_id": 1,
@@ -32,7 +28,6 @@
     "name": "MLB"
   },
   {
-    "id": 5,
     "created_at": "2024-03-04T19:14:48.579Z",
     "updated_at": "2024-03-04T19:14:48.579Z",
     "social_media_platform_id": 1,
@@ -40,7 +35,6 @@
     "name": "Texas Rangers"
   },
   {
-    "id": 6,
     "created_at": "2024-03-05T14:23:31.164Z",
     "updated_at": "2024-03-05T14:23:31.164Z",
     "social_media_platform_id": 1,

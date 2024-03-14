@@ -1,6 +1,5 @@
 [
   {
-    "id": 80,
     "title": "2023 Milwaukee Brewers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -14,7 +13,6 @@
     "has_spam": true
   },
   {
-    "id": 81,
     "title": "2023 Minnesota Twins Game Highlights",
     "description": "",
     "category_id": 1,
@@ -28,7 +26,6 @@
     "has_spam": true
   },
   {
-    "id": 82,
     "title": "2023 New York Yankees Game Highlights",
     "description": "",
     "category_id": 1,
@@ -42,7 +39,6 @@
     "has_spam": true
   },
   {
-    "id": 83,
     "title": "2023 New York Mets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -56,7 +52,6 @@
     "has_spam": true
   },
   {
-    "id": 84,
     "title": "2023 Oakland Athletics Game Highlights",
     "description": "",
     "category_id": 1,
@@ -70,7 +65,6 @@
     "has_spam": true
   },
   {
-    "id": 85,
     "title": "2023 Philadelphia Phillies Game Highlights",
     "description": "",
     "category_id": 1,
@@ -84,7 +78,6 @@
     "has_spam": true
   },
   {
-    "id": 86,
     "title": "2023 Pittsburgh Pirates Game Highlights",
     "description": "",
     "category_id": 1,
@@ -98,7 +91,6 @@
     "has_spam": true
   },
   {
-    "id": 87,
     "title": "2023 San Diego Padres Game Highlights",
     "description": "",
     "category_id": 1,
@@ -112,7 +104,6 @@
     "has_spam": true
   },
   {
-    "id": 88,
     "title": "2023 San Francisco Giants Game Highlights",
     "description": "",
     "category_id": 1,
@@ -126,7 +117,6 @@
     "has_spam": true
   },
   {
-    "id": 89,
     "title": "2023 Seattle Mariners Game Highlights",
     "description": "",
     "category_id": 1,
@@ -140,7 +130,6 @@
     "has_spam": true
   },
   {
-    "id": 90,
     "title": "2023 St. Louis Cardinals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -154,7 +143,6 @@
     "has_spam": true
   },
   {
-    "id": 91,
     "title": "2023 Tampa Bay Rays Game Highlights",
     "description": "",
     "category_id": 1,
@@ -168,7 +156,6 @@
     "has_spam": true
   },
   {
-    "id": 92,
     "title": "2023 Texas Rangers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -182,7 +169,6 @@
     "has_spam": true
   },
   {
-    "id": 93,
     "title": "2023 Toronto Blue Jays Game Highlights",
     "description": "",
     "category_id": 1,
@@ -196,7 +182,6 @@
     "has_spam": true
   },
   {
-    "id": 94,
     "title": "2023 Washington Nationals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -210,7 +195,6 @@
     "has_spam": true
   },
   {
-    "id": 95,
     "title": "2023-24 Atlanta Hawks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -224,7 +208,6 @@
     "has_spam": true
   },
   {
-    "id": 96,
     "title": "2023-24 Boston Celtics Game Highlights",
     "description": "",
     "category_id": 1,
@@ -238,7 +221,6 @@
     "has_spam": true
   },
   {
-    "id": 97,
     "title": "2023-24 Brooklyn Nets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -252,7 +234,6 @@
     "has_spam": true
   },
   {
-    "id": 98,
     "title": "2023-24 Charlotte Hornets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -266,7 +247,6 @@
     "has_spam": true
   },
   {
-    "id": 99,
     "title": "2023-24 Chicago Bulls Game Highlights",
     "description": "",
     "category_id": 1,
@@ -280,7 +260,6 @@
     "has_spam": true
   },
   {
-    "id": 100,
     "title": "2023-24 Cleveland Cavaliers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -294,7 +273,6 @@
     "has_spam": true
   },
   {
-    "id": 101,
     "title": "2023-24 Dallas Mavericks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -308,7 +286,6 @@
     "has_spam": true
   },
   {
-    "id": 102,
     "title": "2023-24 Denver Nuggets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -322,7 +299,6 @@
     "has_spam": true
   },
   {
-    "id": 103,
     "title": "2023-24 Detroit Pistons Game Highlights",
     "description": "",
     "category_id": 1,
@@ -336,7 +312,6 @@
     "has_spam": true
   },
   {
-    "id": 104,
     "title": "2023-24 Golden State Warriors Game Highlights",
     "description": "",
     "category_id": 1,
@@ -350,7 +325,6 @@
     "has_spam": true
   },
   {
-    "id": 105,
     "title": "2023-24 Houston Rockets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -364,7 +338,6 @@
     "has_spam": true
   },
   {
-    "id": 106,
     "title": "2023-24 Indiana Pacers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -378,7 +351,6 @@
     "has_spam": true
   },
   {
-    "id": 107,
     "title": "2023-24 LA Clippers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -392,7 +364,6 @@
     "has_spam": true
   },
   {
-    "id": 108,
     "title": "2023-24 Los Angeles Lakers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -406,7 +377,6 @@
     "has_spam": true
   },
   {
-    "id": 109,
     "title": "2023-24 Memphis Grizzlies Game Highlights",
     "description": "",
     "category_id": 1,
@@ -420,7 +390,6 @@
     "has_spam": true
   },
   {
-    "id": 110,
     "title": "2023-24 Miami Heat Game Highlights",
     "description": "",
     "category_id": 1,
@@ -434,7 +403,6 @@
     "has_spam": true
   },
   {
-    "id": 111,
     "title": "2023-24 Milwaukee Bucks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -448,7 +416,6 @@
     "has_spam": true
   },
   {
-    "id": 112,
     "title": "2023-24 Minnesota Timberwolves Game Highlights",
     "description": "",
     "category_id": 1,
@@ -462,7 +429,6 @@
     "has_spam": true
   },
   {
-    "id": 113,
     "title": "2023-24 New Orleans Pelicans Game Highlights",
     "description": "",
     "category_id": 1,
@@ -476,7 +442,6 @@
     "has_spam": true
   },
   {
-    "id": 114,
     "title": "2023-24 New York Knicks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -490,7 +455,6 @@
     "has_spam": true
   },
   {
-    "id": 115,
     "title": "2023-24 Oklahoma City Thunder Game Highlights",
     "description": "",
     "category_id": 1,
@@ -504,7 +468,6 @@
     "has_spam": true
   },
   {
-    "id": 116,
     "title": "2023-24 Orlando Magic Game Highlights",
     "description": "",
     "category_id": 1,
@@ -518,7 +481,6 @@
     "has_spam": true
   },
   {
-    "id": 117,
     "title": "2023-24 Philadelphia 76ers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -532,7 +494,6 @@
     "has_spam": true
   },
   {
-    "id": 118,
     "title": "2023-24 Phoenix Suns Game Highlights",
     "description": "",
     "category_id": 1,
@@ -546,7 +507,6 @@
     "has_spam": true
   },
   {
-    "id": 119,
     "title": "2023-24 Portland Trail Blazers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -560,7 +520,6 @@
     "has_spam": true
   },
   {
-    "id": 120,
     "title": "2023-24 Sacramento Kings Game Highlights",
     "description": "",
     "category_id": 1,
@@ -574,7 +533,6 @@
     "has_spam": true
   },
   {
-    "id": 121,
     "title": "2023-24 San Antonio Spurs Game Highlights",
     "description": "",
     "category_id": 1,
@@ -583,12 +541,11 @@
     "updated_at": "2024-03-05T15:52:09.406Z",
     "is_private": false,
     "view_count": 4,
-    "creator_id": 33,
+    "creator_id": 32,
     "has_adult_content": true,
     "has_spam": true
   },
   {
-    "id": 122,
     "title": "2023-24 Toronto Raptors Game Highlights",
     "description": "",
     "category_id": 1,
@@ -597,12 +554,11 @@
     "updated_at": "2024-03-05T15:52:09.406Z",
     "is_private": false,
     "view_count": 5,
-    "creator_id": 33,
+    "creator_id": 32,
     "has_adult_content": true,
     "has_spam": true
   },
   {
-    "id": 123,
     "title": "2023-24 Utah Jazz Game Highlights",
     "description": "",
     "category_id": 1,
@@ -611,12 +567,11 @@
     "updated_at": "2024-03-05T15:52:09.406Z",
     "is_private": false,
     "view_count": 6,
-    "creator_id": 33,
+    "creator_id": 32,
     "has_adult_content": true,
     "has_spam": true
   },
   {
-    "id": 124,
     "title": "2023-24 Washington Wizards Game Highlights",
     "description": "",
     "category_id": 1,
@@ -625,12 +580,11 @@
     "updated_at": "2024-03-05T15:52:09.406Z",
     "is_private": false,
     "view_count": 4,
-    "creator_id": 33,
+    "creator_id": 32,
     "has_adult_content": true,
     "has_spam": true
   },
   {
-    "id": 1,
     "title": "2023 New York Jets Postgame Conferences",
     "description": null,
     "category_id": 1,
@@ -644,7 +598,6 @@
     "has_spam": true
   },
   {
-    "id": 6,
     "title": "2023 Cincinnati Bengals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -658,7 +611,6 @@
     "has_spam": true
   },
   {
-    "id": 2,
     "title": "2023 Buffalo Bills Game Highlights",
     "description": "",
     "category_id": 1,
@@ -672,7 +624,6 @@
     "has_spam": true
   },
   {
-    "id": 5,
     "title": "2023 Baltimore Ravens Game Highlights",
     "description": "",
     "category_id": 1,
@@ -686,7 +637,6 @@
     "has_spam": true
   },
   {
-    "id": 7,
     "title": "2023 Cleveland Browns Game Highlights",
     "description": "",
     "category_id": 1,
@@ -700,7 +650,6 @@
     "has_spam": true
   },
   {
-    "id": 8,
     "title": "2023 Pittsburgh Steelers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -714,7 +663,6 @@
     "has_spam": true
   },
   {
-    "id": 9,
     "title": "2023 Houston Texans Game Highlights",
     "description": "",
     "category_id": 1,
@@ -728,7 +676,6 @@
     "has_spam": true
   },
   {
-    "id": 74,
     "title": "2023 Detroit Tigers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -742,7 +689,6 @@
     "has_spam": true
   },
   {
-    "id": 75,
     "title": "2023 Houston Astros Game Highlights",
     "description": "",
     "category_id": 1,
@@ -756,7 +702,6 @@
     "has_spam": true
   },
   {
-    "id": 76,
     "title": "2023 Kansas City Royals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -770,7 +715,6 @@
     "has_spam": true
   },
   {
-    "id": 77,
     "title": "2023 Los Angeles Angels Game Highlights",
     "description": "",
     "category_id": 1,
@@ -784,7 +728,6 @@
     "has_spam": true
   },
   {
-    "id": 78,
     "title": "2023 Los Angeles Dodgers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -798,7 +741,6 @@
     "has_spam": true
   },
   {
-    "id": 67,
     "title": "2023 Baltimore Orioles Game Highlights",
     "description": "",
     "category_id": 1,
@@ -812,7 +754,6 @@
     "has_spam": true
   },
   {
-    "id": 68,
     "title": "2023 Boston Red Sox Game Highlights",
     "description": "",
     "category_id": 1,
@@ -826,7 +767,6 @@
     "has_spam": true
   },
   {
-    "id": 69,
     "title": "2023 Chicago White Sox Game Highlights",
     "description": "",
     "category_id": 1,
@@ -840,7 +780,6 @@
     "has_spam": true
   },
   {
-    "id": 70,
     "title": "2023 Chicago Cubs Game Highlights",
     "description": "",
     "category_id": 1,
@@ -854,7 +793,6 @@
     "has_spam": true
   },
   {
-    "id": 71,
     "title": "2023 Cincinnati Reds Game Highlights",
     "description": "",
     "category_id": 1,
@@ -868,7 +806,6 @@
     "has_spam": true
   },
   {
-    "id": 72,
     "title": "2023 Cleveland Guardians Game Highlights",
     "description": "",
     "category_id": 1,
@@ -882,7 +819,6 @@
     "has_spam": true
   },
   {
-    "id": 73,
     "title": "2023 Colorado Rockies Game Highlights",
     "description": "",
     "category_id": 1,
@@ -896,7 +832,6 @@
     "has_spam": true
   },
   {
-    "id": 20,
     "title": "2023  Washington Commanders Game Highlights",
     "description": "",
     "category_id": 1,
@@ -910,7 +845,6 @@
     "has_spam": true
   },
   {
-    "id": 24,
     "title": "2023 Minnesota Vikings Game Highlights",
     "description": "",
     "category_id": 1,
@@ -924,7 +858,6 @@
     "has_spam": true
   },
   {
-    "id": 15,
     "title": "2023 Las Vegas Raiders Game Highlights",
     "description": "",
     "category_id": 1,
@@ -938,7 +871,6 @@
     "has_spam": true
   },
   {
-    "id": 16,
     "title": "2023 Los Angeles Chargers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -952,7 +884,6 @@
     "has_spam": true
   },
   {
-    "id": 17,
     "title": "2023  Dallas Cowboys Game Highlights",
     "description": "",
     "category_id": 1,
@@ -966,7 +897,6 @@
     "has_spam": true
   },
   {
-    "id": 3,
     "title": "2023 Miami Dolphins Game Highlights",
     "description": "",
     "category_id": 1,
@@ -980,7 +910,6 @@
     "has_spam": true
   },
   {
-    "id": 18,
     "title": "2023 New York Giants  Game Highlights",
     "description": "",
     "category_id": 1,
@@ -994,7 +923,6 @@
     "has_spam": true
   },
   {
-    "id": 4,
     "title": "2023 New England Patriots Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1008,7 +936,6 @@
     "has_spam": true
   },
   {
-    "id": 10,
     "title": "2023 Indianapolis Colts Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1022,7 +949,6 @@
     "has_spam": true
   },
   {
-    "id": 11,
     "title": "2023 Jacksonville Jaguars Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1036,7 +962,6 @@
     "has_spam": true
   },
   {
-    "id": 12,
     "title": "2023 Tennessee Titans Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1050,7 +975,6 @@
     "has_spam": true
   },
   {
-    "id": 13,
     "title": "2023 Denver Broncos Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1064,7 +988,6 @@
     "has_spam": true
   },
   {
-    "id": 14,
     "title": "2023 Kansas City Chiefs Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1078,7 +1001,6 @@
     "has_spam": true
   },
   {
-    "id": 19,
     "title": "2023 Philadelphia Eagles  Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1092,7 +1014,6 @@
     "has_spam": true
   },
   {
-    "id": 21,
     "title": "2023 Chicago Bears Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1106,7 +1027,6 @@
     "has_spam": true
   },
   {
-    "id": 79,
     "title": "2023 Miami Marlins Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1120,7 +1040,6 @@
     "has_spam": true
   },
   {
-    "id": 22,
     "title": "2023 Detroit Lions Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1134,7 +1053,6 @@
     "has_spam": true
   },
   {
-    "id": 23,
     "title": "2023  Green Bay Packers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1148,7 +1066,6 @@
     "has_spam": true
   },
   {
-    "id": 25,
     "title": "2023 Atlanta Falcons Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1162,7 +1079,6 @@
     "has_spam": true
   },
   {
-    "id": 26,
     "title": "2023 Carolina Panthers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1176,7 +1092,6 @@
     "has_spam": true
   },
   {
-    "id": 27,
     "title": "2023 New Orleans Saints Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1190,7 +1105,6 @@
     "has_spam": true
   },
   {
-    "id": 28,
     "title": "2023 Tampa Bay Buccaneers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1204,7 +1118,6 @@
     "has_spam": true
   },
   {
-    "id": 29,
     "title": "2023 Arizona Cardinals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1218,7 +1131,6 @@
     "has_spam": true
   },
   {
-    "id": 31,
     "title": "2023 San Francisco 49ers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1232,7 +1144,6 @@
     "has_spam": true
   },
   {
-    "id": 32,
     "title": "2023 Seattle Seahawks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1246,7 +1157,6 @@
     "has_spam": true
   },
   {
-    "id": 33,
     "title": "2023-24 Anaheim Ducks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1260,7 +1170,6 @@
     "has_spam": true
   },
   {
-    "id": 34,
     "title": "2023-24 Arizona Coyotes Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1274,7 +1183,6 @@
     "has_spam": true
   },
   {
-    "id": 35,
     "title": "2023-24 Boston Bruins Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1288,7 +1196,6 @@
     "has_spam": true
   },
   {
-    "id": 36,
     "title": "2023-24 Buffalo Sabres Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1302,7 +1209,6 @@
     "has_spam": true
   },
   {
-    "id": 37,
     "title": "2023-24 Calgary Flames Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1316,7 +1222,6 @@
     "has_spam": true
   },
   {
-    "id": 38,
     "title": "2023-24 Carolina Hurricanes Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1330,7 +1235,6 @@
     "has_spam": true
   },
   {
-    "id": 39,
     "title": "2023-24 Chicago Blackhawks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1344,7 +1248,6 @@
     "has_spam": true
   },
   {
-    "id": 40,
     "title": "2023-24 Colorado Avalanche Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1358,7 +1261,6 @@
     "has_spam": true
   },
   {
-    "id": 41,
     "title": "2023-24 Columbus Blue Jackets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1372,7 +1274,6 @@
     "has_spam": true
   },
   {
-    "id": 42,
     "title": "2023-24 Dallas Stars Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1386,7 +1287,6 @@
     "has_spam": true
   },
   {
-    "id": 43,
     "title": "2023-24 Detroit Red Wings Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1400,7 +1300,6 @@
     "has_spam": true
   },
   {
-    "id": 44,
     "title": "2023-24 Edmonton Oilers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1414,7 +1313,6 @@
     "has_spam": true
   },
   {
-    "id": 45,
     "title": "2023-24 Florida Panthers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1428,7 +1326,6 @@
     "has_spam": true
   },
   {
-    "id": 46,
     "title": "2023-24 Los Angeles Kings Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1442,7 +1339,6 @@
     "has_spam": true
   },
   {
-    "id": 47,
     "title": "2023-24 Minnesota Wild Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1456,7 +1352,6 @@
     "has_spam": true
   },
   {
-    "id": 48,
     "title": "2023-24 Montreal Canadiens Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1470,7 +1365,6 @@
     "has_spam": true
   },
   {
-    "id": 49,
     "title": "2023-24 Nashville Predators Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1484,7 +1378,6 @@
     "has_spam": true
   },
   {
-    "id": 50,
     "title": "2023-24 New Jersey Devils Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1498,7 +1391,6 @@
     "has_spam": true
   },
   {
-    "id": 51,
     "title": "2023-24 New York Islanders Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1512,7 +1404,6 @@
     "has_spam": true
   },
   {
-    "id": 52,
     "title": "2023-24 New York Rangers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1526,7 +1417,6 @@
     "has_spam": true
   },
   {
-    "id": 53,
     "title": "2023-24 Ottawa Senators Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1540,7 +1430,6 @@
     "has_spam": true
   },
   {
-    "id": 54,
     "title": "2023-24 Philadelphia Flyers Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1554,7 +1443,6 @@
     "has_spam": true
   },
   {
-    "id": 55,
     "title": "2023-24 Pittsburgh Penguins Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1568,7 +1456,6 @@
     "has_spam": true
   },
   {
-    "id": 56,
     "title": "2023-24 San Jose Sharks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1582,7 +1469,6 @@
     "has_spam": true
   },
   {
-    "id": 57,
     "title": "2023-24 Seattle Kraken Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1596,7 +1482,6 @@
     "has_spam": true
   },
   {
-    "id": 58,
     "title": "2023-24 St. Louis Blues Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1610,7 +1495,6 @@
     "has_spam": true
   },
   {
-    "id": 59,
     "title": "2023-24 Tampa Bay Lightning Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1624,7 +1508,6 @@
     "has_spam": true
   },
   {
-    "id": 60,
     "title": "2023-24 Toronto Maple Leafs Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1638,7 +1521,6 @@
     "has_spam": true
   },
   {
-    "id": 61,
     "title": "2023-24 Vancouver Canucks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1652,7 +1534,6 @@
     "has_spam": true
   },
   {
-    "id": 62,
     "title": "2023-24 Vegas Golden Knights Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1666,7 +1547,6 @@
     "has_spam": true
   },
   {
-    "id": 63,
     "title": "2023-24 Washington Capitals Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1680,7 +1560,6 @@
     "has_spam": true
   },
   {
-    "id": 64,
     "title": "2023-24 Winnipeg Jets Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1694,7 +1573,6 @@
     "has_spam": true
   },
   {
-    "id": 65,
     "title": "2023 Arizona Diamondbacks Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1708,7 +1586,6 @@
     "has_spam": true
   },
   {
-    "id": 66,
     "title": "2023 Atlanta Braves Game Highlights",
     "description": "",
     "category_id": 1,
@@ -1722,7 +1599,6 @@
     "has_spam": true
   },
   {
-    "id": 30,
     "title": "2023 Los Angeles Rams Game Highlights",
     "description": "",
     "category_id": 1,
