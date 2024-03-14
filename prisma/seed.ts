@@ -25,7 +25,6 @@ async function main() {
       console.error(`Error creating records from ${fileName}:`, error);
     }
   }
-  // await createRecordsFromJSON('users.json', prisma.user);
   const matt = await prisma.user.upsert({
     where: { email: 'matthew.clunie@gmail.com' },
     update: {},
@@ -33,6 +32,15 @@ async function main() {
       email: 'matthew.clunie@gmail.com',
       name: 'matt clunie',
       username: 'matt',
+    },
+  });
+  const rob = await prisma.user.upsert({
+    where: { email: 'rpdonigian@gmail.com' },
+    update: {},
+    create: {
+      email: 'rpdonigian@gmail.com',
+      name: 'robert donigian',
+      username: 'rob',
     },
   });
   const rich = await prisma.user.upsert({
@@ -52,10 +60,17 @@ async function main() {
     .then((data) => {
       userId = data!.id;
     });
+  await createRecordsFromJSON('users.json', prisma.user);
   console.log('CREATED USERS DATA');
   console.log(matt);
+  console.log(rob);
   console.log(rich);
 
+  await createRecordsFromJSON('eventCategories.json', prisma.eventCategory);
+  await createRecordsFromJSON(
+    'eventSubCategories.json',
+    prisma.eventSubCategory,
+  );
   await createRecordsFromJSON('eventSeries.json', prisma.eventSeries);
   await createRecordsFromJSON('events.json', prisma.event);
   await createRecordsFromJSON(
@@ -72,11 +87,6 @@ async function main() {
     prisma.sourceContentEvent,
   );
   await createRecordsFromJSON('comments.json', prisma.comment);
-  await createRecordsFromJSON('eventCategories.json', prisma.eventCategory);
-  await createRecordsFromJSON(
-    'eventSubCategories.json',
-    prisma.eventSubCategory,
-  );
   await createRecordsFromJSON('eventTags.json', prisma.eventTag);
   await createRecordsFromJSON(
     'eventTagEventSeries.json',
