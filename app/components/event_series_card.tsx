@@ -44,7 +44,7 @@ const EventSeriesCard = (props: {
               </div>
             )}
             <div className="w-full">
-              <CardTitle className="h-12 overflow-hidden line-clamp-2 w-full">
+              <CardTitle className="overflow-hidden line-clamp-2 w-full leading-tight">
                 {props.title}
               </CardTitle>
               {props.description && (

@@ -51,7 +51,7 @@ const WordCloudDisplayComponent: React.FC<WordCloudDisplayProps> = ({
             return sentimentColors[typedScore];
           }
         },
-        backgroundColor: theme === 'dark' ? '#141b24' : '#e0e7eb',
+        backgroundColor: theme === 'dark' ? '#0F172A' : '#e0e7eb',
         minSize: 10,
         shrinkToFit: true,
       };
