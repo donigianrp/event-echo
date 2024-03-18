@@ -61,6 +61,7 @@ const EventSeriesEdit = async ({ params }: { params: { id: string } }) => {
       id,
       title,
       description,
+      details,
       is_private,
       view_count,
       creator_id,

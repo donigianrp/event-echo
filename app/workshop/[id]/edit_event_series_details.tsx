@@ -42,6 +42,7 @@ const FormSchema = z.object({
     message: 'Invalid series title',
   }),
   description: z.string(),
+  details: z.string(),
   tags: z.array(
     z.object({
       id: z.string(),
@@ -75,6 +76,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
     defaultValues: {
       title: eventSeries.title,
       description: eventSeries.description || '',
+      details: eventSeries.details || '',
       tags: tags,
       category: category,
       subcategory: subCategory,
@@ -136,6 +138,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
     params.append('id', String(eventSeries.id));
     params.append('title', values.title);
     params.append('description', values.description);
+    params.append('details', values.details);
     params.append('category', values.category);
     if (values.subcategory) {
       params.append('subcategory', values.subcategory);
@@ -182,6 +185,22 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                 <FormControl>
                   <Textarea
                     placeholder="Enter a brief description about your event series..."
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="details"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-xl">Details</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Edit any additional details about your event series..."
                     {...field}
                   />
                 </FormControl>

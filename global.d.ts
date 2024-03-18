@@ -93,6 +93,7 @@ export interface EventSeriesModel {
   id: number;
   title: string;
   description: string | null;
+  details: string | null;
   created_at: Date;
   updated_at: Date;
   is_private: boolean;

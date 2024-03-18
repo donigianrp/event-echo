@@ -97,6 +97,7 @@ model EventSeries {
   id                Int                   @id @default(autoincrement())
   title             String
   description       String?
+  details           String?
   category_id       Int?
   sub_category_id   Int?
   created_at        DateTime              @default(now())
