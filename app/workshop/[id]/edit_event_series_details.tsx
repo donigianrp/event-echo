@@ -200,7 +200,7 @@ const EditEventSeriesDetails = ({ eventSeries }: Props) => {
                 <FormLabel className="text-xl">Details</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Edit any additional details about your event series..."
+                    placeholder="Enter any additional details about your event series..."
                     {...field}
                   />
                 </FormControl>
