@@ -26,7 +26,7 @@ const BarGraph: FunctionComponent<Props> = ({ data }) => {
   const foregroundToggle = theme === 'dark' ? '#f2f2f2' : '#09090b';
 
   return (
-    <ResponsiveContainer width="100%" height={320}>
+    <ResponsiveContainer minWidth={650} height={320}>
       <BarChart data={data}>
         <Bar
           type="monotone"

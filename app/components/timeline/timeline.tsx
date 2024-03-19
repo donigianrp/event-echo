@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import ReactSlider from 'react-slider';
 import { Button } from '../ui/button';
 import DataTabs from './data_tabs/data_tabs';
-import { comments as mockData } from '@/prisma/seedData';
 
 const nonRelevantWords: { [val: string]: boolean } = {
   that: true,
@@ -93,6 +92,8 @@ interface Props {
   comments: {
     source_content_id: number;
     contents: string;
+    title: string | null;
+    event_position: number;
   }[];
 }
 
@@ -197,7 +198,7 @@ const Timeline = ({ comments }: Props) => {
       <div className="flex items-center my-2 ">
         <ReactSlider
           className="w-full h-5 z-10"
-          trackClassName={`h-2 top-2/4 -translate-y-1/2 bg-foreground rounded-full ${
+          trackClassName={`h-2 top-2/4 -translate-y-1/2 bg-card rounded-full ${
             isAggregate ? 'aggregate' : ''
           }`}
           thumbClassName="bg-black w-5 h-5 rounded-full border-2 border-primary"

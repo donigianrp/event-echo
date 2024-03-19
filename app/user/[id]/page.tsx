@@ -69,7 +69,9 @@ export default async function UserProfile({
     <div className="lg:w-1/2 mx-auto flex flex-col gap-6 border-l border-r p-8">
       <div>
         <Avatar className="w-[96px] h-[96px]">
-          <AvatarImage src={user.image || undefined} />
+          <AvatarImage
+            src={`https://gravatar.com/avatar/${user?.image}` || undefined}
+          />
           <AvatarFallback>
             <CircleUserRound className="w-full h-full" />
           </AvatarFallback>

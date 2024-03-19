@@ -22,6 +22,8 @@ interface Props {
   comments: {
     source_content_id: number;
     contents: string;
+    title: string | null;
+    event_position: number;
   }[];
 }
 

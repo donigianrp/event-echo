@@ -9,7 +9,6 @@ import { FunctionComponent } from 'react';
 import WordCloudDisplayComponent from '@/app/components/data_display/word_cloud';
 import BarGraph, { GraphData } from '@/app/components/data_display/bar_graph';
 import LineGraph from '@/app/components/data_display/line_graph';
-// import { comments } from '@/prisma/seedData';
 
 interface Props {
   isAggregate: boolean;
@@ -21,6 +20,8 @@ interface Props {
   comments: {
     source_content_id: number;
     contents: string;
+    title: string | null;
+    event_position: number;
   }[];
 }
 
@@ -51,26 +52,34 @@ const TabCard: FunctionComponent<Props> = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Event Series Name</CardTitle>
-        {comments && comments.length > 0 ? (
-          <CardDescription>
-            {isAggregate
-              ? `Event ${comments[aggValue[0]]?.source_content_id} to Event ${
-                  comments[aggValue[1]]?.source_content_id
+        <CardTitle className="overflow-hidden line-clamp-2 leading-tight">
+          {comments[value]?.title && comments[value].title}
+        </CardTitle>
+        <CardDescription>
+          {comments && comments.length > 0
+            ? isAggregate
+              ? `Event ${comments[aggValue[0]]?.event_position} to Event ${
+                  comments[aggValue[1]]?.event_position
                 }`
-              : `Event ${comments[value]?.source_content_id}`}
-          </CardDescription>
-        ) : (
-          <CardDescription></CardDescription>
-        )}
+              : `Event ${comments[value]?.event_position}`
+            : ''}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         {comments && comments.length > 0 ? (
-          renderDataDisplay
+          comments[value].contents ? (
+            <div className="overflow-x-auto">{renderDataDisplay}</div>
+          ) : (
+            <div className="grid w-full h-[320px]">
+              <h4 className="self-center justify-self-center text-xl font-semibold text-center">
+                There are no comments for this event
+              </h4>
+            </div>
+          )
         ) : (
           <div className="grid w-full h-[320px]">
             <div className="self-center justify-self-center">
-              <h4 className="scroll-m-20 text-xl font-semibold">
+              <h4 className="text-xl font-semibold text-center">
                 It looks like you haven&#39;t added any events!
               </h4>
               <div className="text-center">Add an event to see some data.</div>

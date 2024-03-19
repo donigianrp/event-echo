@@ -80,12 +80,15 @@ export default async function EventSeriesPage({
   });
 
   const seriesComments = seriesEvents.map((evt) => {
-    const { comment, id } = evt.source_contents[0].source_content;
+    const { comment, id, title } = evt.source_contents[0].source_content;
     return {
       source_content_id: id,
       contents: comment?.contents || '',
+      title: title,
+      event_position: evt.event_position,
     };
   });
+
   return (
     <div className="p-10">
       <div className="mb-2">
@@ -122,9 +125,9 @@ export default async function EventSeriesPage({
             )}
           </div>
         </div>
-        <div className="text-md">
+        <div className="text-md inline-block">
           <Link href={`/user/${eventSeries.creator_id}`}>
-            <p>{eventSeries.creator.name}</p>
+            {eventSeries.creator.name}
             <h3 className="text-sm">@{eventSeries.creator.username}</h3>
           </Link>
         </div>
