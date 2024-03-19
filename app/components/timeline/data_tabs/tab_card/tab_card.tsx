@@ -55,9 +55,9 @@ const TabCard: FunctionComponent<Props> = ({
         {comments && comments.length > 0 ? (
           <CardDescription>
             {isAggregate
-              ? `Event ${comments[aggValue[0]]
-                  ?.source_content_id} to Event ${comments[aggValue[1]]
-                  ?.source_content_id}`
+              ? `Event ${comments[aggValue[0]]?.source_content_id} to Event ${
+                  comments[aggValue[1]]?.source_content_id
+                }`
               : `Event ${comments[value]?.source_content_id}`}
           </CardDescription>
         ) : (

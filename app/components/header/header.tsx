@@ -27,7 +27,7 @@ const Header = async () => {
   return (
     <>
       <div className="hidden lg:block text-center">
-        <Link href={'/'}>Logo</Link>
+        <Link href={'/'}>EventEcho</Link>
       </div>
       <div className="flex items-center justify-evenly">
         <DropdownMenu>
