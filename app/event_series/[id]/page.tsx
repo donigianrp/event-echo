@@ -13,6 +13,7 @@ import {
 import { buttonVariants } from '@/components/ui/button';
 import prisma from '@/db';
 import { useSeriesLikes } from '@/lib/use_series_likes';
+import { ScrollArea } from '@/app/components/ui/scroll-area';
 import { Eye } from 'lucide-react';
 import { getServerSession } from 'next-auth';
 import Link from 'next/link';
@@ -132,20 +133,24 @@ export default async function EventSeriesPage({
         </div>
       </div>
       <EventDescription description={eventSeries.description} />
-      <div className="block lg:grid w-full lg:grid-cols-4 lg:gap-4">
-        <div className="mb-2 col-span-3 lg:mb-0">
+      <div className={`block lg:flex w-full max-h-[530px]`}>
+        <div
+          className={`mb-2 mr-4 ${eventSeries.details ? 'w-3/4' : 'w-full'} lg:mb-0`}
+        >
           <Timeline comments={seriesComments} />
         </div>
-        <Card className="col-span-1">
-          <CardHeader>
-            <CardTitle>Details:</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>Example Data 1.</p>
-            <p>Example Data 2.</p>
-            <p>Example Data 3.</p>
-          </CardContent>
-        </Card>
+        {eventSeries.details && (
+          <Card className="w-1/4">
+            <CardHeader>
+              <CardTitle>Details:</CardTitle>
+            </CardHeader>
+            <CardContent className="h-full">
+              <ScrollArea className="h-4/5 px-4">
+                {eventSeries.details}
+              </ScrollArea>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   );

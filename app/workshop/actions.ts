@@ -12,11 +12,13 @@ export async function createEventSeries(prevState: any, formData: FormData) {
   const schema = z.object({
     title: z.string().min(1),
     description: z.string(),
+    details: z.string(),
     is_private: z.coerce.boolean(),
   });
   const parse = schema.safeParse({
     title: formData.get('title'),
     description: formData.get('description'),
+    details: formData.get('details'),
     is_private: formData.get('is_private'),
   });
 
@@ -31,6 +33,7 @@ export async function createEventSeries(prevState: any, formData: FormData) {
     data: {
       title: data.title,
       description: data.description,
+      details: data.details,
       creator_id: session?.user.id,
       is_private: data.is_private,
     },
@@ -45,6 +48,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     id: z.coerce.number(),
     title: z.string().min(1),
     description: z.string(),
+    details: z.string(),
     category: z.coerce.number(),
     subcategory: z.coerce.number().optional(),
     tags: z.preprocess(
@@ -63,6 +67,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     id: formData.get('id'),
     title: formData.get('title'),
     description: formData.get('description'),
+    details: formData.get('details'),
     category: formData.get('category'),
     subcategory: formData.get('subcategory'),
     tags: formData.get('tags'),
@@ -81,6 +86,7 @@ export async function editEventSeries(prevState: any, formData: FormData) {
     data: {
       title: data.title,
       description: data.description,
+      details: data.details,
       creator_id: session?.user.id,
       is_private: data.is_private,
       updated_at: new Date(),

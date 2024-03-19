@@ -58,7 +58,8 @@ const AddEventSeriesForm = () => {
             required
             className="border-b p-1"
           ></Input>
-          <Textarea placeholder="Description" name="description"></Textarea>
+          <Textarea placeholder="Description" name="description" />
+          <Textarea placeholder="Details" name="details" />
           <div className="flex gap-2 leading-none">
             <Checkbox id="is_private" name="is_private" />
             <Label htmlFor="is_private">Private</Label>
