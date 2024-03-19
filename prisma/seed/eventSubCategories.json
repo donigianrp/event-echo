@@ -1,240 +1,200 @@
 [
   {
-    "id": 1,
     "label": "NFL",
     "value": "nfl",
     "category_id": 1
   },
   {
-    "id": 2,
     "label": "MLB",
     "value": "mlb",
     "category_id": 1
   },
   {
-    "id": 3,
     "label": "NHL",
     "value": "nhl",
     "category_id": 1
   },
   {
-    "id": 4,
     "label": "NBA",
     "value": "nba",
     "category_id": 1
   },
   {
-    "id": 5,
     "label": "MLS",
     "value": "mls",
     "category_id": 1
   },
   {
-    "id": 6,
     "label": "Rock",
     "value": "rock",
     "category_id": 2
   },
   {
-    "id": 7,
     "label": "Pop",
     "value": "pop",
     "category_id": 2
   },
   {
-    "id": 8,
     "label": "Hip Hop",
     "value": "hipHop",
     "category_id": 2
   },
   {
-    "id": 9,
     "label": "Jazz",
     "value": "jazz",
     "category_id": 2
   },
   {
-    "id": 10,
     "label": "Electronic",
     "value": "electronic",
     "category_id": 2
   },
   {
-    "id": 11,
     "label": "Software Development",
     "value": "softwareDevelopment",
     "category_id": 3
   },
   {
-    "id": 12,
     "label": "Hardware",
     "value": "hardware",
     "category_id": 3
   },
   {
-    "id": 13,
     "label": "Artificial Intelligence",
     "value": "artificialIntelligence",
     "category_id": 3
   },
   {
-    "id": 14,
     "label": "Cybersecurity",
     "value": "cybersecurity",
     "category_id": 3
   },
   {
-    "id": 15,
     "label": "Mobile Development",
     "value": "mobileDevelopment",
     "category_id": 3
   },
   {
-    "id": 16,
     "label": "Restaurants",
     "value": "restaurants",
     "category_id": 4
   },
   {
-    "id": 17,
     "label": "Cooking Classes",
     "value": "cookingClasses",
     "category_id": 4
   },
   {
-    "id": 18,
     "label": "Wine Tasting",
     "value": "wineTasting",
     "category_id": 4
   },
   {
-    "id": 19,
     "label": "Coffee Events",
     "value": "coffeeEvents",
     "category_id": 4
   },
   {
-    "id": 20,
     "label": "Food Festivals",
     "value": "foodFestivals",
     "category_id": 4
   },
   {
-    "id": 21,
     "label": "Movies",
     "value": "movies",
     "category_id": 5
   },
   {
-    "id": 22,
     "label": "Theater",
     "value": "theater",
     "category_id": 5
   },
   {
-    "id": 23,
     "label": "Comedy Shows",
     "value": "comedyShows",
     "category_id": 5
   },
   {
-    "id": 24,
     "label": "Concerts",
     "value": "concerts",
     "category_id": 5
   },
   {
-    "id": 25,
     "label": "Festivals",
     "value": "festivals",
     "category_id": 5
   },
   {
-    "id": 26,
     "label": "Yoga",
     "value": "yoga",
     "category_id": 6
   },
   {
-    "id": 27,
     "label": "Running",
     "value": "running",
     "category_id": 6
   },
   {
-    "id": 28,
     "label": "Gym Workouts",
     "value": "gymWorkouts",
     "category_id": 6
   },
   {
-    "id": 29,
     "label": "Meditation",
     "value": "meditation",
     "category_id": 6
   },
   {
-    "id": 30,
     "label": "Wellness Retreats",
     "value": "wellnessRetreats",
     "category_id": 6
   },
   {
-    "id": 31,
     "label": "Art Exhibitions",
     "value": "artExhibitions",
     "category_id": 7
   },
   {
-    "id": 32,
     "label": "Museums",
     "value": "museums",
     "category_id": 7
   },
   {
-    "id": 33,
     "label": "Literature Events",
     "value": "literatureEvents",
     "category_id": 7
   },
   {
-    "id": 34,
     "label": "Performing Arts",
     "value": "performingArts",
     "category_id": 7
   },
   {
-    "id": 35,
     "label": "Cultural Festivals",
     "value": "culturalFestivals",
     "category_id": 7
   },
   {
-    "id": 36,
     "label": "Conferences",
     "value": "conferences",
     "category_id": 8
   },
   {
-    "id": 37,
     "label": "Workshops",
     "value": "workshops",
     "category_id": 8
   },
   {
-    "id": 38,
     "label": "Networking Events",
     "value": "networkingEvents",
     "category_id": 8
   },
   {
-    "id": 39,
     "label": "Trade Shows",
     "value": "tradeShows",
     "category_id": 8
   },
   {
-    "id": 40,
     "label": "Business Seminars",
     "value": "businessSeminars",
     "category_id": 8
