@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +14,7 @@ import { getServerSession } from 'next-auth';
 import { Button } from '../ui/button';
 import { CircleUserRound } from 'lucide-react';
 import prisma from '@/db';
+import logo from 'public/logo.svg';
 
 const Header = async () => {
   const session = await getServerSession(authOptions);
@@ -27,7 +29,15 @@ const Header = async () => {
   return (
     <>
       <div className="hidden lg:block text-center">
-        <Link href={'/'}>EventEcho</Link>
+        <Link href={'/'}>
+          <Image
+            priority
+            src={logo}
+            alt="Event Echo logo"
+            className="w-20 h-20 mx-auto"
+          />
+          <p className="text-primary">Event Echo</p>
+        </Link>
       </div>
       <div className="flex items-center justify-evenly">
         <DropdownMenu>

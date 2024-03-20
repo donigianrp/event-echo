@@ -46,6 +46,7 @@ const NavLinks: FunctionComponent<Props> = ({ navStyle, setSheetOpen }) => {
   const pathname = usePathname();
   return (
     <div>
+      <Separator className="mb-2" />
       <NavButton
         navStyle={navStyle}
         handleSheetClose={handleSheetClose}
