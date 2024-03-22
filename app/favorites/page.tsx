@@ -6,6 +6,7 @@ import {
   getTotalFavoritedPages,
 } from '../components/pagination/actions';
 import PaginationPage from '../components/pagination/pagination_page';
+import NoContentDisplay from '../components/no_content_display/no_content_display';
 
 const Favorites = async ({
   searchParams,
@@ -32,16 +33,27 @@ const Favorites = async ({
     limit,
   });
 
+  const message = {
+    header: 'No favorites yet!',
+    description: 'Any series you favorite will be diplayed on this page.',
+  };
+
   if (!session) {
     return <LoginPrompt />;
   }
 
   return (
-    <PaginationPage
-      eventSeries={favoritedSeries}
-      currentPage={currentPage}
-      totalPages={totalFavoritedPages}
-    />
+    <>
+      {favoritedSeries.length > 0 ? (
+        <PaginationPage
+          eventSeries={favoritedSeries}
+          currentPage={currentPage}
+          totalPages={totalFavoritedPages}
+        />
+      ) : (
+        <NoContentDisplay message={message} />
+      )}
+    </>
   );
 };
 

@@ -9,6 +9,7 @@ import { FunctionComponent } from 'react';
 import WordCloudDisplayComponent from '@/app/components/data_display/word_cloud';
 import BarGraph, { GraphData } from '@/app/components/data_display/bar_graph';
 import LineGraph from '@/app/components/data_display/line_graph';
+import NoContentDisplay from '@/app/components/no_content_display/no_content_display';
 
 interface Props {
   isAggregate: boolean;
@@ -49,6 +50,11 @@ const TabCard: FunctionComponent<Props> = ({
 
   const renderDataDisplay = dataDisplay(type);
 
+  const message = {
+    header: "It looks like you haven't added any events!",
+    description: 'Add an event to see some data.',
+  };
+
   return (
     <Card>
       <CardHeader>
@@ -77,14 +83,7 @@ const TabCard: FunctionComponent<Props> = ({
             </div>
           )
         ) : (
-          <div className="grid w-full h-[320px]">
-            <div className="self-center justify-self-center">
-              <h4 className="text-xl font-semibold text-center">
-                It looks like you haven&#39;t added any events!
-              </h4>
-              <div className="text-center">Add an event to see some data.</div>
-            </div>
-          </div>
+          <NoContentDisplay message={message} />
         )}
       </CardContent>
     </Card>
