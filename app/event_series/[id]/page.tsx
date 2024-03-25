@@ -93,7 +93,9 @@ export default async function EventSeriesPage({
     <div className="p-10">
       <div className="mb-2">
         <div className="flex justify-between items-center">
-          <div className="text-3xl font-medium">{eventSeries.title}</div>
+          <div className="text-3xl font-medium line-clamp-2">
+            {eventSeries.title}
+          </div>
           <div className="flex items-center">
             <div className="flex gap-4">
               <div className="flex flex-col">
