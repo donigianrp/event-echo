@@ -54,7 +54,7 @@ export default async function PaginationPage({
           </div>
         </div>
       )}
-      <div className="flex flex-col gap-6 p-10 justify-center">
+      <div className="flex flex-col gap-6 pt-10 px-10 justify-center">
         <Suspense key={currentPage} fallback={<SearchSkeleton />}>
           <EventSeriesPagination
             eventSeries={eventSeries}
